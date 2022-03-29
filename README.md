@@ -21,6 +21,7 @@ Urbano, Carla
 
 
 ● Listado de sitios de referencia: 
+
 Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las características de los que seleccionaremos para el proyecto: 
 - https://www.iluminacion.net/lamparas/categoria/aranas/4/?gclid=CjwKCAjwrfCRBhAXEiwAnkmKmVSIWqEK0hG0rGumlZiYGGf8A-ieeZBmvK0K0PEGTnfZz4DER9FAkBoC-CIQAvD_BwE
 - https://iluminacionkolor.com.ar/productos-iluminacion/linea-decorativa/aranas/ 
