@@ -25,6 +25,8 @@ Urbano, Carla
 Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las características de los que seleccionaremos para el proyecto: 
 - https://www.iluminacion.net/lamparas/categoria/aranas/4/?gclid=CjwKCAjwrfCRBhAXEiwAnkmKmVSIWqEK0hG0rGumlZiYGGf8A-ieeZBmvK0K0PEGTnfZz4DER9FAkBoC-CIQAvD_BwE
 - https://iluminacionkolor.com.ar/productos-iluminacion/linea-decorativa/aranas/ 
+- https://fabricadeluz.com.ar/
 
 Estos sitios fueron elegidos por la estética que presentan: 
 - https://www.luzbuenosaires.com/techo/colgante/?mpage=3
+- https://www.tabureto.com.ar/
