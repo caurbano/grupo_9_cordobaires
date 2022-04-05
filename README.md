@@ -8,7 +8,7 @@ La audiencia hacia la que apunta el sitio es público en general; todo aquél qu
 <!-- ● Una breve descripción de los integrantes del equipo -->
 ● Integrantes: 
 
-Ackermann, Lucas
+Ackermann, Lucas: Me gusta la practicidad y agilización de las metodologías.
 
 
 Goti, Juan
@@ -28,3 +28,6 @@ Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las
 
 Estos sitios fueron elegidos por la estética que presentan: 
 - https://www.luzbuenosaires.com/techo/colgante/?mpage=3
+
+Este sitio fue elegido por la practicidad del contenido:
+http://www.tiendamilamp.com/#!/-tienda-milamp/
