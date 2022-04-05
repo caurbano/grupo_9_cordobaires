@@ -1,6 +1,6 @@
 ● La oferta de productos del sitio será: 
 
-Lámparas colgantes de diseño.
+Lámparas de diseño: colgantes, de pie y de techo.
 
 La audiencia hacia la que apunta el sitio es público en general; todo aquél que se interese por productos de diseño único y original, ya sea una persona particular para uso personal o bien, para un comercio u oficina, por ejemplo.
 
@@ -9,7 +9,6 @@ La audiencia hacia la que apunta el sitio es público en general; todo aquél qu
 ● Integrantes: 
 
 Ackermann, Lucas: Me gusta la practicidad y agilización de las metodologías.
-
 
 Goti, Juan
 
@@ -25,9 +24,14 @@ Urbano, Carla
 Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las características de los que seleccionaremos para el proyecto: 
 - https://www.iluminacion.net/lamparas/categoria/aranas/4/?gclid=CjwKCAjwrfCRBhAXEiwAnkmKmVSIWqEK0hG0rGumlZiYGGf8A-ieeZBmvK0K0PEGTnfZz4DER9FAkBoC-CIQAvD_BwE
 - https://iluminacionkolor.com.ar/productos-iluminacion/linea-decorativa/aranas/ 
+- https://fabricadeluz.com.ar/
 
 Estos sitios fueron elegidos por la estética que presentan: 
 - https://www.luzbuenosaires.com/techo/colgante/?mpage=3
+<<<<<<< HEAD
 
 Este sitio fue elegido por la practicidad del contenido:
 http://www.tiendamilamp.com/#!/-tienda-milamp/
+=======
+- https://www.tabureto.com.ar/
+>>>>>>> a719ccc99a845d1a9e45463b381d0b20840ea839
