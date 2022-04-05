@@ -28,10 +28,10 @@ Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las
 
 Estos sitios fueron elegidos por la estética que presentan: 
 - https://www.luzbuenosaires.com/techo/colgante/?mpage=3
-<<<<<<< HEAD
 
 Este sitio fue elegido por la practicidad del contenido:
+
 http://www.tiendamilamp.com/#!/-tienda-milamp/
-=======
+
 - https://www.tabureto.com.ar/
->>>>>>> a719ccc99a845d1a9e45463b381d0b20840ea839
+
