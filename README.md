@@ -1,26 +1,28 @@
 ● La oferta de productos del sitio será: 
 
-Lámparas de diseño: colgantes, de pie y de techo.
+Lámparas de diseño - colgantes de techo, de pared y de pie.
 
-La audiencia hacia la que apunta el sitio es público en general; todo aquél que se interese por productos de diseño único y original, ya sea una persona particular para uso personal o bien, para un comercio u oficina, por ejemplo.
+La audiencia hacia la que apunta el sitio es al público en general; todo aquél que se interese por productos de diseño único y original, ya sea una persona particular para uso personal o bien, para un comercio u oficina, por ejemplo.
 
 
-<!-- ● Una breve descripción de los integrantes del equipo -->
 ● Integrantes: 
 
 Ackerman, Lucas
+Me gusta la practicidad y agilización de las metodologías.
 
+Colodro, Boris
+Soy estudiante de la UNLP en Ing. en Computación y me gustan los videojuegos.
 
 Goti, Juan
-
-
-Morales, Boris
-
+Tengo 20 años, me mudé a EEUU en 2021 luego de vivir toda mi vida en Argentina. Me interesé en desarrollo web ya que me gusta la tecnología y aplicarla a negocios.
 
 Urbano, Carla
+Soy Carla, de la Provincia de Córdoba. Entre algunas de las cosas que hago, soy prof. de Música y mayormente enseño a mis alumnos particulares... Desde el año pasado, comencé a interiorizarme de a poco en este nuevo ámbito y con ganas de seguir aprendiendo más!
 
 
 ● Listado de sitios de referencia: 
+
+En la investigación de sitios, se seleccionó de acuerdo a ciertos parámetros.
 
 Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las características de los que seleccionaremos para el proyecto: 
 - https://www.iluminacion.net/lamparas/categoria/aranas/4/?gclid=CjwKCAjwrfCRBhAXEiwAnkmKmVSIWqEK0hG0rGumlZiYGGf8A-ieeZBmvK0K0PEGTnfZz4DER9FAkBoC-CIQAvD_BwE
@@ -30,3 +32,7 @@ Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las
 Estos sitios fueron elegidos por la estética que presentan: 
 - https://www.luzbuenosaires.com/techo/colgante/?mpage=3
 - https://www.tabureto.com.ar/
+- https://www.bazardeluces.com.ar/ 
+
+Por los clientes a los que apuntan, la estética y las funcionalidades:
+- https://manfroni.casa/?gclid=CjwKCAjwopWSBhB6EiwAjxmqDXUJ3O1IkY_eB-tyS4bTRzQ6gMHmag2Nfb77jMLiW0YfPrpAIXEd0RoCXcUQAvD_BwE 
