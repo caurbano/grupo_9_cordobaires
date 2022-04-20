@@ -1,0 +1,391 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    /* font-size:  */
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+.home {
+    width: 100%;
+}
+
+.home__banner {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(31, 29, 29);
+    display: flex;
+    align-items: center; 
+    position: fixed;
+}
+
+.banner__menu-search {
+    background-color: rgb(31, 29, 29);
+    display: flex;
+    justify-content: space-between;
+}
+.banner__menu-search button {
+    background-color: rgb(31, 29, 29);
+    border: 0px;
+    cursor: pointer;
+    height: 90px;
+}
+#menu {
+    background-color: rgb(31, 29, 29);
+    color: white;
+    font-size: 25px;
+    margin: 22px;
+    padding: 10px;
+}
+#menu:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+
+.menu-desp {
+    background-color: black;
+    border: solid 1px white;
+    display: none;
+    height: 100%;
+    width: 20%;
+    opacity: 0.6;
+    position: fixed;
+    top: 90px;
+    left: 1px;
+    transition: all 0.3s ease;
+}
+
+
+.menu-desp a {
+    border: solid 1px white;
+    font-size: 20px;
+    color: white;
+    display: block;
+    padding: 30px 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Esta sección está pensada para que funcione con click (JS) */
+#menu:hover .menu-desp {
+    display: block;
+}
+
+.menu-desp:hover {
+    position: fixed;
+}
+
+#search {
+    background-color: rgb(31, 29, 29);
+    color: white;
+    font-size: 25px;
+    margin: 22px;
+    padding: 10px;
+}
+
+#search:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+
+.banner__logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo {
+    height: 90px;
+    width: 250px;
+    padding: 5px;
+    
+}
+
+.banner__login-buy {
+    display: flex; 
+}
+
+.banner__login-buy p {
+    color: white;
+    position: relative;
+    right: 70px;
+    top: 65px;
+
+}
+#login {
+    color: white;
+    font-size: 25px;
+    margin: 22px;
+    padding: 10px;
+}
+#login:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+
+#buy {
+    color: white;
+    font-size: 25px;
+    margin: 22px;
+    padding: 10px;
+}
+#buy:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+
+/* IMG BIENVENIDA */
+.home__img {
+    padding: 0px;
+}
+.home__img__img {
+    width: 100%;
+}
+
+/* WHATSAPP FIJO */
+.contact {
+    display: flex;
+    margin-left: 87%;
+}
+
+#wafixed {
+    background-color: black;
+    border-radius: 8%;
+    box-shadow: 3px 2px 10px #666666;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    position: fixed;
+    top: 92%;
+    right: 2%;
+    z-index: 1;
+
+}
+#wafixed:hover {
+    box-shadow: -3px -3px 10px #E79F00;
+}
+#wafixed i {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    padding-right: 5%;
+}
+
+
+/* MAIN */
+/* Reseña */
+.review {
+    background-color: white;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.review__txt {
+    flex-direction: column;
+}
+
+.review h1 {
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.review p {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.review__img__img {
+    box-shadow: 3px 3px 6px #666666;
+    height: 200px;
+    width: 400px;
+    margin: 40px;
+    object-fit: cover;
+}
+
+/* Categorías */
+/* falta alinear los nombres de las categorias y detalles */
+.shop {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    padding: 0px;
+}
+
+.shop h3 {
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    /* margin-bottom: 20px; */
+}
+
+.shop__top {
+    height: 500px;
+    width: 60%;
+    margin: 0px;
+}
+
+#top {
+    height: 500px;
+    width: 100%;
+    margin: 0px; 
+    object-fit: fill;
+}
+#top:hover {
+    opacity: 0.8;
+}
+
+.wall-floor {
+    flex-direction: column;
+    height: 500px;
+    width: 40%;
+    margin: 0px;
+}
+.shop__wall {
+    height: 220px;
+    width: 100%;
+    margin: 0px;
+}
+#wall {
+    height: 220px;
+    width: 100%;
+    margin: 0px;
+}
+#wall:hover {
+    opacity: 0.8;
+}
+
+.shop__floor {
+    height: 280px;
+    width: 100%;
+    margin: 0px;
+}
+
+#floor {
+    height: 280px;
+    width: 100%;
+    margin: 0px;
+}
+#floor:hover {
+    opacity: 0.8;
+}
+
+/* información */
+/* faltan detalles como alinear los iconos al centro... */
+.info {
+    background-color: white;
+    height: 200;
+    width: 100%;
+    margin: 40px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.info__item {
+    height: 100px;
+    width: 100px;
+}
+#ship {
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+}
+#pay {
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+}
+#shop-wa {
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+}
+
+/* Productos destacados */
+.see {
+    background-color: lightgray;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.see__dest {
+    height: 250px;
+    width: 210px;
+    /* margin: 10px; */
+}
+
+.dest {
+    height: 250px;
+    width: 210px;
+    /* margin: 10px; */
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    width: 100%;
+    line-height: 20px;
+    padding: 20px;
+}
+
+
+#f-logo {
+    height: 70px;
+    width: 160px;
+    padding: 5px;
+    
+}
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__red {
+    margin-top: 30px;
+}
+
+
+#wa {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+#wa:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+
+#fb {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+#fb:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+#ig {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+#ig:hover {
+    text-shadow: -3px -3px 10px #E79F00;
+}
+
+
+/* color ambar #E79F00 */

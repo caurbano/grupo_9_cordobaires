@@ -1,0 +1,23 @@
+{
+  "name": "grupo_9_cordobaires",
+  "version": "1.0.0",
+  "description": "● La oferta de productos del sitio será:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caurbano/grupo_9_cordobaires.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caurbano/grupo_9_cordobaires/issues"
+  },
+  "homepage": "https://github.com/caurbano/grupo_9_cordobaires#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
