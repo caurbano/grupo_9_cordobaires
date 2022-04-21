@@ -1,11 +1,8 @@
-● La oferta de productos del sitio será: 
+# LUMEN Lights Shop - Marketplace
+## Proyecto Integrador. Digital House.
 
-Lámparas de diseño - colgantes de techo, de pared y de pie.
-
-La audiencia hacia la que apunta el sitio es al público en general; todo aquél que se interese por productos de diseño único y original, ya sea una persona particular para uso personal o bien, para un comercio u oficina, por ejemplo.
-
-
-● Integrantes: 
+### Integrantes 
+Quienes conformamos el grupo, somos:
 
 Ackerman, Lucas
 Me gusta la practicidad y agilización de las metodologías.
@@ -14,13 +11,19 @@ Colodro, Boris
 Soy estudiante de la UNLP en Ing. en Computación y me gustan los videojuegos.
 
 Goti, Juan
-Tengo 20 años, me mudé a EEUU en 2021 luego de vivir toda mi vida en Argentina. Me interesé en desarrollo web ya que me gusta la tecnología y aplicarla a negocios.
+Tengo 20 años, me mudé a EEUU en 2021 luego de vivir toda mi vida en Argentina. Me interesé en Desarrollo Web ya que me gusta la tecnología y aplicarla a negocios.
 
 Urbano, Carla
 Soy Carla, de la Provincia de Córdoba. Entre algunas de las cosas que hago, soy prof. de Música y mayormente enseño a mis alumnos particulares... Desde el año pasado, comencé a interiorizarme de a poco en este nuevo ámbito y con ganas de seguir aprendiendo más!
 
+### Temática del sitio
+La oferta de productos del sitio será: 
+Lámparas de diseño - colgantes de techo, de pared y de pie.
 
-● Listado de sitios de referencia: 
+La audiencia hacia la que apunta el sitio es al público en general; todo aquél que se interese por productos de diseño único y original, ya sea una persona particular para uso personal o bien, para un comercio u oficina, por ejemplo.
+
+
+### Sitios de referencia: 
 
 En la investigación de sitios, se seleccionó de acuerdo a ciertos parámetros.
 
