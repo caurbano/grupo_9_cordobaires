@@ -4,16 +4,16 @@
 ### Integrantes 
 Quienes conformamos el grupo, somos:
 
-Ackerman, Lucas
+Ackerman, Lucas  
 Me gusta la practicidad y agilización de las metodologías.
 
-Colodro, Boris
+Colodro, Boris  
 Soy estudiante de la UNLP en Ing. en Computación y me gustan los videojuegos.
 
-Goti, Juan
+Goti, Juan  
 Tengo 20 años, me mudé a EEUU en 2021 luego de vivir toda mi vida en Argentina. Me interesé en Desarrollo Web ya que me gusta la tecnología y aplicarla a negocios.
 
-Urbano, Carla
+Urbano, Carla  
 Soy Carla, de la Provincia de Córdoba. Entre algunas de las cosas que hago, soy prof. de Música y mayormente enseño a mis alumnos particulares... Desde el año pasado, comencé a interiorizarme de a poco en este nuevo ámbito y con ganas de seguir aprendiendo más!
 
 ### Temática del sitio
