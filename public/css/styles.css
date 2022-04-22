@@ -1,3 +1,12 @@
+/* COLORES */ 
+/* Esto despues se borra:
+black
+white
+#1f1d1d (el negro más brillante - banner)
+#E79F00 (ambar)
+#918c8c (gris claro del footer)
+ */
+ 
 * {
     font-family: 'Montserrat', sans-serif;
     /* font-size:  */
@@ -14,25 +23,26 @@
 .home__banner {
     height: 90px;
     width: 100%;
-    background-color: rgb(31, 29, 29);
+    background-color: #1f1d1d;
     display: flex;
     align-items: center; 
     position: fixed;
+    z-index: 1;
 }
 
 .banner__menu-search {
-    background-color: rgb(31, 29, 29);
+    background-color: #1f1d1d;
     display: flex;
     justify-content: space-between;
 }
 .banner__menu-search button {
-    background-color: rgb(31, 29, 29);
+    background-color: #1f1d1d;
     border: 0px;
     cursor: pointer;
     height: 90px;
 }
 #menu {
-    background-color: rgb(31, 29, 29);
+    background-color: #1f1d1d;
     color: white;
     font-size: 25px;
     margin: 22px;
@@ -77,7 +87,7 @@
 
 
 #search {
-    background-color: rgb(31, 29, 29);
+    background-color: #1f1d1d;
     color: white;
     font-size: 25px;
     margin: 22px;
@@ -292,7 +302,6 @@
 }
 
 /* información */
-/* faltan detalles como alinear los iconos al centro... */
 .info {
     background-color: white;
     height: 200;
@@ -301,20 +310,30 @@
     display: flex;
     justify-content: space-around;
 }
+
+.info p {
+    text-align: center;
+}
+
 .info__item {
     height: 100px;
     width: 100px;
 }
+
 #ship {
     height: 80px;
     width: 120px;
+    /* font-size: 3em; */
     padding: 20px;
+    /* text-align: center; */
 }
+
 #pay {
     height: 80px;
     width: 120px;
     padding: 20px;
 }
+
 #shop-wa {
     height: 80px;
     width: 120px;
@@ -323,16 +342,28 @@
 
 /* Productos destacados */
 .see {
-    background-color: lightgray;
+    background-color: white;
+    border-top: #665e5e;
+    box-shadow: 4px 4px 4px #1f1d1d;
     height: 300px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 5%;
+}
+
+.h2 {
+    align-self: flex-start;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    margin: 20px 15px;
 }
 .see__dest {
+    border: solid 2px #1f1d1d;
+    box-shadow: 3px 3px 5px #665e5e;
     height: 250px;
     width: 210px;
     /* margin: 10px; */
+    /* align-self: flex-end; */
 }
 
 .dest {
@@ -344,7 +375,7 @@
 /* FOOTER */
 
 .footer {
-    background-color: black;
+    background-color: #918c8c;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -384,26 +415,15 @@ a {
     font-size: 40px;
     padding: 10px;
 }
-#wa:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
 
 #fb {
     color: white;
     font-size: 40px;
     padding: 10px;
 }
-#fb:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
+
 #ig {
     color: white;
     font-size: 40px;
     padding: 10px;
 }
-#ig:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
-
-
-/* color ambar #E79F00 */
