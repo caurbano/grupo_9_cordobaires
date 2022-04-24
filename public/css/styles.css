@@ -1,15 +1,5 @@
-/* COLORES */ 
-/* Esto despues se borra:
-black
-white
-#1f1d1d (el negro más brillante - banner)
-#E79F00 (ambar)
-#918c8c (gris claro del footer)
- */
- 
 * {
     font-family: 'Montserrat', sans-serif;
-    /* font-size:  */
     line-height: 18px;
     margin: 0px;
     padding: 0px;
@@ -21,13 +11,13 @@ white
     width: 100%;
 }
 
-/* Banner */
+/* Barra */
 .home__bar {
-    height: 90px;
-    width: 100%;
+    align-items: center;
     background-color: #1f1d1d;
     display: flex;
-    align-items: center; 
+    height: 93px;
+    width: 100%;
     position: fixed;
     z-index: 2;
 }
@@ -100,6 +90,7 @@ white
 #search:hover {
     text-shadow: -3px -3px 10px #E79F00;
 }
+/* Hasta acá */
 
 .bar__logo {
     margin-left: auto;
@@ -108,7 +99,7 @@ white
 
 #logo {
     height: 90px;
-    width: 250px;
+    width: 100%;
     padding: 5px;
 }
 
@@ -138,7 +129,7 @@ white
     text-shadow: -3px -3px 10px #E79F00;
 }
 
-/* IMG BIENVENIDA */
+/* IMG bienvenida */
 .home__img {
     padding: 0px;
 }
@@ -147,7 +138,7 @@ white
     width: 100%;
 }
 
-/* WHATSAPP FIJO */
+/* whatsapp fijo */
 .contact {
     display: flex;
     margin-left: 87%;
@@ -156,7 +147,7 @@ white
 #wafixed {
     background-color: black;
     border-radius: 8%;
-    box-shadow: 3px 2px 10px #666666;
+    box-shadow: 3px 2px 5px #666666;
     color: white;
     cursor: pointer;
     font-size: medium;
@@ -225,7 +216,6 @@ white
     height: 500px;
     margin: 0px;
     padding: 0px;
-    /* width: inherit; */
 }
 
 .shop h3 {
@@ -236,7 +226,6 @@ white
 }
 
 .shop__top {
-    /* height: 500px; */
     width: 58%;
     margin: 0px;
 }
@@ -284,13 +273,6 @@ white
     top: 90%;
     left: 5%;
 }
-
-/* .shop__wall div {
-    padding: 0px;
-    position: relative;
-    top: 93%;
-    left: 5%;
-} */
 
 #wall {
     border: solid 1px #918c8c;
@@ -393,24 +375,44 @@ white
     position: relative;
     top: 45px;
     left: 40px;
+    margin-bottom: 3px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     width: 50%;
 }
 
 .see__dest {
+    background-color: #918c8c1e;
     border: solid 2px #1f1d1d;
     box-shadow: 3px 3px 5px #665e5e;
-    height: 240px;
-    width: 210px;
+    height: 315px;
+    width: 220px;
 }
 
+.see__dest a {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dest-fee {
+    color: black;
+    font-size: 13px;
+    padding-top: 5px;
+    text-align: center;
+}
 .dest {
+    border-bottom: solid 1px #1f1d1d;
     height: 240px;
-    width: 210px;
+    width: 220px;
+    margin-bottom: 3px;
+}
+
+.dest:hover {
+    opacity: 0.9;
 }
 
 /* FOOTER */
-
 .footer {
     background-color: #918c8c;
     color: white;
@@ -422,9 +424,9 @@ white
 }
 
 #f-logo {
-    height: 70px;
-    width: 160px;
-    padding: 5px;
+    height: 75px;
+    width: 100%;
+    margin: 35px 5px;
 }
 
 .footer h3 {
@@ -433,40 +435,37 @@ white
 
 .footer li {
     list-style: none;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .footer a {
     color: white;
     text-decoration: none;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .social {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .footer__red {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 #wa {
     color: white;
-    font-size: 40px;
-    padding: 10px;
+    font-size: 35px;
 }
 
 #fb {
     color: white;
-    font-size: 40px;
-    padding: 10px;
+    font-size: 35px;
 }
 
 #ig {
     color: white;
-    font-size: 40px;
-    padding: 10px;
+    font-size: 35px;
 }
 
 /* SECCION DETALLE DE PRODUCTO */

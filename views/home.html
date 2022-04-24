@@ -32,44 +32,41 @@
                 <button type="button"><i class="fa-solid fa-magnifying-glass" id="search"></i></button> 
             </nav>
             <div class="bar__logo">
-                <a href="/"><img src="/img/Logo.jpg" alt="Logo" id="logo"></a>
+                <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
             </div>
-            <div class="bar__login-buy">
-                <a href="#"><i class="fa-solid fa-user" id="login"></i></a>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="buy"></i></a>
-                
-            </div>
+            <nav class="bar__login-buy">
+                <a href="/login.html"><i class="fa-solid fa-user" id="login"></i></a>
+                <a href="/productCart.html"><i class="fa-solid fa-cart-shopping" id="buy"></i></a>
+            </nav>
         </section>
         
-            <div class="home__img">
-                <!-- imagen grande de bienvenida: ver si dejar en header o pasar a main -->
-                <img src="/img/inicio-img.jpeg" alt="Imágen bienvenida" class="home__img__img">
-            </div>
-            <section class="contact">
-                <div><a href="https://web.whatsapp.com/" target="_blank">
-                    <button id="wafixed"><i class="fa-brands fa-whatsapp"></i>Contáctanos</button></a></div>
-            </section>
-           
+        <section class="home__img">
+            <img src="/img/inicio-img.jpeg" alt="Imágen bienvenida" class="home__img__img">
+        </section>
+
+        <section class="contact">
+            <div><a href="https://web.whatsapp.com/" target="_blank">
+            <button id="wafixed"><i class="fa-brands fa-whatsapp"></i>Contáctanos</button></a></div>
+        </section>
     </header>
     <main>
         <section class="review">
-            <!-- acá breve reseña y foto alusiva -->
             <div class="review__txt">
-            <h1>LUMEN Lights Shop</h1>
-            <p>
-                <strong>LUMEN Lights Shop</strong> es una tienda online, dedicada a ofrecerte <br>
-                productos de iluminación de diseño único y exclusivo, para<br>
-                acondicionar tus espacios de la manera más original.<br>
-                Podés encontrar amplia variedad para todo tipo de ambiente.
-            </p>
+                <h1>LUMEN Lights Shop</h1>
+                <p>
+                    <strong>LUMEN Lights Shop</strong> es una tienda online, dedicada a ofrecerte <br>
+                    productos de iluminación de diseño único y exclusivo, para<br>
+                    acondicionar tus espacios de la manera más original.<br>
+                    Podés encontrar amplia variedad para todo tipo de ambiente.
+                </p>
             </div>
             
             <div class="review__img">
                 <img src="/img/luces.jpeg" alt="Luces" class="review__img__img">
             </div>
         </section>
+
         <section class="shop">
-            <!-- secciones de compra: techo, pared, pie -->
             <div class="shop__top">
                 <h3>Techo</h3>
                 <a href="#"><img src="/img/techo.jpeg" alt="Lámparas de techo" id="top"></a>
@@ -77,11 +74,6 @@
             <div class="wall-floor">
                 <div class="shop__wall">
                     <h3>Pared</h3>
-                    <!-- <div>
-                        <hr>
-                        <p>VER MÁS</p>
-                    </div> -->
-                   
                     <a href="#"><img src="/img/pared.jpg" alt="Lámparas de pared" id="wall"></a>
                 </div>
                 <div class="shop__floor">
@@ -90,10 +82,10 @@
                 </div>
             </div>
         </section>
+
         <section class="info">
             <div class="info__items">
                 <img src="https://www.svgrepo.com/show/6460/truck.svg" alt="envío" id="ship">
-                <!-- <i class="fa-solid fa-truck" id="ship"></i> -->
             <p>Envíos <strong>GRATIS</strong> a todo el país <br> en compras superiores a $10.000</p>
         </div>
             <div class="info__items">
@@ -103,66 +95,93 @@
             <div class="info__items">
                 <img src="https://www.svgrepo.com/show/347646/whatsapp.svg" alt="pedido por whatsapp" id="shop-wa">
                 <p>Hacé tu pedido por <br> <strong>WhatsApp!</strong></p>
-                
             </div>
         </section>
         
-        <!-- este h2 va dentro de section class"see" -->
         <section class="products">
             <h2 class="products-h2">Productos destacados</h2>
             <article class="see">
-            <div class="see__dest"><a href="#"><img src="/img/prod1.jpg" alt="Producto destacado" class="dest"></a></div>
-            <div class="see__dest"><a href="#"><img src="/img/prod2.jpeg" alt="Producto destacado" class="dest"></a></div>
-            <div class="see__dest"><a href="#"><img src="/img/prod3.jpeg" alt="Producto destacado" class="dest"></a></div>
-            <div class="see__dest"><a href="#"><img src="/img/prod4.jpeg" alt="Producto destacado" class="dest"></a></div>
-            <div class="see__dest"><a href="#"><img src="/img/prod5.jpeg" alt="Producto destacado" class="dest"></a></div>
-            </article>
-            
-            <!-- productos destacados -->
-            
+            <div class="see__dest">
+                <a href="/productDetail.html">
+                    <img src="/img/prod1.jpg" alt="Producto destacado" class="dest">
+                    <p>Lámpara de pie SILVER<br><strong>$13.500</strong></p>
+                </a>
+                <p class="dest-fee">6 cuotas sin interés de <strong>$2.250</strong></p>
+            </div>
+            <div class="see__dest">
+                <a href="/productDetail.html">
+                    <img src="/img/prod2.jpeg" alt="Producto destacado" class="dest">
+                    <p>Lámpara de techo set GRECIA<br><strong>$47.550</strong></p>
+                </a>
+                <p class="dest-fee">6 cuotas sin interés de <strong>$7.925</strong></p>
+            </div>
+            <div class="see__dest">
+                <a href="/productDetail.html">
+                    <img src="/img/prod3.jpeg" alt="Producto destacado" class="dest">
+                    <p>Aplique de pared ECLIPSE<br><strong>$24.000</strong></p>
+                </a>
+                <p class="dest-fee">6 cuotas sin interés de <strong>$4.000</strong></p>
+            </div>
+            <div class="see__dest">
+                <a href="/productDetail.html">
+                    <img src="/img/prod4.jpeg" alt="Producto destacado" class="dest">
+                    <p>Lámpara de techo STRIPES<br><strong>$81.000</strong></p>
+                </a>
+                <p class="dest-fee">6 cuotas sin interés de <strong>$13.500</strong></p>
+            </div>
+            <div class="see__dest">
+                <a href="/productDetail.html">
+                    <img src="/img/prod5.jpeg" alt="Producto destacado" class="dest">
+                    <p>Lámpara de techo MINIMAL<br><strong>$2.700</strong></p>
+                </a>
+                <p class="dest-fee">6 cuotas sin interés de <strong>$450</strong></p>
+            </div>
+            </article>            
         </section>
     </main>
     <footer class="footer">
         <section>
-            <div class="footer__logo"><img src="/img/Logo.jpg" alt="logo" id="f-logo"></div>
+            <div><img src="/img/LUMEN.png" alt="logo" id="f-logo"></div>
         </section>
+
         <section>
             <nav>
                 <h3>CONTACTO</h3>
-            <ul>
-                <li>info@lamparasdediseño.com</li>
-                <li>WA: (+54 9) 11-6030-3456  </li>
-                <li>Tel. Fijo: (+54) 11-4000-5555</li>
-                <li>Hs. de atención: Lunes a <br> Sábado de 10 a 19 hs.</li>
-            </ul>
+                <ul>
+                    <li>info@lumenshop.com</li>
+                    <li>WA: (+54 9) 11-6030-3456  </li>
+                    <li>Tel. Fijo: (+54) 11-4000-5555</li>
+                    <li>Horarios de atención: Lunes <br> a Sábado de 10 a 19 hs.</li>
+                </ul>
         </nav> 
         </section>
+
         <section>
              <nav>
                  <h3>TIENDA</h3>
-            <ul>
-                <li><a href="#">Envíos</a></li>
-                <li><a href="#">¿Cómo comprar?</a></li>
-                <li><a href="#">Devoluciones</a></li>
-                <li><a href="#">Reclamos</a></li>
-                <li><a href="#">Nosotros</a></li>
-            </ul>
-                </nav> 
+                 <ul>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">¿Cómo comprar?</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Reclamos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                 </ul>
+            </nav> 
         </section>
+
         <section>
             <h3>REDES SOCIALES</h3>
              <nav class="social">
-                 
                  <div class="footer__red">
                      <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp" id="wa"></i></a>
-                    </div>
+                 </div>
                  <div class="footer__red">
                      <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" id="fb"></i></a>
-                    </div>
+                 </div>
                  <div class="footer__red">
                      <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" id="ig"></i></a>
-                    </div>
-                </nav> 
+                 </div>
+            </nav> 
         </section>
     </footer>
 </body>
