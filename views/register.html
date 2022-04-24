@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/9071629482.js" crossorigin="anonymous"></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+</head>
+<body>
+
+    <!--HEADER-->
+
+    <header class="home">
+        <section class="home__bar">
+            <nav class="bar__menu-search">
+                <button type="button"><i class="fa-solid fa-bars" id="menu">
+                    <section class="menu-dd">
+                        <nav>
+                            <a href="#">Inicio</a>
+                            <a href="#">Techo</a>
+                            <a href="#">Pared</a>
+                            <a href="#">Pie</a>
+                            <a href="#">Outlet</a>
+                            <a href="#">Contacto</a>
+                            <a href="#">Nosotros</a>
+                        </nav>
+                    </section>
+                </i></button> 
+                <button type="button"><i class="fa-solid fa-magnifying-glass" id="search"></i></button> 
+            </nav>
+            <div class="bar__logo">
+                <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
+            </div>
+            <nav class="bar__login-buy">
+                <a href="/login.html"><i class="fa-solid fa-user" id="login"></i></a>
+                <a href="/productCart.html"><i class="fa-solid fa-cart-shopping" id="buy"></i></a>
+            </nav>
+        </section>
+        
+        <section class="home__img">
+            <img src="/img/inicio-img.jpeg" alt="Imágen bienvenida" class="home__img__img">
+        </section>
+
+        <section class="contact">
+            <div><a href="https://web.whatsapp.com/" target="_blank">
+            <button id="wafixed"><i class="fa-brands fa-whatsapp"></i>Contáctanos</button></a></div>
+        </section>
+    </header>
+
+    <!--MAIN-->
+
+    <main class="background-main-form">
+        <div class="main-form">
+        <p>Crear cuenta</p>
+        <h3>Comprá más rápido y llevá el control de tus pedidos!</h3>
+        <article>
+            <form action="/create_account" method="post" class="form-register">
+                <div class="register">
+                    <input type="text" name="name" required="required" pattern="{0,11}" placeholder = "Nombre Completo">
+                </div>
+                <div class="register">
+                    <input type="email" name="email" required pattern="{0,11}" placeholder = "Email">
+                </div>
+                <div class="register">  
+                    <input type="tel" name="phone" pattern="[0-9]{1,11}" required="required" placeholder = "Telefono">
+                </div>
+                <div class="register">
+                    <input type="password" name="password" required="required" placeholder = "Contraseña">
+                </div>
+                <div class="register">
+                    <input type="password" name="confirm_password" required="required" placeholder = "Confirmar Contraseña">
+                </div>
+                <div class="confirm">
+                    <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+                    <button type="submit"><p>Crear Cuenta</p></i></button>
+                </div>
+            </form>
+        </article>
+        </div>
+    </main>
+
+    <!--FOOTER-->
+
+    <footer class="footer">
+        <section>
+            <div><img src="/img/LUMEN.png" alt="logo" id="f-logo"></div>
+        </section>
+
+        <section>
+            <nav>
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li>info@lumenshop.com</li>
+                    <li>WA: (+54 9) 11-6030-3456  </li>
+                    <li>Tel. Fijo: (+54) 11-4000-5555</li>
+                    <li>Horarios de atención: Lunes <br> a Sábado de 10 a 19 hs.</li>
+                </ul>
+        </nav> 
+        </section>
+
+        <section>
+             <nav>
+                 <h3>TIENDA</h3>
+                 <ul>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">¿Cómo comprar?</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Reclamos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                 </ul>
+            </nav> 
+        </section>
+
+        <section>
+            <h3>REDES SOCIALES</h3>
+             <nav class="social">
+                 <div class="footer__red">
+                     <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp" id="wa"></i></a>
+                 </div>
+                 <div class="footer__red">
+                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" id="fb"></i></a>
+                 </div>
+                 <div class="footer__red">
+                     <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" id="ig"></i></a>
+                 </div>
+            </nav> 
+        </section>
+    </footer>
+
+</body>
+</html>
