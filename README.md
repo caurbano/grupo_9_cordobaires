@@ -24,7 +24,6 @@ La audiencia hacia la que apunta el sitio es al público en general; todo aquél
 
 
 ### Sitios de referencia: 
-
 En la investigación de sitios, se seleccionó de acuerdo a ciertos parámetros.
 
 Estos sitios fueron elegidos por los productos ofrecidos, ya que responden a las características de los que seleccionaremos para el proyecto: 
@@ -39,3 +38,7 @@ Estos sitios fueron elegidos por la estética que presentan:
 
 Por los clientes a los que apuntan, la estética y las funcionalidades:
 - https://manfroni.casa/?gclid=CjwKCAjwopWSBhB6EiwAjxmqDXUJ3O1IkY_eB-tyS4bTRzQ6gMHmag2Nfb77jMLiW0YfPrpAIXEd0RoCXcUQAvD_BwE 
+
+
+#### Tablero de trabajo
+https://trello.com/b/iQbarWcg/sprint-2 
