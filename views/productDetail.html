@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9071629482.js" crossorigin="anonymous"></script>
-    <title>LUMEN ProdDetail</title>
+    <title>LUMEN - Detalle de productos</title>
 </head>
 
 <body>
@@ -18,19 +18,19 @@
         <section class="home__bar">
             <nav class="bar__menu-search">
                 <button type="button"><i class="fa-solid fa-bars" id="menu">
-                    <section class="menu-dd">
-                        <nav>
-                            <a href="#">Inicio</a>
-                            <a href="#">Techo</a>
-                            <a href="#">Pared</a>
-                            <a href="#">Pie</a>
-                            <a href="#">Outlet</a>
-                            <a href="#">Contacto</a>
-                            <a href="#">Nosotros</a>
-                        </nav>
-                    </section>
-                </i></button> 
-                <button type="button"><i class="fa-solid fa-magnifying-glass" id="search"></i></button> 
+                        <section class="menu-dd">
+                            <nav>
+                                <a href="#">Inicio</a>
+                                <a href="#">Techo</a>
+                                <a href="#">Pared</a>
+                                <a href="#">Pie</a>
+                                <a href="#">Outlet</a>
+                                <a href="#">Contacto</a>
+                                <a href="#">Nosotros</a>
+                            </nav>
+                        </section>
+                    </i></button>
+                <button type="button"><i class="fa-solid fa-magnifying-glass" id="search"></i></button>
             </nav>
             <div class="bar__logo">
                 <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
@@ -43,74 +43,105 @@
 
         <section class="contact">
             <div><a href="https://web.whatsapp.com/" target="_blank">
-            <button id="wafixed"><i class="fa-brands fa-whatsapp"></i>Contáctanos</button></a></div>
+                    <button id="wafixed"><i class="fa-brands fa-whatsapp"></i>Contáctanos</button></a></div>
         </section>
     </header>
     <main>
         <section class="preview">
-            <!-- acá breve reseña y foto alusiva -->
             <div class="preview__img">
                 <img src="\img\detalle.jpeg" alt="Luces" class="preview__img__img">
             </div>
             <div class="preview__txt">
-                <h2><strong>Candelabro Sputnik</strong></h2>
+                <h2>Candelabro Sputnik</h2>
                 <p>
                     <br>$9.500
-                    <br>12 Cuotas Sin Interes
                     <br>
-                </p>
-                <div> &nbsp </div>
-                <button class="agregarcarrito">Agregar al carrito</button>
+                <form action="productDetail.html" method="POST">
+                    <select name="mes">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select> Cuotas Sin Interes
+                    <br>
+                    </p>
+                    <div> &nbsp </div>
+                    <button class="agregarcarrito">Agregar al carrito</button>
             </div>
         </section>
-        <p style="text-align: center; ;"> El candelabro de techo Sputnik es la mejor opción para tu
-            nuevo hogar. Cada vez más diseñadores de interiores eligen esta lámpara para lograr un estilo de alta gama.
-            Puedes usarla como una lámpara normal para comedor, sala de estar o dormitorio,
-            también es buena para tu oficina.</p>
+        <p class="Desc-candelabro">Añade una bonita decoración a cualquier área de tu casa. <br>
+            Cada vez más diseñadores la eligen para lograr un estilo de alta gama.<br>
+            El candelabro de techo Sputnik es la mejor opción para tu
+            nuevo hogar.</p>
 
-        <h2 class="products-h2">Productos Relacionados</h2>
         <section class="products">
-            <section class="see">
-                <div class="see__dest"><a href="#"><img src="img\relacionado1.jpeg" alt="Producto Relacionado"
-                            class="dest"></a>
-                    <p class="preciodetalle"> $2.500</p>
+            <h2 class="products-h2">Productos Relacionados</h2>
+            <article class="see">
+                <div class="see__dest">
+                    <a href="/productDetail.html">
+                        <img src="\img\relacionado1.jpeg" alt="Producto Relacionado" class="dest">
+                        <p>Lampara de techo BINOMIO<br><strong>$8.400</strong></p>
+                    </a>
+                    <p class="dest-fee">6 cuotas sin interés de <strong>$1400</strong></p>
                 </div>
-                <div class="see__dest"><a href="#"><img src="/img/relacionado2.jpeg" alt="Producto Relacionado"
-                            class="dest"></a>
-                    <p class="preciodetalle"> $10.500</p>
+                <div class="see__dest">
+                    <a href="/productDetail.html">
+                        <img src="\img\relacionado2.jpeg" alt="Producto Relacionado" class="dest">
+                        <p>Lámpara de techo ERIZO<br><strong>$10.500</strong></p>
+                    </a>
+                    <p class="dest-fee">6 cuotas sin interés de <strong>$1.750</strong></p>
                 </div>
-                <div class="see__dest"><a href="#"><img src="/img/relacionado3.jpeg" alt="Producto Relacionado"
-                            class="dest"></a>
-                    <p class="preciodetalle"> $6.000</p>
+                <div class="see__dest">
+                    <a href="/productDetail.html">
+                        <img src="/img/relacionado3.jpeg" alt="Producto Relacionado" class="dest">
+                        <p>Lampara de techo MEMBRANA<br><strong>$6.000</strong></p>
+                    </a>
+                    <p class="dest-fee">6 cuotas sin interés de <strong>$1.000</strong></p>
                 </div>
-                <div class="see__dest"><a href="#"><img src="/img/relacionado4.jpeg" alt="Producto Relacionado"
-                            class="dest"></a>
-                    <p class="preciodetalle"> $4.500</p>
+                <div class="see__dest">
+                    <a href="/productDetail.html">
+                        <img src="/img/relacionado4.jpeg" alt="Producto Relacionado" class="dest">
+                        <p>Lámpara de techo GRUA<br><strong>$15.000</strong></p>
+                    </a>
+                    <p class="dest-fee">6 cuotas sin interés de <strong>$2.500</strong></p>
                 </div>
-                <div class="see__dest"><a href="#"><img src="/img/relacionado5.jpeg" alt="Producto Relacionado"
-                            class="dest"></a>
-                    <p class="preciodetalle"> $8.000</p>
+                <div class="see__dest">
+                    <a href="/productDetail.html">
+                        <img src="/img/relacionado5.jpeg" alt="Producto Relacionado" class="dest">
+                        <p>Lámpara de techo TRIVENTO<br><strong>$8.400</strong></p>
+                    </a>
+                    <p class="dest-fee">6 cuotas sin interés de <strong>$1.400</strong></p>
                 </div>
-                <!-- productos relacionados -->
-
-            </section>
+            </article>
         </section>
     </main>
     <footer class="footer">
         <section>
-            <div class="footer__logo"><img src="/img/Logo.jpg" alt="logo" id="f-logo"></div>
+            <div><img src="/img/LUMEN.png" alt="logo" id="f-logo"></div>
         </section>
+
+        <p>Copyright © 2020-2022 LUMEN Lights Shop</p>
+
         <section>
             <nav>
                 <h3>CONTACTO</h3>
                 <ul>
-                    <li>info@lamparasdediseño.com</li>
+                    <li>info@lumenshop.com</li>
                     <li>WA: (+54 9) 11-6030-3456 </li>
                     <li>Tel. Fijo: (+54) 11-4000-5555</li>
-                    <li>Hs. de atención: Lunes a <br> Sábado de 10 a 19 hs.</li>
+                    <li>Horarios de atención: Lunes <br> a Sábado de 10 a 19 hs.</li>
                 </ul>
             </nav>
         </section>
+
         <section>
             <nav>
                 <h3>TIENDA</h3>
@@ -123,10 +154,10 @@
                 </ul>
             </nav>
         </section>
+
         <section>
             <h3>REDES SOCIALES</h3>
             <nav class="social">
-
                 <div class="footer__red">
                     <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"
                             id="wa"></i></a>

@@ -429,6 +429,13 @@
     margin: 35px 5px;
 }
 
+.footer p {
+    align-self: flex-end;
+    color: #ffffffe1;
+    font-size: 12px;
+    margin-left: -370px;
+}
+
 .footer h3 {
     padding: 10px 0px;
 }
@@ -468,6 +475,8 @@
     font-size: 35px;
 }
 
+
+
 /* SECCION DETALLE DE PRODUCTO */
 .preview {
     background-color: white;
@@ -476,6 +485,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    margin-top: 80px;
     padding-top: 5%;
 }
 
@@ -505,13 +515,14 @@
 }
 
 /* Productos Relacionados */
-.see {
-    background-color: #918c8c1e;
-    width: inherit;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 6% 0%;
+.agregarcarrito{
+    cursor: pointer;
 }
+.Desc-candelabro{
+    margin-left: 10%;
+    margin-bottom: 60px;
+}
+
 .products-h2 {
     font-size: 30px;
     position: relative;
@@ -520,16 +531,7 @@
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     width: 50%;
 }
-.see__dest {
-    border: solid 2px #1f1d1d;
-    box-shadow: 3px 3px 5px #665e5e;
-    height: 240px;
-    width: 210px;
-}
-.dest {
-    height: 240px;
-    width: 210px;
-}
+
 .preciodetalle{
     text-align: center;
     margin-top: 10px;
@@ -539,13 +541,12 @@
     align-self: flex-start;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin: 20px 15px;
-}
+} 
 
 
 
 /* SECCION CARRITO DE COMPRAS */
-
-main{
+.maindetodo{
     background-color: white;
     margin: 1% auto;
 }
@@ -696,6 +697,8 @@ main{
     color: white;
 	background: #2f9b05;
 }
+
+
 /* SECCION FORMULARIO DE REGISTRO */
 
         /* MAIN FORM */
@@ -703,11 +706,13 @@ main{
 .background-main-form{
     background-color:#918c8c1e;
     height: 100%;
+    margin-top: 20px;
 }
 .main-form{
     width: 80%;
+    margin-top: 100px;
     padding:5%;
-    margin-left: 10%;
+    margin-left: 5%;
     background-color: white;
 }
 .main-form > p{
@@ -760,6 +765,7 @@ main{
 .confirm > button{
     width: 60%;
     background-color: #918c8c;
+    cursor: pointer;
     padding: 14px 18px;
     margin: 15px 10%;
     border: solid 1px black;
@@ -773,14 +779,16 @@ main{
     color: white;
     font-size: 12px;
     font-weight: bold;
+    transition: all 1s ease;
 }
 .confirm > button:hover{
     background-color: black;
     font-size: 0.9em;
 }
-.log-in > button > p:hover{
+.confirm > button > p:hover{
     font-size: 16px;
 }
+
 
 /* SECCION FORMULARIO DE LOGIN */
 
@@ -814,6 +822,7 @@ main{
 }
 .log-in > button{
     background-color: #918c8c;
+    cursor: pointer;
     width: 50%;
     padding: 8px 16px;
     margin: 15px 0;
@@ -871,3 +880,4 @@ main{
         font-size: 15px;
     }
 }
+
