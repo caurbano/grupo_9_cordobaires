@@ -471,17 +471,17 @@
 /* SECCION DETALLE DE PRODUCTO */
 
 /* SECCION CARRITO DE COMPRAS */
-/*
-body{
-    background-color: grey;
-}
+
 main{
+    background-color: white;
+}
+.main{
 	margin: 1% auto;
 	height: 50%;
 	width: 50%;
 	padding: 40% auto;
     background-color: rgb(126,126,126);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 #tituloDelCarrito p{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -491,6 +491,8 @@ main{
     padding: 20px;
     letter-spacing: 1px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
+    margin-top: 15%;
+
 }
 #Productone{
 	background: rgb(176,176,176);
@@ -499,7 +501,19 @@ main{
     height: 100px;
 	width: 700px;
 }
-
+.producto1 img{
+    height: 90px;
+    width: 115px;
+    border: solid white 2px;
+}
+.producto2 img{
+    height: 100px;
+    border: solid white 2.3px;
+}
+.producto3 img{
+    width: 100px;
+    border: solid white 4px;
+}
 .botonDeEliminar{
     margin: 1% auto;
     height: 40px;
@@ -518,7 +532,6 @@ main{
 }
 #Productone .producto1{
 	margin: 5px;
-	padding: 0,5px;
 	border: white 8px groove;
 }
 
@@ -558,30 +571,49 @@ main{
 	border: white 8px groove;
 }
 #total{
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
 	display: flex;
 	justify-content: right;
 	margin: 3%;
 }
-.buy span {
-    border: solid black 5px;
-	transition: .4s ease-in-out all;
-	left: 21.5%;
+#total p{
+    font-size: 20px;
 }
-.addProduct{
-    height: 30px;
-    width: 100px;
-    font-size: 25px;
+.mas {
+    margin-left: 5px;
+    opacity: 0.5;
+    height: 45%;
+    width: 30%;
 }
-#button__buy{
+.menos{
+    margin-right: 5px;
+    opacity: 0.5;
+    height: 45%;
+    width: 30%;
+}
+.cero{
     display: flex;
-    align-items: right;
-    height: 70px;
-    border: solid black 5px;
+    justify-content: center;
+    margin: 2px;
+    font-size: 140%;
+    height: 25px;
+    width: 25px;
 }
-.buy:hover {
+#boton_comprar{
+    display: flex;
+    justify-content: right;
+    height: 50px;
+    margin: 20px;
+}
+.botonDeComprar{
+    height: 30px;
+    border-radius: 3rem 3rem;
+    width: 200px;
+}
+.botonDeComprar:hover {
+    color: white;
 	background: #2f9b05;
 }
-*/
 /* SECCION FORMULARIO DE REGISTRO */
 
         /* MAIN FORM */
