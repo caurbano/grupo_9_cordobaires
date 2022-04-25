@@ -505,13 +505,14 @@
 }
 
 /* Productos Relacionados */
-.see {
-    background-color: #918c8c1e;
-    width: inherit;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 6% 0%;
+.Desc-candelabro{
+    text-align: left;
+    margin-left:10%
 }
+.agregarcarrito{
+    cursor: pointer;
+}
+
 .products-h2 {
     font-size: 30px;
     position: relative;
@@ -520,12 +521,7 @@
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     width: 50%;
 }
-.see__dest {
-    border: solid 2px #1f1d1d;
-    box-shadow: 3px 3px 5px #665e5e;
-    height: 240px;
-    width: 210px;
-}
+
 .dest {
     height: 240px;
     width: 210px;
@@ -830,3 +826,4 @@ main{
         font-size: 15px;
     }
 }
+
