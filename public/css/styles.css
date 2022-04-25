@@ -698,8 +698,9 @@
 }
 .main-form{
     width: 80%;
+    margin-top: 100px;
     padding:5%;
-    margin-left: 10%;
+    margin-left: 5%;
     background-color: white;
 }
 .main-form > p{
