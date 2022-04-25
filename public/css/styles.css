@@ -485,6 +485,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    margin-top: 80px;
     padding-top: 5%;
 }
 
@@ -519,6 +520,7 @@
 }
 .Desc-candelabro{
     margin-left: 10%;
+    margin-bottom: 60px;
 }
 
 .products-h2 {
