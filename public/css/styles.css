@@ -569,41 +569,24 @@
     margin-top: 15%;
 
 }
-#Productone{
+.productosDelCarrito{
 	background: rgb(176,176,176);
 	display: flex;
 	margin: 1% auto;
     height: 100px;
 	width: 700px;
 }
-#Productone .producto1{
+.productosDelCarrito .producto{
     display: flex;
     align-items: center;  
     margin: 12px;
 }
-.producto1 img{
-    height: 60px;
-    width: 100px;
-    border: solid white 5px;
-}
-#Productwo .producto2{
-    display: flex;
-    align-items: center;  
-    height: 80px;
-    width: 80px;
-    margin: 12px;
-}
-.producto2 img{
+.producto img{
     height: 60px;
     width: 100px;
     border: solid white 5px;
 }
 
-.producto3 img{
-    height: 60px;
-    width: 100px;
-    border: solid white 5px;
-}
 .botonDeEliminar{
     margin: 1% auto;
     height: 40px;
@@ -615,60 +598,41 @@
     padding: 10px;
     min-width: 40px;
 }
-#Productone article {
+.productosDelCarrito article {
 	display: flex;
 	width: 150px;
 	margin: 20px;
-}
-#Productwo{
-	background: rgb(176,176,176);
-	display: flex;
-	margin: 1% auto;
-    height: 100px;
-	width: 700px;
 }
 
-#Productwo article{
-	display: flex;
-    
-	width: 150px;
-	margin: 20px;
-}
-#Producthree .producto3{
+.totales{
     display: flex;
-    align-items: center;  
-    height: 80px;
-    width: 80px;
-    margin: 12px;
+    flex-direction: row;
 }
-#Producthree{
-	background: rgb(176,176,176);
-	display: flex;
-	margin: 1% auto;
-    height: 100px;
-	width: 700px;
-}
-#Producthree article{
-	display: flex;
-	width: 150px;
-	margin: 20px;
+#total .precioTotal{
+    margin-top: 2.5px;
+    font-weight: bold;
 }
 #total{
-    text-shadow: 1px 1px white, -2px -1px #E79F00;
 	display: flex;
 	justify-content: right;
 	margin: 3%;
 }
-#total p{
+#total .totalDelCarrito{
+    margin-right: 5px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
     font-size: 20px;
 }
 .mas {
+    font-weight: bold;    
+    background-color: white;
     margin-left: 5px;
     opacity: 0.5;
     height: 45%;
     width: 30%;
 }
 .menos{
+    background-color: white;
+    font-weight: bold;
     margin-right: 5px;
     opacity: 0.5;
     height: 45%;
