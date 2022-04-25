@@ -429,6 +429,13 @@
     margin: 35px 5px;
 }
 
+.footer p {
+    align-self: flex-end;
+    color: #ffffffe1;
+    font-size: 12px;
+    margin-left: -370px;
+}
+
 .footer h3 {
     padding: 10px 0px;
 }
@@ -468,6 +475,8 @@
     font-size: 35px;
 }
 
+
+
 /* SECCION DETALLE DE PRODUCTO */
 .preview {
     background-color: white;
@@ -505,12 +514,11 @@
 }
 
 /* Productos Relacionados */
-.Desc-candelabro{
-    text-align: left;
-    margin-left:10%
-}
 .agregarcarrito{
     cursor: pointer;
+}
+.Desc-candelabro{
+    margin-left: 10%;
 }
 
 .products-h2 {
@@ -522,10 +530,6 @@
     width: 50%;
 }
 
-.dest {
-    height: 240px;
-    width: 210px;
-}
 .preciodetalle{
     text-align: center;
     margin-top: 10px;
@@ -535,22 +539,18 @@
     align-self: flex-start;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin: 20px 15px;
-}
+} 
 
 
 
 /* SECCION CARRITO DE COMPRAS */
-/*
-body{
-    background-color: grey;
-}
-main{
+.main{
 	margin: 1% auto;
 	height: 50%;
 	width: 50%;
 	padding: 40% auto;
     background-color: rgb(126,126,126);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 #tituloDelCarrito p{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -560,6 +560,8 @@ main{
     padding: 20px;
     letter-spacing: 1px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
+    margin-top: 15%;
+
 }
 #Productone{
 	background: rgb(176,176,176);
@@ -568,7 +570,19 @@ main{
     height: 100px;
 	width: 700px;
 }
-
+.producto1 img{
+    height: 90px;
+    width: 115px;
+    border: solid white 2px;
+}
+.producto2 img{
+    height: 100px;
+    border: solid white 2.3px;
+}
+.producto3 img{
+    width: 100px;
+    border: solid white 4px;
+}
 .botonDeEliminar{
     margin: 1% auto;
     height: 40px;
@@ -587,7 +601,6 @@ main{
 }
 #Productone .producto1{
 	margin: 5px;
-	padding: 0,5px;
 	border: white 8px groove;
 }
 
@@ -627,30 +640,51 @@ main{
 	border: white 8px groove;
 }
 #total{
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
 	display: flex;
 	justify-content: right;
 	margin: 3%;
 }
-.buy span {
-    border: solid black 5px;
-	transition: .4s ease-in-out all;
-	left: 21.5%;
+#total p{
+    font-size: 20px;
 }
-.addProduct{
-    height: 30px;
-    width: 100px;
-    font-size: 25px;
+.mas {
+    margin-left: 5px;
+    opacity: 0.5;
+    height: 45%;
+    width: 30%;
 }
-#button__buy{
+.menos{
+    margin-right: 5px;
+    opacity: 0.5;
+    height: 45%;
+    width: 30%;
+}
+.cero{
     display: flex;
-    align-items: right;
-    height: 70px;
-    border: solid black 5px;
+    justify-content: center;
+    margin: 2px;
+    font-size: 140%;
+    height: 25px;
+    width: 25px;
 }
-.buy:hover {
+#boton_comprar{
+    display: flex;
+    justify-content: right;
+    height: 50px;
+    margin: 20px;
+}
+.botonDeComprar{
+    height: 30px;
+    border-radius: 3rem 3rem;
+    width: 200px;
+}
+.botonDeComprar:hover {
+    color: white;
 	background: #2f9b05;
 }
-*/
+
+
 /* SECCION FORMULARIO DE REGISTRO */
 
         /* MAIN FORM */
@@ -658,11 +692,13 @@ main{
 .background-main-form{
     background-color:#918c8c1e;
     height: 100%;
+    margin-top: 20px;
 }
 .main-form{
     width: 80%;
+    margin-top: 100px;
     padding:5%;
-    margin-left: 10%;
+    margin-left: 5%;
     background-color: white;
 }
 .main-form > p{
@@ -715,6 +751,7 @@ main{
 .confirm > button{
     width: 60%;
     background-color: #918c8c;
+    cursor: pointer;
     padding: 14px 18px;
     margin: 15px 10%;
     border: solid 1px black;
@@ -728,14 +765,16 @@ main{
     color: white;
     font-size: 12px;
     font-weight: bold;
+    transition: all 1s ease;
 }
 .confirm > button:hover{
     background-color: black;
     font-size: 0.9em;
 }
-.log-in > button > p:hover{
+.confirm > button > p:hover{
     font-size: 16px;
 }
+
 
 /* SECCION FORMULARIO DE LOGIN */
 
@@ -769,6 +808,7 @@ main{
 }
 .log-in > button{
     background-color: #918c8c;
+    cursor: pointer;
     width: 50%;
     padding: 8px 16px;
     margin: 15px 0;
