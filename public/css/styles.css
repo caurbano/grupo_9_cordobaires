@@ -468,6 +468,8 @@
     font-size: 35px;
 }
 
+
+
 /* SECCION DETALLE DE PRODUCTO */
 .preview {
     background-color: white;
@@ -505,7 +507,7 @@
 }
 
 /* Productos Relacionados */
-.see {
+/* .see {
     background-color: #918c8c1e;
     width: inherit;
     display: flex;
@@ -529,25 +531,21 @@
 .dest {
     height: 240px;
     width: 210px;
-}
+} */
 .preciodetalle{
     text-align: center;
     margin-top: 10px;
 }
 
-.h2 {
+/* .h2 {
     align-self: flex-start;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin: 20px 15px;
-}
+} */
 
 
 
 /* SECCION CARRITO DE COMPRAS */
-
-main{
-    background-color: white;
-}
 .main{
 	margin: 1% auto;
 	height: 50%;
@@ -687,6 +685,8 @@ main{
     color: white;
 	background: #2f9b05;
 }
+
+
 /* SECCION FORMULARIO DE REGISTRO */
 
         /* MAIN FORM */
@@ -694,6 +694,7 @@ main{
 .background-main-form{
     background-color:#918c8c1e;
     height: 100%;
+    margin-top: 20px;
 }
 .main-form{
     width: 80%;
@@ -751,6 +752,7 @@ main{
 .confirm > button{
     width: 60%;
     background-color: #918c8c;
+    cursor: pointer;
     padding: 14px 18px;
     margin: 15px 10%;
     border: solid 1px black;
@@ -764,14 +766,16 @@ main{
     color: white;
     font-size: 12px;
     font-weight: bold;
+    transition: all 1s ease;
 }
 .confirm > button:hover{
     background-color: black;
     font-size: 0.9em;
 }
-.log-in > button > p:hover{
+.confirm > button > p:hover{
     font-size: 16px;
 }
+
 
 /* SECCION FORMULARIO DE LOGIN */
 
@@ -805,6 +809,7 @@ main{
 }
 .log-in > button{
     background-color: #918c8c;
+    cursor: pointer;
     width: 50%;
     padding: 8px 16px;
     margin: 15px 0;
