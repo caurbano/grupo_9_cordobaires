@@ -549,6 +549,7 @@
 .maindetodo{
     background-color: white;
     margin: 1% auto;
+    width: inherit;
 }
 .main{
 	margin: 1% auto;
@@ -574,7 +575,7 @@
 	display: flex;
 	margin: 1% auto;
     height: 100px;
-	width: 700px;
+	width: 600px;
 }
 .productosDelCarrito .producto{
     display: flex;
@@ -659,6 +660,7 @@
 }
 .botonDeComprar:hover {
     color: white;
+    cursor: pointer;
 	background: #2f9b05;
 }
 
