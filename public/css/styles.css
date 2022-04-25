@@ -429,6 +429,13 @@
     margin: 35px 5px;
 }
 
+.footer p {
+    align-self: flex-end;
+    color: #ffffffe1;
+    font-size: 12px;
+    margin-left: -370px;
+}
+
 .footer h3 {
     padding: 10px 0px;
 }
