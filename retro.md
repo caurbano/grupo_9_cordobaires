@@ -5,4 +5,5 @@ Consideramos que algo a mejorar es agilizar los tiempos, tanto personales como e
 Por último, será un reto también mejorar la comunicación como equipo.
 
 ## Retrospectiva luego del SPRINT 2  
-
+En este punto, llegamos a conclusiones tanto grupales, como individuales… Algunas situaciones que se presentaron durante el Sprint 2 fueron algo de falta de comunicación, resultando en un incorrecto manejo de los tiempos por parte de algunas actividades, también algunas diferencias en la forma de organización. Asimismo, consideramos que logramos atravesar ciertas diferencias y cumplimos con el objetivo. Pudimos mejorar la colaboración entre los integrantes, además de complementar mejor algunas experiencias o conocimientos previos.  
+Aun así, hay cosas que queremos mejorar, no sólo la comunicación, si no también aspectos como la prolijidad en la ejecución (el código, lo visual), tener más atención a ciertos detalles que suman su aporte al resultado final. Por último, optimizar los tiempos o bien, proponer otras instancias apartes para cuando algún integrante se encuentre con algún conflicto que le impida avanzar con su tarea y así poder asistir a quien lo necesite en algo puntual.  
