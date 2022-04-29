@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/caurbano/grupo_9_cordobaires#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.18.0"
   }
 }
