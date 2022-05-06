@@ -59,11 +59,21 @@ const MainController = {
         // })
         res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos'});
     },
+
     login: (req, res) => {
         res.render('./users/login', {id: 'login', title: 'LUMEN - Login'});
     },
+
     register: (req, res) => {
         res.render('./users/register', {id: 'register', title: 'LUMEN - Formulario de registro'});
+    },
+
+    create: (req, res) => {
+        res.render('./products/productCreate', {id: 'productCreate', title: 'LUMEN - Creación de producto'});
+    },
+
+    edit: (req, res) => {
+        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Editar producto'});
     }
 }
 
