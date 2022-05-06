@@ -1,3 +1,4 @@
+/* MOBILE FIRST (HACER) */
 * {
     font-family: 'Montserrat', sans-serif;
     line-height: 18px;
@@ -16,16 +17,15 @@
     align-items: center;
     background-color: #1f1d1d;
     display: flex;
-    height: 93px;
+    height: 40px;
     width: 100%;
-    position: fixed;
-    z-index: 2;
 }
 
-.bar__menu-search {
+.bar__menu-search,
+.bar__login-buy {
     background-color: #1f1d1d;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .bar__menu-search button {
@@ -35,16 +35,15 @@
     height: 90px;
 }
 
-#menu {
+#menu,
+#search,
+#login,
+#buy {
     background-color: #1f1d1d;
     color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#menu:hover {
-    text-shadow: -3px -3px 10px #E79F00;
+    font-size: 15px;
+    margin: 20px;
+    padding: 5px;
 }
 
 .menu-dd {
@@ -55,7 +54,7 @@
     width: 20%;
     opacity: 0.6;
     position: fixed;
-    top: 90px;
+    top: 40px;
     left: 1px;
     transition: all 0.3s ease;
 }
@@ -79,64 +78,21 @@
     position: fixed;
 }
 
-#search {
-    background-color: #1f1d1d;
-    color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
 
-#search:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
 /* Hasta acá */
 
+/* LOGO */
 .bar__logo {
     margin-left: auto;
     margin-right: auto;
 }
 
 #logo {
-    height: 90px;
+    height: 36px;
     width: 100%;
-    padding: 5px;
+    padding: 1px;
 }
-
-.bar__login-buy {
-    display: flex; 
-}
-
-#login {
-    color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#login:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
-
-#buy {
-    color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#buy:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
-
-/* IMG bienvenida */
-.home__img {
-    padding: 0px;
-}
-
-.home__img__img {
-    width: 100%;
-}
+/* --- */
 
 /* whatsapp fijo */
 .contact {
@@ -173,6 +129,16 @@
 
 
 /* MAIN */
+
+/* IMG bienvenida */
+.home__img {
+    padding: 0px;
+}
+
+.home__img__img {
+    width: 100%;
+}
+
 /* Reseña */
 .review {
     background-color: white;
@@ -473,6 +439,56 @@
 #ig {
     color: white;
     font-size: 35px;
+}
+
+/* BREAKPOINTS */
+/* TABLETS */
+@media (min-width: 481px) {
+    .home__bar {
+        height: 93px;
+        position: fixed;
+        z-index: 2;
+    }
+    .menu-dd {
+        position: fixed;
+        top: 93px;
+        left: 1px;
+    }
+    #menu,
+    #search,
+    #login,
+    #buy {
+        font-size: 20px;
+        margin: 20px;
+        padding: 8px;
+    }
+    #logo {
+        height: 55px;
+        width: 100%;
+        padding: 5px;
+    }
+}
+/* DESKTOP */
+@media (min-width: 769px) {
+    #menu,
+    #search,
+    #login,
+    #buy {
+        font-size: 25px;
+        margin: 22px;
+        padding: 10px;
+    }
+    #menu:hover
+    #search:hover
+    #login:hover
+    #buy:hover {
+        text-shadow: -3px -3px 10px #E79F00;
+    }
+    #logo {
+        height: 90px;
+        width: 100%;
+        padding: 5px;
+    }
 }
 
 

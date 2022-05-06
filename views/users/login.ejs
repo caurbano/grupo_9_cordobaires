@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+
+    <!--HEADER-->
+    <%- include('../partials/header') %>
+
+    <!--MAIN-->
+
+    <main class="background-main-form">
+        <div class="main-form">
+        <p>Mi cuenta</p>
+        <h3>ACCEDER</h3>
+        <form action ="/log_in" method="post" class="log-in">
+            <input type="text" name="email" required="required" placeholder = "Email">
+            <input type="password" name="password" required="required" placeholder = "Contraseña">
+            <div>
+                <input type="checkbox" name="user_password" id="remember" value="Si">
+                <label class="Remember" for="remember">Recuérdame</label>
+            </div>
+            <button type="submit"><p>Iniciar sesión</p></i></button>
+        </form>
+        <a href="#"><p>¿Olvidaste tu contraseña?</p></a>
+        <a href="/register"><p>Crear una cuenta</p></a>
+        </div>
+    </main>
+
+    <!--FOOTER-->
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

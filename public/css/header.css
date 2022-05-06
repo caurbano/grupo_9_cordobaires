@@ -1,0 +1,169 @@
+/* HEADER */
+.home {
+    width: 100%;
+}
+
+/* Barra */
+.home__bar {
+    align-items: center;
+    background-color: #1f1d1d;
+    display: flex;
+    height: 40px;
+    width: 100%;
+}
+
+.bar__menu-search,
+.bar__login-buy {
+    background-color: #1f1d1d;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.bar__menu-search button {
+    background-color: #1f1d1d;
+    border: 0px;
+    cursor: pointer;
+    height: 90px;
+}
+
+#menu,
+#search,
+#login,
+#buy {
+    background-color: #1f1d1d;
+    color: white;
+    font-size: 15px;
+    margin: 20px;
+    padding: 5px;
+}
+
+.menu-dd {
+    background-color: black;
+    border: solid 1px white;
+    display: none;
+    height: 100%;
+    width: 20%;
+    opacity: 0.6;
+    position: fixed;
+    top: 40px;
+    left: 1px;
+    transition: all 0.3s ease;
+}
+
+.menu-dd a {
+    border: solid 1px white;
+    font-size: 20px;
+    color: white;
+    display: block;
+    padding: 30px 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Esta sección está pensada para que funcione con click (JS) */
+#menu:hover .menu-dd {
+    display: block;
+}
+
+.menu-dd:hover {
+    position: fixed;
+}
+
+
+/* Hasta acá */
+
+/* LOGO */
+.bar__logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    height: 36px;
+    width: 100%;
+    padding: 1px;
+}
+/* --- */
+
+/* whatsapp fijo */
+.contact {
+    display: flex;
+    margin-left: 87%;
+}
+
+#wafixed {
+    background-color: black;
+    border-radius: 8%;
+    box-shadow: 3px 2px 5px #666666;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    position: fixed;
+    top: 92%;
+    right: 2%;
+    z-index: 1;
+}
+
+#wafixed:hover {
+    box-shadow: -3px -3px 10px #E79F00;
+}
+
+#wafixed i {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    padding-right: 5%;
+}
+
+/* BREAKPOINTS */
+/* TABLETS */
+@media (min-width: 481px) {
+    .home__bar {
+        height: 93px;
+        position: fixed;
+        z-index: 2;
+    }
+    .menu-dd {
+        position: fixed;
+        top: 93px;
+        left: 1px;
+    }
+    #menu,
+    #search,
+    #login,
+    #buy {
+        font-size: 20px;
+        margin: 20px;
+        padding: 8px;
+    }
+    #logo {
+        height: 55px;
+        width: 100%;
+        padding: 5px;
+    }
+}
+/* DESKTOP */
+@media (min-width: 769px) {
+    #menu,
+    #search,
+    #login,
+    #buy {
+        font-size: 25px;
+        margin: 22px;
+        padding: 10px;
+    }
+    #menu:hover
+    #search:hover
+    #login:hover
+    #buy:hover {
+        text-shadow: -3px -3px 10px #E79F00;
+    }
+    #logo {
+        height: 90px;
+        width: 100%;
+        padding: 5px;
+    }
+}

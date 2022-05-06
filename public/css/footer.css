@@ -1,0 +1,61 @@
+.footer {
+    background-color: #918c8c;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    width: inherit;
+    padding: 20px;
+}
+
+#f-logo {
+    height: 75px;
+    width: 100%;
+    margin: 35px 5px;
+}
+
+.footer p {
+    align-self: flex-end;
+    color: #ffffffe1;
+    font-size: 12px;
+    margin-left: -370px;
+}
+
+.footer h3 {
+    padding: 10px 0px;
+}
+
+.footer li {
+    list-style: none;
+    line-height: 22px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    line-height: 22px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__red {
+    margin-top: 15px;
+}
+
+#wa {
+    color: white;
+    font-size: 35px;
+}
+
+#fb {
+    color: white;
+    font-size: 35px;
+}
+
+#ig {
+    color: white;
+    font-size: 35px;
+}

@@ -1,0 +1,247 @@
+/* IMG bienvenida */
+.home__img {
+    padding: 0px;
+}
+
+.home__img__img {
+    width: 100%;
+}
+
+/* Reseña */
+.review {
+    background-color: white;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.review__txt {
+    flex-direction: column;
+}
+
+.review h1 {
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.review p {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.review__img__img {
+    box-shadow: 3px 3px 6px #666666;
+    height: 200px;
+    width: 400px;
+    margin: 40px;
+    object-fit: cover;
+}
+
+/* Categorías */
+/* La idea es que posteriormente esta parte sea un carrousel */
+.shop {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.shop h3 {
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    font-size: 28px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.shop__top {
+    width: 58%;
+    margin: 0px;
+}
+
+.shop__top h3 {
+    position: relative;
+    top: 90%;
+    left: 5%;
+}
+
+#top {
+    border: solid 1px #918c8c;
+    height: 480px;
+    width: 100%;
+    object-fit: fill;
+}
+
+#top:hover {
+    opacity: 0.8;
+    box-shadow: 3px 3px 6px #666666;
+}
+
+.shop__top:hover h3 {
+    color: #E79F00;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.wall-floor {
+    flex-direction: column;
+    height: 500px;
+    width: 38%;
+    margin: 0px;
+}
+
+.shop__wall {
+    height: 220px;
+    width: 100%;
+    margin: 0px;
+}
+
+.shop__wall h3 {
+    position: relative;
+    top: 90%;
+    left: 5%;
+}
+
+#wall {
+    border: solid 1px #918c8c;
+    height: 210px;
+    width: 100%;
+    margin: 0px;
+}
+
+#wall:hover {
+    opacity: 0.8;
+    box-shadow: 3px 3px 6px #666666;
+}
+
+.shop__wall:hover h3 {
+    color: #E79F00;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.shop__floor {
+    height: 280px;
+    width: 100%;
+    margin: 0px;
+}
+
+.shop__floor h3 {
+    position: relative;
+    top: 90%;
+    left: 5%
+}
+
+#floor {
+    border: solid 1px #918c8c;
+    height: 270px;
+    width: 100%;
+    margin-top: -10px;
+}
+
+#floor:hover {
+    opacity: 0.8;
+    box-shadow: 3px 3px 6px #666666;
+}
+
+.shop__floor:hover h3 {
+    color: #E79F00;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+}
+
+/* información */
+.info {
+    background-color: white;
+    width: inherit;
+    margin: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.info p {
+    text-align: center;
+}
+
+.info__items {
+    text-align: center;
+    width: 30%;
+}
+
+#ship {
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+}
+
+#pay {
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+}
+
+#shop-wa {
+    height: 80px;
+    width: 120px;
+    padding: 20px;
+}
+
+/* Productos destacados */
+.see {
+    background-color: #918c8c1e;
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6% 0%;
+}
+
+.products-h2 {
+    font-size: 30px;
+    position: relative;
+    top: 45px;
+    left: 40px;
+    margin-bottom: 3px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    width: 50%;
+}
+
+.see__dest {
+    background-color: #918c8c1e;
+    border: solid 2px #1f1d1d;
+    box-shadow: 3px 3px 5px #665e5e;
+    height: 315px;
+    width: 220px;
+}
+
+.see__dest a {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dest-fee {
+    color: black;
+    font-size: 13px;
+    padding-top: 5px;
+    text-align: center;
+}
+.dest {
+    border-bottom: solid 1px #1f1d1d;
+    height: 240px;
+    width: 220px;
+    margin-bottom: 3px;
+}
+
+.dest:hover {
+    opacity: 0.9;
+}

@@ -1,55 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/9071629482.js" crossorigin="anonymous"></script> 
-    <title>LUMEN Lights Shop</title>
-</head>
+<!-- HEAD -->
+<%- include('./partials/head') %>
+<!-- LUMEN Lights Shop -->
 <body>
-    <header class="home">
-        <section class="home__bar">
-            <nav class="bar__menu-search">
-                <button type="button"><i class="fa-solid fa-bars" id="menu">
-                    <section class="menu-dd">
-                        <nav>
-                            <a href="#">Inicio</a>
-                            <a href="#">Techo</a>
-                            <a href="#">Pared</a>
-                            <a href="#">Pie</a>
-                            <a href="#">Outlet</a>
-                            <a href="#">Contacto</a>
-                            <a href="#">Nosotros</a>
-                        </nav>
-                    </section>
-                </i></button> 
-                <button type="button"><i class="fa-solid fa-magnifying-glass" id="search"></i></button> 
-            </nav>
-            <div class="bar__logo">
-                <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
-            </div>
-            <nav class="bar__login-buy">
-                <a href="/login"><i class="fa-solid fa-user" id="login"></i></a>
-                <a href="/productCart"><i class="fa-solid fa-cart-shopping" id="buy"></i></a>
-            </nav>
-        </section>
-        
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+    <main>
         <section class="home__img">
             <img src="/img/inicio-img.jpeg" alt="Imágen bienvenida" class="home__img__img">
         </section>
-
-        <section class="contact">
-            <a href="https://web.whatsapp.com/" target="_blank">
-            <button id="wafixed"><i class="fa-brands fa-whatsapp"></i>Contáctanos</button></a>
-        </section>
-    </header>
-    <main>
         <section class="review">
             <article class="review__txt">
                 <h1>LUMEN Lights Shop</h1>
@@ -139,52 +99,7 @@
             </article>            
         </section>
     </main>
-    <footer class="footer">
-        <section>
-            <img src="/img/LUMEN.png" alt="logo" id="f-logo">
-        </section>
-
-        <p>Copyright © 2020-2022 LUMEN Lights Shop</p>
-
-        <section>
-            <nav>
-                <h3>CONTACTO</h3>
-                <ul>
-                    <li>info@lumenshop.com</li>
-                    <li>WA: (+54 9) 11-6030-3456  </li>
-                    <li>Tel. Fijo: (+54) 11-4000-5555</li>
-                    <li>Horarios de atención: Lunes <br> a Sábado de 10 a 19 hs.</li>
-                </ul>
-        </nav> 
-        </section>
-
-        <section>
-             <nav>
-                 <h3>TIENDA</h3>
-                 <ul>
-                    <li><a href="#">Envíos</a></li>
-                    <li><a href="#">¿Cómo comprar?</a></li>
-                    <li><a href="#">Devoluciones</a></li>
-                    <li><a href="#">Reclamos</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                 </ul>
-            </nav> 
-        </section>
-
-        <section>
-            <h3>REDES SOCIALES</h3>
-             <nav class="social">
-                 <article class="footer__red">
-                     <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp" id="wa"></i></a>
-                 </article>
-                 <article class="footer__red">
-                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" id="fb"></i></a>
-                 </article>
-                 <article class="footer__red">
-                     <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" id="ig"></i></a>
-                 </article>
-            </nav> 
-        </section>
-    </footer>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
 </body>
 </html>
