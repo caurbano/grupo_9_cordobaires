@@ -62,10 +62,10 @@
 
 .menu-dd a {
     border: solid 1px white;
-    font-size: 20px;
+    font-size: 12px;
     color: white;
     display: block;
-    padding: 30px 18px;
+    padding: 30% 5%;
     text-align: center;
     text-decoration: none;
 }
@@ -146,68 +146,58 @@
 
 #wafixed {
     background-color: black;
-    border-radius: 8%;
+    border-radius: 8px;
     box-shadow: 3px 2px 5px #666666;
     color: white;
-    cursor: pointer;
-    font-size: medium;
-    font-weight: 400;
-    height: 40px;
-    width: 150px;
+    font-size: small;
+    font-weight: 300;
+    height: 30px;
+    width: 110px;
     position: fixed;
     top: 92%;
     right: 2%;
     z-index: 1;
 }
 
-#wafixed:hover {
-    box-shadow: -3px -3px 10px #E79F00;
-}
-
 #wafixed i {
     color: white;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 12px;
+    padding: 2px;
     padding-right: 5%;
 }
-
 
 /* MAIN */
 /* Reseña */
 .review {
     background-color: white;
     display: flex;
-    height: 300px;
+    height: 180px;
     width: 100%;
     align-items: center;
     justify-content: space-around;
 }
 
-.review__txt {
-    flex-direction: column;
-}
-
 .review h1 {
     text-shadow: 1px 1px white, -2px -1px #E79F00;
-    font-size: 35px;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    margin: 10px 2px;
 }
 
 .review p {
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 10px;
 }
 
 .review__img__img {
     box-shadow: 3px 3px 6px #666666;
-    height: 200px;
-    width: 400px;
-    margin: 40px;
+    height: 100px;
+    width: 200px;
+    margin: 20px;
     object-fit: cover;
 }
-
+/* SEGUIR DESDE ACA CON LOS @MEDIA */
 /* Categorías */
 /* La idea es que posteriormente esta parte sea un carrousel */
 .shop {
@@ -473,6 +463,142 @@
 #ig {
     color: white;
     font-size: 35px;
+}
+
+/* BREAKPOINTS */
+/* TABLETS */
+@media (min-width: 481px) {
+    .home__bar {
+        height: 93px;
+        position: fixed;
+        z-index: 2;
+    }
+    .menu-dd {
+        position: fixed;
+        top: 93px;
+        left: 1px;
+    }
+    .menu-dd a {
+        border: solid 1px white;
+        font-size: 15px;
+        color: white;
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+    #menu,
+    #search,
+    #login,
+    #buy {
+        font-size: 20px;
+        margin: 20px;
+        padding: 8px;
+    }
+    #logo {
+        height: 55px;
+        width: 100%;
+        padding: 5px;
+    }
+    #wafixed {
+    font-size: small;
+    height: 30px;
+    width: 120px;
+    }
+
+    #wafixed i {
+    font-size: 14px;
+    padding: 5px;
+    }
+    .review {
+    height: 250px;
+    }
+
+    .review h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin: 10px 3px;
+    }
+
+    .review p {
+    font-size: 13px;
+    line-height: 10px;
+    }
+
+    .review__img__img {
+    height: 160px;
+    width: 270px;
+    margin: 20px;
+    }
+
+}
+/* DESKTOP */
+@media (min-width: 769px) {
+    .menu-dd a {
+        border: solid 1px white;
+        font-size: 20px;
+        color: white;
+        display: block;
+        padding: 30px 18px;
+        text-align: center;
+        text-decoration: none;
+    }
+    #menu,
+    #search,
+    #login,
+    #buy {
+        font-size: 25px;
+        margin: 22px;
+        padding: 10px;
+    }
+    #menu:hover,
+    #search:hover,
+    #login:hover,
+    #buy:hover {
+        text-shadow: -3px -3px 10px #E79F00;
+    }
+    #logo {
+        height: 90px;
+        width: 100%;
+        padding: 5px;
+    }
+     #wafixed {
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    }
+
+    #wafixed:hover {
+    box-shadow: -3px -3px 10px #E79F00;
+    }
+
+    #wafixed i {
+    font-size: 20px;
+    }
+    .review {
+    height: 290px;
+    }
+
+    .review h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin: 15px 5px;
+    }
+
+    .review p {
+    font-size: 15px;
+    line-height: 20px;
+    }
+
+    .review__img__img {
+    height: 200px;
+    width: 380px;
+    margin: 30px;
+    }
 }
 
 

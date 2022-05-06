@@ -155,9 +155,9 @@
         margin: 22px;
         padding: 10px;
     }
-    #menu:hover
-    #search:hover
-    #login:hover
+    #menu:hover,
+    #search:hover,
+    #login:hover,
     #buy:hover {
         text-shadow: -3px -3px 10px #E79F00;
     }
