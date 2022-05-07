@@ -224,43 +224,35 @@
     width: 100%;
     margin-top: -10px;
 }
-/* SEGUIR DESDE ACA CON LOS @MEDIA */
+
 /* información */
 .info {
     background-color: white;
     width: inherit;
-    margin: 40px 20px;
+    margin: 12px 0px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 10px;
 }
 
 .info p {
+    font-size: 13px;
     text-align: center;
 }
 
 .info__items {
     text-align: center;
-    width: 30%;
 }
 
-#ship {
-    height: 80px;
-    width: 120px;
-    padding: 20px;
-}
-
-#pay {
-    height: 80px;
-    width: 120px;
-    padding: 20px;
-}
-
+#ship,
+#pay,
 #shop-wa {
-    height: 80px;
-    width: 120px;
-    padding: 20px;
+    height: 50px;
+    width: 80px;
+    padding: 15px;
 }
+/* SEGUIR DESDE ACA CON LOS @MEDIA */
 
 /* Productos destacados */
 .see {
@@ -442,21 +434,34 @@
     .wall-floor {
         height: 350px;
     }
-    
     .shop h3 {
         font-size: 20px;
         letter-spacing: 1px;
     }
-
     .shop__wall,
     #wall {
         height: 135px;
     }
-    
     .shop__floor,
     #floor {
         height: 225px;
     }
+    
+    .info {
+    margin: 30px 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 8px;
+    }
+
+    #ship,
+    #pay,
+    #shop-wa {
+    height: 60px;
+    width: 100px;
+    padding: 15px;
+    }
+
 }
 /* DESKTOP */
 @media (min-width: 769px) {
@@ -589,6 +594,22 @@
         cursor: pointer;
         font-size: 30px;
         z-index: 1;
+    }
+    
+    .info {
+        margin: 40px 20px;
+        padding-top: 10px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+    #ship,
+    #pay,
+    #shop-wa {
+        height: 80px;
+        width: 120px;
+        padding: 20px;
     }
 }
 
