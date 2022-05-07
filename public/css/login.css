@@ -1,0 +1,113 @@
+/* MAIN FORM */
+
+.background-main-form{
+    background-color:#918c8c1e;
+    height: 100%;
+    margin-top: 20px;
+}
+.main-form{
+    width: 80%;
+    margin-top: 100px;
+    padding:5%;
+    margin-left: 5%;
+    background-color: white;
+}
+.main-form > p{
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    margin-top: 20%;
+    font-weight: bold;
+    font-size: 35px;
+}
+.main-form > h3{
+    margin-top: 5%;
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+.form-title{
+    align-self: flex-start;
+    margin-left: 10%;
+    font-weight: bold;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    width: 93%;
+}
+.register > input{
+    align-self: center;
+    width: 75%;
+    color: black;
+    background-color: #f8f8ff;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+.register > input:focus{
+    background-color: white;
+    border-color: #E79F00;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+}
+.register > input:hover{
+    background-color: white;
+}
+.register-radio{
+    align-self: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10%;
+}
+
+/* MAIN LOGIN */
+
+.form-links{
+    display: flex;
+    flex-direction: column;
+}
+.form-links > a{
+    align-self: center;
+    text-decoration: none;
+    color: black;
+}
+.form-links > a > p{
+    font-weight: bold;
+    margin: 10px;
+}
+.login-button{
+    background-color: #918c8c;
+    cursor: pointer;
+    width: 25%;
+    padding: 8px 16px;
+    margin: 15px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+.login-button:hover {
+    background-color: black;
+}
+.login-button > p{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 1s ease;
+}
+.login-button > p:hover{
+    font-size: 16px;
+}
+@media (min-width: 761px){
+    .main-form > p{
+        margin: 25px;
+    }
+    .login-button{
+        width: 20%;
+    }
+    .login-button > p{
+        font-size: 15px;
+    }
+}

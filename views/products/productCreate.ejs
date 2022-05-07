@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include('../partials/head') %>
+<body>
+
+    <!--HEADER-->
+
+    <%- include('../partials/header') %>
+
+    <!--MAIN-->
+
+    <main class="background-main-form">
+        <div class="main-form">
+        <p>Crear producto</p>
+        <article>
+            <form action="/create_product" method="post" class="form">
+                <div class="register">
+                    <label class="form-title">Nombre del producto</label>
+                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "Nombre del producto">
+                </div>
+                <div class="register">
+                    <label class="form-title">Descripcion del producto</label>
+                    <input type="text" class="validate" name="description" required="required" placeholder = "Descripcion del producto">
+                </div>
+                <div class="register">
+                    <label class="form-title">Foto del producto</label>
+                    <input type="file" name="Foto" accept=".jpg" multiple>
+                </div>
+                <div class="register">
+                    <label class="form-title">Categoria</label>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Techo" required="required">
+                        <label>Techo</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Pared" required="required">
+                        <label>Pared</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Pie" required="required">
+                        <label>Pie</label>
+                    </div>
+                </div>
+                <div class="register">
+                    <label class="form-title">Tipo de Color</label>
+                    <div class="register-radio">
+                        <input type="radio" name="color" value="Calida" required="required">
+                        <label>Calido</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="color" value="Neutra" required="required">
+                        <label>Neutro</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="color" value="Fria" required="required">
+                        <label>Frio</label>
+                    </div>
+                </div>
+                <div class="register">
+                    <label class="form-title">Precio ($ Pesos)</label>
+                    <input type="number" class="validate" name="price" required="required" placeholder = "Precio">
+                </div>
+                <div class="confirm">
+                    <button type="reset"><p>Borrar</p></i></button>
+                    <button type="submit"><p>Finalizar</p></i></button>
+                </div>
+            </form>
+        </article>
+        </div>
+    </main>
+
+    <!--FOOTER-->
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>
