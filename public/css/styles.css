@@ -16,35 +16,31 @@
     align-items: center;
     background-color: #1f1d1d;
     display: flex;
-    height: 93px;
+    height: 40px;
     width: 100%;
-    position: fixed;
-    z-index: 2;
 }
 
-.bar__menu-search {
+.bar__menu-search,
+.bar__login-buy {
     background-color: #1f1d1d;
     display: flex;
-    justify-content: space-between;
 }
 
 .bar__menu-search button {
     background-color: #1f1d1d;
     border: 0px;
     cursor: pointer;
-    height: 90px;
 }
 
-#menu {
+#menu,
+#search,
+#login,
+#buy {
     background-color: #1f1d1d;
     color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#menu:hover {
-    text-shadow: -3px -3px 10px #E79F00;
+    font-size: 15px;
+    margin: 20px;
+    padding: 5px;
 }
 
 .menu-dd {
@@ -54,7 +50,7 @@
     width: 25%;
     opacity: 0.6;
     position: fixed;
-    top: 90px;
+    top: 40px;
     left: 1px;
     transition: all 0.3s ease;
 }
@@ -77,18 +73,6 @@
 .menu-dd:hover {
     position: fixed;
 }
-
-#search {
-    background-color: #1f1d1d;
-    color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#search:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
 /* Hasta acá */
 
 .bar__logo {
@@ -97,44 +81,9 @@
 }
 
 #logo {
-    height: 90px;
+    height: 36px;
     width: 100%;
     padding: 5px;
-}
-
-.bar__login-buy {
-    display: flex; 
-}
-
-#login {
-    color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#login:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
-
-#buy {
-    color: white;
-    font-size: 25px;
-    margin: 22px;
-    padding: 10px;
-}
-
-#buy:hover {
-    text-shadow: -3px -3px 10px #E79F00;
-}
-
-/* IMG bienvenida */
-.home__img {
-    padding: 0px;
-}
-
-.home__img__img {
-    width: 100%;
 }
 
 /* whatsapp fijo */
@@ -166,52 +115,56 @@
 }
 
 /* MAIN */
+/* IMG bienvenida */
+.home__img {
+    padding: 0px;
+}
+
+.home__img__img {
+    width: 100%;
+}
 /* Reseña */
 .review {
+    align-items: center;
     background-color: white;
     display: flex;
-    height: 180px;
+    justify-content: center;
     width: 100%;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .review h1 {
-    text-shadow: 1px 1px white, -2px -1px #E79F00;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     line-height: 18px;
-    margin: 10px 2px;
+    margin: 8px 1px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
 }
 
 .review p {
     font-size: 12px;
     line-height: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .review__img__img {
-    box-shadow: 3px 3px 6px #666666;
-    height: 100px;
-    width: 200px;
-    margin: 20px;
-    object-fit: cover;
+    display: none;
 }
-/* SEGUIR DESDE ACA CON LOS @MEDIA */
+
 /* Categorías */
 /* La idea es que posteriormente esta parte sea un carrousel */
 .shop {
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: 200px;
     margin: 0px;
     padding: 0px;
 }
 
 .shop h3 {
     text-shadow: 1px 1px white, -2px -1px #E79F00;
-    font-size: 28px;
-    letter-spacing: 2px;
-    line-height: 40px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
 .shop__top {
@@ -219,7 +172,8 @@
     margin: 0px;
 }
 
-.shop__top h3 {
+.shop__top h3,
+.shop__floor h3 {
     position: relative;
     top: 90%;
     left: 5%;
@@ -227,92 +181,50 @@
 
 #top {
     border: solid 1px #918c8c;
-    height: 480px;
+    height: 200px;
     width: 100%;
     object-fit: fill;
 }
 
-#top:hover {
-    opacity: 0.8;
-    box-shadow: 3px 3px 6px #666666;
-}
-
-.shop__top:hover h3 {
-    color: #E79F00;
-    cursor: pointer;
-    font-size: 30px;
-    z-index: 1;
-}
-
 .wall-floor {
     flex-direction: column;
-    height: 500px;
+    height: 200px;
     width: 38%;
     margin: 0px;
 }
 
 .shop__wall {
-    height: 220px;
+    height: 90px;
     width: 100%;
     margin: 0px;
 }
 
 .shop__wall h3 {
     position: relative;
-    top: 90%;
+    top: 80%;
     left: 5%;
 }
 
 #wall {
     border: solid 1px #918c8c;
-    height: 210px;
+    height: 90px;
     width: 100%;
     margin: 0px;
-}
-
-#wall:hover {
-    opacity: 0.8;
-    box-shadow: 3px 3px 6px #666666;
-}
-
-.shop__wall:hover h3 {
-    color: #E79F00;
-    cursor: pointer;
-    font-size: 30px;
-    z-index: 1;
 }
 
 .shop__floor {
-    height: 280px;
+    height: 120px;
     width: 100%;
     margin: 0px;
-}
-
-.shop__floor h3 {
-    position: relative;
-    top: 90%;
-    left: 5%
 }
 
 #floor {
     border: solid 1px #918c8c;
-    height: 270px;
+    height: 120px;
     width: 100%;
     margin-top: -10px;
 }
-
-#floor:hover {
-    opacity: 0.8;
-    box-shadow: 3px 3px 6px #666666;
-}
-
-.shop__floor:hover h3 {
-    color: #E79F00;
-    cursor: pointer;
-    font-size: 30px;
-    z-index: 1;
-}
-
+/* SEGUIR DESDE ACA CON LOS @MEDIA */
 /* información */
 .info {
     background-color: white;
@@ -495,18 +407,15 @@
         width: 100%;
         padding: 5px;
     }
+
     #wafixed {
     font-size: small;
     height: 30px;
     width: 120px;
     }
-
     #wafixed i {
     font-size: 14px;
     padding: 5px;
-    }
-    .review {
-    height: 250px;
     }
 
     .review h1 {
@@ -515,18 +424,39 @@
     line-height: 20px;
     margin: 10px 3px;
     }
-
     .review p {
     font-size: 13px;
     line-height: 10px;
     }
-
     .review__img__img {
+    box-shadow: 3px 3px 6px #666666;
+    display: block;
     height: 160px;
     width: 270px;
     margin: 20px;
+    object-fit: cover;
     }
 
+    .shop,
+    #top,
+    .wall-floor {
+        height: 350px;
+    }
+    
+    .shop h3 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .shop__wall,
+    #wall {
+        height: 135px;
+    }
+    
+    .shop__floor,
+    #floor {
+        height: 225px;
+    }
 }
 /* DESKTOP */
 @media (min-width: 769px) {
@@ -554,6 +484,7 @@
         width: 100%;
         padding: 5px;
     }
+
      #wafixed {
     cursor: pointer;
     font-size: medium;
@@ -561,34 +492,103 @@
     height: 40px;
     width: 150px;
     }
-
     #wafixed:hover {
     box-shadow: -3px -3px 10px #E79F00;
     }
-
     #wafixed i {
     font-size: 20px;
     }
+
     .review {
     height: 290px;
     }
-
     .review h1 {
     font-size: 35px;
     letter-spacing: 2px;
     line-height: 40px;
     margin: 15px 5px;
     }
-
     .review p {
     font-size: 15px;
     line-height: 20px;
     }
-
     .review__img__img {
     height: 200px;
     width: 380px;
     margin: 30px;
+    }
+
+    .shop {
+        height: 500px;
+    }
+    
+    .shop h3 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    #top {
+        height: 480px;
+    }
+    
+    #top:hover {
+        opacity: 0.8;
+        box-shadow: 3px 3px 6px #666666;
+    }
+    
+    .shop__top:hover h3 {
+        color: #E79F00;
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 1;
+    }
+    
+    .wall-floor {
+        height: 500px;
+    }
+    
+    .shop__wall {
+        height: 220px;
+    }
+    
+    #wall {
+        height: 210px;
+    }
+    
+    #wall:hover {
+        opacity: 0.8;
+        box-shadow: 3px 3px 6px #666666;
+    }
+    
+    .shop__wall:hover h3 {
+        color: #E79F00;
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 1;
+    }
+    
+    .shop__floor {
+        height: 280px;
+    }
+    
+    #floor {
+        height: 270px;
+    }
+    .shop__floor h3 {
+        position: relative;
+        top: 85%;
+        left: 5%;
+    }
+    
+    #floor:hover {
+        opacity: 0.8;
+        box-shadow: 3px 3px 6px #666666;
+    }
+    
+    .shop__floor:hover h3 {
+        color: #E79F00;
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 1;
     }
 }
 
