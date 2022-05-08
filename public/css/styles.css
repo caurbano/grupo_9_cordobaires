@@ -252,7 +252,6 @@
     width: 80px;
     padding: 15px;
 }
-/* SEGUIR DESDE ACA CON LOS @MEDIA */
 
 /* Productos destacados */
 .see {
@@ -263,46 +262,40 @@
     padding: 6% 0%;
 }
 
-.products-h2 {
-    font-size: 30px;
+.products h2 {
+    font-size: 20px;
     position: relative;
-    top: 45px;
-    left: 40px;
+    top: 25px;
+    left: 10px;
     margin-bottom: 3px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
-    width: 50%;
 }
 
 .see__dest {
     background-color: #918c8c1e;
     border: solid 2px #1f1d1d;
-    box-shadow: 3px 3px 5px #665e5e;
-    height: 315px;
-    width: 220px;
+    height: 90px;
+    width: 15%;
 }
-
+.dest {
+    border-bottom: solid 1px #1f1d1d;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 2px;
+}
 .see__dest a {
     color: black;
     font-size: 14px;
     text-align: center;
     text-decoration: none;
 }
+.see__dest p {
+    display: none;
+}
 
 .dest-fee {
-    color: black;
-    font-size: 13px;
-    padding-top: 5px;
-    text-align: center;
-}
-.dest {
-    border-bottom: solid 1px #1f1d1d;
-    height: 240px;
-    width: 220px;
-    margin-bottom: 3px;
-}
+    display: none;
 
-.dest:hover {
-    opacity: 0.9;
 }
 
 /* FOOTER */
@@ -310,63 +303,56 @@
     background-color: #918c8c;
     color: white;
     display: flex;
-    justify-content: space-around;
-    height: 180px;
     width: inherit;
-    padding: 20px;
+    padding: 10px;
+    flex-direction: column;
+}
+.footer section {
+    text-align: center;
 }
 
 #f-logo {
-    height: 75px;
-    width: 100%;
-    margin: 35px 5px;
+    display: none;
 }
 
 .footer p {
-    align-self: flex-end;
     color: #ffffffe1;
-    font-size: 12px;
-    margin-left: -370px;
+    font-size: 11px;
+    padding-top: 10%;
 }
 
 .footer h3 {
+    font-size: 14px;
     padding: 10px 0px;
 }
 
 .footer li {
+    font-size: 11px;
     list-style: none;
-    line-height: 22px;
 }
 
 .footer a {
     color: white;
     text-decoration: none;
-    line-height: 22px;
 }
 
 .social {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .footer__red {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
-#wa {
-    color: white;
-    font-size: 35px;
-}
-
-#fb {
-    color: white;
-    font-size: 35px;
-}
-
+#wa,
+#fb,
 #ig {
     color: white;
-    font-size: 35px;
+    font-size: 25px;
+    padding: 0px 10px;
 }
+
 
 /* BREAKPOINTS */
 /* TABLETS */
@@ -453,7 +439,6 @@
     justify-content: space-around;
     padding-top: 8px;
     }
-
     #ship,
     #pay,
     #shop-wa {
@@ -461,6 +446,44 @@
     width: 100px;
     padding: 15px;
     }
+    
+    .products h2 {
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    }
+    .see__dest {
+    border: solid 2px #1f1d1d;
+    box-shadow: 3px 3px 5px #665e5e;
+    height: 120px;
+    width: 15%;
+    }
+    .dest {
+    height: 120px;
+    width: 100%;
+    margin-bottom: 3px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+    .footer h3 {
+        font-size: 15px;
+    }
+    .footer li {
+        font-size: 12px;
+    }
+    .footer a {
+        font-size: 12px;
+    }
+    #wa,
+    #fb,
+    #ig {
+        font-size: 25px;
+        padding: 0px 12px;
+    }
+
 
 }
 /* DESKTOP */
@@ -526,7 +549,6 @@
     .shop {
         height: 500px;
     }
-    
     .shop h3 {
         font-size: 28px;
         letter-spacing: 2px;
@@ -539,42 +561,34 @@
         opacity: 0.8;
         box-shadow: 3px 3px 6px #666666;
     }
-    
     .shop__top:hover h3 {
         color: #E79F00;
         cursor: pointer;
         font-size: 30px;
         z-index: 1;
     }
-    
     .wall-floor {
         height: 500px;
     }
-    
     .shop__wall {
         height: 220px;
     }
-    
     #wall {
         height: 210px;
     }
-    
     #wall:hover {
         opacity: 0.8;
         box-shadow: 3px 3px 6px #666666;
     }
-    
     .shop__wall:hover h3 {
         color: #E79F00;
         cursor: pointer;
         font-size: 30px;
         z-index: 1;
     }
-    
     .shop__floor {
         height: 280px;
     }
-    
     #floor {
         height: 270px;
     }
@@ -583,12 +597,10 @@
         top: 85%;
         left: 5%;
     }
-    
     #floor:hover {
         opacity: 0.8;
         box-shadow: 3px 3px 6px #666666;
     }
-    
     .shop__floor:hover h3 {
         color: #E79F00;
         cursor: pointer;
@@ -600,9 +612,8 @@
         margin: 40px 20px;
         padding-top: 10px;
     }
-
     .info p {
-        font-size: 14px;
+        font-size: 15px;
     }
     #ship,
     #pay,
@@ -610,6 +621,71 @@
         height: 80px;
         width: 120px;
         padding: 20px;
+    }
+
+    .products h2 {
+        font-size: 30px;
+        position: relative;
+        top: 45px;
+        left: 40px;
+        width: 50%;
+    }
+    .see__dest {
+        height: 300px;
+        width: 15%;
+    }
+    .dest {
+        height: 190px;
+        width: 100%;
+    }
+    .dest:hover {
+        opacity: 0.9;
+    }
+    .see__dest p {
+        display: block;
+        font-size: 13px;
+    }
+    .dest-fee {
+        color: black;
+        display: block;
+        padding-top: 6%;
+        text-align: center;
+    }
+
+    .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 180px;
+    padding: 20px;
+    }
+    #f-logo {
+    display: block;
+    height: 75px;
+    width: 100%;
+    margin: 35px 5px;
+    }
+    .footer p {
+    align-self: flex-end;
+    font-size: 12px;
+    margin-left: -370px;
+    }
+    .footer h3 {
+    padding: 10px 0px;
+    }
+    .footer li {
+    line-height: 22px;
+    }
+    .footer a {
+    line-height: 22px;
+    }
+    .social {
+    display: flex;
+    justify-content: space-around;
+    }
+    #wa,
+    #fb,
+    #ig {
+    font-size: 25px;
     }
 }
 
