@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+>>>>>>> 33148810221b481c8a7c6967758136d6a904223e
 .preview {
     background-color: white;
     display: flex;
@@ -128,9 +138,4 @@
         object-fit: cover;
     }
 }
-* {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 18px;
-    margin: 0px;
-    padding: 0px;
-}
+
