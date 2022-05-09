@@ -13,7 +13,7 @@
     }
     .main{
         margin: 1% auto;
-        width: 70%;
+        width: 60%;
         padding: 40% auto;
         background-color: rgb(126,126,126);
         opacity: 0.8;
@@ -30,7 +30,7 @@
         border: solid black 5px;
         display: flex;
         margin: 1% auto;
-        width: 100%;
+        width: 90%;
     }
     .producto{
         width: 20%;
