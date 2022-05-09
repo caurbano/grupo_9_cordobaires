@@ -128,7 +128,10 @@ const MainController = {
     },
 
     edit: (req, res) => {
-        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Editar producto'});
+        const product = products.find(product => {
+            return product.id === req.params.product
+        });
+        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Editar producto', product: product});
     }
 }
 

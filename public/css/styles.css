@@ -971,14 +971,16 @@
     transition: all 0.5s ease;
 }
 
-.register>input:focus {
+.register > input:focus {
     background-color: white;
     border-color: #E79F00;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
     outline: 0 none;
 }
 
-.register>input:hover {
+/* MAIN EDIT/CREATE */
+
+.register > input:hover {
     background-color: white;
 }
 .register-radio{
@@ -986,6 +988,27 @@
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10%;
+}
+.register > textarea{
+    align-self: center;
+    width: 75%;
+    color: black;
+    background-color: #f8f8ff;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+.register > textarea:focus {
+    background-color: white;
+    border-color: #E79F00;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
+    outline: 0 none;
+}
+
+.register > textarea:hover {
+    background-color: white;
 }
 
         /* MAIN REGISTER */
@@ -1000,7 +1023,7 @@
     justify-content: space-between;
 }
 
-.confirm>button {
+.confirm > button {
     width: 60%;
     background-color: #918c8c;
     cursor: pointer;
@@ -1015,19 +1038,19 @@
     display: none;
 }
 
-.confirm>button>p {
+.confirm > button > p {
     color: white;
     font-size: 12px;
     font-weight: bold;
     transition: all 1s ease;
 }
 
-.confirm>button:hover {
+.confirm > button:hover {
     background-color: black;
     font-size: 0.9em;
 }
 
-.confirm>button>p:hover {
+.confirm > button > p:hover {
     font-size: 16px;
 }
 
@@ -1086,12 +1109,12 @@
         flex-direction: row;
     }
 
-    .confirm>button {
-        width: 20%;
+    .confirm > button {
+        width: 15%;
         margin: 15px 0px;
     }
 
-    .confirm>button>p {
+    .confirm > button >p {
         font-size: 13px;
     }
     .login-button{

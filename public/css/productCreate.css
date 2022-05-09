@@ -9,38 +9,29 @@
 
 .background-main-form{
     background-color:#918c8c1e;
-    height: 100%;
-    margin-top: 20px;
 }
-.main-form{
+
+.main-form {
     width: 80%;
     margin-top: 100px;
     padding:5%;
+    margin-bottom: 20px;
     margin-left: 5%;
     background-color: white;
 }
-.main-form > p{
+
+.main-form > p {
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin-top: 20%;
     font-weight: bold;
     font-size: 35px;
 }
-.main-form > h3{
+
+.main-form > h3 {
     margin-top: 5%;
     text-align: center;
 }
-.main-form > a{
-    text-decoration: none;
-    color: black;
-}
-.main-form > a > p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-    margin: 10px;
-}
-form {
+.form {
     text-align: center;
 }
 .form-title{
@@ -65,20 +56,41 @@ form {
     border-radius: 4px;
     transition: all 0.5s ease;
 }
-.register > input:focus{
+
+.register > input:focus {
     background-color: white;
     border-color: #E79F00;
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255,144,0,0.6);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
     outline: 0 none;
 }
-.register > input:hover{
+
+/* MAIN EDIT/CREATE */
+
+.register > input:hover {
     background-color: white;
 }
-
-    /* MAIN REGISTER */
-
-.validate:valid{
-    border-color: rgb(0, 218, 0);
+.register-radio{
+    align-self: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10%;
+}
+.register > textarea{
+    align-self: center;
+    width: 75%;
+    color: black;
+    background-color: #f8f8ff;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+.register > textarea:focus {
+    background-color: white;
+    border-color: #E79F00;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
+    outline: 0 none;
 }
 .confirm{
     display: flex;
@@ -97,9 +109,6 @@ form {
     border-radius: 4px;
     transition: all 1s ease;
 }
-.g-recaptcha{
-    display: none;
-}
 .confirm > button > p{
     color: white;
     font-size: 12px;
@@ -113,12 +122,13 @@ form {
 .confirm > button > p:hover{
     font-size: 16px;
 }
+
+.register > textarea:hover {
+    background-color: white;
+}
 @media (min-width: 761px){
     .main-form > p{
         margin: 25px;
-    }
-    .g-recaptcha{
-        display: block;
     }
     .confirm{
         flex-direction: row;
