@@ -726,14 +726,6 @@
     display: none;
 }
 
-.preview h1 {
-    text-shadow: 1px 1px white, -2px -1px #E79F00;
-    font-size: 35px;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
 .preview p {
     font-size: 20px;
     line-height: 22px;
@@ -753,10 +745,13 @@
 .agregarcarrito {
     cursor: pointer;
 }
-
+.Desc-titulo{
+    margin-left: 15%;
+    margin-bottom: 1%;
+}
 .Desc-candelabro {
-    margin-left: 10%;
-    margin-bottom: 60px;
+    margin-left: 15%;
+    margin-bottom:  10%; ;
     margin-right: 10%;
 }
 
@@ -1150,7 +1145,7 @@
 
     .preview__img__img {
         box-shadow: 3px 3px 6px #666666;
-        height: 250px;
+        height: 400px;
         width: 500px;
         margin: 40px;
         object-fit: cover;
