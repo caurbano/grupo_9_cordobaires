@@ -1,61 +1,123 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
 .footer {
     background-color: #918c8c;
     color: white;
     display: flex;
-    justify-content: space-around;
-    height: 180px;
     width: inherit;
-    padding: 20px;
+    padding: 10px;
+    flex-direction: column;
+}
+.footer section {
+    text-align: center;
 }
 
 #f-logo {
-    height: 75px;
-    width: 100%;
-    margin: 35px 5px;
+    display: none;
 }
 
 .footer p {
-    align-self: flex-end;
     color: #ffffffe1;
-    font-size: 12px;
-    margin-left: -370px;
+    font-size: 11px;
+    padding-top: 10%;
 }
 
 .footer h3 {
+    font-size: 14px;
     padding: 10px 0px;
 }
 
 .footer li {
+    font-size: 11px;
     list-style: none;
-    line-height: 22px;
 }
 
 .footer a {
     color: white;
     text-decoration: none;
-    line-height: 22px;
 }
 
 .social {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .footer__red {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
-#wa {
-    color: white;
-    font-size: 35px;
-}
-
-#fb {
-    color: white;
-    font-size: 35px;
-}
-
+#wa,
+#fb,
 #ig {
     color: white;
-    font-size: 35px;
+    font-size: 25px;
+    padding: 0px 10px;
 }
+
+/* BREAKPOINTS */
+/* TABLETS */
+@media (min-width: 481px) {
+    .footer p {
+        font-size: 12px;
+    }
+    .footer h3 {
+        font-size: 15px;
+    }
+    .footer li {
+        font-size: 12px;
+    }
+    .footer a {
+        font-size: 12px;
+    }
+    #wa,
+    #fb,
+    #ig {
+        font-size: 25px;
+        padding: 0px 12px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+    
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 180px;
+        padding: 20px;
+        }
+        #f-logo {
+        display: block;
+        height: 75px;
+        width: 100%;
+        margin: 35px 5px;
+        }
+        .footer p {
+        align-self: flex-end;
+        font-size: 12px;
+        margin-left: -370px;
+        }
+        .footer h3 {
+        padding: 10px 0px;
+        }
+        .footer li {
+        line-height: 22px;
+        }
+        .footer a {
+        line-height: 22px;
+        }
+        .social {
+        display: flex;
+        justify-content: space-around;
+        }
+        #wa,
+        #fb,
+        #ig {
+        font-size: 25px;
+        }
+    }

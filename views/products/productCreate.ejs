@@ -20,11 +20,11 @@
                 </div>
                 <div class="register">
                     <label class="form-title">Descripcion del producto</label>
-                    <input type="text" class="validate" name="description" required="required" placeholder = "Descripcion del producto">
+                    <textarea name="description" rows="4" cols="50" placeholder = "Descripcion del producto"></textarea>
                 </div>
                 <div class="register">
                     <label class="form-title">Foto del producto</label>
-                    <input type="file" name="Foto" accept=".jpg" multiple>
+                    <input type="file" name="Foto" accept=".jpg" multiple >
                 </div>
                 <div class="register">
                     <label class="form-title">Categoria</label>
@@ -42,22 +42,11 @@
                     </div>
                 </div>
                 <div class="register">
-                    <label class="form-title">Tipo de Color</label>
-                    <div class="register-radio">
-                        <input type="radio" name="color" value="Calida" required="required">
-                        <label>Calido</label>
-                    </div>
-                    <div class="register-radio">
-                        <input type="radio" name="color" value="Neutra" required="required">
-                        <label>Neutro</label>
-                    </div>
-                    <div class="register-radio">
-                        <input type="radio" name="color" value="Fria" required="required">
-                        <label>Frio</label>
-                    </div>
+                    <label class="form-title">Color</label>
+                    <input type="text" class="validate" name="color" required="required" placeholder = "Color">
                 </div>
                 <div class="register">
-                    <label class="form-title">Precio ($ Pesos)</label>
+                    <label class="form-title">Precio</label>
                     <input type="number" class="validate" name="price" required="required" placeholder = "Precio">
                 </div>
                 <div class="confirm">

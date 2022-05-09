@@ -1,84 +1,74 @@
 const products = [
     {
         'id': 'prod1',
-        'nombre': 'Lámpara de pie SILVER',
-        'precio': '$13.500',
+        'nombre': 'Lámpara SILVER',
+        'precio': '13500',
         'detalle': 'Lámpara de pie. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro',
-        // En detalle, haría un objeto más, CREO. onda: 
-        // detalle: {
-            // 'tipo': 'Lámpara de pie',
-        //     'color': 'Plateado',
-        //     'partes': 'Base y brazo metálico',
-        //     'cable': 'Cable alimentación 1,5m negro',
-        //     'medidasGenerales': 'Alto 210cm x base 55cm de diámetro',
-        //     'pantalla': 'Alto 24 cm x 38cm de diámetro'
-        // }
         'maxCuotas': '6'
     },
     {
         'id': 'prod2',
-        'nombre': 'Lámpara de techo set GRECIA',
-        'precio': '$47.550',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara GRECIA',
+        'precio': '47550',
+        'detalle': 'Lámpara de techo. Color: blanco. Set x 3. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro',
         'maxCuotas': '6'
     },
     {
         'id': 'prod3',
-        'nombre': 'Aplique de pared ECLIPSE',
-        'precio': '$24.000',
-        'detalle': 'Lámpara de pared',
+        'nombre': 'Aplique ECLIPSE',
+        'precio': '24000',
+        'detalle': 'Lámpara de pared. Color: espejado. Cable alimentación interno. Medidas generales: Alto 55cm x 55cm',
         'maxCuotas': '6'
     },
     {
         'id': 'prod4',
-        'nombre': 'Lámpara de techo STRIPES',
-        'precio': '$81.000',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara STRIPES',
+        'precio': '81000',
+        'detalle': 'Lámpara de techo. Color: negro. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm',
         'maxCuotas': '6'
     },
     {
         'id': 'prod5',
-        'nombre': 'Lámpara de techo MINIMAL',
-        'precio': '$2.700',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara MINIMAL',
+        'precio': '2700',
+        'detalle': 'Lámpara de techo. Color: cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado1',
-        'nombre': 'Lámpara de techo BINOMIO',
-        'precio': '$8.400',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara BINOMIO',
+        'precio': '8400',
+        'detalle': 'Lámpara de techo. Color: negro. Base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado2',
-        'nombre': 'Lámpara de techo ERIZO',
-        'precio': '$10.500',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara ERIZO',
+        'precio': '10500',
+        'detalle': 'Lámpara de techo. Color: plateado. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado3',
-        'nombre': 'Lámpara de techo MEMBRANA',
-        'precio': '$6.000',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara MEMBRANA',
+        'precio': '6000',
+        'detalle': 'Lámpara de techo. Color: beige. Pantalla de mimbre. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado4',
-        'nombre': 'Lámpara de techo GRUA',
-        'precio': '$15.000',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara GRUA',
+        'precio': '15000',
+        'detalle': 'Lámpara de techo. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado5',
-        'nombre': 'Lámpara de techo TRIVENTO',
-        'precio': '$8.400',
-        'detalle': 'Lámpara de techo',
+        'nombre': 'Lámpara TRIVENTO',
+        'precio': '8400',
+        'detalle': 'Lámpara de techo. Color: bronce. Pantalla de hierro. Cable alimentación 1,5m negro. Medida pantalla: Alto 35cm x 40cm de diámetro',
         'maxCuotas': '6'
-    },
-    // COMPLETAR: A C/U AGREGARLE EL DETALLE.
+    }
 ]
 
 // const views = [
@@ -112,17 +102,15 @@ const MainController = {
         // const view = views.find(view => {
         //     return view.id === 'home';
         // })
-        res.render('home', {id: 'home', title: 'LUMEN Lights Shop'});
+        res.render('home', {id: 'home', title: 'LUMEN Lights Shop', products: products});
     },
     cart: (req, res) => {
         res.render('./products/productCart', {product: products, id: 'productCart', title: 'LUMEN - Carrito de compras'});
         
     },
     detail: (req, res) => {
-        // const product = products.find(product => {
-        //     return product.id === req.params.product;
-        // })
-        res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos'});
+        const product = products.find(elemento => { return elemento.id === req.params.product; })
+        res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos', product:product, products:products});
     },
 
     login: (req, res) => {
@@ -138,7 +126,10 @@ const MainController = {
     },
 
     edit: (req, res) => {
-        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Editar producto'});
+        const product = products.find(product => {
+            return product.id === req.params.product
+        });
+        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Editar producto', product: product});
     }
 }
 

@@ -9,8 +9,57 @@
 
     <!--MAIN-->
 
-    <main>
-        
+    <main class="background-main-form">
+        <div class="main-form">
+        <p>Crear producto</p>
+        <article>
+            <form action="/create_product" method="post" class="form">
+                <div class="register">
+                    <label class="form-title">Nombre del producto</label>
+                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "<%= product.nombre %>">
+                </div>
+                <div class="register">
+                    <label class="form-title">Descripcion del producto</label>
+                    <textarea name="description" rows="4" cols="50" placeholder = "<%= product.detalle %>"></textarea>
+                </div>
+                <div class="register">
+                    <label class="form-title">Foto del producto</label>
+                    <input type="file" name="Foto" accept=".jpg" multiple>
+                </div>
+                <div class="register">
+                    <label class="form-title">Categoria</label>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Techo" required="required">
+                        <label>Techo</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Pared" required="required">
+                        <label>Pared</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Pie" required="required">
+                        <label>Pie</label>
+                    </div>
+                </div>
+                <div class="register">
+                    <label class="form-title">Color</label>
+                    <input type="text" class="validate" name="color" required="required" placeholder = "Color">
+                </div>
+                <div class="register">
+                    <label class="form-title">Precio</label>
+                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.precio %>">
+                </div>
+                <div class="register">
+                    <label class="form-title">Cuotas maxima</label>
+                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.maxCuotas %>">
+                </div>
+                <div class="confirm">
+                    <button type="submit"><p>Atras</p></i></button>
+                    <button type="submit"><p>Editar</p></i></button>
+                </div>
+            </form>
+        </article>
+        </div>
     </main>
 
     <!--FOOTER-->
