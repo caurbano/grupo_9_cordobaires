@@ -4,15 +4,6 @@ const products = [
         'nombre': 'Lámpara SILVER',
         'precio': '13500',
         'detalle': 'Lámpara de pie. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro',
-        // En detalle, haría un objeto más, CREO. onda: 
-        // detalle: {
-            // 'tipo': 'Lámpara de pie',
-        //     'color': 'Plateado',
-        //     'partes': 'Base y brazo metálico',
-        //     'cable': 'Cable alimentación 1,5m negro',
-        //     'medidasGenerales': 'Alto 210cm x base 55cm de diámetro',
-        //     'pantalla': 'Alto 24 cm x 38cm de diámetro'
-        // }
         'maxCuotas': '6'
     },
     {
@@ -46,35 +37,35 @@ const products = [
     {
         'id': 'relacionado1',
         'nombre': 'Lámpara BINOMIO',
-        'precio': '8.400',
+        'precio': '8400',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado2',
         'nombre': 'Lámpara ERIZO',
-        'precio': '10.500',
+        'precio': '10500',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado3',
         'nombre': 'Lámpara MEMBRANA',
-        'precio': '6.000',
+        'precio': '6000',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado4',
         'nombre': 'Lámpara GRUA',
-        'precio': '15.000',
+        'precio': '15000',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado5',
         'nombre': 'Lámpara TRIVENTO',
-        'precio': '8.400',
+        'precio': '8400',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
