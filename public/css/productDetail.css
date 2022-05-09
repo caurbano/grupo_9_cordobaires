@@ -61,14 +61,12 @@
     margin-bottom:  10%; ;
     margin-right: 10%;
 }
-
-.products-h2 {
-    font-size: 30px;
-    position: relative;
-    top: 45px;
-    left: 40px;
-    text-shadow: 1px 1px white, -2px -1px #E79F00;
-    width: 50%;
+.see {
+    background-color: #918c8c1e;
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6% 0%;
 }
 
 .preciodetalle {
@@ -81,7 +79,65 @@
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin: 20px 15px;
 }
+.products-h2 {
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    margin-bottom: 3px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+}
 
+.see__dest {
+    background-color: #918c8c1e;
+    border: solid 2px #1f1d1d;
+    height: 90px;
+    width: 15%;
+}
+.dest {
+    border-bottom: solid 1px #1f1d1d;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.see__dest a {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+.see__dest p {
+    display: none;
+}
+
+.dest-fee {
+    display: none;
+
+}
+
+/* BREAKPOINTS */
+
+/* TABLETS */
+@media (min-width: 481px) {
+    .products-h2 {
+        font-size: 20px;
+        position: relative;
+        top: 25px;
+        left: 20px;
+    }
+    .see__dest {
+        border: solid 2px #1f1d1d;
+        box-shadow: 3px 3px 5px #665e5e;
+        height: 120px;
+        width: 15%;
+    }
+    .dest {
+        height: 120px;
+        width: 100%;
+        margin-bottom: 3px;
+    }
+}
+/* DESKTOP */
 @media (min-width: 761px) {
 
     /*DetalleDeProduct*/
@@ -133,6 +189,34 @@
         width: 500px;
         margin: 40px;
         object-fit: cover;
+    }
+    .products-h2 {
+        font-size: 30px;
+        position: relative;
+        top: 45px;
+        left: 40px;
+        width: 50%;
+    }
+    .see__dest {
+        height: 300px;
+        width: 15%;
+    }
+    .dest {
+        height: 190px;
+        width: 100%;
+    }
+    .dest:hover {
+        opacity: 0.9;
+    }
+    .see__dest p {
+        display: block;
+        font-size: 13px;
+    }
+    .dest-fee {
+        color: black;
+        display: block;
+        padding-top: 6%;
+        text-align: center;
     }
 }
 
