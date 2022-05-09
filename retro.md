@@ -5,5 +5,23 @@ Consideramos que algo a mejorar es agilizar los tiempos, tanto personales como e
 Por último, será un reto también mejorar la comunicación como equipo.
 
 ## Retrospectiva luego del SPRINT 2  
+### Dinámica “Estrella de mar”  
 En este punto, llegamos a conclusiones tanto grupales, como individuales… Algunas situaciones que se presentaron durante el Sprint 2 fueron algo de falta de comunicación, resultando en un incorrecto manejo de los tiempos por parte de algunas actividades, también algunas diferencias en la forma de organización. Asimismo, consideramos que logramos atravesar ciertas diferencias y cumplimos con el objetivo. Pudimos mejorar la colaboración entre los integrantes, además de complementar mejor algunas experiencias o conocimientos previos.  
 Aun así, hay cosas que queremos mejorar, no sólo la comunicación, si no también aspectos como la prolijidad en la ejecución (el código, lo visual), tener más atención a ciertos detalles que suman su aporte al resultado final. Por último, optimizar los tiempos o bien, proponer otras instancias apartes para cuando algún integrante se encuentre con algún conflicto que le impida avanzar con su tarea y así poder asistir a quien lo necesite en algo puntual.  
+
+Según la dinámica mencionada, resaltamos aquello que debemos:  
+#### Comenzar a hacer  
+Manejar mejor los tiempos personales para combinarlos con los del grupo.
+
+#### Hacer más  
+Mayor colaboración entre los integrantes.
+
+#### Continuar haciendo  
+Complementarnos como equipo en lo que cada uno sabe, conoce, tiene preferencia, le resulta más comprensible (algún contenido en particular), etc.
+
+#### Hacer menos  
+En algunos momentos y casos puntuales, depender de la ayuda externa y en vez de eso, intentar más “con el código”.
+
+#### Dejar de hacer  
+Llegar con el tiempo límite de la entrega, por no prever con anticipación el tiempo que puede llevarle a cada uno, comprender los contenidos y llevarlos a la práctica, en algunos casos.
+  
