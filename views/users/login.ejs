@@ -10,19 +10,25 @@
 
     <main class="background-main-form">
         <div class="main-form">
-        <p>Mi cuenta</p>
-        <h3>ACCEDER</h3>
-        <form action ="/log_in" method="post" class="log-in">
-            <input type="text" name="email" required="required" placeholder = "Email">
-            <input type="password" name="password" required="required" placeholder = "Contraseña">
-            <div>
-                <input type="checkbox" name="user_password" id="remember" value="Si">
-                <label class="Remember" for="remember">Recuérdame</label>
+            <p>Mi cuenta</p>
+            <h3>ACCEDER</h3>
+            <form action ="/log_in" method="post" class="form">
+                <div class="register">
+                    <input type="text" name="email" required="required" placeholder = "Email">
+                </div>
+                <div class="register">
+                    <input type="password" name="password" required="required" placeholder = "Contraseña">
+                </div>
+                <div>
+                    <input type="checkbox" name="user_password" id="remember" value="Si">
+                    <label class="Remember" for="remember">Recuérdame</label>
+                </div>
+                <button type="submit" class="login-button"><p>Iniciar sesión</p></i></button>
+            </form>
+            <div class="form-links">
+                <a href="#"><p>¿Olvidaste tu contraseña?</p></a>
+                <a href="/register"><p>Crear una cuenta</p></a>
             </div>
-            <button type="submit"><p>Iniciar sesión</p></i></button>
-        </form>
-        <a href="#"><p>¿Olvidaste tu contraseña?</p></a>
-        <a href="/register"><p>Crear una cuenta</p></a>
         </div>
     </main>
 

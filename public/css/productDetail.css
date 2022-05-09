@@ -103,3 +103,9 @@
         object-fit: cover;
     }
 }
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
