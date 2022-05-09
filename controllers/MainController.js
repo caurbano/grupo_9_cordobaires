@@ -1,8 +1,8 @@
 const products = [
     {
         'id': 'prod1',
-        'nombre': 'Lámpara de pie SILVER',
-        'precio': '$13.500',
+        'nombre': 'Lámpara SILVER',
+        'precio': '13500',
         'detalle': 'Lámpara de pie. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro',
         // En detalle, haría un objeto más, CREO. onda: 
         // detalle: {
@@ -17,64 +17,64 @@ const products = [
     },
     {
         'id': 'prod2',
-        'nombre': 'Lámpara de techo set GRECIA',
-        'precio': '$47.550',
+        'nombre': 'Lámpara GRECIA',
+        'precio': '47550',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'prod3',
-        'nombre': 'Aplique de pared ECLIPSE',
-        'precio': '$24.000',
+        'nombre': 'Aplique ECLIPSE',
+        'precio': '24000',
         'detalle': 'Lámpara de pared',
         'maxCuotas': '6'
     },
     {
         'id': 'prod4',
-        'nombre': 'Lámpara de techo STRIPES',
-        'precio': '$81.000',
+        'nombre': 'Lámpara STRIPES',
+        'precio': '81000',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'prod5',
-        'nombre': 'Lámpara de techo MINIMAL',
-        'precio': '$2.700',
+        'nombre': 'Lámpara MINIMAL',
+        'precio': '2700',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado1',
-        'nombre': 'Lámpara de techo BINOMIO',
-        'precio': '$8.400',
+        'nombre': 'Lámpara BINOMIO',
+        'precio': '8.400',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado2',
-        'nombre': 'Lámpara de techo ERIZO',
-        'precio': '$10.500',
+        'nombre': 'Lámpara ERIZO',
+        'precio': '10.500',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado3',
-        'nombre': 'Lámpara de techo MEMBRANA',
-        'precio': '$6.000',
+        'nombre': 'Lámpara MEMBRANA',
+        'precio': '6.000',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado4',
-        'nombre': 'Lámpara de techo GRUA',
-        'precio': '$15.000',
+        'nombre': 'Lámpara GRUA',
+        'precio': '15.000',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
     {
         'id': 'relacionado5',
-        'nombre': 'Lámpara de techo TRIVENTO',
-        'precio': '$8.400',
+        'nombre': 'Lámpara TRIVENTO',
+        'precio': '8.400',
         'detalle': 'Lámpara de techo',
         'maxCuotas': '6'
     },
@@ -112,7 +112,7 @@ const MainController = {
         // const view = views.find(view => {
         //     return view.id === 'home';
         // })
-        res.render('home', {id: 'home', title: 'LUMEN Lights Shop'});
+        res.render('home', {id: 'home', title: 'LUMEN Lights Shop', products: products});
     },
     cart: (req, res) => {
         res.render('./products/productCart', {product: products, id: 'productCart', title: 'LUMEN - Carrito de compras'});

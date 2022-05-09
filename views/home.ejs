@@ -61,41 +61,15 @@
         <section class="products">
             <h2>Productos destacados</h2>
             <article class="see">
-            <div class="see__dest">
-                <a href="/productDetail">
-                    <img src="/img/prod1.jpg" alt="Producto destacado" class="dest">
-                    <p>Lámpara SILVER<br><strong>$13.500</strong></p>
-                </a>
-                <p class="dest-fee">6 cuotas sin interés de <strong>$2.250</strong></p>
-            </div>
-            <div class="see__dest">
-                <a href="/productDetail">
-                    <img src="/img/prod2.jpeg" alt="Producto destacado" class="dest">
-                    <p>Lámpara GRECIA<br><strong>$47.550</strong></p>
-                </a>
-                <p class="dest-fee">6 cuotas sin interés de <strong>$7.925</strong></p>
-            </div>
-            <div class="see__dest">
-                <a href="/productDetail">
-                    <img src="/img/prod3.jpeg" alt="Producto destacado" class="dest">
-                    <p>Aplique ECLIPSE<br><strong>$24.000</strong></p>
-                </a>
-                <p class="dest-fee">6 cuotas sin interés de <strong>$4.000</strong></p>
-            </div>
-            <div class="see__dest">
-                <a href="/productDetail">
-                    <img src="/img/prod4.jpeg" alt="Producto destacado" class="dest">
-                    <p>Lámpara STRIPES<br><strong>$81.000</strong></p>
-                </a>
-                <p class="dest-fee">6 cuotas sin interés de <strong>$13.500</strong></p>
-            </div>
-            <div class="see__dest">
-                <a href="/productDetail">
-                    <img src="/img/prod5.jpeg" alt="Producto destacado" class="dest">
-                    <p>Lámpara MINIMAL<br><strong>$2.700</strong></p>
-                </a>
-                <p class="dest-fee">6 cuotas sin interés de <strong>$450</strong></p>
-            </div>
+                <% for( let i = 0; i < 5; i++ ) { %>
+                    <div class="see__dest">
+                        <a href="/productDetail">
+                            <img src="/img/<%= products[i].id %>.jpeg" alt="Producto destacado" class="dest">
+                            <p><%= products[i].nombre %><br><strong> $<%= products[i].precio %></strong></p>
+                        </a>
+                        <p class="dest-fee"><%= products[i].maxCuotas %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].precio) /parseInt(products[i].maxCuotas)) %></strong></p>
+                    </div>
+                <% } %>
             </article>            
         </section>
     </main>
