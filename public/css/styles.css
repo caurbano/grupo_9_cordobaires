@@ -693,6 +693,11 @@
     #ig {
     font-size: 25px;
     }
+    #wa:hover,
+    #fb:hover,
+    #ig:hover {
+    cursor: pointer;
+    }
 }
 
 
