@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs') %>
-<body>
-    <%- include('../partials/header') %>
-    <main>
-        <section class="preview">
-            <p class="h2_preview_txt">Candelabro Sputnik</p>
-            <div class="preview__img">
-                <img src="\img\detalle.jpeg" alt="Luces" class="preview__img__img">
-            </div>
-            <div class="preview__txt">
-                <p class="h2_preview_txt2">Candelabro Sputnik</p>
-                    <p>$9.500</p>
-                    
-                <form action="productDetail.html" method="POST">
-                    <select name="mes">
-                        <option value="1">1</option>
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <section class="preview">
+                    <p class="h2_preview_txt">Candelabro Sputnik</p>
+                    <div class="preview__img">
+                        <img src="\img\<%= product.id %>.jpeg" alt="Luces" class="preview__img__img">
+                    </div>
+                    <div class="preview__txt">
+                        <p class="h2_preview_txt2">
+                            <%= product.nombre %>
+                        </p>
+                        $<%= product.precio %>
+                            </p>
+
+                            <form action="productDetail.html" method="POST">
+                                <p>En <select name="mes">
+                                        <% for( let i=0; i < product.maxCuotas; i++ ) { %>
+
+                                            <option value="<%=i+1  %>">
+                                                <%=i+1 %>
+                                            </option>
+                                            <% } %>
+
+
+                                                <!-- <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -27,61 +39,40 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                         <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select> Cuotas Sin Interes
-                    <br>
-                    </p>
-                    <div> &nbsp </div>
-                    <button class="agregarcarrito">Agregar al carrito</button>
-            </div>
-        </section>
-        <p class="Desc-candelabro">Añade una bonita decoración a cualquier área de tu casa. <br>
-            Cada vez más diseñadores la eligen para lograr un estilo de alta gama.<br>
-            El candelabro de techo Sputnik es la mejor opción para tu
-            nuevo hogar.</p>
+                        <option value="12">12</option> -->
+                                    </select>
+                                    cuotas</p>
+                                <div> &nbsp </div>
+                                <button class="agregarcarrito">Agregar al carrito</button>
+                    </div>
+                </section>
+                <h3 class="Desc-titulo">Características</h3>
+                <p class="Desc-candelabro">
+                    <%= product.detalle %>
+                </p>
 
-        <section class="products">
-            <h2 class="products-h2">Productos Relacionados</h2>
-            <article class="see">
-                <div class="see__dest">
-                    <a href="/productDetail.html">
-                        <img src="\img\relacionado1.jpeg" alt="Producto Relacionado" class="dest">
-                        <p>Lámpara BINOMIO<br><strong>$8.400</strong></p>
-                    </a>
-                    <p class="dest-fee">6 cuotas sin interés de <strong>$1400</strong></p>
-                </div>
-                <div class="see__dest">
-                    <a href="/productDetail.html">
-                        <img src="\img\relacionado2.jpeg" alt="Producto Relacionado" class="dest">
-                        <p>Lámpara ERIZO<br><strong>$10.500</strong></p>
-                    </a>
-                    <p class="dest-fee">6 cuotas sin interés de <strong>$1.750</strong></p>
-                </div>
-                <div class="see__dest">
-                    <a href="/productDetail.html">
-                        <img src="/img/relacionado3.jpeg" alt="Producto Relacionado" class="dest">
-                        <p>Lámpara MEMBRANA<br><strong>$6.000</strong></p>
-                    </a>
-                    <p class="dest-fee">6 cuotas sin interés de <strong>$1.000</strong></p>
-                </div>
-                <div class="see__dest">
-                    <a href="/productDetail.html">
-                        <img src="/img/relacionado4.jpeg" alt="Producto Relacionado" class="dest">
-                        <p>Lámpara GRUA<br><strong>$15.000</strong></p>
-                    </a>
-                    <p class="dest-fee">6 cuotas sin interés de <strong>$2.500</strong></p>
-                </div>
-                <div class="see__dest">
-                    <a href="/productDetail.html">
-                        <img src="/img/relacionado5.jpeg" alt="Producto Relacionado" class="dest">
-                        <p>Lámpara TRIVENTO<br><strong>$8.400</strong></p>
-                    </a>
-                    <p class="dest-fee">6 cuotas sin interés de <strong>$1.400</strong></p>
-                </div>
-            </article>
-        </section>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+                <section class="products">
+                    <h2 class="products-h2">Productos relacionados</h2>
+                    <article class="see">
+                        <% for( let i=5; i < 10; i++ ) { %>
+                            <div class="see__dest">
+                                <a href="/productDetail/<%= products[i].id %>">
+                                    <img src="/img/<%= products[i].id %>.jpeg" alt="Producto destacado" class="dest">
+                                    <p>
+                                        <%= products[i].nombre %><br><strong> $<%= products[i].precio %></strong>
+                                    </p>
+                                </a>
+                                <p class="dest-fee">
+                                    <%= products[i].maxCuotas %> cuotas sin interés de <strong>$<%=
+                                                parseInt(parseInt(products[i].precio) /parseInt(products[i].maxCuotas))
+                                                %></strong>
+                                </p>
+                            </div>
+                            <% } %>
+                    </article>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>

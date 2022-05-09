@@ -1,4 +1,13 @@
-/* SECCION DETALLE DE PRODUCTO */
+<<<<<<< HEAD
+=======
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+>>>>>>> 33148810221b481c8a7c6967758136d6a904223e
 .preview {
     background-color: white;
     display: flex;
@@ -27,14 +36,6 @@
     display: none;
 }
 
-.preview h1 {
-    text-shadow: 1px 1px white, -2px -1px #E79F00;
-    font-size: 35px;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
 .preview p {
     font-size: 20px;
     line-height: 22px;
@@ -48,6 +49,40 @@
     margin-left: 15%;
     margin-right: 15%;
     object-fit: cover;
+}
+
+/* Productos Relacionados */
+.agregarcarrito {
+    cursor: pointer;
+}
+.Desc-titulo{
+    margin-left: 15%;
+    margin-bottom: 1%;
+}
+.Desc-candelabro {
+    margin-left: 15%;
+    margin-bottom:  10%; ;
+    margin-right: 10%;
+}
+
+.products-h2 {
+    font-size: 30px;
+    position: relative;
+    top: 45px;
+    left: 40px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    width: 50%;
+}
+
+.preciodetalle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.h2 {
+    align-self: flex-start;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+    margin: 20px 15px;
 }
 
 @media (min-width: 761px) {
@@ -97,15 +132,10 @@
 
     .preview__img__img {
         box-shadow: 3px 3px 6px #666666;
-        height: 250px;
+        height: 400px;
         width: 500px;
         margin: 40px;
         object-fit: cover;
     }
 }
-* {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 18px;
-    margin: 0px;
-    padding: 0px;
-}
+

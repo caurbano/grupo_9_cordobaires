@@ -109,10 +109,8 @@ const MainController = {
         
     },
     detail: (req, res) => {
-        // const product = products.find(product => {
-        //     return product.id === req.params.product;
-        // })
-        res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos'});
+        const product = products.find(elemento => { return elemento.id === req.params.product; })
+        res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos', product:product, products:products});
     },
 
     login: (req, res) => {
