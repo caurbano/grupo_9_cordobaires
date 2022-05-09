@@ -19,55 +19,46 @@
         opacity: 0.8;
     }
     #tituloDelCarrito p{
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 4%;
         display: flex;
         justify-content: center;
-        padding: 3%;
         letter-spacing: 1px;
         text-shadow: 1px 1px white, -2px -1px #E79F00;
-        margin-top: 15%;
+        margin-top: 10%;
     
     }
     .productosDelCarrito{
+        border: solid black 5px;
         display: flex;
         margin: 1% auto;
         width: 100%;
     }
-    .productosDelCarrito .producto{
+    .producto{
         width: 20%;
-        display: flex;
-        align-items: center;  
-        margin: 12px;
-    }
-    .producto img{
-        width: 60%;
-        border: solid white 5px;
     }
     .nombreDelProducto {
+        display: flex;
+        align-items: center;
         width: 20%;
     }
     .nombreDelProducto p{
         display:flex;
-        justify-content: center;
         padding: 1%;
-        margin-top: 50%;
+
     }
     .Delete{
-        width:20%;
+        width:10%;
     }
     
     .botonDeEliminar{
         display: flex;
         justify-content: center;
-        margin: 50% auto;
+        margin: 40% auto;
         font-size: 10px;
         background: red;
         letter-spacing: 0.1px;
         cursor: pointer;
         color: rgba(255, 255, 255, .8);
         padding: 10px;
-        min-width: 40px;
     }
     
     .totales{
@@ -92,15 +83,15 @@
         width: 20%;
     }
     .Precio p{
-        margin-top: 55%;
-        margin-left: 30%;
+        display: flex;
+        justify-content: center;
     }
     .addProduct{
         width: 20%;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
     }
     .mas {
         font-weight: bold;    
@@ -145,9 +136,9 @@
     text-shadow: 1px 1px white, -2px -1px #E79F00;
 }
 .productosDelCarrito{
+    background-color:rgb(126,126,126);
     display: flex;
     flex-direction: row;
-    background: green;
     width: 100%;
     margin-bottom: 1%;
 }
@@ -181,9 +172,32 @@
     align-items: center;
     margin-top: 10%;
 }
+.mas{
+    margin:1%;
+    display: flex;
+    justify-content: center;
+}
 .menos{
     margin: 1%;
+    display: flex;
+    justify-content: center;
 }
 .cero{
-    margin: 1%;
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+}
+.Delete{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+.totales{
+    display: flex;
+    justify-content: right;
+}
+#boton_comprar{
+    margin: 5%;
+    display: flex;
+    justify-content: right;
 }
