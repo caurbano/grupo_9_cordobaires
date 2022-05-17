@@ -18,7 +18,7 @@
                         $<%= product.precio %>
                             </p>
 
-                            <form action="productDetail.html" method="POST">
+                            <form action="/product/detail" method="POST">
                                 <p>En <select name="mes">
                                         <% for( let i=0; i < product.maxCuotas; i++ ) { %>
 
@@ -56,7 +56,7 @@
                     <article class="see">
                         <% for( let i=5; i < 10; i++ ) { %>
                             <div class="see__dest">
-                                <a href="/productDetail/<%= products[i].id %>">
+                                <a href="/product/detail/<%= products[i].id %>">
                                     <img src="/img/<%= products[i].id %>.jpeg" alt="Producto destacado" class="dest">
                                     <p>
                                         <%= products[i].nombre %><br><strong> $<%= products[i].precio %></strong>

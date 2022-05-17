@@ -24,6 +24,10 @@ const MainController = {
         res.render('./users/login', {id: 'login', title: 'LUMEN - Login'});
     },
 
+    login2: (req, res) => {
+        res.send('LOGIN');
+    },
+
     register: (req, res) => {
         res.render('./users/register', {id: 'register', title: 'LUMEN - Formulario de registro'});
     },
