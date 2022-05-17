@@ -1,0 +1,75 @@
+[
+    {
+        "id": "1",
+        "nombre": "Lámpara SILVER",
+        "precio": "13500",
+        "detalle": ["Base y brazo metálico Pantalla de aluminio.","Cable alimentación 1,5m negro.","Medidas generales: Alto 210cm x base 55cm de diámetro.", "Medida pantalla: Alto 24 cm x 38cm de diámetro."],
+        "maxCuotas": "6",
+        "color":"plateado",
+        "categoria":"pie",
+        "img":"prod1.jpeg"
+    },
+    {
+        "id": "2",
+        "nombre": "Lámpara GRECIA",
+        "precio": "47550",
+        "detalle": "Lámpara de techo. Color: blanco. Set x 3. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "3",
+        "nombre": "Aplique ECLIPSE",
+        "precio": "24000",
+        "detalle": "Lámpara de pared. Color: espejado. Cable alimentación interno. Medidas generales: Alto 55cm x 55cm",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "4",
+        "nombre": "Lámpara STRIPES",
+        "precio": "81000",
+        "detalle": "Lámpara de techo. Color: negro. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "5",
+        "nombre": "Lámpara MINIMAL",
+        "precio": "2700",
+        "detalle": "Lámpara de techo. Color: cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "6",
+        "nombre": "Lámpara BINOMIO",
+        "precio": "8400",
+        "detalle": "Lámpara de techo. Color: negro. Base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "7",
+        "nombre": "Lámpara ERIZO",
+        "precio": "10500",
+        "detalle": "Lámpara de techo. Color: plateado. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "8",
+        "nombre": "Lámpara MEMBRANA",
+        "precio": "6000",
+        "detalle": "Lámpara de techo. Color: beige. Pantalla de mimbre. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "9",
+        "nombre": "Lámpara GRUA",
+        "precio": "15000",
+        "detalle": "Lámpara de techo. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro",
+        "maxCuotas": "6"
+    },
+    {
+        "id": "10",
+        "nombre": "Lámpara TRIVENTO",
+        "precio": "8400",
+        "detalle": "Lámpara de techo. Color: bronce. Pantalla de hierro. Cable alimentación 1,5m negro. Medida pantalla: Alto 35cm x 40cm de diámetro",
+        "maxCuotas": "6"
+    }
+]
