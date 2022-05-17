@@ -13,6 +13,10 @@
     padding: 10px;
     flex-direction: column;
 }
+/* .Copyright{
+    display: inline-block;
+    margin-top: 170px;
+} */
 .footer section {
     text-align: center;
 }
