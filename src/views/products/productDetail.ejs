@@ -8,21 +8,21 @@
             <main>
                 <section class="preview">
                     <p class="h2_preview_txt">
-                        <%= product.nombre %>
+                        <%= product.name %>
                     </p>
                     <div class="preview__img">
                         <img src="\img\<%= product.img %>" alt="Luces" class="preview__img__img">
                     </div>
                     <div class="preview__txt">
                         <p class="h2_preview_txt2">
-                            <%= product.nombre %>
+                            <%= product.name %>
                         </p>
-                        $<%= product.precio %>
+                        $<%= product.price %>
                             </p>
 
                             <form action="/product/detail" method="POST">
                                 <p>En <select name="mes">
-                                        <% for( let i=0; i < product.maxCuotas; i++ ) { %>
+                                        <% for( let i=0; i < product.payments; i++ ) { %>
 
                                             <option value="<%=i+1  %>">
                                                 <%=i+1 %>
@@ -61,12 +61,12 @@
                                 <a href="/product/detail/<%= products[i].id %>">
                                     <img src="/img/<%= products[i].img %>" alt="Producto destacado" class="dest">
                                     <p>
-                                        <%= products[i].nombre %><br><strong> $<%= products[i].precio %></strong>
+                                        <%= products[i].name %><br><strong> $<%= products[i].price %></strong>
                                     </p>
                                 </a>
                                 <p class="dest-fee">
-                                    <%= products[i].maxCuotas %> cuotas sin interés de <strong>$<%=
-                                                parseInt(parseInt(products[i].precio) /parseInt(products[i].maxCuotas))
+                                    <%= products[i].payments %> cuotas sin interés de <strong>$<%=
+                                                parseInt(parseInt(products[i].price) /parseInt(products[i].payments))
                                                 %></strong>
                                 </p>
                             </div>
