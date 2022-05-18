@@ -11,13 +11,13 @@
             <% for( let i=0; i < 3; i++ ) { %>
                 <div class = "productosDelCarrito">
                 <article class="producto">
-                    <img src="/img/<%= product[i].id %>.jpeg" alt="">
+                    <img src="/img/<%= product[i].img %>" alt="">
                 </article>
                 <article class="nombreDelProducto">
-                    <p><%= product[i].nombre %></p>
+                    <p><%= product[i].name %></p>
                 </article>
                 <article class="Precio">
-                    <p>$<%= product[i].precio %></p>      
+                    <p>$<%= product[i].price %></p>      
                 </article>  
                 <article class="addProduct">
                     <button class="menos">
@@ -43,7 +43,7 @@
         <div id = "total">
             <article class="totales">
                 <p class= "totalDelCarrito">Total:</p>
-                <p class="precioTotal">$<%= parseInt(product[0].precio) + parseInt(product[1].precio) + parseInt(product[2].precio) %></p>
+                <p class="precioTotal">$<%= parseInt(product[0].price) + parseInt(product[1].price) + parseInt(product[2].price) %></p>
             </article>
         </div>
         <div id="boton_comprar">
