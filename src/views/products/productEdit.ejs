@@ -13,21 +13,21 @@
         <div class="main-form">
         <p>Crear producto</p>
         <article>
-            <form action="/productcreate" method="post" class="form">
+            <form action="/product/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                 <div class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "Nombre del producto">
+                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "<%= product.nombre %>">
                 </div>
                 <div class="register">
-                    <label class="form-title">Descripción del producto</label>
-                    <textarea name="description" rows="4" cols="50" placeholder = "Descripcion del producto"></textarea>
+                    <label class="form-title">Descripcion del producto</label>
+                    <textarea name="description" rows="4" cols="50" placeholder = "<%= product.detalle %>"></textarea>
                 </div>
                 <div class="register">
                     <label class="form-title">Foto del producto</label>
-                    <input type="file" name="Foto" accept=".jpg" multiple >
+                    <input type="file" name="Foto" accept=".jpg" multiple>
                 </div>
                 <div class="register">
-                    <label class="form-title">Categoría</label>
+                    <label class="form-title">Categoria</label>
                     <div class="register-radio">
                         <input type="radio" name="category" value="Techo" required="required">
                         <label>Techo</label>
@@ -47,11 +47,15 @@
                 </div>
                 <div class="register">
                     <label class="form-title">Precio</label>
-                    <input type="number" class="validate" name="price" required="required" placeholder = "Precio">
+                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.precio %>">
+                </div>
+                <div class="register">
+                    <label class="form-title">Cuotas maxima</label>
+                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.maxCuotas %>">
                 </div>
                 <div class="confirm">
-                    <button type="reset"><p>Borrar</p></i></button>
-                    <button type="submit"><p>Finalizar</p></i></button>
+                    <button type="submit"><p>Atras</p></i></button>
+                    <button type="submit"><p>Editar</p></i></button>
                 </div>
             </form>
         </article>
@@ -61,6 +65,6 @@
     <!--FOOTER-->
 
     <%- include('../partials/footer') %>
-
+    
 </body>
 </html>

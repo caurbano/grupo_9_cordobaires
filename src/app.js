@@ -2,9 +2,11 @@ const express = require('express');
 const path = require('path'); 
 const app = express();
 const router = require('./routes/main');
+const methodOverride =  require('method-override');
 
+app.use(methodOverride('_method'));
 
-const publicPath = path.resolve(__dirname, './public');
+const publicPath = path.resolve(__dirname, './src/public');
 app.use(express.static(publicPath));
 
 app.set('view engine', 'ejs');

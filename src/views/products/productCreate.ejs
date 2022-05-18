@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include('../partials/head') %>
+<body>
+
+    <!--HEADER-->
+
+    <%- include('../partials/header') %>
+
+    <!--MAIN-->
+
+    <main class="background-main-form">
+        <section class="main-form">
+            <p>Crear producto</p>
+            <form action="/product/create" method="post" class="form" enctype="multipart/form-data">
+                <section class="register">
+                    <label class="form-title">Nombre del producto</label>
+                    <input type="text" class="validate" name="name"  pattern="{0,11}" placeholder = "Nombre del producto">
+                </section>
+                <section class="register">
+                    <label class="form-title">Descripción del producto</label>
+                    <textarea name="description" rows="4" cols="50" placeholder = "Descripcion del producto"></textarea>
+                </section>
+                <section class="register">
+                    <label class="form-title">Foto del producto</label>
+                    <input type="file" name="img" accept=".jpg" multiple >
+                </section>
+                <section class="register">
+                    <label class="form-title">Categoría</label>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Techo">
+                        <label>Techo</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Pared">
+                        <label>Pared</label>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" name="category" value="Pie">
+                        <label>Pie</label>
+                    </div>
+                </section>
+                <section class="register">
+                    <label class="form-title">Color</label>
+                    <input type="text" class="validate" name="color"  placeholder = "Color">
+                </section>
+                <section class="register">
+                    <label class="form-title">Precio</label>
+                    <input type="number" class="validate" name="price"  placeholder = "Precio">
+                </section>
+                <section class="register">
+                    <label class="form-title">Descuento</label>
+                    <input type="number" class="validate" name="discount"  placeholder = "Precio">
+                </section>
+                <section class="register">
+                    <label class="form-title">Cuotas</label>
+                    <input type="number" class="validate" name="payments"  placeholder = "Precio">
+                </section>
+                <section class="confirm">
+                    <button type="reset"><p>Borrar</p></i></button>
+                    <button type="submit"><p>Finalizar</p></i></button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>
