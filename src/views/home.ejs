@@ -63,11 +63,11 @@
             <article class="see">
                 <% for( let i = 0; i < 5; i++ ) { %>
                     <div class="see__dest">
-                        <a href="/productDetail/<%= products[i].id %>">
-                            <img src="/img/<%= products[i].id %>.jpeg" alt="Producto destacado" class="dest">
-                            <p><%= products[i].nombre %><br><strong> $<%= products[i].precio %></strong></p>
+                        <a href="/product/detail/<%= products[i].id %>">
+                            <img src="/img/<%= products[i].img %>" alt="Producto destacado" class="dest">
+                            <p><%= products[i].name %><br><strong> $<%= products[i].price %></strong></p>
                         </a>
-                        <p class="dest-fee"><%= products[i].maxCuotas %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].precio) /parseInt(products[i].maxCuotas)) %></strong></p>
+                        <p class="dest-fee"><%= products[i].payments %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].price) /parseInt(products[i].payments)) %></strong></p>
                     </div>
                 <% } %>
             </article>            

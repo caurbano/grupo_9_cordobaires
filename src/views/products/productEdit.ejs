@@ -13,7 +13,7 @@
         <div class="main-form">
         <p>Crear producto</p>
         <article>
-            <form action="/create_product" method="post" class="form">
+            <form action="/product/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                 <div class="register">
                     <label class="form-title">Nombre del producto</label>
                     <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "<%= product.nombre %>">
