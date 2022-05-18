@@ -6,7 +6,7 @@ const methodOverride =  require('method-override');
 
 app.use(methodOverride('_method'));
 
-const publicPath = path.resolve(__dirname, './src/public');
+const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
 app.set('view engine', 'ejs');
