@@ -1,119 +1,129 @@
 [
 	{
 		"id": "1",
-		"nombre": "Lámpara SILVER",
-		"precio": "13500",
-		"detalle": [
+		"name": "Lámpara SILVER",
+		"description": [
 			"Base y brazo metálico Pantalla de aluminio.",
 			"Cable alimentación 1,5m negro.",
 			"Medidas generales: Alto 210cm x base 55cm de diámetro.",
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro."
 		],
-		"maxCuotas": "6",
+		"img": "product-1-silver.jpeg",
+		"category": "pie",
 		"color": "plateado",
-		"categoria": "pie",
-		"img": "product-1-silver.jpeg"
+		"price": "13500",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "2",
-		"nombre": "Lámpara GRECIA",
-		"precio": "47550",
-		"detalle": "Set x 3. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro",
-		"maxCuotas": "6",
+		"name": "Lámpara GRECIA",
+		"description": "Set x 3. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro",
+		"img": "product-2-grecia.jpeg",
+		"category": "techo",
 		"color": "blanco",
-		"categoria": "techo",
-		"img": "product-2-grecia.jpeg"
+		"price": "47550",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "3",
-		"nombre": "Aplique ECLIPSE",
-		"precio": "24000",
-		"detalle": "Cable alimentación interno. Medidas generales: Alto 55cm x 55cm",
-		"maxCuotas": "6",
+		"name": "Aplique ECLIPSE",
+		"description": "Cable alimentación interno. Medidas generales: Alto 55cm x 55cm",
+		"img": "product-3-eclipse.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-3-eclipse.jpeg"
+		"price": "24000",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "4",
-		"nombre": "Lámpara STRIPES",
-		"precio": "81000",
-		"detalle": "Lámpara de techo. Color: negro. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm",
-		"maxCuotas": "6",
+		"name": "Lámpara STRIPES",
+		"description": "Lámpara de techo. Color: negro. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm",
+		"img": "product-4-sripes.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-4-sripes.jpeg"
+		"price": "81000",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "5",
-		"nombre": "Lámpara MINIMAL",
-		"precio": "2700",
-		"detalle": "Lámpara de techo. Color: cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.",
-		"maxCuotas": "6",
+		"name": "Lámpara MINIMAL",
+		"description": "Lámpara de techo. Color: cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.",
+		"img": "product-5-minimal.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-5-minimal.jpeg"
+		"price": "2700",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "6",
-		"nombre": "Lámpara BINOMIO",
-		"precio": "8400",
-		"detalle": "Lámpara de techo. Color: negro. Base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm",
-		"maxCuotas": "6",
+		"name": "Lámpara BINOMIO",
+		"description": "Lámpara de techo. Color: negro. Base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm",
+		"img": "product-6-binomio.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-6-binomio.jpeg"
+		"price": "8400",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "7",
-		"nombre": "Lámpara ERIZO",
-		"precio": "10500",
-		"detalle": "Lámpara de techo. Color: plateado. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm",
-		"maxCuotas": "6",
+		"name": "Lámpara ERIZO",
+		"description": "Lámpara de techo. Color: plateado. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm",
+		"img": "product-7-erizo.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-7-erizo.jpeg"
+		"price": "10500",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "8",
-		"nombre": "Lámpara MEMBRANA",
-		"precio": "6000",
-		"detalle": "Lámpara de techo. Color: beige. Pantalla de mimbre. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro",
-		"maxCuotas": "6",
+		"name": "Lámpara MEMBRANA",
+		"description": "Lámpara de techo. Color: beige. Pantalla de mimbre. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro",
+		"img": "product-8-membrana.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-8-membrana.jpeg"
+		"price": "6000",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "9",
-		"nombre": "Lámpara GRUA",
-		"precio": "15000",
-		"detalle": "Lámpara de techo. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro",
-		"maxCuotas": "6",
+		"name": "Lámpara GRUA",
+		"description": "Lámpara de techo. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro",
+		"img": "product-9-grua.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-9-grua.jpeg"
+		"price": "15000",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "10",
-		"nombre": "Lámpara TRIVENTO",
-		"precio": "8400",
-		"detalle": "Lámpara de techo. Color: bronce. Pantalla de hierro. Cable alimentación 1,5m negro. Medida pantalla: Alto 35cm x 40cm de diámetro",
-		"maxCuotas": "6",
+		"name": "Lámpara TRIVENTO",
+		"description": "Lámpara de techo. Color: bronce. Pantalla de hierro. Cable alimentación 1,5m negro. Medida pantalla: Alto 35cm x 40cm de diámetro",
+		"img": "product-10-trivento.jpeg",
+		"category": "pared",
 		"color": "espejado",
-		"categoria": "pared",
-		"img": "product-10-trivento.jpeg"
+		"price": "8400",
+		"discount": "0",
+		"payments": "6"
 	},
 	{
 		"id": "101",
-		"nombre": "asdfsafsd",
-		"detalle": "adsfadsfas",
+		"name": "asdfsafsd",
+		"description": "adsfadsfas",
 		"img": "product-",
-		"categoria": "Pared",
+		"category": "Pared",
 		"color": "amarillo",
-		"precio": "5000",
+		"price": "5000",
 		"discount": "15",
-		"maxCuotas": "12"
+		"payments": "12"
 	},
 	{
 		"id": "102",
