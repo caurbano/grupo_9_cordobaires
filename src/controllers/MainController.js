@@ -81,7 +81,7 @@ const MainController = {
         const product = products.find(product => {
             return product.id === req.params.product
         });
-        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Editar producto', product: product});
+        res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Edición de producto', product: product});
     }
 }
 
