@@ -13,10 +13,6 @@
     padding: 10px;
     flex-direction: column;
 }
-/* .Copyright{
-    display: inline-block;
-    margin-top: 170px;
-} */
 .footer section {
     text-align: center;
 }
@@ -87,7 +83,6 @@
 
 /* DESKTOP */
 @media (min-width: 769px) {
-    
     .footer {
         flex-direction: row;
         justify-content: space-around;
@@ -104,14 +99,17 @@
         align-self: flex-end;
         font-size: 12px;
         margin-left: -370px;
+        padding: 0px;
         }
         .footer h3 {
         padding: 10px 0px;
         }
         .footer li {
+        font-size: 13px;    
         line-height: 22px;
         }
         .footer a {
+        font-size: 13px;
         line-height: 22px;
         }
         .social {
@@ -121,6 +119,6 @@
         #wa,
         #fb,
         #ig {
-        font-size: 25px;
+        font-size: 28px;
         }
     }
