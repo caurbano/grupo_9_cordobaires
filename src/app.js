@@ -21,23 +21,3 @@ app.listen(3030, () => {
 // });
 
 app.use('/', router);
-
-// app.get('/', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './views/home.ejs'))
-// });
-
-// app.get('/productDetail', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './views/products/productDetail.ejs'))
-// });
-
-// app.get('/productCart', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './views/products/productCart.ejs'))
-// });
-
-// app.get('/register', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './views/users/register.ejs'))
-// });
-
-// app.get('/login', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './views/users/login.ejs'))
-// });

@@ -126,9 +126,9 @@
 		"id": "9",
 		"name": "Lámpara GRUA",
 		"description": [
-			"Lámpara con varios brazos en cobre.", 
-			"Cable alimentación 1,5m negro.", 
-			"Medidas generales: Alto 210cm x base 55cm de diámetro.", 
+			"Lámpara con varios brazos en cobre.",
+			"Cable alimentación 1,5m negro.",
+			"Medidas generales: Alto 210cm x base 55cm de diámetro.",
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro"
 		],
 		"img": "product-9-grua.jpeg",
@@ -142,8 +142,8 @@
 		"id": "10",
 		"name": "Lámpara TRIVENTO",
 		"description": [
-			"Tres pantallas de alambre de bronce .",  
-			"Cable alimentación 2m marron.", 
+			"Tres pantallas de alambre de bronce .",
+			"Cable alimentación 2m marron.",
 			"Medida pantalla: Alto 35cm x 40cm de diámetro"
 		],
 		"img": "product-10-trivento.jpeg",
@@ -152,27 +152,5 @@
 		"price": "8400",
 		"discount": "0",
 		"payments": "6"
-	},
-	{
-		"id": "101",
-		"name": "asdfsafsd",
-		"description": "adsfadsfas",
-		"img": "product-",
-		"category": "Pared",
-		"color": "amarillo",
-		"price": "5000",
-		"discount": "15",
-		"payments": "12"
-	},
-	{
-		"id": "102",
-		"name": "asdfsafsd",
-		"description": "adsfadsfas",
-		"image": "product-",
-		"category": "Pared",
-		"color": "amarillo",
-		"price": "5000",
-		"discount": "15",
-		"coutas": "12"
 	}
 ]

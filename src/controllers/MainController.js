@@ -32,48 +32,95 @@ const MainController = {
         res.render('./users/register', {id: 'register', title: 'LUMEN - Formulario de registro'});
     },
 
+    register2: (req, res) => {
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = fs.readFileSync(usersFilePath, 'utf-8');
+        //
+        if(req.file){
+			//Verifico que el JSON esta vacio
+            let array;
+            let ide;
+			if(users == ""){
+				array = [];
+                ide = 1;
+			} else {
+                users =  JSON.parse(users);
+				array = users;
+                ide = parseInt(array[array.length - 1].id) + 1;
+                ide = ide.toString();
+			}
+
+			//Creo el usuario
+			
+			let userNew = {
+				id: ide,
+				firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                phone: req.body.phone,
+                password: req.body.password,
+                img: req.file.filename, //+ ide + "-" + Date.now() + path.extname(file.originalname),
+			}
+
+			//Lo sumo con los demas
+
+			array.push(userNew);
+			newUsers = JSON.stringify(array, null, "\t");
+			fs.writeFileSync(usersFilePath, newUsers);
+			res.render('./users/login', {id: 'login', title: 'LUMEN - Login'});
+
+		} else {
+            res.render('./users/register', {id: 'register', title: 'LUMEN - Formulario de registro'});
+        }
+    },
+
     create: (req, res) => {
         res.render('./products/productCreate', {id: 'productCreate', title: 'LUMEN - Creación de producto'});
     },
     
     create2: (req, res) => {
         const productsFilePath = path.join(__dirname, '../data/products.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let products = fs.readFileSync(productsFilePath, 'utf-8');
         console.log(req.file);
         if(req.file){
+
 			//Verifico que el JSON esta vacio
+
             let array;
             let ide;
 			if(products == undefined){
 				array = [];
                 ide = 1;
 			} else {
+                products = JSON.parse(products);
 				array = products;
                 ide = parseInt(array[array.length - 1].id) + 1;
+                ide = ide.toString();
 			}
+
 			//Creo el producto
 			
 			let productNew = {
 				id: ide,
 				name: req.body.name,
                 description: req.body.description,
-                image: req.file.filename, //+ ide + "-" + Date.now() + path.extname(file.originalname),
+                img: req.file.filename, //+ ide + "-" + Date.now() + path.extname(file.originalname),
 				category: req.body.category,
                 color: req.body.color,
                 price: req.body.price,
 				discount: req.body.discount,
                 coutas: req.body.payments
 			}
+
 			//Lo sumo con los demas
+
 			array.push(productNew);
-
 			newProducts = JSON.stringify(array, null, "\t");
-
 			fs.writeFileSync(productsFilePath, newProducts);
+			res.redirect('/product/detail/'+ ide)
 
-			res.redirect('/');
 		} else {
-			res.render('./products/productCreate');
+			res.render('./products/productCreate', {id: 'productCreate', title: 'LUMEN - Creación de producto'});
 		}
     },
 
