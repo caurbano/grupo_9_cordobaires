@@ -6,15 +6,17 @@
 }
 /*Desktop*/
 @media (min-width: 791px){
-    .maindetodo{
-        background-color: white;
+    #maindetodo{
+        height: 100%;
+        background-color: #666666;
+        margin-bottom: -1%;;
     }
     .main{
         display: flex;
         flex-direction: column;
         margin: 1% auto;
-        width: 60%;
-        background-color: rgb(126,126,126);
+        width: 75%;
+        background-color: #1f1d1d;
         opacity: 0.9;
     }
     #tituloDelCarrito {
@@ -23,11 +25,11 @@
         justify-content: center;
         letter-spacing: 1px;
         text-shadow: 1px 1px white, -2px -1px #E79F00;
-        margin-top: 13%;
+        margin-top: 10%;
     
     }
     .productosDelCarrito{
-        border: solid black 1px;
+        border: solid white 1px;
         margin: 1% auto;
         width: 100%;
     }
@@ -133,11 +135,12 @@
     text-shadow: 1px 1px white, -2px -1px #E79F00;
 }
 .productosDelCarrito{
-    background-color:rgb(126,126,126);
+    background-color:white;
     display: flex;
     flex-direction: row;
     width: 99%;
-    margin: 1% auto;
+    margin: 0.5% auto;
+    border-radius: 2rem;
 }
 .producto{
     width: 20%;
@@ -150,44 +153,50 @@
     width: 100%;
 }
 .nombreDelProducto{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 20%;
     margin: 1%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .Precio{
     width: 20%;
     margin: 2%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-.addProduct{
+.add_delete{
+    width: 30%;
     display: flex;
-    flex-direction: row;
-    height: 10%;
-    margin: 1%;
+    justify-content: center;
     align-items: center;
-    margin-top: 10%;
 }
+
 .mas{
     margin:1%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .menos{
     margin: 1%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .cero{
     margin: 7%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .Delete{
     display: flex;
     align-items: center;
     margin-left: 10%;
+    justify-content: center;
 }
 .totales{
     display: flex;

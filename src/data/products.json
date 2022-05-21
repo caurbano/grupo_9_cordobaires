@@ -3,7 +3,7 @@
 		"id": "1",
 		"name": "Lámpara SILVER",
 		"description": [
-			"Base y brazo metálico Pantalla de aluminio.",
+			"Base y brazo metálico con antalla de aluminio.",
 			"Cable alimentación 1,5m negro.",
 			"Medidas generales: Alto 210cm x base 55cm de diámetro.",
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro."
@@ -18,7 +18,12 @@
 	{
 		"id": "2",
 		"name": "Lámpara GRECIA",
-		"description": "Set x 3. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro",
+		"description": [
+			"Tres pantallas colgantes de aluminio.",
+			"Cable alimentación 1,5m negro.",
+			"Medidas generales: Alto 210cm x base 55cm.",
+			"Medida pantallas: Alto 30 cm x 40cm de diámetro"
+		],
 		"img": "product-2-grecia.jpeg",
 		"category": "techo",
 		"color": "blanco",
@@ -29,7 +34,11 @@
 	{
 		"id": "3",
 		"name": "Aplique ECLIPSE",
-		"description": "Cable alimentación interno. Medidas generales: Alto 55cm x 55cm",
+		"description": [
+			"Aplique para iluminacion de espejo",
+			"Cable de alimentación interno.",
+			"Medidas generales: Alto 55cm x 55cm"
+		],
 		"img": "product-3-eclipse.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -40,7 +49,11 @@
 	{
 		"id": "4",
 		"name": "Lámpara STRIPES",
-		"description": "Lámpara de techo. Color: negro. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm",
+		"description": [
+			"Lámpara de techo.",
+			"Color: negro. Cable alimentación 1,5m negro.",
+			"Medidas generales: Alto 55cm x 125cm"
+		],
 		"img": "product-4-sripes.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -51,7 +64,11 @@
 	{
 		"id": "5",
 		"name": "Lámpara MINIMAL",
-		"description": "Lámpara de techo. Color: cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.",
+		"description": [
+			"Simulacion de borde de foco LED.",
+			"Color cobre. Cable alimentación 1,5m negro.",
+			"Medidas generales: Alto 22cm x 15cm."
+		],
 		"img": "product-5-minimal.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -62,7 +79,12 @@
 	{
 		"id": "6",
 		"name": "Lámpara BINOMIO",
-		"description": "Lámpara de techo. Color: negro. Base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm",
+		"description": [
+			"Lámpara de techo doble foco.",
+			"Color negro con base y brazo metálico.",
+			"Cable alimentación 1,5m negro.",
+			"Medidas generales: Alto 90cm x 35cm"
+		],
 		"img": "product-6-binomio.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -73,7 +95,11 @@
 	{
 		"id": "7",
 		"name": "Lámpara ERIZO",
-		"description": "Lámpara de techo. Color: plateado. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm",
+		"description": [
+			"Lámpara simulacion de erizo marino.",
+			"Color: plateado. Cable alimentación 1m negro.",
+			"Medidas generales: Alto 90cm x 90cm"
+		],
 		"img": "product-7-erizo.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -84,7 +110,11 @@
 	{
 		"id": "8",
 		"name": "Lámpara MEMBRANA",
-		"description": "Lámpara de techo. Color: beige. Pantalla de mimbre. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro",
+		"description": [
+			"Pantalla de mimbre color beige.",
+			"Cable alimentación 1,5m negro.",
+			"Medida pantallas: Alto 40 cm x 90cm de diámetro"
+		],
 		"img": "product-8-membrana.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -95,7 +125,12 @@
 	{
 		"id": "9",
 		"name": "Lámpara GRUA",
-		"description": "Lámpara de techo. Color: plateado. Base y brazo metálico. Pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro",
+		"description": [
+			"Lámpara con varios brazos en cobre.",
+			"Cable alimentación 1,5m negro.",
+			"Medidas generales: Alto 210cm x base 55cm de diámetro.",
+			"Medida pantalla: Alto 24 cm x 38cm de diámetro"
+		],
 		"img": "product-9-grua.jpeg",
 		"category": "pared",
 		"color": "espejado",
@@ -106,34 +141,16 @@
 	{
 		"id": "10",
 		"name": "Lámpara TRIVENTO",
-		"description": "Lámpara de techo. Color: bronce. Pantalla de hierro. Cable alimentación 1,5m negro. Medida pantalla: Alto 35cm x 40cm de diámetro",
+		"description": [
+			"Tres pantallas de alambre de bronce .",
+			"Cable alimentación 2m marron.",
+			"Medida pantalla: Alto 35cm x 40cm de diámetro"
+		],
 		"img": "product-10-trivento.jpeg",
 		"category": "pared",
 		"color": "espejado",
 		"price": "8400",
 		"discount": "0",
 		"payments": "6"
-	},
-	{
-		"id": "101",
-		"name": "asdfsafsd",
-		"description": "adsfadsfas",
-		"img": "product-",
-		"category": "Pared",
-		"color": "amarillo",
-		"price": "5000",
-		"discount": "15",
-		"payments": "12"
-	},
-	{
-		"id": "102",
-		"name": "asdfsafsd",
-		"description": "adsfadsfas",
-		"image": "product-",
-		"category": "Pared",
-		"color": "amarillo",
-		"price": "5000",
-		"discount": "15",
-		"coutas": "12"
 	}
 ]

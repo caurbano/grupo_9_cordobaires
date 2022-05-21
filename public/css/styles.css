@@ -705,7 +705,7 @@
 /* SECCION CARRITO DE COMPRAS */
 @media (min-width: 791px){
     .maindetodo{
-        background-color: white;
+        background-color: black;
         margin: 1% auto;
         width: inherit;
     }
@@ -713,7 +713,7 @@
         margin: 1% auto;
         width: 70%;
         padding: 40% auto;
-        background-color: rgb(126,126,126);
+        background-color: black(126,126,126);
         opacity: 0.8;
     }
     #tituloDelCarrito p{

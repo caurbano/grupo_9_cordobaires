@@ -5,29 +5,29 @@ const path = require('path');
 
 const MainController = require('../controllers/MainController');
 
-const storage1 = multer.diskStorage({
+const storageImgProduct = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname,'../../public/img'))
     },
     filename: function (req, file, cb) {
-      const newFieldName = 'product-';
+      const newFieldName = 'product-'+ Date.now() + path.extname(file.originalname);
       cb(null, newFieldName)
     }
   })
   
-  const upload1 = multer({ storage: storage1 });
+  const uploadImgProduct = multer({ storage: storageImgProduct });
 
-  const storage2 = multer.diskStorage({
+  const storageImgUser = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname,'../../public/img'))
     },
     filename: function (req, file, cb) {
-      const newFieldName = 'user-';
+      const newFieldName = 'user-' + Date.now() + path.extname(file.originalname);
       cb(null, newFieldName)
     }
   })
   
-  const upload2 = multer({ storage: storage2 });
+  const uploadImgUser = multer({ storage: storageImgUser });
 
 router.get('/', MainController.home);
 
@@ -39,12 +39,12 @@ router.get('/user/login', MainController.login);
 //router.post('/login', MainController.login2);
 
 router.get('/register', MainController.register);
-//router.post('/register', upload2.single('img'), MainController.register2);
+router.post('/register', uploadImgUser.single('img'), MainController.register2);
 
 router.get('/product/create', MainController.create);
-router.post('/product/create', upload1.single('img'), MainController.create2);
+router.post('/product/create', uploadImgProduct.single('img'), MainController.create2);
 
 router.get('/product/edit/:product', MainController.edit);
-//router.put('/product/edit/:product', MainController.edit2);
+//router.put('/product/edit/:product', uploadImgProduct.single('img'), MainController.edit2);
 
 module.exports = router;
