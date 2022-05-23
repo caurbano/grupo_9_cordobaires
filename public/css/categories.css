@@ -1,0 +1,263 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.techo {
+    background-color: #918c8c1e;
+    width: inherit;
+}
+.techo__category {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.techo__category a {
+    text-decoration: none;
+}
+/* Productos destacados */
+.see {
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6% 0%;
+}
+
+.products h2 {
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    margin-bottom: 3px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+}
+
+.see__dest {
+    background-color: #918c8c1e;
+    border: solid 2px #1f1d1d;
+    height: 90px;
+    width: 15%;
+}
+.dest {
+    border-bottom: solid 1px #1f1d1d;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.see__dest a {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+.see__dest p {
+    display: none;
+}
+
+.dest-fee {
+    display: none;
+
+}
+
+/* BREAKPOINTS */
+/* TABLETS */
+@media (min-width: 481px) {
+    .review h1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        margin: 10px 3px;
+        }
+        .review p {
+        font-size: 13px;
+        line-height: 10px;
+        }
+        .review__img__img {
+        box-shadow: 3px 3px 6px #666666;
+        display: block;
+        height: 160px;
+        width: 270px;
+        margin: 20px;
+        object-fit: cover;
+        }
+    
+        .shop,
+        #top,
+        .wall-floor {
+            height: 350px;
+        }
+        .shop h3 {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+        .shop__wall,
+        #wall {
+            height: 135px;
+        }
+        .shop__floor,
+        #floor {
+            height: 225px;
+        }
+        
+        .info {
+        margin: 30px 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 8px;
+        }
+        #ship,
+        #pay,
+        #shop-wa {
+        height: 60px;
+        width: 100px;
+        padding: 15px;
+        }
+        
+        .products h2 {
+        font-size: 20px;
+        position: relative;
+        top: 25px;
+        left: 20px;
+        }
+        .see__dest {
+        border: solid 2px #1f1d1d;
+        box-shadow: 3px 3px 5px #665e5e;
+        height: 120px;
+        width: 15%;
+        }
+        .dest {
+        height: 120px;
+        width: 100%;
+        margin-bottom: 3px;
+        }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+    .review {
+        height: 290px;
+        }
+        .review h1 {
+        font-size: 35px;
+        letter-spacing: 2px;
+        line-height: 40px;
+        margin: 15px 5px;
+        }
+        .review p {
+        font-size: 15px;
+        line-height: 20px;
+        }
+        .review__img__img {
+        height: 200px;
+        width: 380px;
+        margin: 30px;
+        }
+    
+        .shop {
+            height: 500px;
+        }
+        .shop h3 {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        #top {
+            height: 480px;
+        }
+        
+        #top:hover {
+            opacity: 0.8;
+            box-shadow: 3px 3px 6px #666666;
+        }
+        .shop__top:hover h3 {
+            color: #E79F00;
+            cursor: pointer;
+            font-size: 30px;
+            z-index: 1;
+        }
+        .wall-floor {
+            height: 500px;
+        }
+        .shop__wall {
+            height: 220px;
+        }
+        #wall {
+            height: 210px;
+        }
+        #wall:hover {
+            opacity: 0.8;
+            box-shadow: 3px 3px 6px #666666;
+        }
+        .shop__wall:hover h3 {
+            color: #E79F00;
+            cursor: pointer;
+            font-size: 30px;
+            z-index: 1;
+        }
+        .shop__floor {
+            height: 280px;
+        }
+        #floor {
+            height: 270px;
+        }
+        .shop__floor h3 {
+            position: relative;
+            top: 85%;
+            left: 5%;
+        }
+        #floor:hover {
+            opacity: 0.8;
+            box-shadow: 3px 3px 6px #666666;
+        }
+        .shop__floor:hover h3 {
+            color: #E79F00;
+            cursor: pointer;
+            font-size: 30px;
+            z-index: 1;
+        }
+        
+        .info {
+            margin: 40px 20px;
+            padding-top: 10px;
+        }
+        .info p {
+            font-size: 15px;
+        }
+        #ship,
+        #pay,
+        #shop-wa {
+            height: 80px;
+            width: 120px;
+            padding: 20px;
+        }
+    
+        .products h2 {
+            font-size: 30px;
+            position: relative;
+            top: 45px;
+            left: 40px;
+            width: 50%;
+        }
+        .see__dest {
+            height: 300px;
+            width: 15%;
+        }
+        .dest {
+            height: 190px;
+            width: 100%;
+        }
+        .dest:hover {
+            opacity: 0.9;
+        }
+        .see__dest p {
+            display: block;
+            font-size: 13px;
+        }
+        .dest-fee {
+            color: black;
+            display: block;
+            padding-top: 6%;
+            text-align: center;
+        }
+    }
