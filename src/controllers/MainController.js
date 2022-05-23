@@ -110,7 +110,7 @@ const MainController = {
 			let productNew = {
 				id: ide,
 				name: req.body.name,
-                description: req.body.description,
+                description: req.body.description.split("."),
                 img: req.file.filename, //+ ide + "-" + Date.now() + path.extname(file.originalname),
 				category: req.body.category,
                 color: req.body.color,
@@ -143,6 +143,7 @@ const MainController = {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
 
 		//Edito el producto
+
 		products.find( element => {
 			if( element.id == req.params.id ){
 				if( element.name != req.body.name ){element.name = req.body.name;}
