@@ -10,9 +10,9 @@
                     <p class="h2_preview_txt">
                         <%= product.name %>
                     </p>
-                    <div class="preview__img">
+                    <article class="preview__img">
                         <img src="\img\<%= product.img %>" alt="Luces" class="preview__img__img">
-                    </div>
+                    </article>
                     <div class="preview__txt">
                         <p class="h2_preview_txt2">
                             <%= product.name %>
@@ -44,16 +44,17 @@
                         <option value="12">12</option> -->
                                     </select>
                                     cuotas</p>
-                                <div> &nbsp </div>
+                                <p> &nbsp </p>
                                 <button class="agregarcarrito">Agregar al carrito</button>
                     </div>
                 </section>
                 <h3 class="Desc-titulo">Características</h3>
+                <!-- <pre class="Desc-producto"><%= product.description %></pre> -->
                 <% product.description.forEach(element=>{ %>
                     <p class="Desc-producto">
-                        <%= element %>
+                    <%= element %>
                     </p>
-                    <% }) %>
+                <% }) %>
                             <section class="products">
                                 <h2 class="products-h2">Productos relacionados</h2>
                                 <article class="see">
