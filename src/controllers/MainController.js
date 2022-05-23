@@ -20,6 +20,13 @@ const MainController = {
         res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos', product:product, products:products});
     },
 
+    gallery: (req, res) => {
+        let productsFilter = products.filter(product => {
+            return product.category === req.params.category;
+        })
+        res.render('./products/categories', {id: 'categories', category: req.params.category , title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter});
+    },
+    
     login: (req, res) => {
         res.render('./users/login', {id: 'login', title: 'LUMEN - Login'});
     },
@@ -78,10 +85,10 @@ const MainController = {
         res.render('./products/productCreate', {id: 'productCreate', title: 'LUMEN - Creación de producto'});
     },
     
-    create2: (req, res) => {
+    store: (req, res) => {
         const productsFilePath = path.join(__dirname, '../data/products.json');
         let products = fs.readFileSync(productsFilePath, 'utf-8');
-        console.log(req.file);
+       
         if(req.file){
 
 			//Verifico que el JSON esta vacio
@@ -109,7 +116,7 @@ const MainController = {
                 color: req.body.color,
                 price: req.body.price,
 				discount: req.body.discount,
-                coutas: req.body.payments
+                payments: req.body.payments
 			}
 
 			//Lo sumo con los demas
@@ -117,7 +124,7 @@ const MainController = {
 			array.push(productNew);
 			newProducts = JSON.stringify(array, null, "\t");
 			fs.writeFileSync(productsFilePath, newProducts);
-			res.redirect('/product/detail/'+ ide)
+			res.redirect('/product/detail/'+ ide);
 
 		} else {
 			res.render('./products/productCreate', {id: 'productCreate', title: 'LUMEN - Creación de producto'});
@@ -131,11 +138,51 @@ const MainController = {
         res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Edición de producto', product: product});
     },
 
-    gallery: (req, res) => {
-        let productsFilter = products.filter(product => {
-            return product.category === req.params.category;
-        })
-        res.render('./products/categories', {id: 'categories', category: req.params.category , title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter});
+    update: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../data/products.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+
+		//Edito el producto
+		products.find( element => {
+			if( element.id == req.params.id ){
+				if( element.name != req.body.name ){element.name = req.body.name;}
+				
+				if( element.price != req.body.price ){element.price = req.body.price;}
+				
+				if( element.discount != req.body.discount ){element.discount = req.body.discount;}
+				
+				if( element.category != req.body.category ){element.category = req.body.category;}
+				
+				if( element.description != req.body.description ){element.description = req.body.description;}
+
+                if( element.img != req.file.filename ){element.img = req.file.filename;}
+
+                if( element.color != req.body.color ){element.color = req.body.color;}
+
+                if( element.payments != req.body.payments ){element.payments = req.body.payments;}
+				
+			}});
+
+		//Actualizo
+
+		products = JSON.stringify(products, null, "\t");
+		fs.writeFileSync(productsFilePath, products);
+		res.redirect('/product/detail/'+ req.params.product);
+
+    },
+
+    delete: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../data/products.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        let newProducts = products.filter(product => {
+            return product.id != req.params.product;
+        });
+
+        newProducts = JSON.stringify(newProducts, null, "\t");
+
+        fs.writeFileSync(productsFilePath, newProducts);
+		res.render('home', {id: 'home', title: 'LUMEN Lights Shop', products: products});
     }
 }
 

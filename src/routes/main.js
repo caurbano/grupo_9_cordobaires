@@ -42,10 +42,12 @@ router.get('/register', MainController.register);
 router.post('/register', uploadImgUser.single('img'), MainController.register2);
 
 router.get('/product/create', MainController.create);
-router.post('/product/create', uploadImgProduct.single('img'), MainController.create2);
+router.post('/product/create', uploadImgProduct.single('img'), MainController.store);
 
 router.get('/product/edit/:product', MainController.edit);
-//router.put('/product/edit/:product', uploadImgProduct.single('img'), MainController.edit2);
+router.put('/product/edit/:product', uploadImgProduct.single('img'), MainController.update);
+
+router.delete('/product/delete/:product', MainController.delete);
 
 router.get('/product/:category', MainController.gallery);
 

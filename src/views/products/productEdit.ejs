@@ -13,18 +13,20 @@
         <div class="main-form">
         <p>Editar de producto</p>
         <article>
-            <form action="/product/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
+            <form action="/product/edit/<%= product.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                 <div class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "<%= product.name %>">
+                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" value = "<%= product.name %>">
                 </div>
                 <div class="register">
                     <label class="form-title">Descripcion del producto</label>
-                    <textarea name="description" rows="4" cols="50" placeholder = "<%= product.description %>"></textarea>
+                    <textarea name="description" rows="4" cols="50" value = "<%= product.description.forMap %>"></textarea>
                 </div>
                 <div class="register">
                     <label class="form-title">Foto del producto</label>
-                    <img src="\img\<%= product.img %>">
+                    <div class="img">
+                        <img src="\img\<%= product.img %>" width="100%">
+                    </div>
                     <input type="file" name="Foto" accept=".jpg" multiple>
                 </div>
                 <div class="register">
@@ -44,22 +46,26 @@
                 </div>
                 <div class="register">
                     <label class="form-title">Color</label>
-                    <input type="text" class="validate" name="color" required="required" placeholder = "Color">
+                    <input type="text" class="validate" name="color" required="required" value = "<%= product.color %>">
                 </div>
                 <div class="register">
                     <label class="form-title">Precio</label>
-                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.price %>">
+                    <input type="number" class="validate" name="price" required="required" value = "<%= product.price %>">
+                </div>
+                <div class="register">
+                    <label class="form-title">Descuento</label>
+                    <input type="number" class="validate" name="discount"  placeholder = "Descuento" value = "<%= product.discount %>">
                 </div>
                 <div class="register">
                     <label class="form-title">Cuotas maxima</label>
-                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.payments %>">
+                    <input type="number" class="validate" name="payments" required="required" value = "<%= product.payments %>">
                 </div>
                 <div class="confirm">
                     <button type="submit"><p>Cancelar</p></button>
                     <button type="submit"><p>Confirmar</p></button>
                 </div>
             </form>
-            <form action="/product/edit?_method=DELETE" method="post" class="form">
+            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post" class="form">
                 <div class="confirm">
                     <button type="submit"><p>Eliminar producto</p></button>
                 </div>
