@@ -129,6 +129,13 @@ const MainController = {
             return product.id === req.params.product
         });
         res.render('./products/productEdit', {id: 'productEdit', title: 'LUMEN - Edición de producto', product: product});
+    },
+
+    gallery: (req, res) => {
+        let productsFilter = products.filter(product => {
+            return product.category === req.params.category;
+        })
+        res.render('./products/categories', {id: 'categories', category: req.params.category , title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter});
     }
 }
 

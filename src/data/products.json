@@ -55,7 +55,7 @@
 			"Medidas generales: Alto 55cm x 125cm"
 		],
 		"img": "product-4-sripes.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "81000",
 		"discount": "0",
@@ -70,7 +70,7 @@
 			"Medidas generales: Alto 22cm x 15cm."
 		],
 		"img": "product-5-minimal.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "2700",
 		"discount": "0",
@@ -86,7 +86,7 @@
 			"Medidas generales: Alto 90cm x 35cm"
 		],
 		"img": "product-6-binomio.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "8400",
 		"discount": "0",
@@ -101,7 +101,7 @@
 			"Medidas generales: Alto 90cm x 90cm"
 		],
 		"img": "product-7-erizo.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "10500",
 		"discount": "0",
@@ -116,7 +116,7 @@
 			"Medida pantallas: Alto 40 cm x 90cm de diámetro"
 		],
 		"img": "product-8-membrana.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "6000",
 		"discount": "0",
@@ -132,7 +132,7 @@
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro"
 		],
 		"img": "product-9-grua.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "15000",
 		"discount": "0",
@@ -147,7 +147,7 @@
 			"Medida pantalla: Alto 35cm x 40cm de diámetro"
 		],
 		"img": "product-10-trivento.jpeg",
-		"category": "pared",
+		"category": "techo",
 		"color": "espejado",
 		"price": "8400",
 		"discount": "0",

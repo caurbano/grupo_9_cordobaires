@@ -47,4 +47,6 @@ router.post('/product/create', uploadImgProduct.single('img'), MainController.cr
 router.get('/product/edit/:product', MainController.edit);
 //router.put('/product/edit/:product', uploadImgProduct.single('img'), MainController.edit2);
 
+router.get('/product/:category', MainController.gallery);
+
 module.exports = router;
