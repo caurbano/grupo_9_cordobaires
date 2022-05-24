@@ -49,7 +49,7 @@
 
 .see__dest {
     background-color: #918c8c1e;
-    border: solid 2px #1f1d1d;
+    border: solid 1px #1f1d1d;
     height: 100px;
     width: 32%;
     margin: 3% 3%;
@@ -91,7 +91,6 @@
         left: 20px;
         }
         .see__dest {
-        border: solid 2px #1f1d1d;
         box-shadow: 3px 3px 5px #665e5e;
         height: 125px;
         width: 25%;
@@ -113,7 +112,12 @@
             width: 50%;
         }
         .see__dest {
+            border: solid 2px #1f1d1d;
             height: 300px;
+            width: 20%;
+            margin: 2% 1%;
+
+
 
         }
         .dest {
