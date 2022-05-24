@@ -199,5 +199,37 @@
 		"price": "3600",
 		"discount": "0",
 		"payments": "6"
+	},
+	{
+		"id": "14",
+		"name": "Aplique BARRAL",
+		"description": [
+			"Barral de 4 lámparas",
+			"\r\nCable de alimentación interno",
+			"\r\nMedidas generales: Alto 34cm x 105cm"
+		],
+		"img": "product-14-BARRAL.jpeg",
+		"category": "pared",
+		"color": "negro",
+		"price": "11400",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "15",
+		"name": "Aplique SANTORINI",
+		"description": [
+			"Aplique simple",
+			"\r\nCable de alimentación interno",
+			"\r\nLámpara de vidrio",
+			"\r\nBase metálica cromada",
+			"\r\nMedidas generales: Alto 45cm x 25cm"
+		],
+		"img": "product-15-SANTORINI.jpeg",
+		"category": "pared",
+		"color": "blanco",
+		"price": "4230",
+		"discount": "0",
+		"payments": "6"
 	}
 ]
