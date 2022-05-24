@@ -131,6 +131,29 @@
 .confirm > button > p:hover{
     font-size: 16px;
 }
+.deleteButton{
+    width: 60%;
+    background-color: #ff0000;
+    cursor: pointer;
+    padding: 14px 18px;
+    margin: 15px 10%;
+    border: solid 1px black;
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+.deleteButton > p{
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    transition: all 1s ease;
+}
+.deleteButton:hover{
+    background-color: #df0000;
+    font-size: 0.9em;
+}
+.deleteButton > p:hover{
+    font-size: 14px;
+}
 @media (min-width: 761px){
     .main-form > p{
         margin: 25px;
@@ -144,5 +167,12 @@
     }
     .confirm > button > p{
         font-size: 13px;
+    }
+    .deleteButton{
+        width: 16%;
+        margin: 15px 0px;
+    }
+    .deleteButton > p{
+        font-size: 12px;
     }
 }
