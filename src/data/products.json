@@ -3,13 +3,13 @@
 		"id": "1",
 		"name": "Lámpara SILVER",
 		"description": [
-			"Base y brazo metálico con antalla de aluminio.",
+			"Base y brazo metálico con pantalla de aluminio.",
 			"Cable alimentación 1,5m negro.",
 			"Medidas generales: Alto 210cm x base 55cm de diámetro.",
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro."
 		],
 		"img": "product-1-silver.jpeg",
-		"category": "Pie",
+		"category": "pie",
 		"color": "plateado",
 		"price": "13500",
 		"discount": "0",
@@ -35,7 +35,7 @@
 		"id": "3",
 		"name": "Aplique ECLIPSE",
 		"description": [
-			"Aplique para iluminacion de espejo",
+			"Aplique para iluminación de espejo",
 			"Cable de alimentación interno.",
 			"Medidas generales: Alto 55cm x 55cm"
 		],
@@ -56,7 +56,7 @@
 		],
 		"img": "product-4-sripes.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "negro",
 		"price": "81000",
 		"discount": "0",
 		"payments": "6"
@@ -71,7 +71,7 @@
 		],
 		"img": "product-5-minimal.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "cobre",
 		"price": "2700",
 		"discount": "0",
 		"payments": "6"
@@ -87,7 +87,7 @@
 		],
 		"img": "product-6-binomio.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "negro",
 		"price": "8400",
 		"discount": "0",
 		"payments": "6"
@@ -102,7 +102,7 @@
 		],
 		"img": "product-7-erizo.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "plateado",
 		"price": "10500",
 		"discount": "0",
 		"payments": "6"
@@ -117,7 +117,7 @@
 		],
 		"img": "product-8-membrana.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "beige",
 		"price": "6000",
 		"discount": "0",
 		"payments": "6"
@@ -133,7 +133,7 @@
 		],
 		"img": "product-9-grua.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "cobre",
 		"price": "15000",
 		"discount": "0",
 		"payments": "6"
@@ -148,8 +148,55 @@
 		],
 		"img": "product-10-trivento.jpeg",
 		"category": "techo",
-		"color": "espejado",
+		"color": "bronce",
 		"price": "8400",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "11",
+		"name": "Lámpara VENTILUZ",
+		"description": [
+			"Base y brazo metálico",
+			"\r\nCable alimentación 1m negro",
+			"\r\nMedidas generales: Alto 100cm x base 55cm de diámetro",
+			"\r\nModerno diseño para 5 focos"
+		],
+		"img": "product-11-VENTILUZ.jpeg",
+		"category": "pie",
+		"color": "bronce",
+		"price": "6600",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "12",
+		"name": "Lámpara MONROE",
+		"description": [
+			"Base y brazo metálico",
+			"\r\nCable alimentación 1m negro",
+			"\r\nMedidas generales: Alto 120cm x base 45cm de diámetro",
+			"\r\nLámpara translúcida en tonalidad gris"
+		],
+		"img": "product-12-MONROE.jpeg",
+		"category": "pie",
+		"color": "dorado",
+		"price": "12300",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "13",
+		"name": "Aplique CILINDRO",
+		"description": [
+			"Aplique para iluminación de pared",
+			"\r\nCable de alimentación interno",
+			"\r\nMedidas generales: Alto 35cm x 15cm"
+		],
+		"img": "product-13-CILINDRO.jpeg",
+		"category": "pared",
+		"color": "negro",
+		"price": "3600",
 		"discount": "0",
 		"payments": "6"
 	}
