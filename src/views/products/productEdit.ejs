@@ -18,8 +18,8 @@
                     <input type="text" class="validate" name="name" required="required" pattern="{0,11}" value = "<%= product.name %>">
                 </section>
                 <section class="register">
-                    <label class="form-title">Descripcion del producto</label>
-                    <textarea name="description" rows="4" cols="50" value = "<%= product.description.forMap %>"></textarea>
+                    <label class="form-title">Descripcion del producto (separar cada características con un . )</label>
+                    <textarea name="description" rows="4" cols="50"><%= product.description.join(" ") %></textarea>
                 </section>
                 <section class="register">
                     <label class="form-title">Foto del producto</label>
@@ -31,15 +31,15 @@
                 <section class="register">
                     <label class="form-title">Categoria</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Techo" required="required">
+                        <input type="radio" name="category" value="Techo" required="required" <%= product.category == 'techo' ? 'checked' : ''; %> >
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pared" required="required">
+                        <input type="radio" name="category" value="Pared" required="required" <%= product.category == 'pared' ? 'checked' : ''; %> >
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pie" required="required">
+                        <input type="radio" name="category" value="Pie" required="required" <%= product.category == 'pie' ? 'checked' : ''; %> >
                         <label>Pie</label>
                     </div>
                 </section>
@@ -65,9 +65,7 @@
                 </section>
             </form>
             <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post" class="form">
-                <section class="confirm">
-                    <button type="submit"><p>Eliminar producto</p></button>
-                </section>
+                    <button type="submit" class="deleteButton"><p>Eliminar producto</p></button>
             </form>
         </section>
     </main>

@@ -3,13 +3,13 @@
 		"id": "1",
 		"name": "Lámpara SILVER",
 		"description": [
-			"Base y brazo metálico con antalla de aluminio.",
+			"Base y brazo metálico con pantalla de aluminio.",
 			"Cable alimentación 1,5m negro.",
 			"Medidas generales: Alto 210cm x base 55cm de diámetro.",
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro."
 		],
 		"img": "product-1-silver.jpeg",
-		"category": "Pie",
+		"category": "pie",
 		"color": "plateado",
 		"price": "13500",
 		"discount": "0",
