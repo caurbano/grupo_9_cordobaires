@@ -20,6 +20,13 @@ const MainController = {
         res.render('./products/productDetail', {id: 'productDetail', title: 'LUMEN - Detalle de productos', product:product, products:products});
     },
 
+    gallery: (req, res) => {
+        let productsFilter = products.filter(product => {
+            return product.category === req.params.category;
+        })
+        res.render('./products/categories', {id: 'categories', category: req.params.category , title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter});
+    },
+    
     login: (req, res) => {
         res.render('./users/login', {id: 'login', title: 'LUMEN - Login'});
     },

@@ -63,4 +63,6 @@ router.put('/product/edit/:product', uploadImgProduct.single('img'), MainControl
 
 router.delete('/product/delete/:product', MainController.delete);
 
+router.get('/product/:category', MainController.gallery);
+
 module.exports = router;

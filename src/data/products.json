@@ -35,7 +35,7 @@
 		"id": "3",
 		"name": "Aplique ECLIPSE",
 		"description": [
-			"Aplique para iluminacion de espejo",
+			"Aplique para iluminación de espejo",
 			"Cable de alimentación interno.",
 			"Medidas generales: Alto 55cm x 55cm"
 		],
@@ -55,8 +55,8 @@
 			"Medidas generales: Alto 55cm x 125cm"
 		],
 		"img": "product-4-sripes.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "negro",
 		"price": "81000",
 		"discount": "0",
 		"payments": "6"
@@ -70,8 +70,8 @@
 			"Medidas generales: Alto 22cm x 15cm."
 		],
 		"img": "product-5-minimal.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "cobre",
 		"price": "2700",
 		"discount": "0",
 		"payments": "6"
@@ -86,8 +86,8 @@
 			"Medidas generales: Alto 90cm x 35cm"
 		],
 		"img": "product-6-binomio.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "negro",
 		"price": "8400",
 		"discount": "0",
 		"payments": "6"
@@ -101,8 +101,8 @@
 			"Medidas generales: Alto 90cm x 90cm"
 		],
 		"img": "product-7-erizo.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "plateado",
 		"price": "10500",
 		"discount": "0",
 		"payments": "6"
@@ -116,8 +116,8 @@
 			"Medida pantallas: Alto 40 cm x 90cm de diámetro"
 		],
 		"img": "product-8-membrana.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "beige",
 		"price": "6000",
 		"discount": "0",
 		"payments": "6"
@@ -132,8 +132,8 @@
 			"Medida pantalla: Alto 24 cm x 38cm de diámetro"
 		],
 		"img": "product-9-grua.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "cobre",
 		"price": "15000",
 		"discount": "0",
 		"payments": "6"
@@ -147,9 +147,88 @@
 			"Medida pantalla: Alto 35cm x 40cm de diámetro"
 		],
 		"img": "product-10-trivento.jpeg",
-		"category": "pared",
-		"color": "espejado",
+		"category": "techo",
+		"color": "bronce",
 		"price": "8400",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "11",
+		"name": "Lámpara VENTILUZ",
+		"description": [
+			"Base y brazo metálico",
+			"\r\nCable alimentación 1m negro",
+			"\r\nMedidas generales: Alto 100cm x base 55cm de diámetro",
+			"\r\nModerno diseño para 5 focos"
+		],
+		"img": "product-11-VENTILUZ.jpeg",
+		"category": "pie",
+		"color": "bronce",
+		"price": "6600",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "12",
+		"name": "Lámpara MONROE",
+		"description": [
+			"Base y brazo metálico",
+			"\r\nCable alimentación 1m negro",
+			"\r\nMedidas generales: Alto 120cm x base 45cm de diámetro",
+			"\r\nLámpara translúcida en tonalidad gris"
+		],
+		"img": "product-12-MONROE.jpeg",
+		"category": "pie",
+		"color": "dorado",
+		"price": "12300",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "13",
+		"name": "Aplique CILINDRO",
+		"description": [
+			"Aplique para iluminación de pared",
+			"\r\nCable de alimentación interno",
+			"\r\nMedidas generales: Alto 35cm x 15cm"
+		],
+		"img": "product-13-CILINDRO.jpeg",
+		"category": "pared",
+		"color": "negro",
+		"price": "3600",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "14",
+		"name": "Aplique BARRAL",
+		"description": [
+			"Barral de 4 lámparas",
+			"\r\nCable de alimentación interno",
+			"\r\nMedidas generales: Alto 34cm x 105cm"
+		],
+		"img": "product-14-BARRAL.jpeg",
+		"category": "pared",
+		"color": "negro",
+		"price": "11400",
+		"discount": "0",
+		"payments": "6"
+	},
+	{
+		"id": "15",
+		"name": "Aplique SANTORINI",
+		"description": [
+			"Aplique simple",
+			"\r\nCable de alimentación interno",
+			"\r\nLámpara de vidrio",
+			"\r\nBase metálica cromada",
+			"\r\nMedidas generales: Alto 45cm x 25cm"
+		],
+		"img": "product-15-SANTORINI.jpeg",
+		"category": "pared",
+		"color": "blanco",
+		"price": "4230",
 		"discount": "0",
 		"payments": "6"
 	}

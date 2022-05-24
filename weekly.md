@@ -1,4 +1,5 @@
 ## Weekly Stand-Up  
+### SPRINT 3  
 Lo primero fue hacer el tablero para el Sprint, de ahí partimos con cada tarea.  
 1°  
 Tareas completadas: 
@@ -23,3 +24,16 @@ Tareas completadas:
 
 Algunos impedimentos fueron la falta de claridad en algunos conceptos por parte de algunos de los integrantes; luego de conversarlo, ponerlo en práctica de manera grupal y relectura del material, se superó.
 
+### SPRINT 4  
+1°  
+Tareas completadas:  
+- Revisión de tareas pendientes (mejoras)  
+- Realizamos la retrospectiva  
+  
+2°  
+Tareas completadas:  
+-  Creación de carpeta “src” y corrección de rutas  
+- Mejoras individuales por parte de cada integrante, en alguna sección puntual (optimización del código de las vistas ejs y agregado de galerías por cada categoría, ya quedaron funcionando)   
+- Finalización de las consignas  
+
+Algunos impedimentos que ocurrieron tienen que ver con la falta de claridad o práctica de algunos contenidos, pero al implementarlos pudimos avanzar adecuadamente.  
