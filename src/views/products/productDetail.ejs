@@ -13,6 +13,8 @@
                     <div class="preview__img">
                         <img src="\img\<%= product.img %>" alt="Luces" class="preview__img__img">
                     </div>
+                    
+                    <p> &nbsp </p>
                     <div class="preview__txt">
                         <p class="h2_preview_txt2">
                             <%= product.name %>
@@ -44,9 +46,10 @@
                         <option value="12">12</option> -->
                                     </select>
                                     cuotas</p>
-                                <div> &nbsp </div>
+                                <p> &nbsp </p>
                                 <button class="agregarcarrito">Agregar al carrito</button>
                     </div>
+                    <p> &nbsp </p>
                 </section>
                 <h3 class="Desc-titulo">Características</h3>
                 <% product.description.forEach(element=>{ %>
@@ -58,7 +61,7 @@
                                 <h2 class="products-h2">Productos relacionados</h2>
                                 <article class="see">
                                     <% for( let i=5; i < 10; i++ ) { %>
-                                        <div class="see__dest">
+                                        <article class="see__dest">
                                             <a href="/product/detail/<%= products[i].id %>">
                                                 <img src="/img/<%= products[i].img %>" alt="Producto destacado"
                                                     class="dest">
@@ -72,7 +75,7 @@
                                                             parseInt(parseInt(products[i].price)
                                                             /parseInt(products[i].payments)) %></strong>
                                             </p>
-                                        </div>
+                                        </article>
                                         <% } %>
                                 </article>
                             </section>
