@@ -32,8 +32,8 @@ Tareas completadas:
   
 2°  
 Tareas completadas:  
--  Creación de carpeta “src” y corrección de rutas  
+- Creación de carpeta “src” y corrección de rutas  
 - Mejoras individuales por parte de cada integrante, en alguna sección puntual (optimización del código de las vistas ejs y agregado de galerías por cada categoría, ya quedaron funcionando)   
 - Finalización de las consignas  
 
-Algunos impedimentos que ocurrieron tienen que ver con la falta de claridad o práctica de algunos contenidos, pero al implementarlos pudimos avanzar adecuadamente.  
+Algunos impedimentos que ocurrieron tienen que ver con la falta de claridad o práctica de algunos conceptos, pero al implementarlos durante el proceso del Sprint, pudimos avanzar adecuadamente y afianzar esos contenidos.  

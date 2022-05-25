@@ -25,3 +25,22 @@ En algunos momentos y casos puntuales, depender de la ayuda externa y en vez de 
 #### Dejar de hacer  
 Llegar con el tiempo límite de la entrega, por no prever con anticipación el tiempo que puede llevarle a cada uno, comprender los contenidos y llevarlos a la práctica, en algunos casos.
   
+## Retrospectiva luego del SPRINT 3  
+### Dinámica “Estrella de mar”  
+Según esta dinámica, resaltamos aquello que tenemos que:  
+  
+### Comenzar a hacer  
+Investigar un poco más respecto a algunas herramientas que utilizamos como equipo (por ej. GitHub).  
+  
+### Hacer más  
+Poner más en práctica la dinámica que propone la Weekly Stand-up. Optimizar más los tiempos personales y grupales.  
+
+### Continuar haciendo  
+Seguir con la colaboración grupal y el complemento entre los integrantes.  
+Mantener una comunicación fluida.  
+
+### Hacer menos  
+Avanzar sin haber resuelto dudas anteriores.  
+
+### Dejar de hacer  
+Nuevamente, no dejar para último momento algunas tareas que se pueden realizar antes.  
