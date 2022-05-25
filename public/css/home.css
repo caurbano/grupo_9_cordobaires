@@ -261,6 +261,9 @@
 
 /* DESKTOP */
 @media (min-width: 769px) {
+    .home__img {
+        padding-top: 70px;
+    }
     .review {
         height: 290px;
         }
@@ -273,11 +276,12 @@
         .review p {
         font-size: 15px;
         line-height: 20px;
+        margin-right: 40px;
         }
         .review__img__img {
         height: 200px;
-        width: 380px;
-        margin: 30px;
+        width: 378px;
+        margin: 0px;
         }
     
         .shop {

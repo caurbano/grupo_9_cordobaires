@@ -4,144 +4,26 @@
     margin: 0px;
     padding: 0px;
 }
-/*Desktop*/
-@media (min-width: 791px){
-    #maindetodo{
-        height: 100%;
-        background-color: #666666;
-        margin-bottom: -1%;;
-    }
-    .main{
-        display: flex;
-        flex-direction: column;
-        margin: 1% auto;
-        width: 75%;
-        background-color: #1f1d1d;
-        opacity: 0.9;
-    }
-    #tituloDelCarrito {
-        font-size: 300%;
-        display: flex;
-        justify-content: center;
-        letter-spacing: 1px;
-        text-shadow: 1px 1px white, -2px -1px #E79F00;
-        margin-top: 10%;
-    
-    }
-    .productosDelCarrito{
-        border: solid white 1px;
-        margin: 1% auto;
-        width: 100%;
-    }
-    .nombreDelProducto {
-        display: flex;
-        align-items: center;
-        width: 10%;
-    }
-    .nombreDelProducto p{
-        display:flex;
-        padding: 1%;
 
-    }
-    .Delete{
-        margin: 1% auto;
-        width:30%;
-    }
-    
-    .botonDeEliminar{
-        display: flex;
-        justify-content: center;
-        margin: 10% auto;
-        font-size: 10px;
-        background: red;
-        letter-spacing: 0.1px;
-        cursor: pointer;
-        color: rgba(255, 255, 255, .8);
-        padding: 10px;
-    }
-    
-    .totales{
-        display: flex;
-        flex-direction: row;
-    }
-    #total .precioTotal{
-        margin-top: 1%;
-        font-weight: bold;
-    }
-    #total{
-        display: flex;
-        justify-content: right;
-        margin: 3%;
-        color: white;
-    }
-    #total .totalDelCarrito{
-        margin-right: 1px;
-        text-shadow: 1px 1px white, -2px -1px #E79F00;
-        font-size: 20px;
-    }
-    .Precio{
-        width: 10%;
-    }
-    .Precio p{
-        display: flex;
-        justify-content: center;
-    }
-    .addProduct{
-        width: 20%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .mas {
-        font-weight: bold;    
-        background-color: white;
-        margin-left: 1px;
-        opacity: 0.5;
-    }
-    .menos{
-        background-color: white;
-        font-weight: bold;
-        margin-right: 5px;
-        opacity: 0.5;
-    }
-    .cero{
-        font-size: 25px;
-    }
-    #boton_comprar{
-        display: flex;
-        justify-content: right;
-        height: 50px;
-        margin: 20px;
-    }
-    .botonDeComprar{
-        height: 30px;
-        border-radius: 3rem 3rem;
-        width: 200px;
-    }
-    .botonDeComprar:hover {
-        color: white;
-        cursor: pointer;
-        background: #2f9b05;
-    }
-
-}
 /* general*/
 #tituloDelCarrito{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     justify-content: center;
-    padding: 3%;
-    letter-spacing: 1px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    /* font-weight: bold; */
+    font-size: 30px;
 }
 .productosDelCarrito{
     background-color:white;
     display: flex;
-    flex-direction: row;
-    width: 99%;
-    margin: 0.5% auto;
-    border-radius: 2rem;
+    justify-content: space-between;
+    /* margin: 0.5% auto; */
+}
+
+.productosDelCarrito p {
+    font-size: 14px;
 }
 .producto{
     width: 20%;
@@ -154,16 +36,14 @@
     width: 100%;
 }
 .nombreDelProducto{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 20%;
-    margin: 1%;
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .Precio{
     width: 20%;
-    margin: 2%;
+    /* margin: 2%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,18 +73,188 @@
     justify-content: center;
     align-items: center;
 }
-.Delete{
+/* .Delete{
     display: flex;
     align-items: center;
     margin-left: 10%;
     justify-content: center;
+} */
+
+.botonDeEliminar{
+    border: solid black 1px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 13px;
+    background: red;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .8);
+    padding: 3px;
 }
 .totales{
     display: flex;
     justify-content: right;
+    margin-right: 20px;
 }
+.totales p {
+     font-weight: bold;
+     word-spacing: 1px;
+}
+
 #boton_comprar{
-    margin: 5%;
-    display: flex;
-    justify-content: right;
+        display: flex;
+        justify-content: right;
+        margin: 20px;
+    }
+    .botonDeComprar{
+        font-weight: bold;
+        height: 30px;
+        border: solid #1f1d1d 1px;
+        border-radius: 8px;
+        width: 150px;
+    }
+
+    @media (min-width: 481px) {
+        #tituloDelCarrito{
+           
+            margin-top: 120px;
+           
+    }
+}
+
+/*Desktop*/
+@media (min-width: 791px){
+    #maindetodo{
+        height: 100%;
+        background-color:#918c8c1e;
+        /* margin-bottom: -1%; */
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background-color: white;
+    }
+    #tituloDelCarrito {
+        /* font-size: 40px; */
+        display: flex;
+        justify-content: center;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px white, -2px -1px #E79F00;
+        margin-top: 10%;
+    
+    }
+    .productosDelCarrito{
+        /* border-top: solid #1f1d1d 1px;
+        border-bottom: solid #1f1d1d 1px; */
+        /* box-shadow: 3px 3px 6px #666666; */
+        margin: 1% auto;
+        width: 100%;
+    }
+
+    .productosDelCarrito p {
+        font-size: 20px;
+    }
+
+    .productosDelCarrito img {
+        box-shadow: 3px 3px 6px #666666;
+
+    }
+    .nombreDelProducto {
+        display: flex;
+        align-items: center;
+
+    }
+    .nombreDelProducto p{
+        display:flex;
+        padding: 1%;
+
+    }
+    
+    .botonDeEliminar{
+        display: flex;
+        justify-content: center;
+        margin: 10% auto;
+        /* font-size: 20px; */
+        background: red;
+        cursor: pointer;
+        color: rgba(255, 255, 255, .8);
+        padding: 10px;
+    }
+    
+    .totales{
+        display: flex;
+        flex-direction: row;
+    }
+    #total .precioTotal{
+        margin-top: 1%;
+        font-weight: bold;
+    }
+    #total{
+        display: flex;
+        justify-content: right;
+        margin: 3%;
+        color: black;
+    }
+    #total .totalDelCarrito{
+        margin-right: 1px;
+        /* text-shadow: 1px 1px white, -2px -1px #E79F00; */
+        font-size: 20px;
+    }
+    .Precio{
+        width: 10%;
+    }
+    .Precio p{
+        display: flex;
+        justify-content: center;
+    }
+    .addProduct{
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .mas {
+        cursor: pointer;
+        font-weight: bold;    
+        background-color: white;
+        margin-left: 1px;
+        opacity: 0.5;
+        padding: 5px;
+    }
+    .menos{
+        cursor: pointer;
+        background-color: white;
+        font-weight: bold;
+        margin-right: 5px;
+        opacity: 0.5;
+        padding: 5px;
+
+    }
+    .cero{
+        font-size: 25px;
+    }
+    #boton_comprar{
+        display: flex;
+        justify-content: right;
+        height: 55px;
+        margin: 15px 50px;
+    }
+    .botonDeComprar{
+        height: 40px;
+        border-radius: 3rem 3rem;
+        width: 200px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .botonDeComprar:hover {
+        color: white;
+        cursor: pointer;
+        background: #2f9b05;
+    }
+
 }
