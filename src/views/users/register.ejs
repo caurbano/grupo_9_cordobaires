@@ -15,22 +15,22 @@
             <h3>Comprá más rápido y llevá el control de tus pedidos!</h3>
             <form action="/register" method="post" class="form" enctype="multipart/form-data">
                 <section class="register">
-                    <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre">
+                    <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre" required>
                 </section>
                 <section class="register">
-                    <input type="text" class="validate" name="lastName"  pattern="{0,11}" placeholder = "Apellido">
+                    <input type="text" class="validate" name="lastName"  pattern="{0,11}" placeholder = "Apellido" required>
                 </section>
                 <section class="register">
-                    <input type="email" class="validate" name="email"  pattern="{0,11}" placeholder = "Email">
+                    <input type="email" class="validate" name="email"  pattern="{0,11}" placeholder = "Email" required>
                 </section>
                 <section class="register">  
-                    <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}"  placeholder = "Telefono">
+                    <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}"  placeholder = "Telefono" required>
                 </section>
                 <section class="register">
-                    <input type="password" class="validate" name="password"  placeholder = "Contraseña">
+                    <input type="password" class="validate" name="password"  placeholder = "Contraseña" required>
                 </section>
                 <section class="register">
-                    <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar Contraseña">
+                    <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar Contraseña" required>
                 </section>
                 <section class="register">
                     <label class="form-title">Imagen de perfil</label>
