@@ -1,7 +1,7 @@
 [
 	{
 		"id": "1",
-		"name": "Lámpara SILVER",
+		"name": "SILVER",
 		"description": [
 			"Base y brazo metálico con pantalla de aluminio.",
 			"Cable alimentación 1,5m negro.",
@@ -17,7 +17,7 @@
 	},
 	{
 		"id": "2",
-		"name": "Lámpara GRECIA",
+		"name": "GRECIA",
 		"description": [
 			"Tres pantallas colgantes de aluminio.",
 			"Cable alimentación 1,5m negro.",
@@ -33,7 +33,7 @@
 	},
 	{
 		"id": "3",
-		"name": "Aplique ECLIPSE",
+		"name": "ECLIPSE",
 		"description": [
 			"Aplique para iluminación de espejo",
 			"Cable de alimentación interno.",
@@ -48,7 +48,7 @@
 	},
 	{
 		"id": "4",
-		"name": "Lámpara STRIPES",
+		"name": "STRIPES",
 		"description": [
 			"Lámpara de techo.",
 			"Color: negro. Cable alimentación 1,5m negro.",
@@ -63,9 +63,9 @@
 	},
 	{
 		"id": "5",
-		"name": "Lámpara MINIMAL",
+		"name": "MINIMAL",
 		"description": [
-			"Simulacion de borde de foco LED.",
+			"Simulación de borde de foco LED.",
 			"Color cobre. Cable alimentación 1,5m negro.",
 			"Medidas generales: Alto 22cm x 15cm."
 		],
@@ -78,7 +78,7 @@
 	},
 	{
 		"id": "6",
-		"name": "Lámpara BINOMIO",
+		"name": "BINOMIO",
 		"description": [
 			"Lámpara de techo doble foco.",
 			"Color negro con base y brazo metálico.",
@@ -94,7 +94,7 @@
 	},
 	{
 		"id": "7",
-		"name": "Lámpara ERIZO",
+		"name": "ERIZO",
 		"description": [
 			"Lámpara simulacion de erizo marino.",
 			"Color: plateado. Cable alimentación 1m negro.",
@@ -109,7 +109,7 @@
 	},
 	{
 		"id": "8",
-		"name": "Lámpara MEMBRANA",
+		"name": "MEMBRANA",
 		"description": [
 			"Pantalla de mimbre color beige.",
 			"Cable alimentación 1,5m negro.",
@@ -124,7 +124,7 @@
 	},
 	{
 		"id": "9",
-		"name": "Lámpara GRUA",
+		"name": "GRUA",
 		"description": [
 			"Lámpara con varios brazos en cobre.",
 			"Cable alimentación 1,5m negro.",
@@ -140,7 +140,7 @@
 	},
 	{
 		"id": "10",
-		"name": "Lámpara TRIVENTO",
+		"name": "TRIVENTO",
 		"description": [
 			"Tres pantallas de alambre de bronce .",
 			"Cable alimentación 2m marron.",
@@ -155,7 +155,7 @@
 	},
 	{
 		"id": "11",
-		"name": "Lámpara VENTILUZ",
+		"name": "VENTILUZ",
 		"description": [
 			"Base y brazo metálico",
 			"\r\nCable alimentación 1m negro",
@@ -171,12 +171,12 @@
 	},
 	{
 		"id": "12",
-		"name": "Lámpara MONROE",
+		"name": "MONROE",
 		"description": [
 			"Base y brazo metálico",
 			"\r\nCable alimentación 1m negro",
 			"\r\nMedidas generales: Alto 120cm x base 45cm de diámetro",
-			"\r\nLámpara translúcida en tonalidad gris"
+			"\r\n translúcida en tonalidad gris"
 		],
 		"img": "product-12-MONROE.jpeg",
 		"category": "pie",
@@ -187,7 +187,7 @@
 	},
 	{
 		"id": "13",
-		"name": "Aplique CILINDRO",
+		"name": "CILINDRO",
 		"description": [
 			"Aplique para iluminación de pared",
 			"\r\nCable de alimentación interno",
@@ -202,9 +202,9 @@
 	},
 	{
 		"id": "14",
-		"name": "Aplique BARRAL",
+		"name": "BARRAL",
 		"description": [
-			"Barral de 4 lámparas",
+			"Barral de 4 s",
 			"\r\nCable de alimentación interno",
 			"\r\nMedidas generales: Alto 34cm x 105cm"
 		],
@@ -217,11 +217,11 @@
 	},
 	{
 		"id": "15",
-		"name": "Aplique SANTORINI",
+		"name": "SANTORINI",
 		"description": [
 			"Aplique simple",
 			"\r\nCable de alimentación interno",
-			"\r\nLámpara de vidrio",
+			"\r\n de vidrio",
 			"\r\nBase metálica cromada",
 			"\r\nMedidas generales: Alto 45cm x 25cm"
 		],

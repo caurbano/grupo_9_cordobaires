@@ -6,7 +6,7 @@
     <main id="maindetodo">
         <div class="main">
         <div id="tituloDelCarrito">
-            <p>Carrito</p>
+            <h3>Carrito</h3>
         </div>
             <% for( let i=0; i < 3; i++ ) { %>
                 <div class = "productosDelCarrito">
@@ -42,13 +42,12 @@
             
         <div id = "total">
             <article class="totales">
-                <p class= "totalDelCarrito">Total:</p>
-                <p class="precioTotal">$<%= parseInt(product[0].price) + parseInt(product[1].price) + parseInt(product[2].price) %></p>
+                <p class= "totalDelCarrito precioTotal">Total: $<%= parseInt(product[0].price) + parseInt(product[1].price) + parseInt(product[2].price) %></p>
             </article>
         </div>
         <div id="boton_comprar">
             <button class="botonDeComprar">
-                <span>Continuar Compra</span>
+                Continuar compra
             </button>
         </div>
         </div>
