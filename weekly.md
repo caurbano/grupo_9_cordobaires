@@ -37,3 +37,5 @@ Tareas completadas:
 - Finalización de las consignas  
 
 Algunos impedimentos que ocurrieron tienen que ver con la falta de claridad o práctica de algunos conceptos, pero al implementarlos durante el proceso del Sprint, pudimos avanzar adecuadamente y afianzar esos contenidos.  
+
+### SPRINT 5  

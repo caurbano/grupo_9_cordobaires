@@ -41,7 +41,7 @@ Por los clientes a los que apuntan, la estética y las funcionalidades:
 
 
 #### Tablero de trabajo
-https://trello.com/b/iQbarWcg/sprint-2 
-
+https://trello.com/sprints217/home  
+  
 ### Link del Marketplace en Heroku:  
 https://lumenshop.herokuapp.com/  

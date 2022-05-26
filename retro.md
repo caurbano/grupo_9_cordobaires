@@ -25,6 +25,7 @@ En algunos momentos y casos puntuales, depender de la ayuda externa y en vez de 
 #### Dejar de hacer  
 Llegar con el tiempo límite de la entrega, por no prever con anticipación el tiempo que puede llevarle a cada uno, comprender los contenidos y llevarlos a la práctica, en algunos casos.
   
+
 ## Retrospectiva luego del SPRINT 3  
 ### Dinámica “Estrella de mar”  
 Según esta dinámica, resaltamos aquello que tenemos que:  
@@ -44,16 +45,19 @@ Avanzar sin haber resuelto dudas anteriores.
 
 ### Dejar de hacer  
 Nuevamente, no dejar para último momento algunas tareas que se pueden realizar antes.  
-
+  
+  
 ## Retrospectiva luego del SPRINT 4 
 ### Dinámica “Estrella de mar”  
-
+  
 ### Comenzar a hacer  
 
 ### Hacer más  
 Estar mas al dia con los contenidos y consultar mas playground. Consultar mas la documentacion y complementar contenidos.
+  
 ### Continuar haciendo  
 Cambiamos la metodologia de trabajo y ahora trabajamos todos juntos.
+  
 ### Hacer menos  
 
 ### Dejar de hacer  
