@@ -10,40 +10,38 @@
     <!--MAIN-->
 
     <main class="background-main-form">
-        <div class="main-form">
+        <section class="main-form">
             <p>Crear cuenta</p>
             <h3>Comprá más rápido y llevá el control de tus pedidos!</h3>
-            <article>
-                <form action="/register" method="post" class="form" enctype="multipart/form-data">
-                    <div class="register">
-                        <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre">
-                    </div>
-                    <div class="register">
-                        <input type="text" class="validate" name="lastName"  pattern="{0,11}" placeholder = "Apellido">
-                    </div>
-                    <div class="register">
-                        <input type="email" class="validate" name="email"  pattern="{0,11}" placeholder = "Email">
-                    </div>
-                    <div class="register">  
-                        <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}"  placeholder = "Telefono">
-                    </div>
-                    <div class="register">
-                        <input type="password" class="validate" name="password"  placeholder = "Contraseña">
-                    </div>
-                    <div class="register">
-                        <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar Contraseña">
-                    </div>
-                    <section class="register">
-                        <label class="form-title">Imagen de perfil</label>
-                        <input type="file" name="img" accept=".jpg" multiple >
-                    </section>
-                    <div class="confirm">
-                        <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
-                        <button type="submit"><p>Crear cuenta</p></i></button>
-                    </div>
+            <form action="/register" method="post" class="form" enctype="multipart/form-data">
+                <section class="register">
+                    <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre" required>
+                </section>
+                <section class="register">
+                    <input type="text" class="validate" name="lastName"  pattern="{0,11}" placeholder = "Apellido" required>
+                </section>
+                <section class="register">
+                    <input type="email" class="validate" name="email"  pattern="{0,11}" placeholder = "Email" required>
+                </section>
+                <section class="register">  
+                    <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}"  placeholder = "Telefono" required>
+                </section>
+                <section class="register">
+                    <input type="password" class="validate" name="password"  placeholder = "Contraseña" required>
+                </section>
+                <section class="register">
+                    <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar Contraseña" required>
+                </section>
+                <section class="register">
+                    <label class="form-title">Imagen de perfil</label>
+                    <input type="file" name="img" accept=".jpg" multiple >
+                </section>
+                <section class="confirm">
+                    <section class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></section>
+                    <button type="submit"><p>Crear cuenta</p></i></button>
+                </section>
                 </form>
-            </article>
-        </div>
+        </section>
     </main>
 
     <!--FOOTER-->

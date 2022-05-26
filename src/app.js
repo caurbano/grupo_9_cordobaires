@@ -12,8 +12,12 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
- app.listen(3030, () => {
-     console.log('Servidor corriendo en el puerto http://localhost:3030/');
- });
+// app.listen(3030, () => {
+//     console.log('Servidor corriendo en el puerto http://localhost:3030/');
+// });
+
+app.listen(process.env.PORT || 3030, () => {
+    console.log('Servidor corriendo en el puerto http://localhost:3030/');
+});
 
 app.use('/', router);

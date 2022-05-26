@@ -10,62 +10,64 @@
     <!--MAIN-->
 
     <main class="background-main-form">
-        <div class="main-form">
-        <p>Editar de producto</p>
-        <article>
-            <form action="/product/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
-                <div class="register">
+        <section class="main-form">
+            <p>Editar de producto</p>
+            <form action="/product/edit/<%= product.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
+                <section class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" placeholder = "<%= product.name %>">
-                </div>
-                <div class="register">
-                    <label class="form-title">Descripcion del producto</label>
-                    <textarea name="description" rows="4" cols="50" placeholder = "<%= product.description %>"></textarea>
-                </div>
-                <div class="register">
+                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" value = "<%= product.name %>">
+                </section>
+                <section class="register">
+                    <label class="form-title">Descripcion del producto (separar cada características con un . )</label>
+                    <textarea name="description" rows="4" cols="50"><%= product.description.join(" ") %></textarea>
+                </section>
+                <section class="register">
                     <label class="form-title">Foto del producto</label>
-                    <img src="\img\<%= product.img %>">
+                    <section class="img">
+                        <img src="\img\<%= product.img %>" width="100%">
+                    </section>
                     <input type="file" name="Foto" accept=".jpg" multiple>
-                </div>
-                <div class="register">
+                </section>
+                <section class="register">
                     <label class="form-title">Categoria</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Techo" required="required">
+                        <input type="radio" name="category" value="Techo" required="required" <%= product.category == 'techo' ? 'checked' : ''; %> >
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pared" required="required">
+                        <input type="radio" name="category" value="Pared" required="required" <%= product.category == 'pared' ? 'checked' : ''; %> >
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pie" required="required">
+                        <input type="radio" name="category" value="Pie" required="required" <%= product.category == 'pie' ? 'checked' : ''; %> >
                         <label>Pie</label>
                     </div>
-                </div>
-                <div class="register">
+                </section>
+                <section class="register">
                     <label class="form-title">Color</label>
-                    <input type="text" class="validate" name="color" required="required" placeholder = "Color">
-                </div>
-                <div class="register">
+                    <input type="text" class="validate" name="color" required="required" value = "<%= product.color %>">
+                </section>
+                <section class="register">
                     <label class="form-title">Precio</label>
-                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.price %>">
-                </div>
-                <div class="register">
+                        <input type="number" class="validate" name="price" required="required" value = "<%= product.price %>">
+                </section>
+                    <section class="register">
+                    <label class="form-title">Descuento</label>
+                    <input type="number" class="validate" name="discount"  placeholder = "Descuento" value = "<%= product.discount %>">
+                </section>
+                <section class="register">
                     <label class="form-title">Cuotas maxima</label>
-                    <input type="number" class="validate" name="price" required="required" placeholder = "<%= product.payments %>">
-                </div>
-                <div class="confirm">
+                    <input type="number" class="validate" name="payments" required="required" value = "<%= product.payments %>">
+                </section>
+                <section class="confirm">
                     <button type="submit"><p>Cancelar</p></button>
                     <button type="submit"><p>Confirmar</p></button>
-                </div>
+                </section>
             </form>
-            <form action="/product/edit?_method=DELETE" method="post" class="form">
-                <div class="confirm">
-                    <button type="submit"><p>Eliminar producto</p></button>
-                </div>
+            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post" class="form">
+                    <button type="submit" class="deleteButton"><p>Eliminar producto</p></button>
             </form>
-        </article>
-        </div>
+        </section>
     </main>
 
     <!--FOOTER-->

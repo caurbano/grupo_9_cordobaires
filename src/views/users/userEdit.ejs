@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+
+        <!--HEADER-->
+
+        <%- include('../partials/header') %>
+
+            <!--MAIN-->
+
+            <main class="background-main-form">
+                <section class="main-form">
+                    <p>Editar usuario</p>
+                    <form action="/user/edit/<%= user.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
+                        <section class="register">
+                            <input type="text" class="validate" name="firstName" pattern="{0,11}" value="<%= user.firstName %>" required>
+                        </section>
+                        <section class="register">
+                            <input type="text" class="validate" name="lastName" pattern="{0,11}" value="<%= user.lastName %>"
+                                required>
+                        </section>
+                        <section class="register">
+                            <input type="email" class="validate" name="email" pattern="{0,11}" value="<%= user.email %>"
+                                required>
+                        </section>
+                        <section class="register">
+                            <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}" value="<%= user.phone %>"
+                                required>
+                        </section>
+                        <section class="register">
+                            <input type="password" class="validate" name="password" value="<%= user.password %>" required>
+                        </section>
+                        <section class="register">
+                            <input type="password" class="validate" name="confirm_password" placeholder="Confirmar Contraseña" required>
+                        </section>
+                        <section class="register">
+                            <label class="form-title">Imagen de perfil</label>
+                            <section class="img">
+                                <img src="\img\<%= user.img %>" width="100%">
+                            </section>
+                            <input type="file" name="img" accept=".jpg" multiple>
+                        </section>
+                        <section class="confirm">
+                            <section class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW">
+                            </section>
+                            <button type="submit">
+                                <p>Confirmar</p>
+                            </button>
+                        </section>
+                    </form>
+            <form action="/user/delete/<%= user.id %>?_method=DELETE" method="post" class="form">
+                    <button type="submit" class="deleteButton"><p>Eliminar usuario</p></button>
+            </form>
+                </section>
+            </main>
+
+            <!--FOOTER-->
+
+            <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

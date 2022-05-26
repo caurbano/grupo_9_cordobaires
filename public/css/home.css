@@ -162,7 +162,7 @@
 
 .see__dest {
     background-color: #918c8c1e;
-    border: solid 2px #1f1d1d;
+    border: solid 1px #1f1d1d;
     height: 90px;
     width: 15%;
 }
@@ -248,7 +248,6 @@
         left: 20px;
         }
         .see__dest {
-        border: solid 2px #1f1d1d;
         box-shadow: 3px 3px 5px #665e5e;
         height: 120px;
         width: 15%;
@@ -262,6 +261,9 @@
 
 /* DESKTOP */
 @media (min-width: 769px) {
+    .home__img {
+        padding-top: 70px;
+    }
     .review {
         height: 290px;
         }
@@ -274,11 +276,12 @@
         .review p {
         font-size: 15px;
         line-height: 20px;
+        margin-right: 40px;
         }
         .review__img__img {
         height: 200px;
-        width: 380px;
-        margin: 30px;
+        width: 378px;
+        margin: 0px;
         }
     
         .shop {
@@ -366,6 +369,7 @@
             width: 50%;
         }
         .see__dest {
+            border: solid 2px #1f1d1d;
             height: 300px;
             width: 15%;
         }
