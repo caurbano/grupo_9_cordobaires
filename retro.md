@@ -59,6 +59,7 @@ Estar aún más actualizados con los contenidos que se están aplicando, consult
   
 ### Continuar haciendo  
 Recientemente cambiamos la metodología de trabajo, ya no distribuimos tanto las tareas si no que, ahora trabajamos más en conjunto y notamos un buen resultado, mayor optimización de tiempos, mejor resolución de dudas ayudándonos entre los integrantes del equipo, por lo que consideramos que es una práctica a seguir aplicando.  
+  
 ### Hacer menos  
 Nuevamente, nos proponemos no avanzar sin haber resuelto dudas anteriores.  
   
