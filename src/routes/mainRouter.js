@@ -4,14 +4,18 @@ const  multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-const MainController = require('../controllers/MainController');
+const MainController = require('../controllers/mainController');
+const userRouter = require('./userRouter');
+const productRouter = require('./productRouter');
+
+router.use("/user", userRouter);
+router.use("/product", productRouter);
 
 const storageImgProduct = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname,'../../public/img'))
     },
     filename: function (req, file, cb) {
-
       const productsFilePath = path.join(__dirname, '../data/products.json');
       let products = fs.readFileSync(productsFilePath, 'utf-8');
       let array;
@@ -31,17 +35,17 @@ const storageImgProduct = multer.diskStorage({
   
   const uploadImgProduct = multer({ storage: storageImgProduct });
 
-  const storageImgUser = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.join(__dirname,'../../public/img'))
-    },
-    filename: function (req, file, cb) {
-      const newFieldName = 'user-' + Date.now() + path.extname(file.originalname);
-      cb(null, newFieldName)
-    }
-  })
+  // const storageImgUser = multer.diskStorage({
+  //   destination: function (req, file, cb) {
+  //     cb(null, path.join(__dirname,'../../public/img'))
+  //   },
+  //   filename: function (req, file, cb) {
+  //     const newFieldName = 'user-' + Date.now() + path.extname(file.originalname);
+  //     cb(null, newFieldName)
+  //   }
+  // })
   
-  const uploadImgUser = multer({ storage: storageImgUser });
+  // const uploadImgUser = multer({ storage: storageImgUser });
 
 router.get('/', MainController.home);
 
@@ -49,15 +53,15 @@ router.get('/product/cart', MainController.cart);
 
 router.get('/product/detail/:product', MainController.detail);
 
-router.get('/user/login', MainController.login);
-//router.post('/login', MainController.login2);
+// router.get('/user/login', MainController.login);
+// //router.post('/login', MainController.login2);
 
-router.get('/register', MainController.register);
-router.post('/register', uploadImgUser.single('img'), MainController.register2);
+// router.get('/register', MainController.register);
+// router.post('/register', uploadImgUser.single('img'), MainController.register2);
 
-router.get('/user/edit/:id', MainController.editUser);
-router.put('/user/edit/:id', uploadImgUser.single('img'), MainController.updateUser);
-router.delete('/user/delete/:id', MainController.deleteUser);
+// router.get('/user/edit/:id', MainController.editUser);
+// router.put('/user/edit/:id', uploadImgUser.single('img'), MainController.updateUser);
+// router.delete('/user/delete/:id', MainController.deleteUser);
 
 router.get('/product/create', MainController.create);
 router.post('/product/create', uploadImgProduct.single('img'), MainController.store);
