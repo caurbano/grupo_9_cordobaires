@@ -49,16 +49,18 @@ Nuevamente, no dejar para último momento algunas tareas que se pueden realizar 
   
 ## Retrospectiva luego del SPRINT 4 
 ### Dinámica “Estrella de mar”  
-  
-### Comenzar a hacer  
+Según esta dinámica, resaltamos aquello que tenemos que:  
 
+### Comenzar a hacer  
+Un hábito importante a implementar sería el de consultar más la documentación complementaria a los contenidos propuestos. Hacer tiempo de buscar mayor profundización de los conceptos.  
+  
 ### Hacer más  
-Estar mas al dia con los contenidos y consultar mas playground. Consultar mas la documentacion y complementar contenidos.
+Estar aún más actualizados con los contenidos que se están aplicando, consultar más la plataforma (Playground).  
   
 ### Continuar haciendo  
-Cambiamos la metodologia de trabajo y ahora trabajamos todos juntos.
-  
+Recientemente cambiamos la metodología de trabajo, ya no distribuimos tanto las tareas si no que, ahora trabajamos más en conjunto y notamos un buen resultado, mayor optimización de tiempos, mejor resolución de dudas ayudándonos entre los integrantes del equipo, por lo que consideramos que es una práctica a seguir aplicando.  
 ### Hacer menos  
-
+Nuevamente, nos proponemos no avanzar sin haber resuelto dudas anteriores.  
+  
 ### Dejar de hacer  
-
+Esperar hasta el último momento para algunas mejoras. Por ejemplo, revisar las vistas, eliminar o reemplazar algunas etiquetas por otras, etc.  
