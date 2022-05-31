@@ -1,31 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const MainController = {
     home: (req, res) => {
-        // const view = views.find(view => {
-        //     return view.id === 'home';
-        // })
+        const productsFilePath = path.join(__dirname, '../data/products.json');
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('home', { id: 'home', title: 'LUMEN Lights Shop', products: products });
     },
-    cart: (req, res) => {
-        res.render('./products/productCart', { product: products, id: 'productCart', title: 'LUMEN - Carrito de compras' });
-
-    },
-    detail: (req, res) => {
-        const product = products.find(elemento => { return elemento.id === req.params.product; })
-        res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: product, products: products });
-    },
-
-    gallery: (req, res) => {
-        let productsFilter = products.filter(product => {
-            return product.category === req.params.category;
-        })
-        res.render('./products/categories', { id: 'categories', category: req.params.category, title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter });
-    },
+    
 
     // login: (req, res) => {
     //     res.render('./users/login', { id: 'login', title: 'LUMEN - Login' });

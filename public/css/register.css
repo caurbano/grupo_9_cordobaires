@@ -9,19 +9,18 @@
 
 .background-main-form{
     background-color:#918c8c1e;
-    height: 100%;
-    margin-top: 20px;
 }
 .main-form{
     width: 80%;
-    margin-top: 100px;
     padding:5%;
     margin-left: 5%;
     background-color: white;
 }
 .main-form > p{
     text-shadow: 1px 1px white, -2px -1px #E79F00;
+    height: 50px;
     margin-top: 20%;
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 35px;
 }
@@ -114,6 +113,9 @@ form {
     font-size: 16px;
 }
 @media (min-width: 761px){
+    .background-main-form{
+        margin-top: 40px;
+    }
     .main-form > p{
         margin: 25px;
     }
