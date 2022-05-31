@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include('../partials/head') %>
+<!-- LUMEN Lights Shop -->
+<body>
+    <!-- HEADER -->
+    <!-- <%- include('../partials/header') %> -->
+    <main class="background-main">
+        <section class="boxTrue">
+            <article class="head">
+                <h2 class="tittle">Operación exitosa</h2>
+                <i class="fa-solid fa-circle-check" id="true"></i>
+            </article>
+            <p class="text">Se a registrado sus datos correctamente.</p>
+        </section>
+        <section class="boxFalse">
+            <article class="head">
+                <h2 class="tittle">Upss...</h2>
+                <i class="fa-solid fa-circle-xmark" id="false"></i>
+            </article>
+            <p class="text">Hubo un problema en el envio. Vuelva a intentarlo mas tarde.</p>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

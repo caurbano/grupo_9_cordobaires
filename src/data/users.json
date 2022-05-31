@@ -7,5 +7,14 @@
 		"phone": "4847079079",
 		"password": "Aguanteteamgian",
 		"img": "user-1653529875512.webp"
+	},
+	{
+		"id": "2",
+		"firstName": "Boris",
+		"lastName": "Colodro",
+		"email": "bgcolodro@gmail.com",
+		"phone": "4561264",
+		"password": "123456",
+		"img": "user-1654038173920.jpg"
 	}
 ]
