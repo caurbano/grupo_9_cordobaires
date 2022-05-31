@@ -16,10 +16,22 @@ const storageImgUser = multer.diskStorage({
     }
 })
 
+
+// const { body, check } = require('express-validator');
+
+// let validateLogin = [
+//     check('email')
+//     .notEmpty().withMessage('Debes completar este campo con tu email de registro').bail()
+//     .isEmail().withMessage('Debes ingresar un email válido'),
+//     check('password')
+//     .notEmpty().withMessage('Debes completar este campo con tu contraseña').bail()
+//     .isLength({ min: 6 }).withMessage('La contraseña debe contener 6 caracteres como mínimo')
+// ]; 
+
 const uploadImgUser = multer({ storage: storageImgUser });
 
 routerUsers.get('/login', usersController.login);
-//routerUsersUsers.post('/login', MainController.login2);
+// routerUsers.post('/login', validateLogin, usersController.login2);
 
 routerUsers.get('/register', usersController.register);
 routerUsers.post('/register', uploadImgUser.single('img'), usersController.register2);
@@ -29,3 +41,4 @@ routerUsers.put('/user/edit/:id', uploadImgUser.single('img'), usersController.u
 routerUsers.delete('/user/delete/:id', usersController.deleteUser);
 
 module.exports = routerUsers;
+

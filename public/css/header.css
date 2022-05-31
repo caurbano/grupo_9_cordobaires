@@ -100,7 +100,7 @@
     width: 110px;
     position: fixed;
     top: 92%;
-    right: 2%;
+    right: 4%;
     z-index: 1;
 }
 
@@ -181,7 +181,7 @@
         padding: 5px;
     }
 
-     #wafixed {
+    #wafixed {
     cursor: pointer;
     font-size: medium;
     font-weight: 400;

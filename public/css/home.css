@@ -41,11 +41,17 @@
 }
 
 /* Categorías */
-/* La idea es que posteriormente esta parte sea un carrousel */
 .shop {
     display: flex;
-    justify-content: center;
+    /* flex-wrap: wrap; */
     height: 200px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.shop a {
+    display: flex;
     margin: 0px;
     padding: 0px;
 }
@@ -54,11 +60,22 @@
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     font-size: 15px;
     letter-spacing: 1px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .shop__top {
-    width: 58%;
+    flex-wrap: wrap;
+    width: 60%;
     margin: 0px;
+    padding: 0px;
+}
+
+#top {
+    border: solid 1px #918c8c;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .shop__top h3,
@@ -68,21 +85,14 @@
     left: 5%;
 }
 
-#top {
-    border: solid 1px #918c8c;
-    height: 200px;
-    width: 100%;
-    object-fit: fill;
-}
-
 .wall-floor {
+    display: flex;
     flex-direction: column;
-    height: 200px;
-    width: 38%;
-    margin: 0px;
+    width: 40%;
 }
 
 .shop__wall {
+    flex-wrap: wrap;
     height: 90px;
     width: 100%;
     margin: 0px;
@@ -90,7 +100,7 @@
 
 .shop__wall h3 {
     position: relative;
-    top: 80%;
+    top: 85%;
     left: 5%;
 }
 
@@ -99,9 +109,12 @@
     height: 90px;
     width: 100%;
     margin: 0px;
+    object-fit: cover;
+
 }
 
 .shop__floor {
+    flex-wrap: wrap;
     height: 120px;
     width: 100%;
     margin: 0px;
@@ -112,6 +125,8 @@
     height: 120px;
     width: 100%;
     margin-top: -10px;
+    object-fit: cover;
+
 }
 
 /* información */
@@ -143,6 +158,7 @@
 }
 
 /* Productos destacados */
+/* La idea es que posteriormente esta parte sea un carrousel */
 .see {
     background-color: #918c8c1e;
     width: inherit;
@@ -201,6 +217,7 @@
         line-height: 10px;
         }
         .review__img__img {
+        border-radius: 3px;
         box-shadow: 3px 3px 6px #666666;
         display: block;
         height: 160px;
