@@ -1,3 +1,4 @@
+const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -8,7 +9,20 @@ const usersController = {
     },
 
     login2: (req, res) => {
-        res.send('LOGIN');
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        console.log(req.body);
+        users.find( user => {
+            console.log(user.email);
+            
+            if( user.email == req.body.email && user.password == req.body.password ){
+                return res.redirect('/');
+            }
+        });
+        // if(userLogin){
+            
+        // }
+        res.redirect('/users/login');
     },
 
     register: (req, res) => {
@@ -65,6 +79,7 @@ const usersController = {
         });
         res.render('./users/userEdit', { id: 'userEdit', title: 'LUMEN - Edición de usuario', user: user });
     },
+
     updateUser: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
