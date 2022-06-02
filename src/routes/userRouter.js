@@ -15,7 +15,6 @@ const storageImgUser = multer.diskStorage({
     }
 })
 
-
 const { body, check } = require('express-validator');
 
 let validateLogin = [
@@ -27,6 +26,7 @@ let validateLogin = [
     .isLength({ min: 6 }).withMessage('La contraseña debe contener 6 caracteres como mínimo')
 ]; 
 
+
 const uploadImgUser = multer({ storage: storageImgUser });
 
 routerUsers.get('/login', usersController.login);
@@ -36,7 +36,7 @@ routerUsers.get('/register', usersController.register);
 routerUsers.post('/register', validateLogin, uploadImgUser.single('img'), usersController.register2);
 
 routerUsers.get('/user/edit/:id', usersController.editUser);
-routerUsers.put('/user/edit/:id', uploadImgUser.single('img'), usersController.updateUser);
+routerUsers.put('/user/edit/:id', validateLogin, uploadImgUser.single('img'), usersController.updateUser);
 
 routerUsers.delete('/user/delete/:id', usersController.deleteUser);
 
