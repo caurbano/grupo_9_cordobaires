@@ -11,18 +11,11 @@ const usersController = {
     login2: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        console.log(req.body);
-        users.find( user => {
-            console.log(user.email);
-            
-            if( user.email == req.body.email && user.password == req.body.password ){
-                return res.redirect('/');
-            }
-        });
-        // if(userLogin){
-            
-        // }
-        res.redirect('/users/login');
+        let userLogin = users.find( user => user.email == req.body.email && user.password == req.body.password );
+        if(userLogin){
+            return res.redirect('/');
+        }
+        res.redirect('login');
     },
 
     register: (req, res) => {
@@ -64,10 +57,10 @@ const usersController = {
             array.push(userNew);
             newUsers = JSON.stringify(array, null, "\t");
             fs.writeFileSync(usersFilePath, newUsers);
-            res.render('./users/login', { id: 'login', title: 'LUMEN - Login' });
+            res.redirect('login');
 
         } else {
-            res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro' });
+            res.redirect('register');
         }
     },
 
