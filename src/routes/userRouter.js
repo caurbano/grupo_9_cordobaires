@@ -15,15 +15,15 @@ const storageImgUser = multer.diskStorage({
     }
 })
 
-const { body, check } = require('express-validator');
+const { body } = require('express-validator');
 
 let validateLogin = [
-    check('email')
-    .notEmpty().withMessage('Debes completar este campo con tu email de registro').bail()
-    .isEmail().withMessage('Debes ingresar un email válido'),
-    check('password')
-    .notEmpty().withMessage('Debes completar este campo con tu contraseña').bail()
-    .isLength({ min: 6 }).withMessage('La contraseña debe contener 6 caracteres como mínimo')
+    body('email').notEmpty().withMessage('Debes completar este campo con tu email de registro'),
+    // .bail()
+    // .isEmail().withMessage('Debes ingresar un email válido'),
+    body('password').notEmpty().withMessage('Debes completar este campo con tu contraseña')
+    // .bail()
+    // .isLength({ min: 6 }).withMessage('La contraseña debe contener 6 caracteres como mínimo')
 ]; 
 
 

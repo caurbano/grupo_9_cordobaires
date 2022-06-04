@@ -15,7 +15,7 @@
     margin-left: 5%;
     background-color: white;
 }
-.main-form > p{
+.account{
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     height: 50px;
     margin-top: 20%;
@@ -25,6 +25,12 @@
 }
 .main-form > h3{
     margin-top: 5%;
+    text-align: center;
+}
+.errorMsg {
+    color: #ca1717;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
 }
 form {

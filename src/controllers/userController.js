@@ -5,7 +5,8 @@ const path = require('path');
 
 // SEGUIR CON EXPESS VALIDATOR AVANZADO
 // EN EL CONTROLADOR:
-// const { validateLogin } = require('express-validator');
+const { validationResult } = require('express-validator');
+
 
 
 const usersController = {
@@ -18,27 +19,30 @@ const usersController = {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-        // let errors = validateLogin(req);
-        // if (errors.isEmpty()) {
-        //     //sin errores: continuar
-        // } else {
-        //     //si hay error, redirecciona al login
-        //     res.render('/users/login', { errors: errors.mapped(), old: req.body });
-        // }
+        // users.find( user => {
+        //     // console.log(user.email);
+            
+        //     if( user.email == req.body.email && user.password == req.body.password ){
+        //         return res.redirect('/');
+        //     }
+        // });
+        // // if(userLogin){
+            
+        // // }
+        // res.redirect('/users/login');
+        let errors = validationResult(req);
+        // res.send(errors);
+        if (errors.isEmpty()) {
+            //sin errores: continuar
+            res.redirect('/');
+        } else {
+            //si hay error, redirecciona al login
+            res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', errors: errors.array(), old: req.body });
+        }
 
 
-        console.log(req.body);
-        users.find( user => {
-            console.log(user.email);
-            
-            if( user.email == req.body.email && user.password == req.body.password ){
-                return res.redirect('/');
-            }
-        });
-        // if(userLogin){
-            
-        // }
-        res.redirect('/users/login');
+        // // console.log(req.body);
+        
     },
 
     register: (req, res) => {

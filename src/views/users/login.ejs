@@ -10,8 +10,13 @@
 
     <main class="background-main-form">
         <div class="main-form">
-            <p>Mi cuenta</p>
+            <p class="account">Mi cuenta</p>
             <h3>ACCEDER</h3>
+            <% if (locals.errors) {        
+             errors.forEach(error => { %>
+             <p class="errorMsg"> <%= error.msg %> </p>
+            <% }) %>
+            <% } %>
             <form action ="/user/login" method="post" class="form">
                 <div class="register">
                     <input type="text" name="email" id="email" placeholder = "Email">
