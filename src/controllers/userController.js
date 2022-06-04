@@ -1,6 +1,6 @@
-const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const usersController = {
 
@@ -23,11 +23,14 @@ const usersController = {
     },
 
     register2: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = fs.readFileSync(usersFilePath, 'utf-8');
-        //
-        if (req.file) {
+        console.log(req.body.firstName);
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            const usersFilePath = path.join(__dirname, '../data/users.json');
+            let users = fs.readFileSync(usersFilePath, 'utf-8');
+            
             //Verifico que el JSON esta vacio
+
             let array;
             let ide;
             if (users == "") {
@@ -49,7 +52,7 @@ const usersController = {
                 email: req.body.email,
                 phone: req.body.phone,
                 password: req.body.password,
-                img: req.file.filename,
+                img: req.file ? req.file.filename : 'user-1653529875512.webp',
             }
 
             //Lo sumo con los demas
@@ -58,10 +61,8 @@ const usersController = {
             newUsers = JSON.stringify(array, null, "\t");
             fs.writeFileSync(usersFilePath, newUsers);
             res.redirect('login');
-
-        } else {
-            res.redirect('register');
         }
+        res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro', error: errors.mapped(), old: req.body});
     },
 
     editUser: (req, res) => {
