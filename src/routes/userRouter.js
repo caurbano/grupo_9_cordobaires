@@ -13,7 +13,9 @@ const storageImgUser = multer.diskStorage({
         const newFieldName = 'user-' + Date.now() + path.extname(file.originalname);
         cb(null, newFieldName)
     }
-})
+});
+
+const uploadImgUser = multer({ storage: storageImgUser });
 
 const { body } = require('express-validator');
 
@@ -26,19 +28,16 @@ let validateLogin = [
     // .isLength({ min: 6 }).withMessage('La contraseña debe contener 6 caracteres como mínimo')
 ]; 
 
-
-const uploadImgUser = multer({ storage: storageImgUser });
-
 routerUsers.get('/login', usersController.login);
 routerUsers.post('/login', validateLogin, usersController.login2);
 
 routerUsers.get('/register', usersController.register);
 routerUsers.post('/register', validateLogin, uploadImgUser.single('img'), usersController.register2);
 
-routerUsers.get('/user/edit/:id', usersController.editUser);
-routerUsers.put('/user/edit/:id', validateLogin, uploadImgUser.single('img'), usersController.updateUser);
+routerUsers.get('/edit/:id', usersController.editUser);
+routerUsers.put('/edit/:id', validateLogin, uploadImgUser.single('img'), usersController.updateUser);
 
-routerUsers.delete('/user/delete/:id', usersController.deleteUser);
+routerUsers.delete('/delete/:id', usersController.deleteUser);
 
 routerUsers.get('/result', usersController.result);
 

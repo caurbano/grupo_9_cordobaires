@@ -15,6 +15,7 @@ app.use(session({ secret: 'Secret!'}));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
+app.use(express.urlencoded({ extended: false }));
 
 app.listen(process.env.PORT || 3030, () => {
     console.log('Servidor corriendo en el puerto http://localhost:3030/');
