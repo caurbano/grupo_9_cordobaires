@@ -14,7 +14,7 @@ app.use(express.static(publicPath));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
-
+app.use(session({ secret: 'shhh', resave: false, saveUninitialized: false }));
 app.use(express.urlencoded({ extended: false }));
 
 app.listen(process.env.PORT || 3030, () => {

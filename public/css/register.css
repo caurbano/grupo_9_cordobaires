@@ -76,9 +76,6 @@ form {
 
     /* MAIN REGISTER */
 
-.validate:valid{
-    border-color: rgb(0, 218, 0);
-}
 .confirm{
     display: flex;
     margin-top: 5%;
