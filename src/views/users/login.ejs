@@ -14,10 +14,19 @@
             <h3>ACCEDER</h3>
             <form action ="/user/login" method="post" class="form">
                 <div class="register">
-                    <input type="text" name="email" placeholder = "Email">
+                    <input type="text" name="email" placeholder = "Email" value = "<%= locals.old && old.email ? old.email : '' %>">
+                    <% if ( locals.error && error.email ){ %>
+                        <p class="error"><%= error.email.msg %></p>
+                    <% } %>
                 </div>
+                <% if ( locals.error && error.errorLogin ){ %>
+                    <p class="error"><%= error.errorLogin %></p>
+                <% } %>
                 <div class="register">
                     <input type="password" name="password" placeholder = "Contraseña">
+                    <% if ( locals.error && error.password ){ %>
+                        <p class="error"><%= error.password.msg %></p>
+                    <% } %>
                 </div>
                 <div>
                     <input type="checkbox" name="remember" id="remember" value="Si">

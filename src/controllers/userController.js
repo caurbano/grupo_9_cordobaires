@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 const usersController = {
 
@@ -9,13 +10,19 @@ const usersController = {
     },
 
     login2: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let userLogin = users.find( user => user.email == req.body.email && user.password == req.body.password );
-        if(userLogin){
-            return res.redirect('/');
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            const usersFilePath = path.join(__dirname, '../data/users.json');
+            let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+            let userLogin = users.find(user => user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password));
+            if (userLogin) {
+                delete userLogin.password; 
+                req.session.userLogged = userLogin;
+                return res.redirect('/');
+            }
+            res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', error: { errorLogin: "Usuario o contraseña incorrectos" }, old: req.body });
         }
-        res.redirect('login');
+        res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', error: errors.mapped(), old: req.body });
     },
 
     register: (req, res) => {
@@ -23,12 +30,11 @@ const usersController = {
     },
 
     register2: (req, res) => {
-        console.log(req.body.firstName);
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             const usersFilePath = path.join(__dirname, '../data/users.json');
             let users = fs.readFileSync(usersFilePath, 'utf-8');
-            
+
             //Verifico que el JSON esta vacio
 
             let array;
@@ -51,7 +57,7 @@ const usersController = {
                 lastName: req.body.lastName,
                 email: req.body.email,
                 phone: req.body.phone,
-                password: req.body.password,
+                password: bcrypt.hashSync(req.body.password, 10),
                 img: req.file ? req.file.filename : 'user-1653529875512.webp',
             }
 
@@ -62,7 +68,7 @@ const usersController = {
             fs.writeFileSync(usersFilePath, newUsers);
             res.redirect('login');
         }
-        res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro', error: errors.mapped(), old: req.body});
+        res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro', error: errors.mapped(), old: req.body });
     },
 
     editUser: (req, res) => {
@@ -120,7 +126,7 @@ const usersController = {
         res.redirect('/');
     },
     result: (req, res) => {
-        res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación'});
+        res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación' });
     },
 }
 

@@ -16,5 +16,14 @@
 		"phone": "4561264",
 		"password": "123456",
 		"img": "user-1654038173920.jpg"
+	},
+	{
+		"id": "3",
+		"firstName": "marcos",
+		"lastName": "marquis",
+		"email": "marcosmarquis@gmail.com",
+		"phone": "23245678",
+		"password": "$2a$10$mzOKXdSVtWdTPxT7kBvMB.AIMg6J/91BJs2dEnqiwZBzCC60ZuNtG",
+		"img": "user-1653529875512.webp"
 	}
 ]
