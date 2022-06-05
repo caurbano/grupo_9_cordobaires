@@ -30,6 +30,8 @@ routerUsers.put('/edit/:id', uploadImgUser.single('img'), usersController.update
 
 routerUsers.delete('/delete/:id', usersController.deleteUser);
 
+routerUsers.get('/list', usersController.list);
+
 routerUsers.get('/result', usersController.result);
 
 module.exports = routerUsers;

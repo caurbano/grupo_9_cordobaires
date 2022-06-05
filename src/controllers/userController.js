@@ -150,6 +150,9 @@ const usersController = {
     result: (req, res) => {
         res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación' });
     },
+    list: (req, res) => {
+        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
+    }
 }
 
 module.exports = usersController;
