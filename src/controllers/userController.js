@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const usersController = {
 
@@ -8,7 +9,13 @@ const usersController = {
     },
 
     login2: (req, res) => {
-        res.send('LOGIN');
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        let userLogin = users.find( user => user.email == req.body.email && user.password == req.body.password );
+        if(userLogin){
+            return res.redirect('/');
+        }
+        res.redirect('login');
     },
 
     register: (req, res) => {
@@ -16,11 +23,14 @@ const usersController = {
     },
 
     register2: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = fs.readFileSync(usersFilePath, 'utf-8');
-        //
-        if (req.file) {
+        console.log(req.body.firstName);
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            const usersFilePath = path.join(__dirname, '../data/users.json');
+            let users = fs.readFileSync(usersFilePath, 'utf-8');
+            
             //Verifico que el JSON esta vacio
+
             let array;
             let ide;
             if (users == "") {
@@ -42,7 +52,7 @@ const usersController = {
                 email: req.body.email,
                 phone: req.body.phone,
                 password: req.body.password,
-                img: req.file.filename,
+                img: req.file ? req.file.filename : 'user-1653529875512.webp',
             }
 
             //Lo sumo con los demas
@@ -50,11 +60,9 @@ const usersController = {
             array.push(userNew);
             newUsers = JSON.stringify(array, null, "\t");
             fs.writeFileSync(usersFilePath, newUsers);
-            res.render('./users/login', { id: 'login', title: 'LUMEN - Login' });
-
-        } else {
-            res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro' });
+            res.redirect('login');
         }
+        res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro', error: errors.mapped(), old: req.body});
     },
 
     editUser: (req, res) => {
@@ -65,6 +73,7 @@ const usersController = {
         });
         res.render('./users/userEdit', { id: 'userEdit', title: 'LUMEN - Edición de usuario', user: user });
     },
+
     updateUser: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));

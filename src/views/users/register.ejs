@@ -15,22 +15,37 @@
             <h3>Comprá más rápido y llevá el control de tus pedidos!</h3>
             <form action="/user/register" method="post" class="form" enctype="multipart/form-data">
                 <section class="register">
-                    <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre" required>
+                    <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre" value= "<%= locals.old && old.firstName ? old.firstName : '' %>">
+                    <% if ( locals.error && error.firstName ){ %>
+                        <p class="error"><%= error.firstName.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
-                    <input type="text" class="validate" name="lastName"  pattern="{0,11}" placeholder = "Apellido" required>
+                    <input type="text" class="validate" name="lastName"  placeholder = "Apellido" value= "<%= locals.old && old.lastName ? old.lastName : '' %>">
+                    <% if ( locals.error && error.lastName ){ %>
+                        <p class="error"><%= error.lastName.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
-                    <input type="email" class="validate" name="email"  pattern="{0,11}" placeholder = "Email" required>
+                    <input type="text" class="validate" name="email"  placeholder = "Email" value= "<%= locals.old && old.email ? old.email : '' %>">
+                    <% if ( locals.error && error.email ){ %>
+                        <p class="error"><%= error.email.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">  
-                    <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}"  placeholder = "Teléfono" required>
+                    <input type="text" class="validate" name="phone" placeholder = "Teléfono" value= "<%= locals.old && old.phone ? old.phone : '' %>">
+                    <% if ( locals.error && error.phone ){ %>
+                        <p class="error"><%= error.phone.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
-                    <input type="password" class="validate" name="password"  placeholder = "Contraseña" required>
+                    <input type="password" class="validate" name="password"  placeholder = "Contraseña" >
+                    <% if ( locals.error && error.password ){ %>
+                        <p class="error"><%= error.password.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
-                    <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar contraseña" required>
+                    <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar contraseña" >
                 </section>
                 <section class="register">
                     <label class="form-title">Imagen de perfil</label>
