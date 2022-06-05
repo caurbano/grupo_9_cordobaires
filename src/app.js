@@ -3,13 +3,13 @@ const path = require('path');
 const app = express();
 const mainRouter = require('./routes/mainRouter');
 const methodOverride =  require('method-override');
-const session = require('express-session');
+// const session = require('express-session');
 
 app.use(methodOverride('_method'));
 
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
-app.use(session({ secret: 'Secret!'}));
+// app.use(session({ secret: 'Secret!'}));
 
 
 app.set('view engine', 'ejs');

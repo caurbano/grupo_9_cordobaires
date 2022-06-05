@@ -6,12 +6,8 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = productController = {
 
-    cart: (req, res) => {
-        res.render('./products/productCart', { product: products, id: 'productCart', title: 'LUMEN - Carrito de compras' });
-    },
-
     detail: (req, res) => {
-        const product = products.find(elemento => { return elemento.id === req.params.product; })
+        const product = products.find(elemento => { return elemento.id === req.params.id; })
         res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: product, products: products });
     },
 
@@ -73,7 +69,7 @@ module.exports = productController = {
 
     edit: (req, res) => {
         const product = products.find(product => {
-            return product.id === req.params.product;
+            return product.id === req.params.id;
         });
         res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
     },
@@ -109,7 +105,7 @@ module.exports = productController = {
 
         products = JSON.stringify(products, null, "\t");
         fs.writeFileSync(productsFilePath, products);
-        res.redirect('/product/detail/' + req.params.product);
+        res.redirect('/product/detail/' + req.params.id);
 
     },
 
@@ -118,12 +114,12 @@ module.exports = productController = {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
         let newProducts = products.filter(product => {
-            return product.id != req.params.product;
+            return product.id != req.params.id;
         });
 
         newProducts = JSON.stringify(newProducts, null, "\t");
 
         fs.writeFileSync(productsFilePath, newProducts);
-        res.render('home', { id: 'home', title: 'LUMEN Lights Shop', products: products });
+        res.redirect('/');
     }
 }
