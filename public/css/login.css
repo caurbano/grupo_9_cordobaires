@@ -8,19 +8,18 @@
 
 .background-main-form{
     background-color:#918c8c1e;
-    height: 100%;
-    margin-top: 20px;
 }
 .main-form{
     width: 80%;
-    margin-top: 100px;
     padding:5%;
     margin-left: 5%;
     background-color: white;
 }
 .main-form > p{
     text-shadow: 1px 1px white, -2px -1px #E79F00;
+    height: 50px;
     margin-top: 20%;
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 35px;
 }
@@ -87,7 +86,7 @@ form {
 .login-button{
     background-color: #918c8c;
     cursor: pointer;
-    width: 25%;
+    width: 50%;
     padding: 8px 16px;
     margin: 15px 0;
     border: 1px solid black;
@@ -107,6 +106,9 @@ form {
     font-size: 16px;
 }
 @media (min-width: 761px){
+    .background-main-form{
+        margin-top: 40px;
+    }
     .main-form > p{
         margin: 25px;
     }

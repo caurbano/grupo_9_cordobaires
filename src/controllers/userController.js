@@ -42,7 +42,7 @@ const usersController = {
                 email: req.body.email,
                 phone: req.body.phone,
                 password: req.body.password,
-                img: req.file.filename, //+ ide + "-" + Date.now() + path.extname(file.originalname),
+                img: req.file.filename,
             }
 
             //Lo sumo con los demas
@@ -91,9 +91,10 @@ const usersController = {
 
         users = JSON.stringify(users, null, "\t");
         fs.writeFileSync(usersFilePath, users);
+
         const productsFilePath = path.join(__dirname, '../data/products.json');
         let products = fs.readFileSync(productsFilePath, 'utf-8');
-        res.redirect('/');
+        res.redirect('/',);
 
     },
     deleteUser: (req, res) => {
@@ -108,7 +109,10 @@ const usersController = {
 
         fs.writeFileSync(usersFilePath, newUsers);
         res.redirect('/');
-    }
+    },
+    result: (req, res) => {
+        res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación'});
+    },
 }
 
 module.exports = usersController;
