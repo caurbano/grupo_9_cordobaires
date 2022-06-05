@@ -4,12 +4,6 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 
-// SEGUIR CON EXPESS VALIDATOR AVANZADO
-// EN EL CONTROLADOR:
-const { validationResult } = require('express-validator');
-
-
-
 const usersController = {
 
     login: (req, res) => {
@@ -86,7 +80,7 @@ const usersController = {
                 email: req.body.email,
                 phone: req.body.phone,
                 password: bcrypt.hashSync(req.body.password, 10),
-                img: req.file ? req.file.filename : 'user-1653529875512.webp',
+                img: req.file ? req.file.filename : 'default.jpg',
             }
 
             //Lo sumo con los demas

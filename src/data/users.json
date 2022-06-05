@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": "1",
 		"firstName": "Juan",
 		"lastName": "Goti",
 		"email": "juan4goti@gmail.com",
@@ -25,5 +25,14 @@
 		"phone": "23245678",
 		"password": "$2a$10$mzOKXdSVtWdTPxT7kBvMB.AIMg6J/91BJs2dEnqiwZBzCC60ZuNtG",
 		"img": "user-1653529875512.webp"
+	},
+	{
+		"id": "4",
+		"firstName": "Prueba",
+		"lastName": "Default",
+		"email": "prueba@default.com",
+		"phone": "123456",
+		"password": "$2a$10$cgNKy9GdL2CUDegYNfP6RehMuIu35pR97yjoLzSs7p16s3le3wQGO",
+		"img": "default.jpg"
 	}
 ]
