@@ -52,7 +52,7 @@ Nuevamente, no dejar para último momento algunas tareas que se pueden realizar 
 Según esta dinámica, resaltamos aquello que tenemos que:  
 
 ### Comenzar a hacer  
-Un hábito importante a implementar sería el de consultar más la documentación complementaria a los contenidos propuestos. Hacer tiempo de buscar mayor profundización de los conceptos.  
+Un hábito importante a implementar sería el de consultar más la documentación complementaria a los contenidos propuestos. Hacer tiempo para investigar y así, lograr mayor profundización de los conceptos.  
   
 ### Hacer más  
 Estar aún más actualizados con los contenidos que se están aplicando, consultar más la plataforma (Playground).  
