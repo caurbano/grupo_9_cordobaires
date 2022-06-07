@@ -139,6 +139,9 @@ const usersController = {
     },
     list: (req, res) => {
         res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
+    },
+    profile: (req, res) => {
+        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario' });
     }
 }
 

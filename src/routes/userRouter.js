@@ -31,6 +31,8 @@ routerUsers.put('/edit/:id', uploadImgUser.single('img'), usersController.update
 routerUsers.delete('/delete/:id', usersController.deleteUser);
 
 routerUsers.get('/list', usersController.list);
+routerUsers.get('/profile', usersController.profile);
+
 
 routerUsers.get('/result', usersController.result);
 
