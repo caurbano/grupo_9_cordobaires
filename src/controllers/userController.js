@@ -10,27 +10,11 @@ const usersController = {
         res.render('./users/login', { id: 'login', title: 'LUMEN - Login' });
     },
 
-    login2: (req, res) => {
+    processLogin: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-    
-        // let errors = validationResult(req);
-        // // res.send(errors);
-        // if (errors.isEmpty()) {
-        //     //sin errores: continuar
-        //     res.redirect('/');
-        // } else {
-        //     //si hay error, redirecciona al login
-        //     res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', errors: errors.array(), old: req.body });
-        // }
-
-
-        // // console.log(req.body);
-        
-        // let userLogin = users.find( user => user.email == req.body.email && user.password == req.body.password );
-        // if(userLogin){
-        //     return res.redirect('/');
+        //En el video de Session, aca muestran un for que engloba el if.. min 15 aprox. VER. - kz.
 
         let errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -40,11 +24,14 @@ const usersController = {
             if (userLogin) {
                 delete userLogin.password; 
                 req.session.userLogged = userLogin;
+
+                if (req.body.remember != undefined) {
+                    res.cookie('remember', userLogin.email, { maxAge: 60000 })
+                }
                 return res.redirect('/');
             }
             res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', error: { errorLogin: "Usuario o contraseña incorrectos" }, old: req.body });
         }
-        // res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', error: errors.mapped(), old: req.body });
     },
 
     register: (req, res) => {

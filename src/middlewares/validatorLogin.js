@@ -2,6 +2,7 @@ const { check } = require ("express-validator");
 
 const validatorLogin = [
     check('email').notEmpty().withMessage('Debes completar este campo.'),
+    // check('email').isEmail().withMessage('Debes completar este campo con tu email de registro.'), //Yo le haría la validacion isEmail
     check('password').notEmpty().withMessage('Debes completar este campo.')
 ];
 
