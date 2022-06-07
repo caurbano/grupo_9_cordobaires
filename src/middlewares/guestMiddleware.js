@@ -16,7 +16,7 @@ module.exports = guestMiddleware;
 //         next();
 //     } else {
 //         res.send('Esta página es sólo para usuarios');
-//     }
+//     } 
 // };
 
 // module.exports = authMiddleware;
