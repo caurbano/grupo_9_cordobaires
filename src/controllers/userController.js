@@ -38,7 +38,7 @@ const usersController = {
         res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro' });
     },
 
-    register2: (req, res) => {
+    processRegister: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             const usersFilePath = path.join(__dirname, '../data/users.json');

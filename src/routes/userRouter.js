@@ -23,7 +23,7 @@ routerUsers.post('/login', validatorLogin, usersController.processLogin);
 
 
 routerUsers.get('/register', usersController.register);
-routerUsers.post('/register', uploadImgUser.single('img'), validatorRegister, usersController.register2);
+routerUsers.post('/register', uploadImgUser.single('img'), validatorRegister, usersController.processRegister);
 
 routerUsers.get('/edit/:id', usersController.editUser);
 routerUsers.put('/edit/:id', uploadImgUser.single('img'), usersController.updateUser);
