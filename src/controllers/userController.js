@@ -11,9 +11,6 @@ const usersController = {
     },
 
     processLogin: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
         //En el video de Session, aca muestran un for que engloba el if.. min 15 aprox. VER. - kz.
 
         let errors = validationResult(req);
@@ -31,7 +28,9 @@ const usersController = {
                 return res.redirect('/');
             }
             res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', error: { errorLogin: "Usuario o contraseña incorrectos" }, old: req.body });
-        }
+        } 
+        res.render('./users/login', { id: 'login', title: 'LUMEN - Formulario de login', error: errors.mapped(), old: req.body });
+
     },
 
     register: (req, res) => {
