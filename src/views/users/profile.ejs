@@ -9,11 +9,13 @@
     <main class="profile_main">
         <h3>Perfil del usuario</h3>
         <article class="users_profile">
-            <img src="/img/users/default.jpg" alt="Imagen de usuario">
+            <img src="/img/users/<%= user.img %>" alt="Imagen de usuario">
             <section class="users_data">
-                 <h4>firstName & lastName (id:x)</h4>
-            <p>email</p>
-            <p>phone</p>
+                 <h4>
+                    <%= user.firstName user.lastName %>
+                 </h4>
+            <p><%= user.email %></p>
+            <p><%= user.phone %></p>
             <p><em>Agregar más info después</em></p>
             </section>
             <section class="users_options">

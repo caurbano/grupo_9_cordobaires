@@ -140,8 +140,15 @@ const usersController = {
         res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
     },
     profile: (req, res) => {
-        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario' });
-    }
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        
+        const user = users.find(user => {
+            return user.id == req.params.id;
+        });
+        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario', user: user, users: users });
+    },
+    
 }
 
 module.exports = usersController;
