@@ -10,7 +10,7 @@
 	},
 	{
 		"id": "2",
-		"firstName": "Boris",
+		"firstName": "Borisito",
 		"lastName": "Colodro",
 		"email": "bgcolodro@gmail.com",
 		"phone": "4561264",
@@ -32,7 +32,7 @@
 		"lastName": "Default",
 		"email": "prueba@default.com",
 		"phone": "123456",
-		"password": "$2a$10$cgNKy9GdL2CUDegYNfP6RehMuIu35pR97yjoLzSs7p16s3le3wQGO",
+		"password": "123123",
 		"img": "default.jpg"
 	}
 ]

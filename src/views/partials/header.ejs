@@ -20,7 +20,11 @@
             <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
         </div>
         <nav class="bar__login-buy">
+            <% if (locals.session) { %>
+                <a href="/user/profile"><i class="fa-solid fa-user" id="login"></i></a>
+            <% } else { %> 
             <a href="/user/login"><i class="fa-solid fa-user" id="login"></i></a>
+            <% } %> 
             <a href="/cart"><i class="fa-solid fa-cart-shopping" id="buy"></i></a>
         </nav>
     </section>

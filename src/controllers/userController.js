@@ -106,7 +106,7 @@ const usersController = {
 
                 if (element.password != req.body.password) { element.password = req.body.password; }
 
-                if (element.img != req.file.filename) { element.img = req.file.filename; }
+                if (req.file) { element.img = req.file.filename; }
             }
         });
 
