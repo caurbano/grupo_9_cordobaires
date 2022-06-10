@@ -1,9 +1,8 @@
 function guestMiddleware(req, res, next) {
-    if (req.session.userLogin == undefined) {
-        next();
-    } else {
-        res.send('Esta página es sólo para invitados');
+    if (req.session.userLogged) {
+        return res.redirect('/');
     }
+    next();
 };
 
 module.exports = guestMiddleware;

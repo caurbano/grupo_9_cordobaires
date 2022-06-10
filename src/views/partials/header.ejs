@@ -20,7 +20,7 @@
             <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
         </div>
         <nav class="bar__login-buy">
-            <% if (locals.session) { %>
+            <% if (locals.isLogged) { %>
                 <a href="/user/profile"><i class="fa-solid fa-user" id="login"></i></a>
             <% } else { %> 
             <a href="/user/login"><i class="fa-solid fa-user" id="login"></i></a>

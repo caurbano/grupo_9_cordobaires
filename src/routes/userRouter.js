@@ -6,6 +6,8 @@ const path = require('path');
 const usersController = require('../controllers/userController');
 const validatorRegister = require('../middlewares/validatorRegister');
 const validatorLogin = require('../middlewares/validatorLogin');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+
 const storageImgUser = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, '../../public/img/users'))
@@ -18,7 +20,7 @@ const storageImgUser = multer.diskStorage({
 
 const uploadImgUser = multer({ storage: storageImgUser });
 
-routerUsers.get('/login', usersController.login);
+routerUsers.get('/login', guestMiddleware,usersController.login);
 routerUsers.post('/login', validatorLogin, usersController.processLogin);
 
 
