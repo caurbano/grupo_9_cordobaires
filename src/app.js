@@ -11,12 +11,17 @@ app.use(methodOverride('_method'));
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
+// const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(session({ secret: 'shhh', resave: false, saveUninitialized: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser())
+
+// app.use(userLoggedMiddleware);
+
 
 app.listen(process.env.PORT || 3030, () => {
     console.log('Servidor corriendo en el puerto http://localhost:3030/');

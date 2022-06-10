@@ -159,6 +159,10 @@ const usersController = {
     //     users: req.session.userLogged
     // })
     },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
+    }
     
 }
 
