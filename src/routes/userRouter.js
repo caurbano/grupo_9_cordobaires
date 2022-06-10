@@ -34,6 +34,7 @@ routerUsers.get('/list', usersController.list);
 routerUsers.get('/profile/:id', usersController.profile);
 
 
+
 routerUsers.get('/result', usersController.result);
 
 module.exports = routerUsers;

@@ -12,14 +12,15 @@
             <img src="/img/users/<%= user.img %>" alt="Imagen de usuario">
             <section class="users_data">
                  <h4>
-                    <%= user.firstName user.lastName %>
+                    <%= user.firstName %> <%= user.lastName %>
                  </h4>
-            <p><%= user.email %></p>
-            <p><%= user.phone %></p>
+            <p>Email: <%= user.email %></p>
+            <p>Teléfono: <%= user.phone %></p>
             <p><em>Agregar más info después</em></p>
             </section>
             <section class="users_options">
-                <a href="#"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
+                <!-- armar bien la ruta de eliminacion -->
+                <a href="../edit/<%- user.id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
                 <a href="#"><i class="fa-solid fa-trash" id="delete"></i></a>
             </section>
         </article>

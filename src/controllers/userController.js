@@ -137,7 +137,13 @@ const usersController = {
         res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación' });
     },
     list: (req, res) => {
-        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        // res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
+
+       
+        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
     },
     profile: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');

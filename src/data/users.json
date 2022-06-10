@@ -34,5 +34,14 @@
 		"phone": "123456",
 		"password": "123123",
 		"img": "default.jpg"
+	},
+	{
+		"id": "5",
+		"firstName": "Prueba",
+		"lastName": "Maluca",
+		"email": "prueba@default.com",
+		"phone": "44112233",
+		"password": "$2a$10$rUPR7GdZ2uA8o1zomzA6Q..4jXj/oU6j7hd0BKfXT5XaU2CCmMOBW",
+		"img": "default.jpg"
 	}
 ]
