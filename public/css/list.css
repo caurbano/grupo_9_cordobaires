@@ -98,6 +98,9 @@
 
 /* DESKTOP */
 @media (min-width: 769px) {
+    .users_main h3 {
+        font-size: 35px;
+    }
     .users_list {
         margin: 20px 0px;
         margin-left: auto;

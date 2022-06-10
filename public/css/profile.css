@@ -112,6 +112,9 @@
 
 /* DESKTOP */
 @media (min-width: 769px) {
+    .profile_main h3 {
+        font-size: 35px;
+    }
     .users_profile {
         margin: 45px;
         margin-left: auto;
