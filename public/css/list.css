@@ -108,10 +108,13 @@
         padding: 15px;
         width: 85%;
     }
+    .users_img {
+        width: 150px;
+    }
     .users_list img {
         align-self: center;
         box-shadow: 3px 3px 6px #666666;
-        height: 120px;
+        /* height: 120px; */
         /* width: 70%; */
     }   
     .users_data h4 {

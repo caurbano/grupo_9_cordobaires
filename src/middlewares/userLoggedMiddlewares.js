@@ -7,7 +7,7 @@ function userLoggedMiddleware(req, res, next){
     let userFromCookie = User.findByField('email', remember);
 
     if(userFromCookie){
-        res.cookie('remember', req.session.userLogged.email, { maxAge: 300000 })
+        res.cookie('remember', remember, { maxAge: 1000 * 60 * 5 });
         req.session.userLogged = userFromCookie;
         delete req.session.userLogged.password;
     }
