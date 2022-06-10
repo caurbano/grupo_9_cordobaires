@@ -41,7 +41,7 @@ routerUsers.get('/list', usersController.list);
 routerUsers.get('/profile', authMiddleware, usersController.profile);
 
 //logout
-routerUsers.get('/logout', usersController.logout);
+routerUsers.get('/logout', authMiddleware,usersController.logout);
 
 
 

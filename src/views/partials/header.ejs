@@ -22,8 +22,8 @@
         <nav class="bar__login-buy">
             <% if (locals.userLogged) { %>
                 <a href="/user/profile"><i class="fa-solid fa-user" id="login"></i></a>
-                <!-- <p class="login_msg">Hola, <%= locals.userLogged.firstName %>! </p> -->
-            <% } else { %> 
+                <a href="/user/profile"><p class="login_msg">Hola, <%= locals.userLogged.firstName %>! </p></a>
+            <% } else { %>
             <a href="/user/login"><i class="fa-solid fa-user" id="login"></i></a>
                 <!-- <p class="login_msg">Iniciá sesión </p> -->
 

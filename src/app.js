@@ -24,5 +24,4 @@ app.listen(process.env.PORT || 3030, () => {
     console.log('Servidor corriendo en el puerto http://localhost:3030/');
 });
 
-
 app.use('/', mainRouter);

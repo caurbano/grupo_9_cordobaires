@@ -23,7 +23,7 @@ const usersController = {
                 req.session.userLogged = userLogin;
 
                 if (req.body.remember != undefined) {
-                    res.cookie('remember', userLogin.email, { maxAge: 60000 })
+                    res.cookie('remember', userLogin.email, { maxAge: 1000 * 60 * 1 });
                 }
                 return res.redirect('/');
             }
@@ -47,20 +47,24 @@ const usersController = {
 
             let array;
             let ide;
+            let admin;
             if (users == "") {
                 array = [];
                 ide = 1;
+                admin = true;
             } else {
                 users = JSON.parse(users);
                 array = users;
                 ide = parseInt(array[array.length - 1].id) + 1;
                 ide = ide.toString();
+                admin = false;
             }
 
             //Creo el usuario
 
             let userNew = {
                 id: ide,
+                admin: admin,
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
@@ -161,7 +165,8 @@ const usersController = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        return res.redirect('/')
+        res.clearCookie('remember');
+        return res.redirect('/');
     }
     
 }
