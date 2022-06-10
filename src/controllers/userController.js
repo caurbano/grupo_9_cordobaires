@@ -153,6 +153,11 @@ const usersController = {
             return user.id == req.params.id;
         });
         res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario', user: user, users: users });
+    
+    // Otra prueba:
+    // return res.render('./users/profile', {
+    //     users: req.session.userLogged
+    // })
     },
     
 }
