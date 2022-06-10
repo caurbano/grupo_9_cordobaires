@@ -23,6 +23,10 @@
     display: flex;
 }
 
+.loggin_msg {
+    color: #E79F00;
+}
+
 .bar__menu-search button {
     background-color: #1f1d1d;
     border: 0px;

@@ -20,10 +20,13 @@
             <a href="/"><img src="/img/LUMEN.png" alt="Logo" id="logo"></a>
         </div>
         <nav class="bar__login-buy">
-            <% if (locals.isLogged) { %>
+            <% if (locals.userLogged) { %>
                 <a href="/user/profile"><i class="fa-solid fa-user" id="login"></i></a>
+                <!-- <p class="login_msg">Hola, <%= locals.userLogged.firstName %>! </p> -->
             <% } else { %> 
             <a href="/user/login"><i class="fa-solid fa-user" id="login"></i></a>
+                <!-- <p class="login_msg">Iniciá sesión </p> -->
+
             <% } %> 
             <a href="/cart"><i class="fa-solid fa-cart-shopping" id="buy"></i></a>
         </nav>

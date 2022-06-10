@@ -9,16 +9,19 @@
     <main class="profile_main">
         <h3>Perfil del usuario</h3>
         <article class="users_profile">
-            <img src="/img/users/default.jpg" alt="Imagen de usuario">
+            <img src="/img/users/<%= userLogged.img %>" alt="Imagen de usuario">
             <section class="users_data">
-                 <h4>firstName & lastName (id:x)</h4>
-            <p>email</p>
-            <p>phone</p>
+                 <h4>
+                    <%= userLogged.firstName %> <%= userLogged.lastName %>
+                 </h4>
+            <p>Email: <%= userLogged.email %></p>
+            <p>Teléfono: <%= userLogged.phone %></p>
             <p><em>Agregar más info después</em></p>
             </section>
             <section class="users_options">
-                <a href="#"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
-                <a href="#"><i class="fa-solid fa-trash" id="delete"></i></a>
+                <!-- armar bien la ruta de eliminacion -->
+                <a href="/user/edit/<%- userLogged.id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
+                <a href="/user/edit/<%- userLogged.id %>"><i class="fa-solid fa-trash" id="delete"></i></a>
             </section>
         </article>
     </main>

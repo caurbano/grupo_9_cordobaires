@@ -104,7 +104,7 @@ const usersController = {
 
                 if (element.phone != req.body.phone) { element.phone = req.body.phone; }
 
-                if (element.password != req.body.password) { element.password = req.body.password; }
+                if (bcrypt.compareSync(req.body.password, element.password)) { bcrypt.hashSync(req.body.password, 10) }
 
                 if (req.file) { element.img = req.file.filename; }
             }
@@ -137,11 +137,33 @@ const usersController = {
         res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación' });
     },
     list: (req, res) => {
-        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        // res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
+
+       
+        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
     },
     profile: (req, res) => {
-        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario' });
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        
+        const user = users.find(user => {
+            return user.id == req.params.id;
+        });
+        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario', user: user, users: users });
+    
+    // Otra prueba:
+    // return res.render('./users/profile', {
+    //     users: req.session.userLogged
+    // })
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
+    
 }
 
 module.exports = usersController;

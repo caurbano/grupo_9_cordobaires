@@ -4,7 +4,6 @@ const path = require('path');
 const fs = require('fs');
 
 const productController = require('../controllers/productController');
-const cartController = require("../controllers/cartController");
 
 const storageImgProduct = multer.diskStorage({
     destination: function (req, file, cb) {
