@@ -7,7 +7,7 @@
         <%- include('../partials/header') %>
             <main>
                 <section class="preview">
-                    <p class="h2_preview_txt">
+                    <p class="detail_product_name1">
                         <%= product.name %>
                     </p>
                     <!-- <p>Lámpara de <%= product.category %></p> -->
@@ -15,19 +15,21 @@
                         <img src="\img\<%= product.img %>" alt="Luces" class="preview__img__img">
                     </article>
                     <div class="preview__txt">
-                        <p class="h2_preview_txt2">
+                        <p class="detail_product_name2">
                             <%= product.name %>
                         </p>
-                        $<%= product.price %>
-                            </p>
-                            <form action="/product/detail" method="POST">
-                                <p>En <select name="mes">
-                                        <% for( let i=0; i < product.payments; i++ ) { %>
-                                            <option value="<%=i+1  %>">
-                                                <%=i+1 %>
-                                            </option>
-                                            <% } %>
-                                                <!-- <option value="1">1</option>
+                        <p class="detail_product_price">
+                            $<%= product.price %>
+                        </p>
+                        </p>
+                        <form action="/product/detail" method="POST">
+                            <p>En <select name="mes">
+                                    <% for( let i=0; i < product.payments; i++ ) { %>
+                                        <option value="<%=i+1  %>">
+                                            <%=i+1 %>
+                                        </option>
+                                        <% } %>
+                                            <!-- <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -39,44 +41,46 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option> -->
-                                    </select>
-                                    cuotas</p>
-                                <p> &nbsp </p>
-                                <button class="agregarcarrito">Agregar al carrito</button>
-                    </div>
+                                </select>
+                                cuotas</p>
+                            <p> &nbsp </p>
+                            <button class="agregarcarrito">Agregar al carrito</button>
+                            <button class="agregarcarrito">Editar</button>
+                            <button class="agregarcarrito">Borrar</button>
+                        </div>
+                   
                     <p> &nbsp </p>
                 </section>
                 <section class="Desc-articulo">
                     <h3 class="Desc-titulo">Características</h3>
-                <!-- <pre class="Desc-producto"><%= product.description %></pre> -->
-                <% product.description.forEach(element=>{ %>
-                    <p class="Desc-producto">
-                        <%= element %>
-                    </p>
+                    <!-- <pre class="Desc-producto"><%= product.description %></pre> -->
+                    <% product.description.forEach(element=>{ %>
+                        <p class="Desc-producto">
+                            <%= element %>
+                        </p>
                 </section>
-                    <% }) %>
-                        <section class="products">
-                            <h2 class="products-h2">Productos relacionados</h2>
-                            <article class="see">
-                                <% for( let i=5; i < 10; i++ ) { %>
-                                    <article class="see__dest">
-                                        <a href="/product/detail/<%= products[i].id %>">
-                                            <img src="/img/<%= products[i].img %>" alt="Producto destacado"
-                                                class="dest">
-                                            <p>
-                                                <%= products[i].name %><br><strong> $<%= products[i].price %>
-                                                    </strong>
-                                            </p>
-                                        </a>
-                                        <p class="dest-fee">
-                                            <%= products[i].payments %> cuotas sin interés de <strong>$<%=
-                                                        parseInt(parseInt(products[i].price)
-                                                        /parseInt(products[i].payments)) %></strong>
+                <% }) %>
+                    <section class="products">
+                        <h2 class="products-h2">Productos relacionados</h2>
+                        <article class="see">
+                            <% for( let i=5; i < 10; i++ ) { %>
+                                <article class="see__dest">
+                                    <a href="/product/detail/<%= products[i].id %>">
+                                        <img src="/img/<%= products[i].img %>" alt="Producto destacado" class="dest">
+                                        <p>
+                                            <%= products[i].name %><br><strong> $<%= products[i].price %>
+                                                </strong>
                                         </p>
-                                    </article>
-                                    <% } %>
-                            </article>
-                        </section>
+                                    </a>
+                                    <p class="dest-fee">
+                                        <%= products[i].payments %> cuotas sin interés de <strong>$<%=
+                                                    parseInt(parseInt(products[i].price)
+                                                    /parseInt(products[i].payments)) %></strong>
+                                    </p>
+                                </article>
+                                <% } %>
+                        </article>
+                    </section>
             </main>
             <%- include('../partials/footer') %>
     </body>
