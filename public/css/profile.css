@@ -61,6 +61,21 @@
     color: #d11b1b;
     margin: 0px 3px;
 }
+.users_logout {
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.users_logout a {
+    color: #666666;
+    text-decoration: none;
+}
+#logout {
+    color: #666666;
+    font-size: 13px;
+    margin-left: 4px;
+}
 
 /* BREAKPOINTS */
 /* TABLET */
@@ -108,6 +123,12 @@
     #delete {
         margin: 0px 5px;
     }
+    .users_logout {
+        font-size: 15px;
+    }
+    #logout {
+        font-size: 15px;
+    }
 }
 
 /* DESKTOP */
@@ -147,5 +168,11 @@
     #delete {
         cursor: pointer;
         margin: 1px 6px;
+    }
+    .users_logout {
+        font-size: 16px;
+    }
+    #logout {
+        font-size: 16px;
     }
 }
