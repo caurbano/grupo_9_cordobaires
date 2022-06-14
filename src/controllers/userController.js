@@ -21,9 +21,10 @@ const usersController = {
             if (userLogin) {
                 delete userLogin.password; 
                 req.session.userLogged = userLogin;
-
+                req.session.remember = false;
                 if (req.body.remember != undefined) {
-                    res.cookie('remember', userLogin.email, { maxAge: 1000 * 60 * 1 });
+                    req.session.remember = true;
+                    res.cookie('rememberEmail', userLogin.email, { maxAge: 1000 * 60 * 1 });
                 }
                 return res.redirect('/');
             }
@@ -48,7 +49,7 @@ const usersController = {
             let array;
             let ide;
             let admin;
-            if (users == "") {
+            if (users == "[]") {
                 array = [];
                 ide = 1;
                 admin = true;
@@ -137,9 +138,7 @@ const usersController = {
         fs.writeFileSync(usersFilePath, newUsers);
         res.redirect('/');
     },
-    result: (req, res) => {
-        res.render('./users/result', { id: 'result', title: 'LUMEN - Verificación' });
-    },
+    
     list: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));

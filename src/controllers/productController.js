@@ -7,15 +7,20 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = productController = {
 
     detail: (req, res) => {
-        const product = products.find(elemento => { return elemento.id === req.params.id; })
+        const product = products.find(elemento => { return elemento.id === req.params.id; });
+
         res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: product, products: products });
     },
 
-    gallery: (req, res) => {
+    category: (req, res) => {
         let productsFilter = products.filter(product => {
             return product.category === req.params.category;
         })
         res.render('./products/categories', { id: 'categories', category: req.params.category, title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter });
+    },
+
+    gallery: (req, res) => {
+        res.render('./products/categories', { id: 'categories', category: req.params.category, title: 'LUMEN - Galeria ', products: products });
     },
 
     create: (req, res) => {
@@ -105,11 +110,24 @@ module.exports = productController = {
 
         products = JSON.stringify(products, null, "\t");
         fs.writeFileSync(productsFilePath, products);
-        res.redirect('/product/detail/' + req.params.id);
+        res.redirect('./product/detail/' + req.params.id);
 
     },
 
+    result: (req, res) => {
+        result = req.session.check;
+        req.session.check = null;
+        res.render('./products/result', { id: 'result', title: 'LUMEN - Verificación', result: result });
+    },
+
     delete: (req, res) => {
+        const product = products.find(product => {
+            return product.id == req.params.id;
+        });
+        res.render('./products/productDelete', { id: 'productDelete', title: 'LUMEN - Eliminar producto', product: product });
+    },
+
+    destroy: (req, res) => {
         const productsFilePath = path.join(__dirname, '../data/products.json');
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -120,6 +138,13 @@ module.exports = productController = {
         newProducts = JSON.stringify(newProducts, null, "\t");
 
         fs.writeFileSync(productsFilePath, newProducts);
-        res.redirect('/');
+
+        if(products.find(product => {return product.id == req.params.id})){
+            req.session.check = true;
+            res.redirect('../result');
+        }
+        req.session.check = false;
+        res.redirect('../result');
+        
     }
 }

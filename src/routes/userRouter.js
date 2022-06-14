@@ -8,6 +8,7 @@ const validatorRegister = require('../middlewares/validatorRegister');
 const validatorLogin = require('../middlewares/validatorLogin');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 const storageImgUser = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -33,10 +34,7 @@ routerUsers.put('/edit/:id', uploadImgUser.single('img'), usersController.update
 
 routerUsers.delete('/delete/:id', usersController.deleteUser);
 
-routerUsers.get('/result', usersController.result);
-
-
-routerUsers.get('/list', usersController.list);
+routerUsers.get('/list', authMiddleware, adminMiddleware, usersController.list);
 //routerUsers.get('/profile/:id', usersController.profile);
 routerUsers.get('/profile', authMiddleware, usersController.profile);
 

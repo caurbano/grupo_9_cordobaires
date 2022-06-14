@@ -24,6 +24,9 @@
             </section>
         
             <section class="users_options">
+                <% if(userLogged.admin) {%>
+                <button class="back_button"><p>Dar admin</p></button>
+                <% } %>
                 <a href="../user/edit/<%- users[i].id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
                 <a href="../user/edit/<%- users[i].id %>"><i class="fa-solid fa-trash" id="delete"></i></a>
             </section>

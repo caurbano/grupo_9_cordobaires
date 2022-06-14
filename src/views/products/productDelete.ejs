@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h2 class="title">¿Estas Seguro?</h2>
+        <section class="framework">
+            <!-- <article class="text" id="product_name1">
+                <h3 class="category">Nombre: </h3>
+                <p class="value"><%= product.name %></p>
+            </article> -->
+            <article class="framework_img">
+                <img src="\img\<%= product.img %>" alt="Luces" class="framework_img_img">
+            </article>
+            <article class="Desc-articulo">
+                <section class="text" id="product_name2">
+                    <p class="category">Nombre: </p>
+                    <p class="value"><%= product.name %></p>
+                </section>
+                <section class="text">
+                    <p class="category">Precio: </p>
+                    <p class="value"> $<%= product.price %></p>
+                </section>
+                <section class="text">
+                    <p class="category">Categoria: </p>
+                    <p class="value"> <%= product.category %></p>
+                </section>
+                <section class="Desc-articulo">
+                    <h3 class="Desc-titulo">Características:</h3>
+                    <% product.description.forEach(element=>{ %>
+                        <p class="Desc-producto"><%= element %></p>
+                    <% }) %>
+                </section>    
+            </article>
+        </section>
+        <section class="confirm">
+            <a href="/product/<%= product.category %>"><button class="back_button"><p>Cancelar</p></button></a>
+            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
+                    <button class="delete_button"><p>Borrar</p></button>
+            </form>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
