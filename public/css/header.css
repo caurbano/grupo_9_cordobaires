@@ -156,10 +156,15 @@
         width: 100%;
         padding: 5px;
     }
+    .bar__login-buy,
+    .bar_login {
+    display: flex;
+    align-items: center;
+    }
 
     .bar_login {
         height: 93px;
-    
+        flex-direction: column;   
     }
     .bar_login a {
         font-size: 12px;
@@ -167,7 +172,12 @@
     
     .login_msg {
         position: relative;
-        top: -14px;
+        top: -13px;
+        left: 0px;
+    }
+    #login {
+        position: relative;
+        top: 9px;
         left: 0px;
     }
 
@@ -216,6 +226,11 @@
     .login_msg {
         position: relative;
         top: -22px;
+        left: 0px;
+    }
+    #login {
+        position: relative;
+        top: 3px;
         left: 0px;
     }
     #wafixed {

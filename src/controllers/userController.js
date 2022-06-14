@@ -114,6 +114,7 @@ const usersController = {
                 if (req.file) { element.img = req.file.filename; }
             }
         });
+        res.redirect('../profile')
 
         //Actualizo
 
