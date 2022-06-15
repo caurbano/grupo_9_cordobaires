@@ -3,7 +3,8 @@ const User = require('../models/User')
 function userLoggedMiddleware(req, res, next){
     res.locals.isLogged = false;
 
-    let rememberEmail = req.cookies.rememberEmail;
+    if( req.cookies.rememberEmail ){
+        let rememberEmail = req.cookies.rememberEmail;
     let userFromCookie = User.findByField('email', rememberEmail);
 
     if( userFromCookie ){
@@ -11,6 +12,8 @@ function userLoggedMiddleware(req, res, next){
         req.session.userLogged = userFromCookie;
         delete req.session.userLogged.password;
     }
+    }
+    
     
     if(req.session.userLogged){
         res.locals.isLogged = true;
