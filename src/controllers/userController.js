@@ -112,16 +112,14 @@ const usersController = {
                 if (req.file) { element.img = req.file.filename; }
             }
         });
-        res.redirect('../profile')
+        
 
         //Actualizo
 
         users = JSON.stringify(users, null, "\t");
         fs.writeFileSync(usersFilePath, users);
 
-        const productsFilePath = path.join(__dirname, '../data/products.json');
-        let products = fs.readFileSync(productsFilePath, 'utf-8');
-        res.redirect('/',);
+        res.redirect('../profile');
 
     },
     deleteUser: (req, res) => {
