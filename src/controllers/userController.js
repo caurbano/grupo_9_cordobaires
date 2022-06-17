@@ -143,11 +143,23 @@ const usersController = {
     list: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        // res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios' });
-
        
         res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
+    },
+    deleteUserList: (req, res) => {
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        let newUsers = users.filter(user => {
+            return user.id != req.params.id;
+        });
+
+        newUsers = JSON.stringify(newUsers, null, "\t");
+
+        fs.writeFileSync(usersFilePath, newUsers);
+        // res.redirect('./user/list');
+        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
+
     },
     profile: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
