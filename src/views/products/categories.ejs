@@ -13,6 +13,9 @@
 
         <section class="products">
             <h2>Lámparas de <%= category %> </h2>
+            <% if(userLogged.admin) {%>
+                <button class="admin_options"><a href="./create">Crear nuevo producto</a></button>
+                <% } %>
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">

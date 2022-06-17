@@ -37,6 +37,22 @@
     margin-bottom: 3px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
 }
+.admin_options {
+    background-color: #e79e003b;
+    border: solid 1px #666666;
+    border-radius: 8px;
+    margin: 10px;
+    margin-top: 40px;
+    padding: 4px;
+    width: 185px;
+}
+.admin_options a {
+    color: #061104;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .see {
     display: flex;
     flex-wrap: wrap;
@@ -111,14 +127,23 @@
             left: 40px;
             width: 50%;
         }
+        .admin_options {
+            margin-left: 40px;
+            margin-top: 90px;
+            padding: 5px;
+            width: 185px;
+        }
+        .admin_options a {
+            color: #061104;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
         .see__dest {
             border: solid 2px #1f1d1d;
             height: 300px;
             width: 20%;
             margin: 2% 1%;
-
-
-
         }
         .dest {
             height: 190px;
