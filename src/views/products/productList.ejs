@@ -8,11 +8,15 @@
     <%- include('../partials/header') %>
     <section class="categories">
         <section class="category">
-            <p><a href="/">INICIO</a> > <%= category %> </p>
+            <p><a href="/">INICIO</a> > Productos </p>
         </section>
 
         <section class="products">
-            <h2>Lámparas de <%= category %> </h2>
+            <h2>Lámparas - Galería completa </h2>
+            <% if(locals.userLogged && userLogged.admin) {%>
+                <button class="admin_options"><a href="./create">Crear nuevo producto</a></button>
+                <% } %>
+
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">

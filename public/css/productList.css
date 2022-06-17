@@ -1,0 +1,165 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+/* CATEGORÍAS */
+.categories {
+    background-color: #918c8c1e;
+    width: inherit;
+}
+.category {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.category p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+} 
+
+.category a {
+    color: black;
+    text-decoration: none;
+}
+/* Productos */
+.products {
+    width: 100%;
+}
+.products h2 {
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    margin-bottom: 3px;
+    text-shadow: 1px 1px white, -2px -1px #E79F00;
+}
+.admin_options {
+    background-color: #e79e003b;
+    border: solid 1px #666666;
+    border-radius: 8px;
+    margin: 10px;
+    margin-top: 40px;
+    padding: 4px;
+    width: 185px;
+}
+.admin_options a {
+    color: #061104;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.see {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    padding: 6% 0%;
+    width: 100%;
+    /* box-shadow: none; */
+}
+
+.see__dest {
+    background-color: #918c8c1e;
+    border: solid 1px #1f1d1d;
+    height: 100px;
+    width: 32%;
+    margin: 3% 3%;
+}
+.dest {
+    border-bottom: solid 1px #1f1d1d;
+    height: 100px;
+    width: 100%;
+}
+.see__dest a {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+.see__dest p {
+    display: none;
+}
+
+.dest-fee {
+    display: none;
+
+}
+
+/* BREAKPOINTS */
+/* TABLETS */
+@media (min-width: 481px) {
+       .category {
+        padding-top: 110px;
+        }
+        .category p {
+        font-size: 15px;
+        word-spacing: 6px;
+        } 
+        .products h2 {
+        font-size: 20px;
+        position: relative;
+        top: 25px;
+        left: 20px;
+        }
+        .see__dest {
+        box-shadow: 3px 3px 5px #665e5e;
+        height: 125px;
+        width: 25%;
+        }
+        .dest {
+        height: 125px;
+        width: 100%;
+        margin-bottom: 3px;
+        }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+        .products h2 {
+            font-size: 30px;
+            position: relative;
+            top: 45px;
+            left: 40px;
+            width: 50%;
+        }
+        .admin_options {
+            margin-left: 40px;
+            margin-top: 90px;
+            padding: 5px;
+            width: 185px;
+        }
+        .admin_options a {
+            color: #061104;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .see__dest {
+            border: solid 2px #1f1d1d;
+            height: 300px;
+            width: 20%;
+            margin: 2% 1%;
+        }
+        .dest {
+            height: 190px;
+            width: 100%;
+        }
+        .dest:hover {
+            opacity: 0.9;
+        }
+        .see__dest p {
+            display: block;
+            font-size: 13px;
+        }
+        .dest-fee {
+            color: black;
+            display: block;
+            padding-top: 6%;
+            text-align: center;
+        }
+    }

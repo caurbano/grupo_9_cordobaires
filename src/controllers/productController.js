@@ -20,7 +20,7 @@ module.exports = productController = {
     },
 
     gallery: (req, res) => {
-        res.render('./products/categories', { id: 'categories', category: req.params.category, title: 'LUMEN - Galeria ', products: products });
+        res.render('./products/productList', { id: 'productList', category: req.params.category, title: 'LUMEN - Galería ', products: products });
     },
 
     create: (req, res) => {
