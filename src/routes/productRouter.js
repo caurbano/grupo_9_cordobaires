@@ -17,14 +17,14 @@ const storageImgProduct = multer.diskStorage({
         let array;
         let ide;
 	    if(products != undefined){
-			products = JSON.parse(products);
-			array = products;
-            ide = parseInt(array[array.length - 1].id) + 1;
-		} else {
-            ide = 1;
-		}
-        const newFieldName = 'product-'+ ide + '-' + req.body.name + path.extname(file.originalname);
-        cb(null, newFieldName);
+			  products = JSON.parse(products);
+			  array = products;
+        ide = parseInt(array[array.length - 1].id) + 1;
+		  } else {
+          ide = 1;
+		  }
+      const newFieldName = 'product-'+ ide + '-' + req.body.name + path.extname(file.originalname);
+      cb(null, newFieldName);
     }
   })
 

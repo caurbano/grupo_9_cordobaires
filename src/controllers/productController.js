@@ -7,7 +7,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = productController = {
 
     detail: (req, res) => {
-        const product = products.find(elemento => { return elemento.id === req.params.id; });
+        const product = products.find(elemento => { return elemento.id == req.params.id; });
 
         res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: product, products: products });
     },
@@ -30,46 +30,41 @@ module.exports = productController = {
     store: (req, res) => {
         const productsFilePath = path.join(__dirname, '../data/products.json');
         let products = fs.readFileSync(productsFilePath, 'utf-8');
-        if (req.file) {
 
-            //Verifico que el JSON esta vacio
+        //Verifico que el JSON esta vacio
 
-            let array;
-            let ide;
-            if (products == undefined) {
-                array = [];
-                ide = 1;
-            } else {
-                products = JSON.parse(products);
-                array = products;
-                ide = parseInt(array[array.length - 1].id) + 1;
-                ide = ide.toString();
-            }
-
-            //Creo el producto
-
-            let productNew = {
-                id: ide,
-                name: req.body.name,
-                description: req.body.description.split("."),
-                img: req.file.filename, //+ ide + "-" + Date.now() + path.extname(file.originalname),
-                category: req.body.category,
-                color: req.body.color,
-                price: req.body.price,
-                discount: req.body.discount,
-                payments: req.body.payments
-            }
-
-            //Lo sumo con los demas
-
-            array.push(productNew);
-            newProducts = JSON.stringify(array, null, "\t");
-            fs.writeFileSync(productsFilePath, newProducts);
-            res.redirect('/product/detail/' + ide);
-
+        let array;
+        let ide;
+        if (products == undefined) {
+            array = [];
+            ide = 1;
         } else {
-            res.render('./products/productCreate', { id: 'productCreate', title: 'LUMEN - Creación de producto' });
+            products = JSON.parse(products);
+            array = products;
+            ide = parseInt(array[array.length - 1].id) + 1;
         }
+
+        //Creo el producto
+
+        let productNew = {
+            id: ide,
+            name: req.body.name,
+            description: req.body.description.split("."),
+            img: req.file ? req.file.filename : 'default.jpg', //+ ide + "-" + Date.now() + path.extname(file.originalname),
+            category: req.body.category,
+            color: req.body.color,
+            price: req.body.price,
+            discount: req.body.discount,
+            payments: req.body.payments
+        }
+
+        //Lo sumo con los demas
+
+        array.push(productNew);
+        newProducts = JSON.stringify(array, null, "\t");
+        fs.writeFileSync(productsFilePath, newProducts);
+        res.redirect('/product/detail/' + ide);
+
     },
 
     edit: (req, res) => {

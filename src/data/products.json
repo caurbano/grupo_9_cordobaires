@@ -231,5 +231,21 @@
 		"price": "4230",
 		"discount": "0",
 		"payments": "6"
+	},
+	{
+		"id": 16,
+		"name": "PRODUCTO",
+		"description": [
+			"Producto importado del extranjero",
+			" No molestar electrocuta",
+			" No se que colocar",
+			""
+		],
+		"img": "productDefault.png",
+		"category": "pared",
+		"color": "Verde",
+		"price": "20000",
+		"discount": "10",
+		"payments": "12"
 	}
 ]
