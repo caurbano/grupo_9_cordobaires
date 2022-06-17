@@ -32,12 +32,13 @@ routerUsers.post('/register', uploadImgUser.single('img'), validatorRegister, us
 routerUsers.get('/edit/:id', usersController.editUser);
 routerUsers.put('/edit/:id', uploadImgUser.single('img'), usersController.updateUser);
 
-routerUsers.delete('/delete/:id', usersController.deleteUser);
+routerUsers.get('/delete/:id', usersController.deleteUser);
+routerUsers.delete('/delete/:id', usersController.destroyUser);
 
 routerUsers.get('/list', authMiddleware, adminMiddleware, usersController.list);
-routerUsers.delete('/list', usersController.deleteUserList);
 
-//routerUsers.get('/profile/:id', usersController.profile);
+routerUsers.put('/admin/:id', usersController.admin);
+
 routerUsers.get('/profile', authMiddleware, usersController.profile);
 
 //logout

@@ -25,15 +25,16 @@
         
             <section class="users_options">
                 <% if(userLogged.admin) {%>
-                <button class="back_button"><p>Dar admin</p></button>
+                    <form action="/user/admin/<%= users[i].id %>?_method=PUT" method="POST">
+                    <% if(users[i].admin) {%>
+                        <button class="back_button"><p>Quitar admin</p></button>
+                    <% } else {%>
+                        <button class="back_button"><p>Dar admin</p></button>
+                    <% } %>
+                    </form>
                 <% } %>
                 <a href="../user/edit/<%- users[i].id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
-                
-                <form action="/user/delete/<%= users.id %>?_method=DELETE" method="post" class="form">
-                    <!-- <button type="submit" class="deleteButton"> -->
-                        <a href="../user/list"><i class="fa-solid fa-trash" id="delete"></i></a>
-                    <!-- </button> -->
-                </form>
+                <a href="../user/delete/<%- users[i].id %>"><i class="fa-solid fa-trash" id="delete"></i></a>
             </section>
         </article>
         <% } %>
