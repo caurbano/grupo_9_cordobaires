@@ -46,11 +46,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 45px;
+    height: 70px;
     font-size: 35px;
+    line-height: 35px;
 }
 .text{
     margin: 15px;
     padding: 10;
     font-size: 20px;
+}
+
+@media (min-width: 481px) {
+
+    .background-main {
+        padding-top: 80px;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .background-main {
+        padding-top: 10em;
+        padding-bottom: 6em;
+    }
+
 }
