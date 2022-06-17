@@ -1,0 +1,173 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.framework {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.category {
+    font-size: 20px;
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+.value {
+    font-size: 20px;
+}
+
+.framework_img_img {
+    box-shadow: 3px 3px 6px #666666;
+    height: 50%;
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    object-fit: cover;
+}
+
+.confirm{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back_button{
+    width: 200px;
+    background-color: #918c8c;
+    cursor: pointer;
+    padding: 14px 18px;
+    border: solid 1px black;
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+
+.back_button > p{
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 1s ease;
+}
+
+.back_button:hover{
+    background-color: black;
+    font-size: 0.9em;
+}
+
+.back_button > p:hover{
+    font-size: 16px;
+}
+
+.delete_button {
+    margin-top: 5%;
+    width: 200px;
+    cursor: pointer;
+    background-color: #ff0000;
+    cursor: pointer;
+    padding: 14px 18px;
+    border: solid 1px black;
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+
+.delete_button > p {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 1s ease;
+}
+
+.delete_button:hover{
+    background-color: #df0000;
+    font-size: 0.9em;
+}
+.delete_button > p:hover{
+    font-size: 16px;
+}
+
+/* BREAKPOINTS */
+
+/* TABLETS */
+@media (min-width: 481px) {
+
+    .title {
+        margin-top: 120px;
+        padding: 15px;
+    }
+    .confirm{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .delete_button {
+        margin-top: 0;
+    }
+    
+}
+/* DESKTOP */
+@media (min-width: 761px) {
+
+    .title {
+        padding: 20px;
+    }
+    .framework {
+        background-color: #918c8c1e;
+        border: solid 1px #1f1d1d;
+        box-shadow: 3px 3px 6px #666666;
+        flex-direction: row;
+        margin-left: 5%;
+        width: 90%;
+    }
+    /* #product_name1 {
+        display:none;
+    }
+    #product_name2{
+        display: block;
+    } */
+    .framework h1 {
+        text-shadow: 1px 1px white, -2px -1px #E79F00;
+        font-size: 35px;
+        letter-spacing: 2px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    .framework p {
+        line-height: 22px;
+    }
+    .framework_img_img {
+        box-shadow: 3px 3px 6px #666666;
+        height: 350px;
+        width: 450px;
+        margin: 40px;
+        object-fit: cover;
+    }
+    .category {
+        margin-left: 12%;
+    }
+    .back_button > p{
+        font-size: 15px;
+    }
+    .delete_button > p{
+        font-size: 15px;
+    }
+
+}

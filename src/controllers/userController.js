@@ -122,7 +122,17 @@ const usersController = {
         res.redirect('../profile');
 
     },
+
     deleteUser: (req, res) => {
+        const usersFilePath = path.join(__dirname, '../data/users.json');
+        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        const user = users.find(user => {
+            return user.id == req.params.id;
+        });
+        res.render('./users/userDelete', { id: 'userDelete', title: 'LUMEN - Eliminar usuario', user: user });
+    },
+
+    destroyUser: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -133,7 +143,7 @@ const usersController = {
         newUsers = JSON.stringify(newUsers, null, "\t");
 
         fs.writeFileSync(usersFilePath, newUsers);
-        res.redirect('/');
+        res.redirect('/user/list');
     },
     
     list: (req, res) => {
@@ -142,21 +152,26 @@ const usersController = {
        
         res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
     },
-    deleteUserList: (req, res) => {
+
+    admin: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        let newUsers = users.filter(user => {
-            return user.id != req.params.id;
+        
+        const user = users.find(user => {
+            return user.id == req.params.id;
         });
 
-        newUsers = JSON.stringify(newUsers, null, "\t");
+        if(user.admin){
+            user.admin = false;
+        }else{
+            user.admin = true;
+        }
 
-        fs.writeFileSync(usersFilePath, newUsers);
-        // res.redirect('./user/list');
-        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
-
+        users = JSON.stringify(users, null, "\t");
+        fs.writeFileSync(usersFilePath, users);
+        res.redirect('/user/list');
     },
+
     profile: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -171,6 +186,7 @@ const usersController = {
     //     users: req.session.userLogged
     // })
     },
+    
     logout: (req, res) => {
         req.session.destroy();
         res.clearCookie('rememberEmail');

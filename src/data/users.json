@@ -13,10 +13,20 @@
 		"id": "2",
 		"admin": false,
 		"firstName": "Prueba",
-		"lastName": "Test",
+		"lastName": "Prueba",
 		"email": "prueba@default.com",
-		"phone": "123",
-		"password": "$2a$10$MTklCWds2cQ6OYWDLv58SeAdijdv8lP6P1oLm8UOMRIKnVD8RlL6y",
+		"phone": "123456789",
+		"password": "$2a$10$1H10k5bJcDq3IOHeIKKADODAL8RWyWLHPMdBYu8emEGf28T/72ynG",
+		"img": "default.jpg"
+	},
+	{
+		"id": "3",
+		"admin": false,
+		"firstName": "asdada",
+		"lastName": "asdasdsad",
+		"email": "marcosmarquis@gmail.com",
+		"phone": "4654534132",
+		"password": "$2a$10$fU/tA3LSD5jz3cGrbO1LIu7oPl8CRcoidHi8Abzvm67Y.RutB4rxO",
 		"img": "default.jpg"
 	}
 ]
