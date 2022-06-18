@@ -63,7 +63,7 @@
                     <section class="products">
                         <h2 class="products-h2">Productos relacionados</h2>
                         <article class="see">
-                            <% for( let i=5; i < 10; i++ ) { %>
+                            <% for( let i=0; i < products.length; i++ ) { %>
                                 <article class="see__dest">
                                     <a href="/product/detail/<%= products[i].id %>">
                                         <img src="/img/<%= products[i].img %>" alt="Producto destacado" class="dest">
@@ -78,7 +78,7 @@
                                                     /parseInt(products[i].payments)) %></strong>
                                     </p>
                                 </article>
-                                <% } %>
+                            <% } %>
                         </article>
                     </section>
             </main>

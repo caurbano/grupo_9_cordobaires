@@ -7,9 +7,15 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = productController = {
 
     detail: (req, res) => {
-        const product = products.find(elemento => { return elemento.id == req.params.id; });
-
-        res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: product, products: products });
+        const productDetail = products.find(elemento => { return elemento.id == req.params.id; });
+        let cant = 0;
+        let relatedProducts = products.filter(product => {
+            if( product.category == productDetail.category && product.id != productDetail.id && cant < 5 ){
+                cant++;
+                return product;
+            }
+        });
+        res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: productDetail, products: relatedProducts });
     },
 
     category: (req, res) => {

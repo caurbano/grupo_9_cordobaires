@@ -112,14 +112,12 @@ const usersController = {
                 if (req.file) { element.img = req.file.filename; }
             }
         });
-        
 
         //Actualizo
 
         users = JSON.stringify(users, null, "\t");
         fs.writeFileSync(usersFilePath, users);
-
-        res.redirect('../profile');
+        res.redirect('/user/profile');
 
     },
 
