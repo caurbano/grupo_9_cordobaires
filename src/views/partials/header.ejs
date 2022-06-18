@@ -23,7 +23,7 @@
             <article class="bar_login">
             <% if (locals.userLogged) { %>
                 <a href="/user/profile"><i class="fa-solid fa-user" id="login"></i></a>
-                <a href="/user/profile" class="login_msg"><p>Hola, <%= locals.userLogged.firstName %>!</p></a>
+                <a href="/user/profile" class="login_msg"><p>Hola, <%= userLogged.firstName %>!</p></a>
             <% } else { %>
             <a href="/user/login"><i class="fa-solid fa-user" id="login"></i></a>
             <% } %> 

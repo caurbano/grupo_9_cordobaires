@@ -2,31 +2,11 @@
 	{
 		"id": 1,
 		"admin": true,
-		"firstName": "Boris",
+		"firstName": "Boriss",
 		"lastName": "Colodroo",
 		"email": "bgcolodro@gmail.com",
 		"phone": "123456789",
 		"password": "$2a$10$PMmb9FgMVa167XshmI8o2.3uztyarhl9cXageBLTrQJJC58TzvZwO",
 		"img": "user-1655246454072.jpg"
-	},
-	{
-		"id": "2",
-		"admin": false,
-		"firstName": "Prueba",
-		"lastName": "Prueba",
-		"email": "prueba@default.com",
-		"phone": "123456789",
-		"password": "$2a$10$1H10k5bJcDq3IOHeIKKADODAL8RWyWLHPMdBYu8emEGf28T/72ynG",
-		"img": "default.jpg"
-	},
-	{
-		"id": "3",
-		"admin": false,
-		"firstName": "asdada",
-		"lastName": "asdasdsad",
-		"email": "marcosmarquis@gmail.com",
-		"phone": "4654534132",
-		"password": "$2a$10$fU/tA3LSD5jz3cGrbO1LIu7oPl8CRcoidHi8Abzvm67Y.RutB4rxO",
-		"img": "default.jpg"
 	}
 ]
