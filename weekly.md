@@ -39,3 +39,25 @@ Tareas completadas:
 Algunos impedimentos que ocurrieron tienen que ver con la falta de claridad o práctica de algunos conceptos, pero al implementarlos durante el proceso del Sprint, pudimos avanzar adecuadamente y afianzar esos contenidos.  
 
 ### SPRINT 5  
+1° weekly  
+Tareas completadas:  
+- Revisión de tareas pendientes (mejoras)  
+- Realizamos la retrospectiva  
+- Dejamos listo el punto 4 (entidad de usuarios)  
+- Comenzamos con el punto 6 (login de usuarios)  
+  
+2° weekly  
+Tareas completadas:  
+-  Continuación de la implementación del login de usuarios  
+-  Concluimos con la implementación de registro de usuarios  
+- Listo el formulario de login con cookies y middlewares para recordar el usuario  
+- Avance de mejoras pendientes   
+  
+3° weekly  
+Tareas completadas:   
+- Revisión de otras mejoras que estaban pendientes  
+- Avanzamos con la implementación de rutas de huéspedes y de usuarios  
+- Terminamos de definir las vistas del “Administrador”  
+
+
+Un impedimento con el que nos encontramos en ciertas instancias, es el de querer llevar a cabo algunas funcionalidades y aún no tener las herramientas para hacerlo. En esa situación, decidimos esperar a avanzar con esos contenidos para hacerlo adecuadamente y dejar un resultado provisorio hasta entonces.  
