@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const { log } = require('console');
 
 
 const usersController = {
@@ -83,12 +84,7 @@ const usersController = {
     },
 
     editUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        const user = users.find(user => {
-            return user.id == req.params.id;
-        });
-        res.render('./users/userEdit', { id: 'userEdit', title: 'LUMEN - Edición de usuario', user: user });
+        res.render('./users/userEdit', { id: 'userEdit', title: 'LUMEN - Edición de usuario'});
     },
 
     updateUser: (req, res) => {
@@ -98,7 +94,7 @@ const usersController = {
         //Edito el user
 
         users.find(element => {
-            if (element.id == req.params.id) {
+            if ( element.id == req.session.userLogged.id ) {
                 if (element.firstName != req.body.firstName) { element.firstName = req.body.firstName; }
 
                 if (element.lastName != req.body.lastName) { element.lastName = req.body.lastName; }
@@ -112,22 +108,19 @@ const usersController = {
                 if (req.file) { element.img = req.file.filename; }
             }
         });
-        
 
         //Actualizo
 
         users = JSON.stringify(users, null, "\t");
         fs.writeFileSync(usersFilePath, users);
-
-        res.redirect('../profile');
-
+        res.redirect('/user/profile');
     },
 
     deleteUser: (req, res) => {
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         const user = users.find(user => {
-            return user.id == req.params.id;
+            return user.id == req.session.userLogged.id;
         });
         res.render('./users/userDelete', { id: 'userDelete', title: 'LUMEN - Eliminar usuario', user: user });
     },
@@ -137,49 +130,21 @@ const usersController = {
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
         let newUsers = users.filter(user => {
-            return user.id != req.params.id;
+            return user.id != req.session.userLogged.id;
         });
 
         newUsers = JSON.stringify(newUsers, null, "\t");
 
         fs.writeFileSync(usersFilePath, newUsers);
-        res.redirect('/user/list');
-    },
-    
-    list: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-       
-        res.render('./users/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
-    },
-
-    admin: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        req.session.destroy();
+        console.log(req.session);
+        res.clearCookie('rememberEmail');
         
-        const user = users.find(user => {
-            return user.id == req.params.id;
-        });
-
-        if(user.admin){
-            user.admin = false;
-        }else{
-            user.admin = true;
-        }
-
-        users = JSON.stringify(users, null, "\t");
-        fs.writeFileSync(usersFilePath, users);
-        res.redirect('/user/list');
+        res.redirect('/');
     },
 
     profile: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        
-        const user = users.find(user => {
-            return user.id == req.params.id;
-        });
-        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario', user: user, users: users });
+        res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario' });
     
     // Otra prueba:
     // return res.render('./users/profile', {

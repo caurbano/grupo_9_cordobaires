@@ -14,7 +14,7 @@
         <section class="products">
             <h2>Lámparas - Galería completa </h2>
             <% if(locals.userLogged && userLogged.admin) {%>
-                <button class="admin_options"><a href="./create">Crear nuevo producto</a></button>
+                <button class="admin_options"><a href="/admin/product/create">Crear nuevo producto</a></button>
                 <% } %>
 
             <article class="see">
@@ -26,8 +26,8 @@
                         </a>
                         <p class="dest-fee"><%= products[i].payments %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].price) /parseInt(products[i].payments)) %></strong></p>
                         <% if(locals.userLogged && userLogged.admin) {%>
-                            <button class="back_button"><p>Editar</p></button>
-                            <button class="back_button"><p>Eliminar</p></button>
+                            <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button"><p>Editar</p></button></a>
+                            <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button"><p>Eliminar</p></button></a>
                         <% } %>
                     </div>
                 <% } %>

@@ -9,26 +9,30 @@
         <h2 class="title">¿Estas Seguro?</h2>
         <section class="framework">
             <article class="framework_img">
-                <img src="\img\users\<%= userLogged.img %>" alt="Luces" class="framework_img_img">
+                <img src="\img\users\<%= user.img %>" alt="Luces" class="framework_img_img">
             </article>
             <article class="Desc-articulo">
                 <section class="text">
                     <p class="category">Nombre: </p>
-                    <p class="value"><%= userLogged.firstName %></p>
+                    <p class="value"><%= user.firstName %></p>
                 </section>
                 <section class="text">
                     <p class="category">Apellido: </p>
-                    <p class="value"> <%= userLogged.lastName %></p>
+                    <p class="value"> <%= user.lastName %></p>
                 </section>
                 <section class="text">
                     <p class="category">Email: </p>
-                    <p class="value"> <%= userLogged.email %></p>
+                    <p class="value"> <%= user.email %></p>
                 </section>
+                <section class="text">
+                    <p class="category">Admin: </p>
+                    <p class="value"> <%= user.admin %></p>
+                </section>  
             </article>
         </section>
         <section class="confirm">
-            <a href="/user/profile"><button class="back_button"><p>Cancelar</p></button></a>
-            <form action="/user/delete?_method=DELETE" method="POST">
+            <a href="/admin/user/list"><button class="back_button"><p>Cancelar</p></button></a>
+            <form action="/admin/user/delete/<%= user.id %>?_method=DELETE" method="POST">
                     <button class="delete_button"><p>Borrar</p></button>
             </form>
         </section>

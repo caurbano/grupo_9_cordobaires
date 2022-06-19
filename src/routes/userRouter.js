@@ -8,7 +8,6 @@ const validatorRegister = require('../middlewares/validatorRegister');
 const validatorLogin = require('../middlewares/validatorLogin');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
-const adminMiddleware = require('../middlewares/adminMiddleware');
 
 const storageImgUser = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -29,15 +28,11 @@ routerUsers.post('/login', validatorLogin, usersController.processLogin);
 routerUsers.get('/register', guestMiddleware, usersController.register);
 routerUsers.post('/register', uploadImgUser.single('img'), validatorRegister, usersController.processRegister);
 
-routerUsers.get('/edit/:id', usersController.editUser);
-routerUsers.put('/edit/:id', uploadImgUser.single('img'), usersController.updateUser);
+routerUsers.get('/edit', authMiddleware, usersController.editUser);
+routerUsers.put('/edit', uploadImgUser.single('img'), usersController.updateUser);
 
-routerUsers.get('/delete/:id', usersController.deleteUser);
-routerUsers.delete('/delete/:id', usersController.destroyUser);
-
-routerUsers.get('/list', authMiddleware, adminMiddleware, usersController.list);
-
-routerUsers.put('/admin/:id', usersController.admin);
+routerUsers.get('/delete', authMiddleware, usersController.deleteUser);
+routerUsers.delete('/delete', usersController.destroyUser);
 
 routerUsers.get('/profile', authMiddleware, usersController.profile);
 
