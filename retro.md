@@ -47,7 +47,7 @@ Avanzar sin haber resuelto dudas anteriores.
 Nuevamente, no dejar para último momento algunas tareas que se pueden realizar antes.  
   
   
-## Retrospectiva luego del SPRINT 4 
+## Retrospectiva luego del SPRINT 4  
 ### Dinámica “Estrella de mar”  
 Según esta dinámica, resaltamos aquello que tenemos que:  
 
