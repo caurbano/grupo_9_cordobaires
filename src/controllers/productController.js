@@ -22,7 +22,8 @@ module.exports = productController = {
         let productsFilter = products.filter(product => {
             return product.category === req.params.category;
         })
-        res.render('./products/categories', { id: 'categories', category: req.params.category, title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter });
+        let category = req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1);
+        res.render('./products/categories', { id: 'categories', category: category, title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter });
     },
 
     gallery: (req, res) => {

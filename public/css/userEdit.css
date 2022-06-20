@@ -118,7 +118,11 @@
     border-radius: 4px;
     transition: all 1s ease;
 }
-.confirm > button > p{
+.confirm > button > a {
+    text-decoration: none;
+    color: white;
+}
+.button_text{
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -128,7 +132,7 @@
     background-color: black;
     font-size: 0.9em;
 }
-.confirm > button > p:hover{
+.button_text:hover{
     font-size: 16px;
 }
 .deleteButton{
@@ -165,7 +169,7 @@
         width: 15%;
         margin: 15px 0px;
     }
-    .confirm > button > p{
+    .button_text{
         font-size: 13px;
     }
     .deleteButton{

@@ -60,13 +60,14 @@
                     <input type="number" class="validate" name="payments" required="required" value = "<%= product.payments %>">
                 </section>
                 <section class="confirm">
-                    <button type="submit"><p>Cancelar</p></button>
-                    <button type="submit"><p>Confirmar</p></button>
+                    <button type="button"><a href="/product/gallery"><p class="button_text">Cancelar</p></a></button>
+                    <button type="submit"><p class="button_text">Confirmar</p></button>
                 </section>
             </form>
-            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post" class="form">
-                    <button type="submit" class="deleteButton"><p>Eliminar producto</p></button>
-            </form>
+            
+            <section class="form">
+                <a href="/admin/product/delete/<%= product.id %>"><button type="submit" class="deleteButton"><p>Eliminar producto</p></button>
+            </section>
         </section>
     </main>
 

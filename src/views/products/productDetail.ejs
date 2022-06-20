@@ -22,32 +22,24 @@
                             $<%= product.price %>
                         </p>
                         </p>
-                        <form action="/product/detail" method="POST">
+                        <form action="" method="POST">
                             <p>En <select name="mes">
                                     <% for( let i=0; i < product.payments; i++ ) { %>
                                         <option value="<%=i+1  %>">
                                             <%=i+1 %>
                                         </option>
-                                        <% } %>
-                                            <!-- <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option> -->
+                                    <% } %>
                                 </select>
                                 cuotas</p>
                             <p> &nbsp </p>
                             <button class="agregarcarrito">Agregar al carrito</button>
-                            <button class="agregarcarrito">Editar</button>
-                            <button class="agregarcarrito">Borrar</button>
-                        </div>
+                            <% if(locals.userLogged && userLogged.admin) {%>
+                                <a href="/admin/product/edit/<%- product.id %>"><button type="button">Editar</button></a>
+                                <a href="/admin/product/delete/<%- product.id %>"><button type="button">Eliminar</button></a>
+                            <% } %>
+                        </form>
+                       
+                    </div>
                    
                     <p> &nbsp </p>
                 </section>

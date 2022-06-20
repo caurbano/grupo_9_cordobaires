@@ -12,7 +12,7 @@
         </section>
 
         <section class="products">
-            <h2>Lámparas de <%= category %></h2>
+            <h2>Lámparas de <%= category.toLowerCase() %></h2>
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">
@@ -22,8 +22,8 @@
                         </a>
                         <p class="dest-fee"><%= products[i].payments %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].price) /parseInt(products[i].payments)) %></strong></p>
                         <% if(locals.userLogged && userLogged.admin) {%>
-                            <button class="back_button"><p>Editar</p></button>
-                            <button class="back_button"><p>Eliminar</p></button>
+                            <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button"><p>Editar</p></button></a>
+                            <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button"><p>Eliminar</p></button></a>
                         <% } %>
                     </div>
                 <% } %>

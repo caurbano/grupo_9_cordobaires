@@ -2,11 +2,31 @@
 	{
 		"id": 1,
 		"admin": true,
-		"firstName": "Boriss",
-		"lastName": "Colodroo",
-		"email": "bgcolodro@gmail.com",
-		"phone": "123456789",
-		"password": "$2a$10$PMmb9FgMVa167XshmI8o2.3uztyarhl9cXageBLTrQJJC58TzvZwO",
-		"img": "user-1655246454072.jpg"
+		"firstName": "Admin",
+		"lastName": "Lumen",
+		"email": "admin@lumenshop.com",
+		"phone": "0303456",
+		"password": "$2a$10$W4oZflXyNKtJ9v21yGaFiul.d3rrrM6oszY0Abp13saz1SnYsRU4G",
+		"img": "user-1655677988734.png"
+	},
+	{
+		"id": "2",
+		"admin": false,
+		"firstName": "Usuario1",
+		"lastName": "Prueba",
+		"email": "prueba@lumenshop.com",
+		"phone": "987654321",
+		"password": "$2a$10$oaltQbokfqZrSRhAMiYjbOe7HbGgQ7Asz2eDJkAOLuchpuHQyMdXC",
+		"img": "default.jpg"
+	},
+	{
+		"id": "3",
+		"admin": false,
+		"firstName": "Usuario2",
+		"lastName": "Prueba",
+		"email": "usuario@lumenshop.com",
+		"phone": "456789123",
+		"password": "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq",
+		"img": "default.jpg"
 	}
 ]
