@@ -19,7 +19,7 @@ module.exports = function(sequelize, dataTypes) {
         },
         categories_id: {
             type: dataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
         },
         color: {
             type: dataTypes.VARCHAR(45),
