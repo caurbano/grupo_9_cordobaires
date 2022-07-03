@@ -65,3 +65,22 @@ Nuevamente, nos proponemos no avanzar sin haber resuelto dudas anteriores.
   
 ### Dejar de hacer  
 Esperar hasta el último momento para algunas mejoras. Por ejemplo, revisar las vistas, eliminar o reemplazar algunas etiquetas por otras, etc.  
+  
+   
+## Retrospectiva luego del SPRINT 5  
+### Dinámica “Estrella de mar”  
+Según esta dinámica, resaltamos aquello que tenemos que:  
+
+### Comenzar a hacer  
+  
+  
+### Hacer más  
+
+  
+### Continuar haciendo  
+  
+  
+### Hacer menos  
+
+  
+### Dejar de hacer  
