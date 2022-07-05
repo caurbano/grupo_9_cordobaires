@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../../database/models');
 
 const adminController = {
 
@@ -71,6 +71,7 @@ const adminController = {
     },
 
     list: (req, res) => {
+        console.log(req.session);
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
        
@@ -78,6 +79,7 @@ const adminController = {
     },
 
     setAdmin: (req, res) => {
+        console.log(req.session);
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         
@@ -103,42 +105,23 @@ const adminController = {
     },
 
     store: (req, res) => {
-        const productsFilePath = path.join(__dirname, '../data/products.json');
-        let products = fs.readFileSync(productsFilePath, 'utf-8');
 
-        //Verifico que el JSON esta vacio
-
-        let array;
-        let ide;
-        if (products == undefined) {
-            array = [];
-            ide = 1;
-        } else {
-            products = JSON.parse(products);
-            array = products;
-            ide = parseInt(array[array.length - 1].id) + 1;
-        }
-
-        //Creo el producto
-
-        let productNew = {
-            id: ide,
+        db.Product.create({
             name: req.body.name,
-            description: req.body.description.split("."),
-            img: req.file ? req.file.filename : 'default.jpg', //+ ide + "-" + Date.now() + path.extname(file.originalname),
+            description: req.body.description,
             category: req.body.category,
             color: req.body.color,
             price: req.body.price,
             discount: req.body.discount,
-            payments: req.body.payments
-        }
-
-        //Lo sumo con los demas
-
-        array.push(productNew);
-        newProducts = JSON.stringify(array, null, "\t");
-        fs.writeFileSync(productsFilePath, newProducts);
-        res.redirect('/product/detail/' + ide);
+            stock: req.body.stock
+        }).then(product => {
+            db.Image.create({
+                url: req.file ? req.file.filename : 'default.jpg',
+                product_id: product.id
+            }).then(function(image){
+                res.redirect('/product/detail/' + image.product_id);
+            });
+        });
 
     },
 

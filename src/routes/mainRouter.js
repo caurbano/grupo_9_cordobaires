@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const MainController = require('../controllers/mainController');
+const mainController = require('../controllers/mainController');
 const userRouter = require('./userRouter');
 const productRouter = require('./productRouter');
 const cartRouter = require('./cartRouter');
@@ -15,6 +15,6 @@ router.use("/product", productRouter);
 router.use("/cart", cartRouter);
 router.use("/admin", authMiddleware, adminMiddleware, adminRouter);
 
-router.get('/', MainController.home);
+router.get('/', mainController.home);
 
 module.exports = router;

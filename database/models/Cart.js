@@ -1,27 +1,27 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
 
     let alias = 'Cart';
     let cols = {
         id:{
-            type: DataTypes.INTIGER(11),
+            type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: true,
             autoIncrement: true
         },
         total:{
-            type: DataTypes.INTIGER(11),
+            type: dataTypes.INTEGER,
             allowNull: true,
         },
         cant_items:{
-            type: DataTypes.INTIGER(11),
+            type: dataTypes.INTEGER,
             allowNull: true,
         },
-        users_id:{
-            type: DataTypes.INTIGER(11),
+        user_id:{
+            type: dataTypes.INTEGER,
             allowNull: true
         }
     };
-    let config = {underscored: true};
+    let config = {underscored: true, timestamps:false};
 
     const Cart = sequelize.define(alias, cols, config);
 
@@ -33,8 +33,8 @@ module.exports = (sequelize, DataTypes) => {
         Cart.belongsToMany(models.Product, {
             as:'product',
             through:'products_carts',
-            foreignKey:'carts_id',
-            otherKey:'products_id',
+            foreignKey:'cart_id',
+            otherKey:'product_id',
             timestamps:false
         });
     }

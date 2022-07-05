@@ -1,46 +1,46 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
 
     let alias = 'Product';
     let cols = {
         id:{
-            type: DataTypes.INTEGER(11),
+            type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: true,
             autoIncrement: true
         },
         name:{
-            type: DataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: true,
             unique: true
         },
         description:{
-            type: DataTypes.VARCHAR(500),
+            type: dataTypes.STRING(500),
             allowNull: true
         },
         category:{
-            type: DataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: true
         },
         color:{
-            type: DataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: true
         },
         price:{
-            type: DataTypes.INTENTEGER(11),
+            type: dataTypes.INTEGER,
             allowNull: true
         },
         discount:{
-            type: DataTypes.INTENTEGER(11),
+            type: dataTypes.INTEGER,
             allowNull: true
         },
         created_at:{
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         updated_at:{
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         stock:{
-            type: DataTypes.INTENTEGER(11),
+            type: dataTypes.INTEGER,
             allowNull: true
         }
     };
@@ -51,13 +51,13 @@ module.exports = (sequelize, DataTypes) => {
     Product.associate = function (models){
         Product.hasMany(models.Image, {
             as:'images',
-            foreignKey:'products_id'
+            foreignKey:'product_id'
         });
         Product.belongsToMany(models.Cart, {
             as:'carts',
-            through:'products_carts',
-            foreignKey:'products_id',
-            otherKey:'carts_id',
+            through:'product_carts',
+            foreignKey:'product_id',
+            otherKey:'cart_id',
             timestamps:false
         });
     }
