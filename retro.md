@@ -72,15 +72,18 @@ Esperar hasta el último momento para algunas mejoras. Por ejemplo, revisar las 
 Según esta dinámica, resaltamos aquello que tenemos que:  
 
 ### Comenzar a hacer  
-  
+Mejorar el manejo de los tiempos personales para poder optimizar los grupales y avanzar más cómodamente en tiempo con las consignas.  
+Examinar más funcionalidades de Trello, para implementar algunas nuevas que ayuden a una mejor estructuración de las tareas.  
   
 ### Hacer más  
-
+Investigar más aún respecto a contenidos puntuales y reforzar conceptos ya vistos.  
   
 ### Continuar haciendo  
-  
+Seguir optimizando el código, en la medida de lo posible, para acercarnos más al resultado deseado.  
+Continuar aplicando la metodología de trabajo grupal que propusimos en los últimos Sprints, ya que vemos resultados positivos.  
   
 ### Hacer menos  
-
+En ocasiones, algo que debemos hacer menos es priorizar “mejoras” por sobre las consignas, durante las llamadas, cuando se trata de actividades que podemos repartirlas y hacerlas individualmente. Aun así, lo tomamos como una instancia más de práctica que en algunas ocasiones, sigue siendo necesaria, aunque debería ser en menor medida…  
   
 ### Dejar de hacer  
+En este momento y por ahora, no encontramos algo que debamos “dejar de hacer”.  
