@@ -135,6 +135,26 @@ const adminController = {
     },
 
     update: (req, res) => {
+
+        db.Product.update({
+            name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            color: req.body.color,
+            price: req.body.price,
+            discount: req.body.discount,
+            stock: req.body.stock
+        },{
+            where: {id: req.params.id}
+        }).then( product => {
+            db.Image.create({
+                url: req.file ? req.file.filename : 'default.jpg',
+                product_id: product.id
+            }).then(function(image){
+                res.redirect('/product/detail/' + image.product_id);
+            });
+        });
+
         const productsFilePath = path.join(__dirname, '../data/products.json');
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
