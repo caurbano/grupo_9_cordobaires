@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../../database/models');
+
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -26,9 +28,17 @@ module.exports = productController = {
         res.render('./products/categories', { id: 'categories', category: category, title: 'LUMEN - Categoría - ' + req.params.category, products: productsFilter });
     },
 
-    gallery: (req, res) => {
-        res.render('./products/productList', { id: 'productList', category: req.params.category, title: 'LUMEN - Galería ', products: products });
-    },
+    // gallery: (req, res) => {
+    //     res.render('./products/productList', { id: 'productList', category: req.params.category, title: 'LUMEN - Galería ', products: products });
+    // },
 
+    // listado
+    // probar si funciona - abrir DB
+    gallery: (req, res) => {
+        db.Product.findAll()
+        .then(function(products){
+            res.render('./products/productList', { id: 'productList', category: req.params.category, title: 'LUMEN - Galería ', products: products });
+        })
+    }
     
 }
