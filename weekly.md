@@ -62,3 +62,21 @@ Tareas completadas:
 
 Un impedimento con el que nos encontramos en ciertas instancias, es el de querer llevar a cabo algunas funcionalidades y aún no tener las herramientas para hacerlo. En esa situación, decidimos esperar a avanzar con esos contenidos para hacerlo adecuadamente y dejar un resultado provisorio hasta entonces.  
 Respecto a nuestra opinión acerca de esta ceremonia, consideramos que es útil estar al tanto de aquello que ya se haya realizado (si dividimos algunas tareas), si hubo algún impedimento en algo y lo aplicamos generalmente. Aun así, al manejarnos también con la herramienta Trello, desde la misma, vamos viendo los avances anticipadamente a la “Weekly”.  
+  
+### SPRINT 6  
+1° weekly  
+Tareas realizadas:  
+-	Trello armado  
+-	Retrospectiva completa  
+-	Primer boceto del Diagrama  
+  
+2° weekly  
+Tareas realizadas:  
+-	Diagrama final  
+-	Script de estructura definido  
+-	Creación de la carpeta y archivos de Sequelize  
+-	Carpeta database incluyendo configuraciones y Modelos  
+-	Reorganización de Trello con nuevas correcciones  
+  
+3° weekly  
+Tareas realizadas:  
