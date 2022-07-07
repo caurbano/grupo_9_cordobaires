@@ -77,14 +77,6 @@
 }
 
 /* Esta sección está pensada para que funcione con click (JS) */
-#menu:hover .menu-dd {
-    display: block;
-}
-
-.menu-dd:hover {
-    position: fixed;
-}
-
 .input_search {
     border: solid 1px #666666;
     height: 20px;
@@ -100,9 +92,14 @@
     display: none;
 }
 
-#search:hover .search_form {
+.block {
     display: block;
+    position: fixed;
 }
+
+/* #search:hover .search_form {
+    display: block;
+} */
 /* Hasta acá */
 .bar__logo {
     margin-left: auto;
@@ -234,25 +231,7 @@
     /* .search_command {
         display: flex;
     } */
-    .input_search {
-    border: solid 1px #666666;
-    display: flex;
-    height: 20px;
-    opacity: 0.6;
-    padding: 1px;
-    width: 170px;
-    }
-    .search_form {
-        position: fixed;
-        top: 64px;
-        left: 1px;
-        transition: all 0.3s ease;
-        display: none;
-    }
-
-    #search:hover .search_form {
-        display: block;
-    }
+    
     #logo {
         height: 75px;
         width: 100%;
