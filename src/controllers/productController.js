@@ -28,8 +28,10 @@ module.exports = productController = {
     },
 
     gallery: async (req, res) => {
-        await 
-        res.render('./products/productList', { id: 'productList', category: req.params.category, title: 'LUMEN - Galería ', products: products });
+        db.Product.findAll()
+        .then(function(products){
+            res.render('./products/productList', { id: 'productList', category: req.params.category, title: 'LUMEN - Galería ', products: products });
+        });
     },
 
     
