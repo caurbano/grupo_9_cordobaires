@@ -19,27 +19,27 @@
                 </section>
                 <section class="register">
                     <label class="form-title">Descripcion del producto (separar cada características con un . )</label>
-                    <textarea name="description" rows="4" cols="50"><%= product.description.join(" ") %></textarea>
+                    <textarea name="description" rows="4" cols="50"><%= product.description %></textarea>
                 </section>
                 <section class="register">
                     <label class="form-title">Foto del producto</label>
                     <section class="img">
-                        <img src="\img\<%= product.img %>" width="100%">
+                        <img src="\img\<%= product.images[0].url %>" width="100%">
                     </section>
                     <input type="file" name="Foto" accept=".jpg" multiple>
                 </section>
                 <section class="register">
                     <label class="form-title">Categoria</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Techo" required="required" <%= product.category == 'techo' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="Techo" required="required" <%= product.category == 'Techo' ? 'checked' : ''; %> >
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pared" required="required" <%= product.category == 'pared' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="Pared" required="required" <%= product.category == 'Pared' ? 'checked' : ''; %> >
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pie" required="required" <%= product.category == 'pie' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="Pie" required="required" <%= product.category == 'Pie' ? 'checked' : ''; %> >
                         <label>Pie</label>
                     </div>
                 </section>
@@ -56,8 +56,8 @@
                     <input type="number" class="validate" name="discount"  placeholder = "Descuento" value = "<%= product.discount %>">
                 </section>
                 <section class="register">
-                    <label class="form-title">Cuotas maxima</label>
-                    <input type="number" class="validate" name="payments" required="required" value = "<%= product.payments %>">
+                    <label class="form-title">Stock</label>
+                    <input type="number" class="validate" name="stock" required="required" value = "<%= product.stock %>">
                 </section>
                 <section class="confirm">
                     <button type="button"><a href="/product/gallery"><p class="button_text">Cancelar</p></a></button>

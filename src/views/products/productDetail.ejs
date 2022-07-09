@@ -12,7 +12,7 @@
                     </p>
                     <!-- <p>Lámpara de <%= product.category %></p> -->
                     <article class="preview__img">
-                        <img src="\img\<%= product.img %>" alt="Luces" class="preview__img__img">
+                        <img src="\img\<%= product.images[0].url %>" alt="Luces" class="preview__img__img">
                     </article>
                     <div class="preview__txt">
                         <p class="detail_product_name2">
@@ -45,13 +45,10 @@
                 </section>
                 <section class="Desc-articulo">
                     <h3 class="Desc-titulo">Características</h3>
-                    <!-- <pre class="Desc-producto"><%= product.description %></pre> -->
-                    <% product.description.forEach(element=>{ %>
-                        <p class="Desc-producto">
-                            <%= element %>
-                        </p>
+                    <p class="Desc-producto">
+                        <%= product.description %>
+                    </p>
                 </section>
-                <% }) %>
                     <section class="products">
                         <h2 class="products-h2">Productos relacionados</h2>
                         <article class="see">
