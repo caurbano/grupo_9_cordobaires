@@ -13,8 +13,8 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.use("/user", userRouter);
 router.use("/product", productRouter);
 router.use("/cart", cartRouter);
-router.use("/admin", authMiddleware, adminMiddleware, adminRouter);
-
+router.use("/admin",  adminRouter);
+//authMiddleware, adminMiddleware,
 router.get('/', mainController.home);
 
 module.exports = router;

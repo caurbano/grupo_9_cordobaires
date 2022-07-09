@@ -121,39 +121,49 @@ const adminController = {
             }).then(function(image){
                 res.redirect('/product/detail/' + image.product_id);
             });
-        });
+        }).catch(error => res.send(error));
 
     },
 
-    edit: (req, res) => {
-        const productsFilePath = path.join(__dirname, '../data/products.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let product = products.find(product => {
-            return product.id == req.params.id;
+    edit: async (req, res) => {
+        await db.Product.findByPk(req.params.id, {include: ['images']})
+        .then(product => {
+            res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
         });
-        res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
+        // const productsFilePath = path.join(__dirname, '../data/products.json');
+        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // let product = products.find(product => {
+        //     return product.id == req.params.id;
+        // });
+        // res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
     },
 
-    update:async (req, res) => {
+    update: async (req, res) => {
 
-        let product_old = await db.Product.findOne({where:{id:req.params.id}});
+        let product_old = await db.Product.findByPk(req.params.id);
         let newProduct = {};
-        for (const key in product_old) {
-            if (product_old[key] != req.body[key]) {
+        for (const key in req.body) {
+            if (req.body[key] != product_old[key]) {
                 newProduct[key] = req.body[key];
             }
         }
-        await db.Product.update( newProduct,
-        {
+
+        let updateProduct = await db.Product.update( newProduct, {
             where: {id: req.params.id}
-        }).then( product => {
-            db.Image.update({
-                url: req.file ? req.file.filename : 'default.jpg',
-                product_id: product.id
-            }).then(function(image){
-                res.redirect('/product/detail/' + image.product_id);
-            });
+        }).catch(error => res.send(error));
+
+        let img = req.file ? req.file.filename : 'default.jpg';
+        let updateImg = await db.Image.update({
+                url: img
+        },{
+            where: {id: req.params.id}
+        }).catch(error => res.send(error));
+        
+        Promise.all([updateProduct, updateImg]).then(function([product, img]){
+            res.redirect('/product/detail/' + req.params.id);
         });
+                
+            
 
         // const productsFilePath = path.join(__dirname, '../data/products.json');
         // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -195,23 +205,43 @@ const adminController = {
         res.render('./products/result', { id: 'result', title: 'LUMEN - Verificación', result: result });
     },
 
-    delete: (req, res) => {
-        const productsFilePath = path.join(__dirname, '../data/products.json');
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const product = products.find(product => {
-            return product.id == req.params.id;
-        });
-        res.render('./products/productDelete', { id: 'productDelete', title: 'LUMEN - Eliminar producto', product: product });
+    delete: async (req, res) => {
+        await db.Product.findByPk(req.params.id)
+        .then(product => {
+            res.render('./products/productDelete', { id: 'productDelete', title: 'LUMEN - Eliminar producto', product: product });
+        }).catch(error => res.send(error));
+        // const productsFilePath = path.join(__dirname, '../data/products.json');
+        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // const product = products.find(product => {
+        //     return product.id == req.params.id;
+        // });
+        // res.render('./products/productDelete', { id: 'productDelete', title: 'LUMEN - Eliminar producto', product: product });
     },
 
     destroy: async (req, res) => {
-        await db.Product.destroy({
+        let destroyProduct = await db.Product.destroy({
             where:{
-                id:1//req.params.id
-            }
-        }).then(product => {
-            return product;
-        })
+                id: req.params.id,
+            },
+            force: true
+        }).catch(error => res.send(error));
+
+        let destroyImg = await db.Image.destroy({
+            where:{
+                id: req.params.id,
+            },
+            force: true
+        }).catch(error => res.send(error));
+
+        Promise.all([destroyProduct, destroyImg]).then(function([product, img]){
+            console.log(product, img);
+            // if(product){
+            //     req.session.check = true;
+            //     res.redirect('/admin/product/result');
+            // }
+            // req.session.check = false;
+            // res.redirect('/product/detail/' + req.params.id);
+        });
         // const productsFilePath = path.join(__dirname, '../data/products.json');
         // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -233,7 +263,5 @@ const adminController = {
     }
 
 }
-
-console.log(adminController.destroy);
 
 module.exports = adminController;
