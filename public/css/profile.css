@@ -27,7 +27,7 @@
     border-radius: 50%;
     height: 115px;
     margin: 20px 0px 40px 0px;
-
+    width: 115px;
 }
 
 .users_data {
@@ -109,6 +109,7 @@
         border-radius: 50%;
         height: 140px;
         margin: 25px 0px 60px 0px;
+        width: 140px;
     }
 
     .users_data {
@@ -162,6 +163,7 @@
         align-self: center;
         box-shadow: 3px 3px 6px #666666;
         height: 170px;
+        width: 170px;
     }   
     .users_data h4 {
         font-size: 20px;
