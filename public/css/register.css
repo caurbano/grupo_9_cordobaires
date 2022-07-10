@@ -129,4 +129,11 @@ form {
     .confirm > button > p{
         font-size: 13px;
     }
+    .pass {
+        font-size: 13px;
+        /* display: none; */
+    }
+    .block {
+        display: block;
+    }
 }
