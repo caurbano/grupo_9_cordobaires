@@ -27,8 +27,9 @@
     width: 25%;
 }
 .users_list img {
-    height: 60px;
     border-radius: 50%;
+    height: 60px;
+    width: 60px;
 }
 
 .users_data {
@@ -76,6 +77,7 @@
     }
     .users_list img {
         height: 80px;
+        width: 80px;
     }
     .users_data h4 {
         font-size: 18px;
@@ -114,8 +116,8 @@
     .users_list img {
         align-self: center;
         box-shadow: 3px 3px 6px #666666;
-        /* height: 120px; */
-        /* width: 70%; */
+        height: 100px;
+        width: 100px;
     }   
     .users_data h4 {
         font-size: 20px;
