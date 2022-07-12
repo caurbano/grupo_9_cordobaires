@@ -21,21 +21,26 @@
                         <p class="detail_product_price">
                             $<%= product.price %>
                         </p>
-                        </p>
+                        
                         <form action="" method="POST">
+<<<<<<< HEAD
                             <p>En <select name="mes">
                                     <% product.discount %>
+=======
+                            <!-- <p>En <select name="mes">
+                                    <% for( let i=0; i < product.payments; i++ ) { %>
+>>>>>>> 40c89034d62ca2c121bf359d140fcb46a14c3375
                                         <option value="<%=i+1  %>">
                                             <%=i+1 %>
                                         </option>
                                     <% } %>
                                 </select>
                                 cuotas</p>
-                            <p> &nbsp </p>
+                            <p> &nbsp </p> -->
                             <button class="agregarcarrito">Agregar al carrito</button>
                             <% if(locals.userLogged && userLogged.admin) {%>
-                                <a href="/admin/product/edit/<%- product.id %>"><button type="button">Editar</button></a>
-                                <a href="/admin/product/delete/<%- product.id %>"><button type="button">Eliminar</button></a>
+                                <a href="/admin/product/edit/<%- product.id %>"><button type="button" class="button_admin">Editar</button></a>
+                                <a href="/admin/product/delete/<%- product.id %>"><button type="button" class="button_admin">Eliminar</button></a>
                             <% } %>
                         </form>
                        
@@ -50,7 +55,7 @@
                     </p>
                 </section>
                     <section class="products">
-                        <h2 class="products-h2">Productos relacionados</h2>
+                        <h2>Productos relacionados</h2>
                         <article class="see">
                             <% for( let i=0; i < products.length; i++ ) { %>
                                 <article class="see__dest">
@@ -61,11 +66,11 @@
                                                 </strong>
                                         </p>
                                     </a>
-                                    <p class="dest-fee">
+                                    <!-- <p class="dest-fee">
                                         <%= products[i].payments %> cuotas sin interés de <strong>$<%=
                                                     parseInt(parseInt(products[i].price)
                                                     /parseInt(products[i].payments)) %></strong>
-                                    </p>
+                                    </p> -->
                                 </article>
                             <% } %>
                         </article>
