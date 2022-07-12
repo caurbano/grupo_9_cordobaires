@@ -80,3 +80,9 @@ Tareas realizadas:
   
 3° weekly  
 Tareas realizadas:  
+-	CRUD
+-	Script de datos
+-	Mejoras del código (home, menú, carrito, users, products, etc.)
+
+
+Seguimos considerando la utilidad de estar al tanto de las tareas ya resueltas (verlas plasmadas como “realizadas”) o bien, poder dialogar y comunicar si se presentó algún conflicto o dificultad en alguna de las restantes para poder tomar la acción más adecuada. Aun así, estamos también pendientes del tablero de Trello, en donde inicializamos todas estas tareas para ir cambiándolas de estado; nos resulta práctico y dinámico.  
