@@ -199,8 +199,8 @@
 
     .preview__img__img {
         box-shadow: 3px 3px 6px #666666;
-        height: 400px;
-        width: 500px;
+        height: 440px;
+        width: 470px;
         margin: 40px;
         object-fit: cover;
     }
