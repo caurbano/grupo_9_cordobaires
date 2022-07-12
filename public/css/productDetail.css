@@ -53,9 +53,14 @@
 }
 
 
-.agregarcarrito {
+/* .agregarcarrito {
     cursor: pointer;
     padding: 3px;
+} */
+button {
+    cursor: pointer;
+    padding: 3px;
+    margin: 2px;
 }
 .Desc-titulo{
     margin-left: 15%;
