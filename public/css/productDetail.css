@@ -12,7 +12,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    margin-top: 80px;
+    margin-top: 40px;
     padding-top: 5%;
 }
 
@@ -24,6 +24,7 @@
     font-size: 40px;
     font-weight: bold;
     display: block;
+    margin-bottom: 20px;
 }
 .detail_product_name2 {
     display: block;
@@ -31,9 +32,9 @@
 }
 
 .detail_product_price {
-    margin-top: 5%;
-    margin-bottom: 3%;
-    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -51,9 +52,10 @@
     object-fit: cover;
 }
 
-/* Productos Relacionados */
+
 .agregarcarrito {
     cursor: pointer;
+    padding: 3px;
 }
 .Desc-titulo{
     margin-left: 15%;
@@ -64,42 +66,36 @@
     line-height: 25px;
     margin-right: 10%;
 }
+
+/* Productos Relacionados */
 .see {
     background-color: #918c8c1e;
+    height: 120px;
     width: inherit;
     display: flex;
     justify-content: space-evenly;
     padding: 6% 0%;
 }
 
-.preciodetalle {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.h2 {
-    align-self: flex-start;
-    text-shadow: 1px 1px white, -2px -1px #E79F00;
-    margin: 20px 15px;
-}
-.products-h2 {
+.products h2 {
     font-size: 20px;
     position: relative;
-    top: 25px;
+    top: 28px;
     left: 10px;
     margin-bottom: 3px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
 }
 
 .see__dest {
+    align-self: center;
     background-color: #918c8c1e;
     border: solid 1px #1f1d1d;
-    height: 90px;
+    height: 88px;
     width: 15%;
 }
 .dest {
     border-bottom: solid 1px #1f1d1d;
-    height: 90px;
+    height: 88px;
     width: 100%;
     margin-bottom: 2px;
 }
@@ -122,11 +118,20 @@
 
 /* TABLETS */
 @media (min-width: 481px) {
-    .products-h2 {
+    .preview {
+        margin-top: 120px;
+    }
+    .detail_product_price {
+    margin-top: 22px;
+    margin-bottom: 13px;
+    font-size: 22px;
+}
+    .products h2 {
         font-size: 20px;
         position: relative;
-        top: 25px;
+        top: 36px;
         left: 20px;
+        margin-bottom: 10px;
     }
     .see__dest {
         box-shadow: 3px 3px 5px #665e5e;
@@ -149,20 +154,15 @@
         flex-direction: inherit;
         width: 100%;
         align-items: center;
-        justify-content: space-around;
-        margin-top: 80px;
-        padding-top: 5%;
+        margin-top: 100px;
     }
 
     .preview__txt {
         flex-direction: column;
         text-align: center;
-        
     }
 
     .detail_product_name1 {
-        font-size: 1em;
-        font-weight: bold;
         display:none;
     }
     .detail_product_name2{
@@ -175,10 +175,9 @@
     .detail_product_price {
         font-size: 20px;
         font-weight: bold;
-        display:block;
+        display: block;
         margin-bottom: 10%;
     }
-
 
     .preview h1 {
         text-shadow: 1px 1px white, -2px -1px #E79F00;
@@ -199,16 +198,19 @@
         margin: 40px;
         object-fit: cover;
     }
-    .products-h2 {
+    .products h2 {
         font-size: 30px;
         position: relative;
-        top: 45px;
+        top: 48px;
         left: 40px;
         width: 50%;
     }
+    .see {
+        height: 320px;
+    }
     .see__dest {
         border: solid 2px #1f1d1d;
-        height: 300px;
+        height: 280px;
         width: 15%;
     }
     .dest {
@@ -221,13 +223,14 @@
     .see__dest p {
         display: block;
         font-size: 13px;
+        margin-top: 10%;
     }
-    .dest-fee {
+    /* .dest-fee {
         color: black;
         display: block;
         padding-top: 6%;
         text-align: center;
-    }
+    } */
     .Desc-titulo{
         margin-left: 12%;
         margin-bottom: 1%;
