@@ -5,6 +5,6 @@ const cartController = require('../controllers/cartController');
 
 const authMiddleware = require('../middlewares/authMiddleware');
 
-router.get('/',authMiddleware ,cartController.cart);
+router.get('/', authMiddleware, cartController.cart);
 
 module.exports = router;

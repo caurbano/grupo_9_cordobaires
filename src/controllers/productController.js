@@ -16,8 +16,9 @@ module.exports = productController = {
         let relatedProducts = await db.Product.findAll({
             where: {
                 id: { [db.Sequelize.Op.ne] : req.params.id },
-                category: { [db.Sequelize.Op.eq] : productDetail.category }
+                category: { [db.Sequelize.Op.eq] : productDetail.category },
             },
+            include: ['images'],
             limit: 5
         });
 
@@ -46,7 +47,7 @@ module.exports = productController = {
         let category = req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1);
         let categoryProducts = await db.Product.findAll({
             where: {
-                category: { [db.Sequelize.Op.eq] : req.params.category }
+                category: { [db.Sequelize.Op.eq] : category }
             },
             include: ['images']
         })

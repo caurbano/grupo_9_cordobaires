@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const { log } = require('console');
-
+const db = require('../../database/models');
 
 const usersController = {
 
@@ -37,50 +36,41 @@ const usersController = {
         res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro' });
     },
 
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            const usersFilePath = path.join(__dirname, '../data/users.json');
-            let users = fs.readFileSync(usersFilePath, 'utf-8');
-
-            //Verifico que el JSON esta vacio
-
-            let array;
-            let ide;
-            let admin;
-            if (users == "[]") {
-                array = [];
-                ide = 1;
-                admin = true;
-            } else {
-                users = JSON.parse(users);
-                array = users;
-                ide = parseInt(array[array.length - 1].id) + 1;
-                ide = ide.toString();
-                admin = false;
+            let user = await db.User.findOne({ 
+                where: { email: req.body.email } 
+            })
+            .catch(error => res.send(error));
+            if(user){
+                res.render('./users/register', { 
+                    id: 'register', 
+                    title: 'LUMEN - Formulario de registro', 
+                    error: { email: { msg: 'Este email ya está registrado.'} },
+                    old: req.body 
+                });
             }
-
-            //Creo el usuario
-
-            let userNew = {
-                id: ide,
-                admin: admin,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
+            await db.User.create({
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+                admin: 0,
                 email: req.body.email,
-                phone: req.body.phone,
                 password: bcrypt.hashSync(req.body.password, 10),
+                phone: req.body.phone,
                 img: req.file ? req.file.filename : 'default.jpg',
-            }
-
-            //Lo sumo con los demas
-
-            array.push(userNew);
-            newUsers = JSON.stringify(array, null, "\t");
-            fs.writeFileSync(usersFilePath, newUsers);
-            res.redirect('login');
+            })
+            .then(user => {
+                res.redirect('/user/login');
+            })
+            .catch(error => res.send(error));
         }
-        res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro', error: errors.mapped(), old: req.body });
+        res.render('./users/register', { 
+            id: 'register', 
+            title: 'LUMEN - Formulario de registro', 
+            error: errors.mapped(), 
+            old: req.body 
+        });
     },
 
     editUser: (req, res) => {
@@ -88,6 +78,20 @@ const usersController = {
     },
 
     updateUser: (req, res) => {
+        // let user_old = await db.Product.findByPk(req.params.id);
+        // let newUser = {};
+        // for (const key in req.body) {
+        //     if (req.body[key] != user_old[key]) {
+        //         newUser[key] = req.body[key];
+        //     }
+        // }
+        // await db.User.update( newUser, {
+        //     where: {id: req.params.id}
+        // })
+        // .then(user => {
+        //     res.redirect('/user/profile');
+        // })
+        // .catch(error => res.send(error));
         const usersFilePath = path.join(__dirname, '../data/users.json');
         let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
