@@ -1,20 +1,20 @@
-window.addEventListener('load', function () {
+// window.addEventListener('load', function () {
 
-    let topHover = document.querySelector('#top')
-    let top2 = document.querySelector('#top2')
+//     let topHover = document.querySelector('#top')
+//     let top2 = document.querySelector('#top2')
 
     
-    topHover.addEventListener('mouseover', function(event){
+//     topHover.addEventListener('mouseover', function(event){
         
-        top2.classList.toggle('block')
-        topHover.classList.toggle('none')
+//         top2.classList.add('block')
+//         topHover.classList.add('none')
         
-    })
+//     })
 
-    topHover.addEventListener('mouseout', function(event){
+//     topHover.addEventListener('mouseout', function(event){
         
-        top2.classList.toggle('block')
-        topHover.classList.toggle('none')
+//         top2.classList.remove('block')
+//         topHover.classList.remove('none')
         
-    })
-})
+//     })
+// })

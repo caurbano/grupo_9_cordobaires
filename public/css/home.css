@@ -79,10 +79,6 @@
     width: 100%;
     object-fit: cover;
 }
-#top2 {
-    display: none;
-}
-
 .shop__top h3,
 .shop__floor h3 {
     position: relative;
@@ -253,10 +249,7 @@
         #floor {
             height: 225px;
         }
-        #top2 {
-            display: none;
-        }
-        
+       
         .info {
         margin: 30px 10px;
         flex-direction: row;
@@ -328,11 +321,6 @@
         #top:hover {
             opacity: 0.8;
             box-shadow: 3px 3px 6px #666666;
-        }
-        
-        #top2 {
-            height: 480px;
-            display: none;
         }
 
         .block {
