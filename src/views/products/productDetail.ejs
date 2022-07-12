@@ -34,8 +34,8 @@
                             <p> &nbsp </p> -->
                             <button class="agregarcarrito">Agregar al carrito</button>
                             <% if(locals.userLogged && userLogged.admin) {%>
-                                <a href="/admin/product/edit/<%- product.id %>"><button type="button">Editar</button></a>
-                                <a href="/admin/product/delete/<%- product.id %>"><button type="button">Eliminar</button></a>
+                                <a href="/admin/product/edit/<%- product.id %>"><button type="button" class="button_admin">Editar</button></a>
+                                <a href="/admin/product/delete/<%- product.id %>"><button type="button" class="button_admin">Eliminar</button></a>
                             <% } %>
                         </form>
                        
