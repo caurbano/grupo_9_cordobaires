@@ -235,12 +235,12 @@ const adminController = {
 
         Promise.all([destroyProduct, destroyImg]).then(function([product, img]){
             console.log(product, img);
-            // if(product){
-            //     req.session.check = true;
-            //     res.redirect('/admin/product/result');
-            // }
-            // req.session.check = false;
-            // res.redirect('/product/detail/' + req.params.id);
+            if(product){
+                req.session.check = true;
+                res.redirect('/admin/product/result');
+            }
+            req.session.check = false;
+            res.redirect('/product/detail/' + req.params.id);
         });
         // const productsFilePath = path.join(__dirname, '../data/products.json');
         // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
