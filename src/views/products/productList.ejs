@@ -20,7 +20,7 @@
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">
-                        <a href="/product/detail/<%= products[i].id %>" class="filter">
+                        <a href="/product/detail/<%= products[i].id %>">
                             <img src="/img/<%= products[i].images[0].url %>" alt="Producto destacado" class="dest">
                             <p><%= products[i].name %><br><strong> $<%= products[i].price %></strong></p>
                         </a>

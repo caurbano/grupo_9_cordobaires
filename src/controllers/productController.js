@@ -1,5 +1,5 @@
 const db = require('../database/models');
-// const Op = db.Sequelize.Op;
+const Op = db.Sequelize.Op;
 
 module.exports = productController = {
 
@@ -58,25 +58,7 @@ module.exports = productController = {
             });
         })
         .catch(error => res.send(error));
-    },
-
-    search: async (req, res) => {
-        db.Product.findAll({
-            where: {
-                category: {[Op.like]: '%' + req.body.category + '%'}
-                //req.body
-            }
-        })
-        .then(function(products){
-            res.render('./products/productList', { 
-            id: 'productList', 
-            category: req.params.category, title: 'LUMEN - Galería ', 
-            products: products 
-        })})
-        
-        .catch(
-            error => res.send(error)
-        )}
+    }
     
     
 }
