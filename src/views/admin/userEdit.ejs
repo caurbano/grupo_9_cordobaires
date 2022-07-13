@@ -13,12 +13,12 @@
             <main class="background-main-form">
                 <section class="main-form">
                     <p>Editar usuario</p>
-                    <form action="/user/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
+                    <form action="/admin/user/edit/<%= user.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                         <section class="register">
-                            <input type="text" class="validate" name="firstName" pattern="{0,11}" value="<%= user.firstName %>" >
+                            <input type="text" class="validate" name="firstName" pattern="{0,11}" value="<%= user.first_name %>" >
                         </section>
                         <section class="register">
-                            <input type="text" class="validate" name="lastName" pattern="{0,11}" value="<%= user.lastName %>"
+                            <input type="text" class="validate" name="lastName" pattern="{0,11}" value="<%= user.last_name %>"
                                 >
                         </section>
                         <section class="register">
@@ -30,7 +30,7 @@
                                 >
                         </section>
                         <section class="register">
-                            <input type="password" class="validate" name="password">
+                            <input type="password" class="validate" name="password" placeholder="Contraseña">
                         </section>
                         <section class="register">
                             <input type="password" class="validate" name="confirm_password" placeholder="Confirmar contraseña" >
@@ -40,7 +40,7 @@
                             <section class="img">
                                 <img src="/img/users/<%= user.img %>" width="100%">
                             </section>
-                            <input type="file" name="img" accept=".jpg" multiple>
+                            <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple>
                         </section>
                         <section class="confirm">
                             <button type="button">

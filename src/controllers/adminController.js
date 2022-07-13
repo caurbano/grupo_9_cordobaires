@@ -1,101 +1,113 @@
-const fs = require('fs');
-const path = require('path');
-const db = require('../../database/models');
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const db = require('../database/models');
 
 const adminController = {
 
     //USER
 
-    editUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        let user = users.find( user => {
-            return user.id == req.params.id
-        });
-
-        res.render('./admin/userEdit', { id: 'userEdit', title: 'LUMEN - Edición de usuario', user: user});
+    editUser: async (req, res) => {
+        await db.User.findByPk(req.params.id)
+        .then(user => {
+            res.render('./admin/userEdit', { 
+                id: 'userEdit', 
+                title: 'LUMEN - Edición de usuario', 
+                user: user
+            });
+        })
+        .catch(error => res.send(error));
     },
 
-    updateUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        //Edito el user
-
-        users.find(element => {
-            if ( element.id == req.params.id ) {
-                if (element.firstName != req.body.firstName) { element.firstName = req.body.firstName; }
-
-                if (element.lastName != req.body.lastName) { element.lastName = req.body.lastName; }
-
-                if (element.email != req.body.email) { element.email = req.body.email; }
-
-                if (element.phone != req.body.phone) { element.phone = req.body.phone; }
-
-                if (bcrypt.compareSync(req.body.password, element.password)) { bcrypt.hashSync(req.body.password, 10) }
-
-                if (req.file) { element.img = req.file.filename; }
+    updateUser: async (req, res) => {
+        //Pido los datos del usuario que voy a modificar
+        let user_old = await db.User.findByPk(req.params.id)
+        .catch(error => res.send(error));
+        //Creo un objeto literal para almacenar los cambios
+        let newUser = {};
+        //Comparo los datos del formulario con los viejos datos del usuario
+        for (const key in req.body) {
+            //Guardo los cambios del usurio
+            if (req.body[key] != user_old[key]) {
+                newUser[key] = req.body[key];
             }
-        });
+        }
+        //Verifico si cambio la contraseña
+        if (req.body.password != '' && !bcrypt.compareSync(req.body.password, user_old.password)) { 
+            newUser.password = bcrypt.hashSync(req.body.password, 10);
+        } else {
+            delete newUser.password;
+        }
+        delete newUser.confirm_password;
+        //Verifico si subio una img
+        if (req.file) { 
+            newUser.img = req.file.filename;
+        };
 
-        //Actualizo
-
-        users = JSON.stringify(users, null, "\t");
-        fs.writeFileSync(usersFilePath, users);
-        res.redirect('/admin/user/list');
-    },
-
-    deleteUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        const user = users.find(user => {
-            return user.id == req.params.id;
-        });
-        res.render('./admin/userDelete', { id: 'userDelete', title: 'LUMEN - Eliminar usuario', user: user });
-    },
-
-    destroyUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        let newUsers = users.filter(user => {
-            return user.id != req.params.id;
-        });
-
-        newUsers = JSON.stringify(newUsers, null, "\t");
-
-        fs.writeFileSync(usersFilePath, newUsers);
+        await db.User.update( newUser, {
+            where: {id: req.params.id}
+        })
+        .then(user => {
+            res.redirect('/admin/user/list');
+        })
+        .catch(error => res.send(error));
         
-        res.redirect('/admin/user/list');
+    },
+
+    deleteUser: async (req, res) => {
+        await db.User.findByPk(req.params.id)
+        .then(user => {
+            res.render('./admin/userDelete', { 
+                id: 'userDelete', 
+                title: 'LUMEN - Eliminar usuario', 
+                user: user 
+            });
+        })
+        .catch(error => res.send(error));
+    },
+
+    destroyUser: async (req, res) => {
+        //Elimina el Usuario
+        //PD:Este codigo no sirve cuando el CARRITO este en funcionamiento
+        await db.User.destroy({
+            where:{
+                id: req.params.id,
+            },
+            force: true
+        })
+        .then(user => {
+            res.redirect('/admin/user/list');
+        })
+        .catch(error => res.send(error));
     },
 
     list: (req, res) => {
-        console.log(req.session);
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-       
-        res.render('./admin/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
+        db.User.findAll({
+            where:{
+                id: { [db.Sequelize.Op.ne] : req.session.userLogged.id}
+            }
+        })
+        .then(users => {
+            res.render('./admin/list', { id: 'list', title: 'LUMEN - Lista de usuarios', users: users });
+        })
+        .catch(error => res.send(error));
     },
 
-    setAdmin: (req, res) => {
-        console.log(req.session);
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        
-        const user = users.find(user => {
-            return user.id == req.params.id;
-        });
-
-        if(user.admin){
-            user.admin = false;
-        }else{
-            user.admin = true;
-        }
-
-        users = JSON.stringify(users, null, "\t");
-        fs.writeFileSync(usersFilePath, users);
-        res.redirect('/admin/user/list');
+    setAdmin: async (req, res) => {
+        await db.User.findByPk(req.params.id)
+        .then(user => {
+            let booleanAdmin;
+            if(user.dataValues.admin){
+                booleanAdmin = 0;
+            }else{
+                booleanAdmin = 1;
+            }
+            db.User.update({admin : booleanAdmin}, {where:{id:req.params.id}})
+            .then(user => {
+                res.redirect('/admin/user/list');
+            })
+            .catch(error => res.send(error));         
+        })
+        .catch(error => res.send(error));
     },
 
     // PRODUCT
@@ -160,23 +172,6 @@ const adminController = {
         })
         .catch(error => res.send(error));
 
-        
-        // if(req.file){
-        //     let updateImg = await db.Image.update({
-        //         url: req.file.filename
-        //     },{
-        //         where: {id: req.params.id}
-        //     })
-        //     .then(images =>{
-        //         res.redirect('/product/detail/' + req.params.id);
-        //     })
-        //     .catch(error => res.send(error));
-        // }
-        // console.log('Me pase de largo');
-        // Promise.all([updateProduct]).then(function([product]){
-        //     res.redirect('/product/detail/' + req.params.id);
-        // });
-
     },
 
     result: (req, res) => {
@@ -194,12 +189,6 @@ const adminController = {
                 product: product 
             });
         }).catch(error => res.send(error));
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // const product = products.find(product => {
-        //     return product.id == req.params.id;
-        // });
-        // res.render('./products/productDelete', { id: 'productDelete', title: 'LUMEN - Eliminar producto', product: product });
     },
 
     destroy: async (req, res) => {

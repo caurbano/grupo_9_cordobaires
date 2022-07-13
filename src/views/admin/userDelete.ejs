@@ -14,11 +14,11 @@
             <article class="Desc-articulo">
                 <section class="text">
                     <p class="category">Nombre: </p>
-                    <p class="value"><%= user.firstName %></p>
+                    <p class="value"><%= user.first_name %></p>
                 </section>
                 <section class="text">
                     <p class="category">Apellido: </p>
-                    <p class="value"> <%= user.lastName %></p>
+                    <p class="value"> <%= user.last_name %></p>
                 </section>
                 <section class="text">
                     <p class="category">Email: </p>
@@ -26,7 +26,7 @@
                 </section>
                 <section class="text">
                     <p class="category">Admin: </p>
-                    <p class="value"> <%= user.admin %></p>
+                    <p class="value"> <%= user.admin? 'Yes' : 'No' %></p>
                 </section>  
             </article>
         </section>

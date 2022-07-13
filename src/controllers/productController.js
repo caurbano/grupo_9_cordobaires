@@ -1,6 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const db = require('../../database/models');
+const db = require('../database/models');
 // const Op = db.Sequelize.Op;
 
 module.exports = productController = {
@@ -51,7 +49,7 @@ module.exports = productController = {
     },
 
     gallery: async (req, res) => {
-        await db.Product.findAll()
+        await db.Product.findAll({include: ['images']})
         .then(function(products){
             res.render('./products/productList', { 
                 id: 'productList', 
