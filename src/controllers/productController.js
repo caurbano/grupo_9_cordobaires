@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models');
+// const Op = db.Sequelize.Op;
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -96,6 +97,17 @@ module.exports = productController = {
         //     });
         // })
         // .catch(error => res.send(error));
-    }
+    },
+    // search: async (req, res) => {
+    //     db.Product.findAll({
+    //         where: {
+    //             category: {[Op.like]: '%%'}
+    //             //req.body
+    //         }
+    //     })
+        
+        // catch{
+        //     error => res.send(error)
+        // }}
     
 }
