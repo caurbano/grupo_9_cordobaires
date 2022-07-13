@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const Op = db.Sequelize.Op;
 
 module.exports = productController = {
 
@@ -53,18 +51,27 @@ module.exports = productController = {
     },
 
     gallery: async (req, res) => {
-        try{
-            const resProduct = await db.Product.findAll({include: ['images']});
-            res.render('./products/productList', 
-                { 
-                    id: 'productList', 
-                    category: req.params.category, title: 'LUMEN - Galería ', 
-                    products: resProduct
-                });
-        }
-        catch{
-            error => res.send(error)
-        }
-    }
+        await db.Product.findAll()
+        .then(function(products){
+            res.render('./products/productList', { 
+                id: 'productList', 
+                category: req.params.category, title: 'LUMEN - Galería ', 
+                products: products 
+            });
+        })
+        .catch(error => res.send(error));
+    },
+
+    // search: async (req, res) => {
+    //     db.Product.findAll({
+    //         where: {
+    //             category: {[Op.like]: '%%'}
+    //             //req.body
+    //         }
+    //     })
+        
+        // catch{
+        //     error => res.send(error)
+        // }}
     
 }

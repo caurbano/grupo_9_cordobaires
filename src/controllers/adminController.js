@@ -130,12 +130,6 @@ const adminController = {
         .then(product => {
             res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
         });
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // let product = products.find(product => {
-        //     return product.id == req.params.id;
-        // });
-        // res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
     },
 
     update: async (req, res) => {
@@ -182,40 +176,6 @@ const adminController = {
         // Promise.all([updateProduct]).then(function([product]){
         //     res.redirect('/product/detail/' + req.params.id);
         // });
-                
-            
-
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        // //Edito el producto
-
-        // products.find(element => {
-        //     if (element.id == req.params.id) {
-        //         if (element.name != req.body.name) { element.name = req.body.name; }
-
-        //         if (element.price != req.body.price) { element.price = req.body.price; }
-
-        //         if (element.discount != req.body.discount) { element.discount = req.body.discount; }
-
-        //         if (element.category != req.body.category) { element.category = req.body.category; }
-
-        //         if (element.description != req.body.description) { element.description = req.body.description; }
-
-        //         if (element.img != req.file.filename) { element.img = req.file.filename; }
-
-        //         if (element.color != req.body.color) { element.color = req.body.color; }
-
-        //         if (element.payments != req.body.payments) { element.payments = req.body.payments; }
-
-        //     }
-        // });
-
-        // //Actualizo
-
-        // products = JSON.stringify(products, null, "\t");
-        // fs.writeFileSync(productsFilePath, products);
-        // res.redirect('./product/detail/' + req.params.id);
 
     },
 
@@ -262,46 +222,6 @@ const adminController = {
             req.session.check = true;
             res.redirect('/admin/product/result');
         });
-
-
-        // await db.Image.destroy({
-        //     where:{
-        //         id: req.params.id
-        //     },
-        //     force: true
-        // })
-        // .then(images => {
-        //     db.Product.destroy({
-        //         where:{
-        //             id: req.params.id
-        //         },
-        //         force: true
-        //     })
-        //     .then(product => {
-        //         req.session.check = true;
-        //         res.redirect('/product/gallery');
-        //     })
-        //     .catch(error => res.send(error));
-        // })
-        // .catch(error => res.send(error));
-
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        // let newProducts = products.filter(product => {
-        //     return product.id != req.params.id;
-        // });
-
-        // newProducts = JSON.stringify(newProducts, null, "\t");
-
-        // fs.writeFileSync(productsFilePath, newProducts);
-
-        // if(products.find(product => {return product.id == req.params.id})){
-        //     req.session.check = true;
-        //     res.redirect('/admin/product/result');
-        // }
-        // req.session.check = false;
-        // res.redirect('/admin/product/result');
         
     }
 
