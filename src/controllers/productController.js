@@ -87,7 +87,7 @@ module.exports = productController = {
         catch{
             error => res.send(error)
         }
-        // await db.Product.findAll()
+        // await db.Product.findAll({include: ['images']})
         // .then(function(products){
         //     res.render('./products/productList', { 
         //         id: 'productList', 

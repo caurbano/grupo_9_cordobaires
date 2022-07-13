@@ -26,20 +26,20 @@
                     <section class="img">
                         <img src="\img\<%= product.images[0].url %>" width="100%">
                     </section>
-                    <input type="file" name="Foto" accept=".jpg" multiple>
+                    <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple>
                 </section>
                 <section class="register">
                     <label class="form-title">Categoria</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Techo" required="required" <%= product.category == 'Techo' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="techo" required="required" <%= product.category == 'techo' ? 'checked' : ''; %> >
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pared" required="required" <%= product.category == 'Pared' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="pared" required="required" <%= product.category == 'pared' ? 'checked' : ''; %> >
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="Pie" required="required" <%= product.category == 'Pie' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="pie" required="required" <%= product.category == 'pie' ? 'checked' : ''; %> >
                         <label>Pie</label>
                     </div>
                 </section>

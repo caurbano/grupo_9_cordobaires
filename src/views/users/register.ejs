@@ -47,10 +47,13 @@
                 </section>
                 <section class="register">
                     <input type="password" class="validate" name="confirm_password"  placeholder = "Confirmar contraseña" >
+                    <% if ( locals.error && error.password ){ %>
+                        <p class="error"><%= error.password.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Imagen de perfil</label>
-                    <input type="file" name="img" accept=".jpg" multiple >
+                    <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple >
                 </section>
                 <section class="confirm">
                     <section class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></section>
