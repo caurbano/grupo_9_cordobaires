@@ -1,8 +1,6 @@
-const fs = require('fs');
-const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const db = require('../../database/models');
+const db = require('../database/models');
 
 const usersController = {
 
@@ -55,7 +53,7 @@ const usersController = {
     processRegister: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            //Verifico si el email que ingreso existe
+            //Verifico si el email que ingreso ya fue registrado
             let user = await db.User.findOne({ 
                 where: { email: req.body.email } 
             })
@@ -129,7 +127,6 @@ const usersController = {
             newUser.img = req.file.filename;
         };
         
-        
         await db.User.update( newUser, {
             where: {id: req.session.userLogged.id}
         })
@@ -140,37 +137,36 @@ const usersController = {
                     req.session.userLogged[key] = newUser[key];
                 }
             }
-            console.log('hubo cambios');
             res.redirect('/user/profile');
         })
         .catch(error => res.send(error));
     },
 
     deleteUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        const user = users.find(user => {
-            return user.id == req.session.userLogged.id;
+        console.log(req.session);
+        console.log(req.session.userLogged);
+        res.render('./users/userDelete', { 
+            id: 'userDelete', 
+            title: 'LUMEN - Eliminar usuario'
         });
-        res.render('./users/userDelete', { id: 'userDelete', title: 'LUMEN - Eliminar usuario', user: user });
     },
 
-    destroyUser: (req, res) => {
-        const usersFilePath = path.join(__dirname, '../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        let newUsers = users.filter(user => {
-            return user.id != req.session.userLogged.id;
-        });
-
-        newUsers = JSON.stringify(newUsers, null, "\t");
-
-        fs.writeFileSync(usersFilePath, newUsers);
-        req.session.destroy();
-        console.log(req.session);
-        res.clearCookie('rememberEmail');
+    destroyUser: async (req, res) => {
+        //Elimina el Usuario
+        //PD:Este codigo no sirve cuando el CARRITO este en funcionamiento
+        await db.User.destroy({
+            where:{
+                id: req.session.userLogged.id,
+            },
+            force: true
+        })
+        .then(user => {
+            req.session.destroy();
+            res.clearCookie('rememberEmail');
+            res.redirect('/');
+        })
+        .catch(error => res.send(error));
         
-        res.redirect('/');
     },
 
     profile: async (req, res) => {
