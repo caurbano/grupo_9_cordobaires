@@ -32,15 +32,6 @@ module.exports = productController = {
             });
         })
         .catch(error => res.send(error));
-        // const productDetail = products.find(elemento => { return elemento.id == req.params.id; });
-        // let cant = 0;
-        // let relatedProducts = products.filter(product => {
-        //     if( product.category == productDetail.category && product.id != productDetail.id && cant < 5 ){
-        //         cant++;
-        //         return product;
-        //     }
-        // });
-        // res.render('./products/productDetail', { id: 'productDetail', title: 'LUMEN - Detalle de productos', product: productDetail, products: relatedProducts });
     },
 
     category: async (req, res) => {
@@ -59,19 +50,6 @@ module.exports = productController = {
                 products: products
             });
         });
-
-        
-        // let productsFilter = products.filter(product => {
-        //     return product.category === req.params.category;
-        // });
-
-        // let category = req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1);
-
-        // res.render('./products/categories', { 
-        //     id: 'categories', category: category, 
-        //     title: 'LUMEN - Categoría - ' + req.params.category, 
-        //     products: productsFilter 
-        // });
     },
 
     gallery: async (req, res) => {
@@ -87,15 +65,6 @@ module.exports = productController = {
         catch{
             error => res.send(error)
         }
-        // await db.Product.findAll({include: ['images']})
-        // .then(function(products){
-        //     res.render('./products/productList', { 
-        //         id: 'productList', 
-        //         category: req.params.category, title: 'LUMEN - Galería ', 
-        //         products: products 
-        //     });
-        // })
-        // .catch(error => res.send(error));
     }
     
 }
