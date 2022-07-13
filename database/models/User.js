@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE
         }
     };
-    let config = {underscored: true};
+    let config = {underscored: true, timestamps: false};
 
     const User = sequelize.define(alias, cols, config);
 

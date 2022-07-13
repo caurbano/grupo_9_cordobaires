@@ -130,16 +130,9 @@ const adminController = {
         .then(product => {
             res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
         });
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // let product = products.find(product => {
-        //     return product.id == req.params.id;
-        // });
-        // res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
     },
 
     update: async (req, res) => {
-
         let product_old = await db.Product.findByPk(req.params.id);
         let newProduct = {};
         for (const key in req.body) {
@@ -150,52 +143,39 @@ const adminController = {
 
         let updateProduct = await db.Product.update( newProduct, {
             where: {id: req.params.id}
-        }).catch(error => res.send(error));
+        }).then(product => {
+            if(req.file){
+                let updateImg = db.Image.update({
+                    url: req.file.filename
+                },{
+                    where: {id: req.params.id}
+                })
+                .then(images =>{
+                    res.redirect('/product/detail/' + req.params.id);
+                })
+                .catch(error => res.send(error));
+            }else{
+                res.redirect('/product/detail/' + req.params.id);
+            }
+        })
+        .catch(error => res.send(error));
 
-        let img = req.file ? req.file.filename : 'default.jpg';
-        let updateImg = await db.Image.update({
-                url: img
-        },{
-            where: {id: req.params.id}
-        }).catch(error => res.send(error));
         
-        Promise.all([updateProduct, updateImg]).then(function([product, img]){
-            res.redirect('/product/detail/' + req.params.id);
-        });
-                
-            
-
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        // //Edito el producto
-
-        // products.find(element => {
-        //     if (element.id == req.params.id) {
-        //         if (element.name != req.body.name) { element.name = req.body.name; }
-
-        //         if (element.price != req.body.price) { element.price = req.body.price; }
-
-        //         if (element.discount != req.body.discount) { element.discount = req.body.discount; }
-
-        //         if (element.category != req.body.category) { element.category = req.body.category; }
-
-        //         if (element.description != req.body.description) { element.description = req.body.description; }
-
-        //         if (element.img != req.file.filename) { element.img = req.file.filename; }
-
-        //         if (element.color != req.body.color) { element.color = req.body.color; }
-
-        //         if (element.payments != req.body.payments) { element.payments = req.body.payments; }
-
-        //     }
+        // if(req.file){
+        //     let updateImg = await db.Image.update({
+        //         url: req.file.filename
+        //     },{
+        //         where: {id: req.params.id}
+        //     })
+        //     .then(images =>{
+        //         res.redirect('/product/detail/' + req.params.id);
+        //     })
+        //     .catch(error => res.send(error));
+        // }
+        // console.log('Me pase de largo');
+        // Promise.all([updateProduct]).then(function([product]){
+        //     res.redirect('/product/detail/' + req.params.id);
         // });
-
-        // //Actualizo
-
-        // products = JSON.stringify(products, null, "\t");
-        // fs.writeFileSync(productsFilePath, products);
-        // res.redirect('./product/detail/' + req.params.id);
 
     },
 
@@ -206,9 +186,13 @@ const adminController = {
     },
 
     delete: async (req, res) => {
-        await db.Product.findByPk(req.params.id)
+        await db.Product.findByPk(req.params.id,{include: ['images']})
         .then(product => {
-            res.render('./products/productDelete', { id: 'productDelete', title: 'LUMEN - Eliminar producto', product: product });
+            res.render('./products/productDelete', { 
+                id: 'productDelete', 
+                title: 'LUMEN - Eliminar producto', 
+                product: product 
+            });
         }).catch(error => res.send(error));
         // const productsFilePath = path.join(__dirname, '../data/products.json');
         // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -219,13 +203,7 @@ const adminController = {
     },
 
     destroy: async (req, res) => {
-        let destroyProduct = await db.Product.destroy({
-            where:{
-                id: req.params.id,
-            },
-            force: true
-        }).catch(error => res.send(error));
-
+        
         let destroyImg = await db.Image.destroy({
             where:{
                 id: req.params.id,
@@ -233,32 +211,17 @@ const adminController = {
             force: true
         }).catch(error => res.send(error));
 
+        let destroyProduct = await db.Product.destroy({
+            where:{
+                id: req.params.id,
+            },
+            force: true
+        }).catch(error => res.send(error));
+
         Promise.all([destroyProduct, destroyImg]).then(function([product, img]){
-            console.log(product, img);
-            if(product){
-                req.session.check = true;
-                res.redirect('/admin/product/result');
-            }
-            req.session.check = false;
-            res.redirect('/product/detail/' + req.params.id);
+            req.session.check = true;
+            res.redirect('/admin/product/result');
         });
-        // const productsFilePath = path.join(__dirname, '../data/products.json');
-        // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        // let newProducts = products.filter(product => {
-        //     return product.id != req.params.id;
-        // });
-
-        // newProducts = JSON.stringify(newProducts, null, "\t");
-
-        // fs.writeFileSync(productsFilePath, newProducts);
-
-        // if(products.find(product => {return product.id == req.params.id})){
-        //     req.session.check = true;
-        //     res.redirect('/admin/product/result');
-        // }
-        // req.session.check = false;
-        // res.redirect('/admin/product/result');
         
     }
 

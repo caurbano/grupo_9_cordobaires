@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true
         }
     };
-    let config = {underscored: true};
+    let config = {underscored: true, timestamps: false};
 
     const Product = sequelize.define(alias, cols, config);
 

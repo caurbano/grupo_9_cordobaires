@@ -15,10 +15,10 @@
                     <p>Editar usuario</p>
                     <form action="/user/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                         <section class="register">
-                            <input type="text" class="validate" name="firstName" pattern="{0,11}" value="<%= userLogged.firstName %>" >
+                            <input type="text" class="validate" name="first_name" pattern="{0,11}" value="<%= userLogged.first_name %>" >
                         </section>
                         <section class="register">
-                            <input type="text" class="validate" name="lastName" pattern="{0,11}" value="<%= userLogged.lastName %>"
+                            <input type="text" class="validate" name="last_name" pattern="{0,11}" value="<%= userLogged.last_name %>"
                                 >
                         </section>
                         <section class="register">
@@ -40,7 +40,7 @@
                             <section class="img">
                                 <img src="/img/users/<%= userLogged.img %>" width="100%">
                             </section>
-                            <input type="file" name="img" accept=".jpg" multiple>
+                            <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple>
                         </section>
                         <section class="confirm">
                             <button type="button">
