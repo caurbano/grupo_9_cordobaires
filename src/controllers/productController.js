@@ -62,16 +62,23 @@ module.exports = productController = {
         .catch(error => res.send(error));
     },
 
-    // search: async (req, res) => {
-    //     db.Product.findAll({
-    //         where: {
-    //             category: {[Op.like]: '%%'}
-    //             //req.body
-    //         }
-    //     })
+    search: async (req, res) => {
+        db.Product.findAll({
+            where: {
+                category: {[Op.like]: '%' + req.body.category + '%'}
+                //req.body
+            }
+        })
+        .then(function(products){
+            res.render('./products/productList', { 
+            id: 'productList', 
+            category: req.params.category, title: 'LUMEN - Galería ', 
+            products: products 
+        })})
         
-        // catch{
-        //     error => res.send(error)
-        // }}
+        .catch(
+            error => res.send(error)
+        )}
+    
     
 }

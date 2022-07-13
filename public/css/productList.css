@@ -89,6 +89,9 @@
     display: none;
 
 }
+.filter {
+    display: none;
+}
 /* BREAKPOINTS */
 /* TABLETS */
 @media (min-width: 481px) {
