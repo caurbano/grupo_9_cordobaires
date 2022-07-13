@@ -28,15 +28,5 @@
 		"phone": "456789123",
 		"password": "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq",
 		"img": "default.jpg"
-	},
-	{
-		"id": "4",
-		"admin": false,
-		"firstName": "kz",
-		"lastName": "kz",
-		"email": "kz@lumenshop.com",
-		"phone": "123123123",
-		"password": "$2a$10$dexr/shhmwryf4rIln0B3ui5mOCHsJoGsAaAPmb16eFbUWYVOsPA2",
-		"img": "user-1657460799042.png"
 	}
 ]

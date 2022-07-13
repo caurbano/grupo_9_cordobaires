@@ -79,7 +79,6 @@
     width: 100%;
     object-fit: cover;
 }
-
 .shop__top h3,
 .shop__floor h3 {
     position: relative;
@@ -183,12 +182,12 @@
     align-self: center;
     background-color: #918c8c1e;
     border: solid 1px #1f1d1d;
-    height: 90px;
+    height: 88px;
     width: 15%;
 }
 .dest {
     border-bottom: solid 1px #1f1d1d;
-    height: 90px;
+    height: 88px;
     width: 100%;
     margin-bottom: 2px;
 }
@@ -204,7 +203,6 @@
 
 .dest-fee {
     display: none;
-
 }
 
 /* BREAKPOINTS */
@@ -250,7 +248,7 @@
         #floor {
             height: 225px;
         }
-        
+       
         .info {
         margin: 30px 10px;
         flex-direction: row;
@@ -264,12 +262,15 @@
         width: 100px;
         padding: 15px;
         }
-        
+        .see {
+            height: 140px;
+        }
         .products h2 {
         font-size: 20px;
         position: relative;
-        top: 28px;
+        top: 36px;
         left: 20px;
+        margin-bottom: 10px;
         }
         .see__dest {
         box-shadow: 3px 3px 5px #665e5e;
@@ -319,6 +320,15 @@
         #top:hover {
             opacity: 0.8;
             box-shadow: 3px 3px 6px #666666;
+        }
+
+        .block {
+            display: block;
+            opacity: 0.8;
+            box-shadow: 3px 3px 6px #666666;
+        }
+        .none {
+            display: none;
         }
         .shop__top:hover h3 {
             color: #E79F00;
@@ -395,7 +405,7 @@
         }
         .see__dest {
             border: solid 2px #1f1d1d;
-            height: 300px;
+            height: 280px;
             width: 15%;
         }
         .dest {
@@ -408,11 +418,12 @@
         .see__dest p {
             display: block;
             font-size: 13px;
+            margin-top: 10%;
         }
-        .dest-fee {
+        /* .dest-fee {
             color: black;
             display: block;
             padding-top: 6%;
             text-align: center;
-        }
+        } */
     }
