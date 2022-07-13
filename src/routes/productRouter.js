@@ -12,6 +12,6 @@ router.get('/gallery', productController.gallery);
 router.get('/gallery/:category', productController.category);
 
 //search
-router.post('/gallery', productController.search);
+router.post('/search', productController.search);
 
 module.exports = router;
