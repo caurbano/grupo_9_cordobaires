@@ -141,7 +141,7 @@
         }
         .see__dest {
             border: solid 2px #1f1d1d;
-            height: 300px;
+            height: 305px;
             width: 20%;
             margin: 2% 1%;
         }
@@ -155,22 +155,18 @@
         .see__dest p {
             display: block;
             font-size: 13px;
-            margin-top: 10%;
+            margin-top: 20px;
         }
-        .dest-fee {
-            color: black;
-            display: block;
-            padding-top: 6%;
-            text-align: center;
-        }
+       
         .buttons{
             display: flex;
             margin: 10px;
-            padding: 1px;
+            padding: 2px;
             justify-content: space-evenly;
         }
         
         .back_button{
             cursor: pointer;
+            padding: 2px;
         }
     }

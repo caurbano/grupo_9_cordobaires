@@ -53,17 +53,6 @@
     text-decoration: none;
 }
 
-.buttons{
-    display: flex;
-    margin: 10px;
-    padding: 3px;
-    justify-content: space-evenly;
-}
-
-.back_button{
-    cursor: pointer;
-}
-
 .see {
     display: flex;
     flex-wrap: wrap;
@@ -165,12 +154,18 @@
         .see__dest p {
             display: block;
             font-size: 13px;
-            margin-top: 10%;
+            margin-top: 20px;
         }
-        .dest-fee {
-            color: black;
-            display: block;
-            padding-top: 6%;
-            text-align: center;
+        
+        .buttons{
+            display: flex;
+            margin: 10px;
+            padding: 2px;
+            justify-content: space-evenly;
+        }
+        
+        .back_button{
+            cursor: pointer;
+            padding: 2px;
         }
     }

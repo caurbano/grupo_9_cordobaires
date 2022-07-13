@@ -23,8 +23,8 @@
                         <!-- <p class="dest-fee"><%= products[i].payments %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].price) /parseInt(products[i].payments)) %></strong></p> -->
                         <% if(locals.userLogged && userLogged.admin) {%>
                             <div class="buttons">
-                            <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button"><p>Editar</p></button></a>
-                            <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button"><p>Eliminar</p></button></a>
+                            <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button">Editar</button></a>
+                            <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button">Eliminar</button></a>
                             </div>
                         <% } %>
                     </div>
