@@ -16,10 +16,16 @@
                 <section class="register">
                     <label class="form-title">Nombre del producto</label>
                     <input type="text" class="validate" name="name"  pattern="{0,11}" placeholder = "Nombre del producto (escribir en MAYÚSCULA. Ej. GRECIA)">
+                    <% if ( locals.error && error.name ){ %>
+                        <p class="error"><%= error.name.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Descripción del producto</label>
                     <textarea name="description" rows="4" cols="50" placeholder = "Descripción del producto (separar cada características con un . )"></textarea>
+                    <% if ( locals.error && error.description ){ %>
+                        <p class="error"><%= error.description.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Foto del producto</label>

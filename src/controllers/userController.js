@@ -47,11 +47,17 @@ const usersController = {
     },
 
     register: (req, res) => {
-        res.render('./users/register', { id: 'register', title: 'LUMEN - Formulario de registro' });
+        res.render('./users/register', { 
+            id: 'register', 
+            title: 'LUMEN - Formulario de registro' 
+        });
     },
 
     processRegister: async (req, res) => {
         let errors = validationResult(req);
+        if(!req.file){
+            errors.errors.pop();
+        }
         if (errors.isEmpty()) {
             //Verifico si el email que ingreso ya fue registrado
             let user = await db.User.findOne({ 
@@ -59,21 +65,20 @@ const usersController = {
             })
             .catch(error => res.send(error));
             if(user){
-                res.render('./users/register', { 
-                    id: 'register', 
-                    title: 'LUMEN - Formulario de registro', 
-                    error: { email: { msg: 'Este email ya está registrado.'} },
-                    old: req.body 
-                });
+                errors.errors.push({msg: 'Este email ya está registrado.', param:'email'})
             }
             //Verifico si escribio bien la contraseña
             if(req.body.password != req.body.confirm_password){
+                errors.errors.push({msg: 'La contraseña no coinciden.', param:'password'})
+            }
+            //Pregunto si hubo errores
+            if(errors.errors.length > 0){
                 res.render('./users/register', { 
                     id: 'register', 
                     title: 'LUMEN - Formulario de registro', 
-                    error: { confirm_password: { msg: 'La contraseña no coinciden'} },
+                    error: errors.mapped(), 
                     old: req.body 
-                });
+                }); 
             }
             //Registro la cuenta
             await db.User.create({
@@ -99,47 +104,62 @@ const usersController = {
     },
 
     editUser: (req, res) => {
-        res.render('./users/userEdit', { id: 'userEdit', title: 'LUMEN - Edición de usuario'});
+        res.render('./users/userEdit', { 
+            id: 'userEdit', 
+            title: 'LUMEN - Edición de usuario'
+        });
     },
 
     updateUser: async (req, res) => {
-        //Pido los datos del usuario que voy a modificar
-        let user_old = await db.User.findByPk(req.session.userLogged.id)
-        .catch(error => res.send(error));
-        //Creo un objeto literal para almacenar los cambios
-        let newUser = {};
-        //Comparo los datos del formulario con los viejos datos del usuario
-        for (const key in req.body) {
-            //Guardo los cambios del usurio
-            if (req.body[key] != user_old[key]) {
-                newUser[key] = req.body[key];
-            }
-        }
-        //Verifico si cambio la contraseña
-        if (req.body.password != '' && !bcrypt.compareSync(req.body.password, user_old.password)) { 
-            newUser.password = bcrypt.hashSync(req.body.password, 10);
-        } else {
-            delete newUser.password;
-        }
-        delete newUser.confirm_password;
-        //Verifico si subio una img
-        if (req.file) { 
-            newUser.img = req.file.filename;
-        };
-        
-        await db.User.update( newUser, {
-            where: {id: req.session.userLogged.id}
-        })
-        .then(user => {
-            //Actualizo los datos de session
-            for (const key in req.session.userLogged) {
-                if (newUser[key] && req.session.userLogged[key] != newUser[key]) {
-                    req.session.userLogged[key] = newUser[key];
+        let errors = validationResult(req);
+        //Si no cambio la imagen de prefil o la contraseña no lo tomo como error
+        errors.errors = errors.errors.filter(error => {return error.msg != ' '});
+        if (errors.isEmpty()) {
+            
+            //Pido los datos del usuario que voy a modificar
+            let user_old = await db.User.findByPk(req.session.userLogged.id)
+            .catch(error => res.send(error));
+            //Creo un objeto literal para almacenar los cambios
+            let newUser = {};
+            //Comparo los datos del formulario con los viejos datos del usuario
+            for (const key in req.body) {
+                //Guardo los cambios del usurio
+                if (req.body[key] != user_old[key]) {
+                    newUser[key] = req.body[key];
                 }
             }
-            res.redirect('/user/profile');
-        })
-        .catch(error => res.send(error));
+            //Verifico si cambio la contraseña
+            if (req.body.password != '' && !bcrypt.compareSync(req.body.password, user_old.password)) { 
+                newUser.password = bcrypt.hashSync(req.body.password, 10);
+            } else {
+                delete newUser.password;
+            }
+            delete newUser.confirm_password;
+            //Verifico si subio una img
+            if (req.file) { 
+                newUser.img = req.file.filename;
+            };
+            
+            await db.User.update( newUser, {
+                where: {id: req.session.userLogged.id}
+            })
+            .then(user => {
+                //Actualizo los datos de session
+                for (const key in req.session.userLogged) {
+                    if (newUser[key] && req.session.userLogged[key] != newUser[key]) {
+                        req.session.userLogged[key] = newUser[key];
+                    }
+                }
+                res.redirect('/user/profile');
+            })
+            .catch(error => res.send(error));
+
+        }
+        res.render('./users/userEdit', { 
+            id: 'userEdit', 
+            title: 'LUMEN - Edición de usuario', 
+            error: errors.mapped()
+        });
     },
 
     deleteUser: (req, res) => {
@@ -147,7 +167,7 @@ const usersController = {
         console.log(req.session.userLogged);
         res.render('./users/userDelete', { 
             id: 'userDelete', 
-            title: 'LUMEN - Eliminar usuario'
+            title: 'LUMEN - Eliminar usuario',
         });
     },
 

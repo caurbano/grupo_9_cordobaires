@@ -16,10 +16,16 @@
                 <section class="register">
                     <label class="form-title">Nombre del producto</label>
                     <input type="text" class="validate" name="name" required="required" pattern="{0,11}" value = "<%= product.name %>">
+                    <% if ( locals.error && error.name ){ %>
+                        <p class="error"><%= error.name.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Descripcion del producto (separar cada características con un . )</label>
                     <textarea name="description" rows="4" cols="50"><%= product.description %></textarea>
+                    <% if ( locals.error && error.description ){ %>
+                        <p class="error"><%= error.description.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Foto del producto</label>
@@ -27,6 +33,9 @@
                         <img src="\img\<%= product.images[0].url %>" width="100%">
                     </section>
                     <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple>
+                    <% if ( locals.error && error.img ){ %>
+                        <p class="error"><%= error.img.msg %></p>
+                    <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Categoria</label>

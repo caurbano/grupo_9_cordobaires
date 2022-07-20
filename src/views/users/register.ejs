@@ -15,15 +15,15 @@
             <h3>Comprá más rápido y llevá el control de tus pedidos!</h3>
             <form action="/user/register" method="post" class="form" enctype="multipart/form-data">
                 <section class="register">
-                    <input type="text" class="validate" name="firstName"  pattern="{0,11}" placeholder = "Nombre" value= "<%= locals.old && old.firstName ? old.firstName : '' %>">
-                    <% if ( locals.error && error.firstName ){ %>
-                        <p class="error"><%= error.firstName.msg %></p>
+                    <input type="text" class="validate" name="first_name"  pattern="{0,11}" placeholder = "Nombre" value= "<%= locals.old && old.first_name ? old.first_name : '' %>">
+                    <% if ( locals.error && error.first_name ){ %>
+                        <p class="error"><%= error.first_name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
-                    <input type="text" class="validate" name="lastName"  placeholder = "Apellido" value= "<%= locals.old && old.lastName ? old.lastName : '' %>">
-                    <% if ( locals.error && error.lastName ){ %>
-                        <p class="error"><%= error.lastName.msg %></p>
+                    <input type="text" class="validate" name="last_name"  placeholder = "Apellido" value= "<%= locals.old && old.last_name ? old.last_name : '' %>">
+                    <% if ( locals.error && error.last_name ){ %>
+                        <p class="error"><%= error.last_name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
@@ -53,7 +53,10 @@
                 </section>
                 <section class="register">
                     <label class="form-title">Imagen de perfil</label>
-                    <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple >
+                    <input type="file" name="img" accept=".jpg, .jpeg, .png .gif" multiple >
+                    <% if ( locals.error && error.img ){ %>
+                        <p class="error"><%= error.img.msg %></p>
+                    <% } %>
                 </section>
                 <section class="confirm">
                     <section class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></section>
