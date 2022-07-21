@@ -71,7 +71,7 @@ const usersController = {
                 res.render('./users/register', { 
                     id: 'register', 
                     title: 'LUMEN - Formulario de registro', 
-                    error: { confirm_password: { msg: 'La contraseña no coinciden'} },
+                    error: { confirm_password: { msg: 'La contraseña no coincide.'} },
                     old: req.body 
                 });
             }
