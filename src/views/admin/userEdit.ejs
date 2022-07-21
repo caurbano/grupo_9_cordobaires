@@ -15,32 +15,50 @@
                     <p>Editar usuario</p>
                     <form action="/admin/user/edit/<%= user.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                         <section class="register">
-                            <input type="text" class="validate" name="firstName" pattern="{0,11}" value="<%= user.first_name %>" >
+                            <input type="text" class="validate" name="first_name" value="<%= locals.error && error.first_name ? error.first_name.value : user.first_name %>" >
+                            <% if ( locals.error && error.first_name ){ %>
+                                <p class="error"><%= error.first_name.msg %></p>
+                            <% } %>
                         </section>
                         <section class="register">
-                            <input type="text" class="validate" name="lastName" pattern="{0,11}" value="<%= user.last_name %>"
-                                >
+                            <input type="text" class="validate" name="last_name" value="<%= locals.error && error.last_name ? error.last_name.value : user.last_name %>">
+                            <% if ( locals.error && error.last_name ){ %>
+                                <p class="error"><%= error.last_name.msg %></p>
+                            <% } %>
                         </section>
                         <section class="register">
-                            <input type="email" class="validate" name="email" pattern="{0,11}" value="<%= user.email %>"
-                                >
+                            <input type="email" class="validate" name="email" value="<%= locals.error && error.email ? error.email : user.email %>">
+                            <% if ( locals.error && error.email ){ %>
+                                <p class="error"><%= error.email.msg %></p>
+                            <% } %>
                         </section>
                         <section class="register">
-                            <input type="tel" class="validate" name="phone" pattern="[0-9]{1,11}" value="<%= user.phone %>"
-                                >
+                            <input type="tel" class="validate" name="phone" value="<%= locals.error && error.phone ? error.phone.value : user.phone %>">
+                            <% if ( locals.error && error.phone ){ %>
+                                <p class="error"><%= error.phone.msg %></p>
+                            <% } %>
                         </section>
                         <section class="register">
                             <input type="password" class="validate" name="password" placeholder="Contraseña">
+                            <% if ( locals.error && error.password ){ %>
+                                <p class="error"><%= error.password.msg %></p>
+                            <% } %>
                         </section>
                         <section class="register">
                             <input type="password" class="validate" name="confirm_password" placeholder="Confirmar contraseña" >
+                            <% if ( locals.error && error.password ){ %>
+                                <p class="error"><%= error.password.msg %></p>
+                            <% } %>
                         </section>
                         <section class="register">
                             <label class="form-title">Imagen de perfil</label>
                             <section class="img">
                                 <img src="/img/users/<%= user.img %>" width="100%">
                             </section>
-                            <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple>
+                            <input type="file" name="img" accept=".jpg, .jpeg, .png .gif" multiple>
+                            <% if ( locals.error && error.img ){ %>
+                                <p class="error"><%= error.img.msg %></p>
+                            <% } %>
                         </section>
                         <section class="confirm">
                             <button type="button">

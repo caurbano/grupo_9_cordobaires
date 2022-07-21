@@ -85,6 +85,7 @@ window.addEventListener('load', function () {
         
 
         //lo que falta es lograr que se reseteen los errores cuando ya no exista mas
+        //tambien, decidir el estilo de estos elementos
         let ulErrors = document.querySelector('.errors ul')
 
         for (let i = 0; i < errors.length; i++) {

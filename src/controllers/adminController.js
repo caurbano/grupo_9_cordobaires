@@ -19,35 +19,50 @@ const adminController = {
     },
 
     updateUser: async (req, res) => {
-        //Pido los datos del usuario que voy a modificar
-        let user_old = await db.User.findByPk(req.params.id)
-        .catch(error => res.send(error));
-        //Creo un objeto literal para almacenar los cambios
-        let newUser = {};
-        //Comparo los datos del formulario con los viejos datos del usuario
-        for (const key in req.body) {
-            //Guardo los cambios del usurio
-            if (req.body[key] != user_old[key]) {
-                newUser[key] = req.body[key];
+        let errors = validationResult(req);
+        //Si no cambio la imagen de prefil o la contraseña no lo tomo como error
+        errors.errors = errors.errors.filter(error => {return error.msg != ' '});
+        if (errors.isEmpty()) {
+            //Pido los datos del usuario que voy a modificar
+            let user_old = await db.User.findByPk(req.params.id)
+            .catch(error => res.send(error));
+            //Creo un objeto literal para almacenar los cambios
+            let newUser = {};
+            //Comparo los datos del formulario con los viejos datos del usuario
+            for (const key in req.body) {
+                //Guardo los cambios del usurio
+                if (req.body[key] != user_old[key]) {
+                    newUser[key] = req.body[key];
+                }
             }
-        }
-        //Verifico si cambio la contraseña
-        if (req.body.password != '' && !bcrypt.compareSync(req.body.password, user_old.password)) { 
-            newUser.password = bcrypt.hashSync(req.body.password, 10);
-        } else {
-            delete newUser.password;
-        }
-        delete newUser.confirm_password;
-        //Verifico si subio una img
-        if (req.file) { 
-            newUser.img = req.file.filename;
-        };
+            //Verifico si cambio la contraseña
+            if (req.body.password != '' && !bcrypt.compareSync(req.body.password, user_old.password)) { 
+                newUser.password = bcrypt.hashSync(req.body.password, 10);
+            } else {
+                delete newUser.password;
+            }
+            delete newUser.confirm_password;
+            //Verifico si subio una img
+            if (req.file) { 
+                newUser.img = req.file.filename;
+            };
 
-        await db.User.update( newUser, {
-            where: {id: req.params.id}
-        })
+            await db.User.update( newUser, {
+                where: {id: req.params.id}
+            })
+            .then(user => {
+                res.redirect('/admin/user/list');
+            })
+            .catch(error => res.send(error));
+        }
+        await db.User.findByPk(req.params.id)
         .then(user => {
-            res.redirect('/admin/user/list');
+            res.render('./admin/userEdit', { 
+                id: 'userEdit', 
+                title: 'LUMEN - Edición de usuario',
+                user: user, 
+                error: errors.mapped()
+            });
         })
         .catch(error => res.send(error));
         
@@ -113,64 +128,94 @@ const adminController = {
     // PRODUCT
 
     create: (req, res) => {
-        res.render('./products/productCreate', { id: 'productCreate', title: 'LUMEN - Creación de producto' });
+        res.render('./products/productCreate', { 
+            id: 'productCreate', 
+            title: 'LUMEN - Creación de producto' 
+        });
     },
 
     store: async (req, res) => {
-
-        await db.Product.create({
-            name: req.body.name,
-            description: req.body.description,
-            category: req.body.category,
-            color: req.body.color,
-            price: req.body.price,
-            discount: req.body.discount,
-            stock: req.body.stock
-        }).then(product => {
-            db.Image.create({
-                url: req.file ? req.file.filename : 'default.jpg',
-                product_id: product.id
-            }).then(function(image){
-                res.redirect('/product/detail/' + image.product_id);
-            });
-        }).catch(error => res.send(error));
-
+        let errors = validationResult(req);
+        if(!req.file){
+            errors.errors.pop();
+        }
+        if (errors.isEmpty()) {
+            await db.Product.create({
+                name: req.body.name,
+                description: req.body.description,
+                category: req.body.category,
+                color: req.body.color,
+                price: req.body.price,
+                discount: req.body.discount,
+                stock: req.body.stock
+            }).then(product => {
+                db.Image.create({
+                    url: req.file ? req.file.filename : 'default.jpg',
+                    product_id: product.id
+                }).then(function(image){
+                    res.redirect('/product/detail/' + image.product_id);
+                });
+            }).catch(error => res.send(error));
+        }
+        res.render('./products/productCreate', { 
+            id: 'productCreate', 
+            title: 'LUMEN - Creación de producto', 
+            error: errors.mapped(), 
+            old: req.body 
+        });
     },
 
     edit: async (req, res) => {
         await db.Product.findByPk(req.params.id, {include: ['images']})
         .then(product => {
-            res.render('./products/productEdit', { id: 'productEdit', title: 'LUMEN - Edición de producto', product: product });
+            res.render('./products/productEdit', { 
+                id: 'productEdit',
+                title: 'LUMEN - Edición de producto', 
+                product: product 
+            });
         });
     },
 
     update: async (req, res) => {
-        let product_old = await db.Product.findByPk(req.params.id);
-        let newProduct = {};
-        for (const key in req.body) {
-            if (req.body[key] != product_old[key]) {
-                newProduct[key] = req.body[key];
-            }
+        let errors = validationResult(req);
+        if(!req.file){
+            errors.errors.pop();
         }
-
-        let updateProduct = await db.Product.update( newProduct, {
-            where: {id: req.params.id}
-        }).then(product => {
-            if(req.file){
-                let updateImg = db.Image.update({
-                    url: req.file.filename
-                },{
-                    where: {id: req.params.id}
-                })
-                .then(images =>{
-                    res.redirect('/product/detail/' + req.params.id);
-                })
-                .catch(error => res.send(error));
-            }else{
-                res.redirect('/product/detail/' + req.params.id);
+        if (errors.isEmpty()) {
+            let product_old = await db.Product.findByPk(req.params.id);
+            let newProduct = {};
+            for (const key in req.body) {
+                if (req.body[key] != product_old[key]) {
+                    newProduct[key] = req.body[key];
+                }
             }
-        })
-        .catch(error => res.send(error));
+
+            await db.Product.update( newProduct, {
+                where: {id: req.params.id}
+            }).then(product => {
+                if(req.file){
+                    let updateImg = db.Image.update({
+                        url: req.file.filename
+                    },{
+                        where: {id: req.params.id}
+                    })
+                    .then(images =>{
+                        res.redirect('/product/detail/' + req.params.id);
+                    })
+                    .catch(error => res.send(error));
+                }else{
+                    res.redirect('/product/detail/' + req.params.id);
+                }
+            })
+            .catch(error => res.send(error));
+        }
+        res.render('./products/productEdit', { 
+            id: 'productEdit', 
+            title: 'LUMEN - Edición de producto', 
+            error: errors.mapped(), 
+            old: req.body 
+        });
+        
 
     },
 

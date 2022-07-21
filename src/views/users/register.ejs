@@ -58,7 +58,10 @@
                 </section>
                 <section class="register">
                     <label class="form-title">Imagen de perfil</label>
-                    <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png, .gif" multiple >
+                    <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png .gif" multiple >
+                    <% if ( locals.error && error.img ){ %>
+                        <p class="error"><%= error.img.msg %></p>
+                    <% } %>
                 </section>
                 <section class="confirm">
                     <section class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></section>
