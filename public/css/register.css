@@ -39,6 +39,15 @@
     font-weight: bold;
     margin: 10px;
 }
+.errorMsg {
+    color: #ca1717;
+    font-size: 15px;
+    font-weight: bold;
+}
+.errors {
+    margin: 20px 0px;
+    padding: 10px;
+}
 form {
     text-align: center;
 }
@@ -57,7 +66,6 @@ form {
     align-self: center;
     width: 75%;
     color: black;
-    /* background-color: #f8f8ff; */
     background-image: linear-gradient(to right, rgba(128, 128, 128, 0.103), white);
     padding: 12px 20px;
     margin: 8px 0;
@@ -66,7 +74,6 @@ form {
     transition: all 0.5s ease;
 }
 .register > input:focus{
-    /* background-color: white; */
     background-image: linear-gradient(to right, rgba(255, 145, 0, 0.089), white);
     border-color: #E79F00;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255,144,0,0.6);
@@ -115,9 +122,9 @@ form {
 
 /* DESKTOP */
 
-@media (min-width: 769px){
+@media (min-width: 761px){
     .background-main-form{
-        margin-top: 40px;
+        margin-top: 60px;
     }
     .main-form > p{
         margin: 25px;

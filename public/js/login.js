@@ -1,3 +1,4 @@
+// Validaciones para login de usuario
 window.addEventListener('load', function () {
     let formLogin = document.querySelector('form.form');
     let emailField = document.querySelector('input#email')
@@ -27,8 +28,11 @@ window.addEventListener('load', function () {
         
         let ulErrors = document.querySelector('.errors ul')
 
+
+        ulErrors.innerHTML = ''
+
         for (let i = 0; i < errors.length; i++) {
-            ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
+            ulErrors.innerHTML += "<li class='errorMsg'>" + errors[i] + "</li>"
         }
     })
 

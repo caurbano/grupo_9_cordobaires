@@ -29,9 +29,12 @@
 }
 .errorMsg {
     color: #ca1717;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    text-align: center;
+}
+.errors {
+    margin: 20px 0px;
+    padding: 10px;
 }
 form {
     text-align: center;
@@ -116,9 +119,9 @@ form {
 
 /* DESKTOP */
 
-@media (min-width: 769px){
+@media (min-width: 761px){
     .background-main-form{
-        margin-top: 40px;
+        margin-top: 60px;
     }
     .main-form > p{
         margin: 25px;

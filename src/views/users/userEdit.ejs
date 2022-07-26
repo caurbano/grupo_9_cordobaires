@@ -13,39 +13,44 @@
             <main class="background-main-form">
                 <section class="main-form">
                     <p>Editar usuario</p>
+                    <div class="errors">
+                        <ul>
+                            
+                        </ul>
+                    </div>
                     <form action="/user/edit?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                         <section class="register">
-                            <input type="text" class="validate" name="first_name" value="<%= locals.error && error.first_name ? error.first_name.value : userLogged.first_name %>" >
+                            <input type="text" class="validate" name="first_name" id="firstName" value="<%= locals.error && error.first_name ? error.first_name.value : userLogged.first_name %>" >
                             <% if ( locals.error && error.first_name ){ %>
                                 <p class="error"><%= error.first_name.msg %></p>
                             <% } %>
                         </section>
                         <section class="register">
-                            <input type="text" class="validate" name="last_name" value="<%= locals.error && error.last_name ? error.last_name.valuelast_name : userLogged.last_name %>">
+                            <input type="text" class="validate" name="last_name" id="lastName" value="<%= locals.error && error.last_name ? error.last_name.valuelast_name : userLogged.last_name %>">
                             <% if ( locals.error && error.last_name ){ %>
                                 <p class="error"><%= error.last_name.msg %></p>
                             <% } %>
                         </section>
                         <section class="register">
-                            <input type="email" class="validate" name="email"  value="<%= locals.error && error.email ? error.email.value : userLogged.email %>">
+                            <input type="email" class="validate" name="email" id="email" value="<%= locals.error && error.email ? error.email.value : userLogged.email %>">
                             <% if ( locals.error && error.email ){ %>
                                 <p class="error"><%= error.email.msg %></p>
                             <% } %>
                         </section>
                         <section class="register">
-                            <input type="tel" class="validate" name="phone" value="<%= locals.error && error.phone ? error.phone.value : userLogged.phone %>">
+                            <input type="tel" class="validate" name="phone" id="phone" value="<%= locals.error && error.phone ? error.phone.value : userLogged.phone %>">
                             <% if ( locals.error && error.phone ){ %>
                                 <p class="error"><%= error.phone.msg %></p>
                             <% } %>
                         </section>
                         <section class="register">
-                            <input type="password" class="validate" name="password" placeholder="Ingresa tu contraseña">
+                            <input type="password" class="validate" name="password" id="password" placeholder="Ingresa tu contraseña">
                             <% if ( locals.error && error.password ){ %>
                                 <p class="error"><%= error.password.msg %></p>
                             <% } %>
                         </section>
                         <section class="register">
-                            <input type="password" class="validate" name="confirm_password" placeholder="Confirmar contraseña" >
+                            <input type="password" class="validate" name="confirm_password" id="confirm_password" placeholder="Confirmar contraseña" >
                             <% if ( locals.error && error.password ){ %>
                                 <p class="error"><%= error.password.msg %></p>
                             <% } %>
@@ -55,7 +60,7 @@
                             <section class="img">
                                 <img src="/img/users/<%= userLogged.img %>" width="100%">
                             </section>
-                            <input type="file" name="img" accept=".jpg, .jpeg, .png .gif" multiple>
+                            <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png .gif" multiple>
                             <% if ( locals.error && error.img ){ %>
                                 <p class="error"><%= error.img.msg %></p>
                             <% } %>
@@ -74,6 +79,9 @@
             </form>
                 </section>
             </main>
+
+            <script src="/js/register.js"></script>
+
 
             <!--FOOTER-->
 

@@ -1,5 +1,6 @@
+// Validaciones para register y para userEdit
 window.addEventListener('load', function () {
-    let formRegister = document.querySelector('form.form');
+    let form = document.querySelector('form.form');
     let firstNameField = document.querySelector('input#firstName')
     let lastNameField = document.querySelector('input#lastName')
     let emailField = document.querySelector('input#email')
@@ -11,7 +12,7 @@ window.addEventListener('load', function () {
 
         firstNameField.focus();
 
-    formRegister.addEventListener('submit', function(event){
+    form.addEventListener('submit', function(event){
 
         let errors = [];   
 
@@ -26,13 +27,6 @@ window.addEventListener('load', function () {
         } else if (lastNameField.value.length < 2) {
             errors.push("El campo apellido debe tener al menos 2 caracteres.")
         }
-
-        //borrar luego
-        // if(emailField.value == "") {
-        //     errors.push("El campo email está vacío.")
-        // } else if (!emailField.value.search("@") && !emailField.value.search(".com")) {
-        //     errors.push("El email ingresado no es válido.")
-        // }
 
         //expresión regular para validar email aa@bb.ccc
         let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -61,16 +55,6 @@ window.addEventListener('load', function () {
             errors.push("La contraseña debe tener al menos 8 caracteres y contener algún número y letra mayúscula.")
         } 
 
-        // if(passwordField.value == "") {
-        //     errors.push("Debe ingresar una contraseña.")
-        // } else if (passwordField.value.length < 8) {
-        //     errors.push("La contraseña debe tener al menos 8 caracteres.")
-        // } else if (passwordField.value.search(/\d/) == -1) {
-        //     errors.push("La contraseña debe tener al menos un número.")
-        // } else if (passwordField.value.search(/[A-Z]/) == -1) {
-        //     errors.push("La contraseña debe tener al menos una letra mayúscula.")
-        // }
-
         if(confirm_passwordField.value != passwordField.value) {
             errors.push("La constraseña no coincide con la anteriormente ingresada.")
         }
@@ -84,12 +68,12 @@ window.addEventListener('load', function () {
         }
         
 
-        //lo que falta es lograr que se reseteen los errores cuando ya no exista mas
-        //tambien, decidir el estilo de estos elementos
         let ulErrors = document.querySelector('.errors ul')
 
+        ulErrors.innerHTML = ''
+
         for (let i = 0; i < errors.length; i++) {
-            ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
+            ulErrors.innerHTML += "<li class='errorMsg'>" + errors[i] + "</li>"
         }
     })
 })
