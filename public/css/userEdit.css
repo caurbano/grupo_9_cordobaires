@@ -6,11 +6,9 @@
 }
 
 /* MAIN FORM */
-
 .background-main-form{
     background-color:#918c8c1e;
 }
-
 .main-form {
     width: 80%;
     padding:5%;
@@ -18,14 +16,12 @@
     margin-left: 5%;
     background-color: white;
 }
-
 .main-form>p {
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin-top: 20%;
     font-weight: bold;
     font-size: 35px;
 }
-
 .main-form>h3 {
     margin-top: 5%;
     text-align: center;
@@ -116,7 +112,8 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.confirm > button{
+.confirm_cancel,
+.confirm_confirm {
     width: 60%;
     background-color: #918c8c;
     cursor: pointer;
@@ -155,18 +152,24 @@
 }
 .deleteButton > p{
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     transition: all 1s ease;
-}
-.deleteButton:hover{
-    background-color: #df0000;
-    font-size: 0.9em;
 }
 .deleteButton > p:hover{
     font-size: 14px;
 }
-@media (min-width: 761px){
+
+/* BREAKPOINTS */
+/* TABLET */
+@media (min-width: 481px) {
+    .background-main-form{
+        margin-top: 50px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 769px){
     .background-main-form{
         margin-top: 60px;
     }
@@ -177,17 +180,13 @@
         flex-direction: row;
     }
     .confirm > button{
-        width: 15%;
+        width: 25%;
         margin: 15px 0px;
     }
     .button_text{
         font-size: 13px;
     }
-    .deleteButton{
-        width: 16%;
-        margin: 15px 0px;
-    }
     .deleteButton > p{
-        font-size: 12px;
+        font-size: 13px;
     }
 }

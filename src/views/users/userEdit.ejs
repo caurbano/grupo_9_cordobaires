@@ -66,17 +66,18 @@
                             <% } %>
                         </section>
                         <section class="confirm">
-                            <button type="button">
+                            <button type="button" class="confirm_cancel">
                                 <a href="/user/profile"><p class="button_text">Cancelar</p></a>
                             </button>
-                            <button type="submit">
+                            <button type="submit" class="confirm_confirm">
                                 <p class="button_text">Confirmar</p>
+                            </form>
+                            <form action="/user/delete?_method=DELETE" method="post" class="form">
+                                    <button type="submit" class="deleteButton"><p>Eliminar cuenta</p></button>
+                            </form>
                             </button>
                         </section>
-                    </form>
-            <form action="/user/delete?_method=DELETE" method="post" class="form">
-                    <button type="submit" class="deleteButton"><p>Eliminar cuenta</p></button>
-            </form>
+                    
                 </section>
             </main>
 

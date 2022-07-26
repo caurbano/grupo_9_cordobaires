@@ -43,7 +43,7 @@ window.addEventListener('load', function () {
         if(phoneField.value == "") {
             errors.push("El campo teléfono está vacío.")
         } else if (!regexPhone.test(phoneField.value)) {
-            errors.push("El campo teléfono debe tener al menos 10 dígitos.")
+            errors.push("El campo teléfono debe contener 10 dígitos.")
         }
 
         //expresión regular para validar password. Al menos: 8 caracteres, 1 mayúscula, 1 núm.

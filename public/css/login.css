@@ -4,8 +4,8 @@
     margin: 0px;
     padding: 0px;
 }
-/* MAIN FORM */
 
+/* MAIN FORM */
 .background-main-form{
     background-color:#918c8c1e;
 }
@@ -54,7 +54,6 @@ form {
     align-self: center;
     width: 75%;
     color: black;
-    /* background-color: #f8f8ff; */
     background-image: linear-gradient(to right, rgba(128, 128, 128, 0.103), white);
     padding: 12px 20px;
     margin: 8px 0;
@@ -63,7 +62,6 @@ form {
     transition: all 0.5s ease;
 }
 .register > input:focus{
-    /* background-color: white; */
     background-image: linear-gradient(to right, rgba(255, 145, 0, 0.089), white);
     border-color: #E79F00;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255,144,0,0.6);
@@ -116,10 +114,16 @@ form {
     font-size: 16px;
 }
 
+/* BREAKPOINTS */
+/* TABLET */
+@media (min-width: 481px) {
+    .background-main-form{
+        margin-top: 50px;
+    }
+}
 
 /* DESKTOP */
-
-@media (min-width: 761px){
+@media (min-width: 769px){
     .background-main-form{
         margin-top: 60px;
     }
@@ -127,9 +131,12 @@ form {
         margin: 25px;
     }
     .login-button{
-        width: 20%;
+        padding: 10px;
     }
     .login-button > p{
         font-size: 15px;
+    }
+    .login-button > p:hover{
+        font-size: 18px;
     }
 }
