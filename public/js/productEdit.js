@@ -28,6 +28,7 @@ window.addEventListener('load', function () {
         }
 
         if(errors.length > 0) {
+            console.log('ok')
             event.preventDefault();
         }
 

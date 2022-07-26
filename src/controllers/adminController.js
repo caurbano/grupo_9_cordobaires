@@ -209,11 +209,13 @@ const adminController = {
             })
             .catch(error => res.send(error));
         }
+        let old = req.body;
+        old.id = req.params.id;
         res.render('./products/productEdit', { 
             id: 'productEdit', 
             title: 'LUMEN - Edición de producto', 
             error: errors.mapped(), 
-            old: req.body 
+            old: old 
         });
         
 

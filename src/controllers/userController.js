@@ -82,8 +82,8 @@ const usersController = {
             }
             //Registro la cuenta
             await db.User.create({
-                first_name: req.body.firstName,
-                last_name: req.body.lastName,
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
                 admin: 0,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
@@ -91,6 +91,8 @@ const usersController = {
                 img: req.file ? req.file.filename : 'default.jpg',
             })
             .then(user => {
+                console.log('Chau');
+
                 res.redirect('/user/login');
             })
             .catch(error => res.send(error));

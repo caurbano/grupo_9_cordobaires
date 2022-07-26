@@ -21,7 +21,7 @@
                 </div>
                 <section class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name" required="required" id="name" value = "<%= product.name %>">
+                    <input type="text" class="validate" name="name" id="name" value = "<%= product.name %>">
                     <% if ( locals.error && error.name ){ %>
                         <p class="error"><%= error.name.msg %></p>
                     <% } %>
@@ -46,25 +46,25 @@
                 <section class="register">
                     <label class="form-title">Categoria</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="techo" required="required" <%= product.category == 'techo' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="techo" <%= product.category == 'techo' ? 'checked' : ''; %> >
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="pared" required="required" <%= product.category == 'pared' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="pared" <%= product.category == 'pared' ? 'checked' : ''; %> >
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="pie" required="required" <%= product.category == 'pie' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="pie" <%= product.category == 'pie' ? 'checked' : ''; %> >
                         <label>Pie</label>
                     </div>
                 </section>
                 <section class="register">
                     <label class="form-title">Color</label>
-                    <input type="text" class="validate" name="color" required="required" value = "<%= product.color %>">
+                    <input type="text" class="validate" name="color" value = "<%= product.color %>">
                 </section>
                 <section class="register">
                     <label class="form-title">Precio</label>
-                        <input type="number" class="validate" name="price" required="required" value = "<%= product.price %>">
+                        <input type="number" class="validate" name="price" value = "<%= product.price %>">
                 </section>
                     <section class="register">
                     <label class="form-title">Descuento</label>
@@ -72,7 +72,7 @@
                 </section>
                 <section class="register">
                     <label class="form-title">Stock</label>
-                    <input type="number" class="validate" name="stock" required="required" value = "<%= product.stock %>">
+                    <input type="number" class="validate" name="stock" value = "<%= product.stock %>">
                 </section>
                 <section class="confirm">
                     <button type="button"><a href="/product/gallery"><p class="button_text">Cancelar</p></a></button>
