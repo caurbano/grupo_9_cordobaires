@@ -22,14 +22,14 @@
             <form action="/user/register" method="post" class="form" enctype="multipart/form-data">
                 <section class="register">
                     <input type="text" class="validate" name="first_name" id="firstName"  placeholder = "Nombre" value= "<%= locals.old && old.firstName ? old.firstName : '' %>">
-                    <% if ( locals.error && error.firstName ){ %>
-                        <p class="errorMsg"><%= error.firstName.msg %></p>
+                    <% if ( locals.error && error.first_name ){ %>
+                        <p class="errorMsg"><%= error.first_name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
                     <input type="text" class="validate" name="last_name" id="lastName"  placeholder = "Apellido" value= "<%= locals.old && old.lastName ? old.lastName : '' %>">
-                    <% if ( locals.error && error.lastName ){ %>
-                        <p class="errorMsg"><%= error.lastName.msg %></p>
+                    <% if ( locals.error && error.last_name ){ %>
+                        <p class="errorMsg"><%= error.last_name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
