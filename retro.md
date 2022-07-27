@@ -87,3 +87,26 @@ En ocasiones, algo que debemos hacer menos es priorizar “mejoras” por sobre 
   
 ### Dejar de hacer  
 En este momento y por ahora, no encontramos algo que debamos “dejar de hacer”.  
+  
+   
+## Retrospectiva luego del SPRINT 6  
+### Dinámica “Estrella de mar”  
+Según esta dinámica, resaltamos aquello que tenemos que:  
+
+### Comenzar a hacer  
+Destinar tiempo a optimizar o bien, hacer una revisión general y corregir cosas en ciertas partes del código que anteriormente no hicimos…    
+Implementar el correcto uso de Trello…  
+  
+### Hacer más  
+Hacer rendir más el tiempo, distribuirlo mejor con respecto a las actividades planteadas.  
+    
+### Continuar haciendo  
+Investigar más aún respecto a contenidos puntuales y reforzar conceptos ya vistos.  
+Mantenernos al día con el contenido propuesto de Playground y realizar las actividades.  
+Asumir tareas por separado, cada integrante, de acuerdo a la disponibilidad y facilidad para realizarla.  
+  
+### Hacer menos  
+Proponer menor cantidad de mejoras quizás, en relación al tiempo del que disponemos, ya que suele ocurrir que quedan pendientes y las dejamos “para la próxima”.    
+  
+### Dejar de hacer  
+En este momento y por ahora, no encontramos algo que debamos “dejar de hacer”.  
