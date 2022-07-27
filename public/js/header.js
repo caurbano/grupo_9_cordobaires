@@ -2,6 +2,7 @@ window.addEventListener('load', function () {
     let menu = document.querySelector('#menu');
     let menuDropDown = document.querySelector('.menu-dd')
     let search = document.querySelector('#search');
+    
 
     menu.addEventListener('click', function (event){
         menuDropDown.classList.toggle('block')
@@ -17,4 +18,3 @@ window.addEventListener('load', function () {
     })
 })
 
-// prueba, seguir.

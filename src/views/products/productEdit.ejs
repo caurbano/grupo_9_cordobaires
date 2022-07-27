@@ -12,29 +12,35 @@
     <main class="background-main-form">
         <section class="main-form">
             <p>Editar de producto</p>
+
             <form action="/admin/product/edit/<%= product.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
+                <div class="errors">
+                    <ul>
+                        
+                    </ul>
+                </div>
                 <section class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name" value = "<%= locals.old && old.name ? old.name : product.name %>">
+                    <input type="text" class="validate" name="name" id="name" value = "<%= locals.old && old.name ? old.name : product.name %>">
                     <% if ( locals.error && error.name ){ %>
-                        <p class="error"><%= error.name.msg %></p>
+                        <p class="errorMsg"><%= error.name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Descripcion del producto (separar cada características con un . )</label>
-                    <textarea name="description" rows="4" cols="50"><%= locals.old && old.description ? old.description : product.description %></textarea>
+                    <textarea name="description" id="description" rows="4" cols="50"><%= locals.old && old.description ? old.description : product.description %></textarea>
                     <% if ( locals.error && error.description ){ %>
-                        <p class="error"><%= error.description.msg %></p>
+                        <p class="errorMsg"><%= error.description.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Foto del producto</label>
                     <section class="img">
-                        <img src="\img\<%= product.images[0].url %>" width="100%">
+                        <img src="\img\<%= product.images[0].url %>" width="100%" id="img">
                     </section>
-                    <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple>
+                    <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png" multiple>
                     <% if ( locals.error && error.img ){ %>
-                        <p class="error"><%= error.img.msg %></p>
+                        <p class="errorMsg"><%= error.img.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
@@ -79,6 +85,8 @@
             </section>
         </section>
     </main>
+
+    <script src="/js/productEdit.js"></script>
 
     <!--FOOTER-->
 

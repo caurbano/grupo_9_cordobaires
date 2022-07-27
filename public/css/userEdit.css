@@ -6,30 +6,34 @@
 }
 
 /* MAIN FORM */
-
 .background-main-form{
     background-color:#918c8c1e;
 }
-
 .main-form {
     width: 80%;
-    margin-top: 100px;
     padding:5%;
     margin-bottom: 20px;
     margin-left: 5%;
     background-color: white;
 }
-
 .main-form>p {
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin-top: 20%;
     font-weight: bold;
     font-size: 35px;
 }
-
 .main-form>h3 {
     margin-top: 5%;
     text-align: center;
+}
+.errorMsg {
+    color: #ca1717;
+    font-size: 15px;
+    font-weight: bold;
+}
+.errors {
+    margin: 20px 0px;
+    padding: 10px;
 }
 .form {
     text-align: center;
@@ -50,7 +54,7 @@
     align-self: center;
     width: 75%;
     color: black;
-    background-color: #f8f8ff;
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.103), white);
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid black;
@@ -59,7 +63,7 @@
 }
 
 .register > input:focus {
-    background-color: white;
+    background-image: linear-gradient(to right, rgba(255, 145, 0, 0.089), white);
     border-color: #E79F00;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
     outline: 0 none;
@@ -108,11 +112,12 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.confirm > button{
+.confirm_cancel,
+.confirm_confirm {
     width: 60%;
     background-color: #918c8c;
     cursor: pointer;
-    padding: 14px 18px;
+    padding: 10px;
     margin: 15px 10%;
     border: solid 1px black;
     border-radius: 4px;
@@ -139,7 +144,7 @@
     width: 60%;
     background-color: #ff0000;
     cursor: pointer;
-    padding: 14px 18px;
+    padding: 10px;
     margin: 15px 10%;
     border: solid 1px black;
     border-radius: 4px;
@@ -147,36 +152,52 @@
 }
 .deleteButton > p{
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     transition: all 1s ease;
-}
-.deleteButton:hover{
-    background-color: #df0000;
-    font-size: 0.9em;
 }
 .deleteButton > p:hover{
     font-size: 14px;
 }
-@media (min-width: 761px){
+
+/* BREAKPOINTS */
+/* TABLET */
+@media (min-width: 481px) {
+    .background-main-form{
+        margin-top: 50px;
+    }
+
+    .confirm > button{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px;
+        width: 40%;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 769px){
+    .background-main-form{
+        margin-top: 60px;
+    }
+    .img{
+        width: 30%;
+    }
     .main-form > p{
         margin: 25px;
     }
     .confirm{
         flex-direction: row;
+        justify-content: space-evenly;
     }
     .confirm > button{
-        width: 15%;
+        width: 22%;
         margin: 15px 0px;
     }
     .button_text{
         font-size: 13px;
     }
-    .deleteButton{
-        width: 16%;
-        margin: 15px 0px;
-    }
     .deleteButton > p{
-        font-size: 12px;
+        font-size: 13px;
     }
 }

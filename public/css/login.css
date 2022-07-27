@@ -4,8 +4,8 @@
     margin: 0px;
     padding: 0px;
 }
-/* MAIN FORM */
 
+/* MAIN FORM */
 .background-main-form{
     background-color:#918c8c1e;
 }
@@ -29,9 +29,12 @@
 }
 .errorMsg {
     color: #ca1717;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    text-align: center;
+}
+.errors {
+    margin: 20px 0px;
+    padding: 10px;
 }
 form {
     text-align: center;
@@ -51,7 +54,7 @@ form {
     align-self: center;
     width: 75%;
     color: black;
-    background-color: #f8f8ff;
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.103), white);
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid black;
@@ -59,7 +62,7 @@ form {
     transition: all 0.5s ease;
 }
 .register > input:focus{
-    background-color: white;
+    background-image: linear-gradient(to right, rgba(255, 145, 0, 0.089), white);
     border-color: #E79F00;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255,144,0,0.6);
     outline: 0 none;
@@ -110,17 +113,35 @@ form {
 .login-button > p:hover{
     font-size: 16px;
 }
-@media (min-width: 761px){
+
+/* BREAKPOINTS */
+/* TABLET */
+@media (min-width: 481px) {
     .background-main-form{
-        margin-top: 40px;
+        margin-top: 50px;
+    }
+    .login-button{
+        padding: 10px;
+        width: 40%;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 769px){
+    .background-main-form{
+        margin-top: 60px;
     }
     .main-form > p{
         margin: 25px;
     }
     .login-button{
-        width: 20%;
+        width: 25%;
     }
     .login-button > p{
         font-size: 15px;
+        letter-spacing: 1px;
+    }
+    .login-button > p:hover{
+        font-size: 18px;
     }
 }

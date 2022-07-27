@@ -69,7 +69,7 @@ const usersController = {
             }
             //Verifico si escribio bien la contraseña
             if(req.body.password != req.body.confirm_password){
-                errors.errors.push({msg: 'La contraseña no coinciden.', param:'password'})
+                errors.errors.push({msg: 'La contraseña no coincide.', param:'password'})
             }
             //Pregunto si hubo errores
             if(errors.errors.length > 0){
@@ -91,6 +91,8 @@ const usersController = {
                 img: req.file ? req.file.filename : 'default.jpg',
             })
             .then(user => {
+                console.log('Chau');
+
                 res.redirect('/user/login');
             })
             .catch(error => res.send(error));

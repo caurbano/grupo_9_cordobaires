@@ -32,6 +32,16 @@
     margin-top: 5%;
     text-align: center;
 }
+.errorMsg {
+    color: #ca1717;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+.errors {
+    margin: 20px 0px;
+    padding: 10px;
+}
 .form {
     text-align: center;
 }
@@ -51,7 +61,7 @@
     align-self: center;
     width: 75%;
     color: black;
-    background-color: #f8f8ff;
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.103), white);
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid black;
@@ -60,7 +70,7 @@
 }
 
 .register > input:focus {
-    background-color: white;
+    background-image: linear-gradient(to right, rgba(255, 145, 0, 0.089), white);
     border-color: #E79F00;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
     outline: 0 none;

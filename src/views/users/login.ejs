@@ -12,20 +12,25 @@
         <div class="main-form">
             <p class="account">Mi cuenta</p>
             <h3>ACCEDER</h3>
+            <div class="errors">
+                <ul>
+                    
+                </ul>
+            </div>
             <form action ="/user/login" method="post" class="form">
                 <div class="register">
-                    <input type="text" name="email" placeholder = "Email" value = "<%= locals.old && old.email ? old.email : '' %>">
+                    <input type="text" name="email" id="email" placeholder = "Email" value = "<%= locals.old && old.email ? old.email : '' %>">
                     <% if ( locals.error && error.email ){ %>
-                        <p class="error"><%= error.email.msg %></p>
+                        <p class="errorMsg"><%= error.email.msg %></p>
                     <% } %>
                 </div>
                 <% if ( locals.error && error.errorLogin ){ %>
-                    <p class="error"><%= error.errorLogin %></p>
+                    <p class="errorMsg"><%= error.errorLogin %></p>
                 <% } %>
                 <div class="register">
-                    <input type="password" name="password" placeholder = "Contraseña">
+                    <input type="password" name="password" id="password" placeholder = "Contraseña">
                     <% if ( locals.error && error.password ){ %>
-                        <p class="error"><%= error.password.msg %></p>
+                        <p class="errorMsg"><%= error.password.msg %></p>
                     <% } %>
                 </div>
                 <div>
@@ -40,6 +45,8 @@
             </div>
         </div>
     </main>
+
+    <script src="/js/login.js"></script>
 
     <!--FOOTER-->
 
