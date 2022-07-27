@@ -86,3 +86,21 @@ Tareas realizadas:
   
   
 Seguimos considerando la utilidad de estar al tanto de las tareas ya resueltas (verlas plasmadas como “realizadas”) o bien, poder dialogar y comunicar si se presentó algún conflicto o dificultad en alguna de las restantes para poder tomar la acción más adecuada. Aun así, estamos también pendientes del tablero de Trello, en donde inicializamos todas estas tareas para ir cambiándolas de estado; nos resulta práctico y dinámico.  
+  
+### SPRINT 7  
+1° weekly  
+Tareas realizadas:  
+-	Tablero de Trello armado  
+-	Retrospectiva completa  
+-	Distribución de algunas tareas  
+  
+  
+2° weekly  
+Tareas realizadas:  
+-	Validaciones del back-end (usuarios y productos)  
+-	Validaciones del front-end (usuarios y productos)  
+-	Mejoras del código  
+-	Correcciones de algunos errores  
+  
+   
+Nuestra impresión respecto a esta ceremonia, es que se trata de un momento necesario para el trabajo grupal. Lo llevamos a cabo y según lo conversado en cada instancia, redistribuimos a veces algunas tareas o bien, las finalizamos en equipo. Nos sirve para estar pendientes del ciclo de cada integrante, al asumir alguna tarea.  
