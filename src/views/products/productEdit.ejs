@@ -15,14 +15,14 @@
             <form action="/admin/product/edit/<%= product.id %>?_method=PUT" method="post" class="form" enctype="multipart/form-data">
                 <section class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name" required="required" pattern="{0,11}" value = "<%= product.name %>">
+                    <input type="text" class="validate" name="name" value = "<%= locals.old && old.name ? old.name : product.name %>">
                     <% if ( locals.error && error.name ){ %>
                         <p class="error"><%= error.name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Descripcion del producto (separar cada características con un . )</label>
-                    <textarea name="description" rows="4" cols="50"><%= product.description %></textarea>
+                    <textarea name="description" rows="4" cols="50"><%= locals.old && old.description ? old.description : product.description %></textarea>
                     <% if ( locals.error && error.description ){ %>
                         <p class="error"><%= error.description.msg %></p>
                     <% } %>
@@ -40,33 +40,33 @@
                 <section class="register">
                     <label class="form-title">Categoria</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="techo" required="required" <%= product.category == 'techo' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="techo" <%= locals.old && old.category ? (old.category == 'techo' ? 'checked' : '') : (product.category == 'techo' ? 'checked' : '') %> >
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="pared" required="required" <%= product.category == 'pared' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="pared" <%= locals.old && old.category ? (old.category == 'pared' ? 'checked' : '') : (product.category == 'pared' ? 'checked' : '') %> >
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="pie" required="required" <%= product.category == 'pie' ? 'checked' : ''; %> >
+                        <input type="radio" name="category" value="pie" <%= locals.old && old.category ? (old.category == 'pie' ? 'checked' : '') : (product.category == 'pie' ? 'checked' : '') %> >
                         <label>Pie</label>
                     </div>
                 </section>
                 <section class="register">
                     <label class="form-title">Color</label>
-                    <input type="text" class="validate" name="color" required="required" value = "<%= product.color %>">
+                    <input type="text" class="validate" name="color" value = "<%= locals.old && old.color ? old.color : product.color %>">
                 </section>
                 <section class="register">
                     <label class="form-title">Precio</label>
-                        <input type="number" class="validate" name="price" required="required" value = "<%= product.price %>">
+                        <input type="number" class="validate" name="price" value = "<%= locals.old && old.price ? old.price : product.price %>">
                 </section>
                     <section class="register">
                     <label class="form-title">Descuento</label>
-                    <input type="number" class="validate" name="discount"  placeholder = "Descuento" value = "<%= product.discount %>">
+                    <input type="number" class="validate" name="discount"  placeholder = "Descuento" value = "<%= locals.old && old.discount ? old.discount : product.discount %>">
                 </section>
                 <section class="register">
                     <label class="form-title">Stock</label>
-                    <input type="number" class="validate" name="stock" required="required" value = "<%= product.stock %>">
+                    <input type="number" class="validate" name="stock" value = "<%= locals.old && old.stock ? old.stock : product.stock %>">
                 </section>
                 <section class="confirm">
                     <button type="button"><a href="/product/gallery"><p class="button_text">Cancelar</p></a></button>

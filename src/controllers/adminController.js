@@ -97,6 +97,7 @@ const adminController = {
 
     list: (req, res) => {
         db.User.findAll({
+            attributes:['id', 'first_name', 'last_name', 'admin', 'email', 'phone', 'img'],
             where:{
                 id: { [db.Sequelize.Op.ne] : req.session.userLogged.id}
             }
@@ -139,23 +140,46 @@ const adminController = {
         if(!req.file){
             errors.errors.pop();
         }
-        if (errors.isEmpty()) {
-            await db.Product.create({
-                name: req.body.name,
-                description: req.body.description,
-                category: req.body.category,
-                color: req.body.color,
-                price: req.body.price,
-                discount: req.body.discount,
-                stock: req.body.stock
-            }).then(product => {
-                db.Image.create({
-                    url: req.file ? req.file.filename : 'default.jpg',
-                    product_id: product.id
-                }).then(function(image){
-                    res.redirect('/product/detail/' + image.product_id);
-                });
-            }).catch(error => res.send(error));
+        if (errors.isEmpty()) { 
+            try {
+                let newProduct = await db.Product.create({
+                    name: req.body.name,
+                    description: req.body.description,
+                    category: req.body.category,
+                    color: req.body.color,
+                    price: req.body.price,
+                    discount: req.body.discount,
+                    stock: req.body.stock
+                })
+                let newImage = await db.Image.create({
+                        url: req.file ? req.file.filename : 'default.jpg',
+                        product_id: newProduct.id
+                })
+                if(newImage){
+                    res.redirect('/product/detail/' + newImage.product_id);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+
+            // .then(product => {
+            //     db.Image.create({
+            //         url: req.file ? req.file.filename : 'default.jpg',
+            //         product_id: product.id
+            //     }).then(image => {
+            //         res.redirect('/product/detail/' + image.product_id);
+            //     })
+            //     .catch(error => res.send(error));
+            // })
+            // .catch(error => res.send(error));
+            // let newImage = await db.Image.create({
+            //     url: req.file ? req.file.filename : 'default.jpg',
+            //     product_id: newProduct.dataValues.id
+            // })
+            // .catch(error => res.send(error));
+            // Promise.all([newProduct, newImage]).then(function([product, img]){
+            //     res.redirect('/product/detail/' + product.dataValues.id);
+            // });
         }
         res.render('./products/productCreate', { 
             id: 'productCreate', 
@@ -166,7 +190,7 @@ const adminController = {
     },
 
     edit: async (req, res) => {
-        await db.Product.findByPk(req.params.id, {include: ['images']})
+        db.Product.findByPk(req.params.id, {include: ['images']})
         .then(product => {
             res.render('./products/productEdit', { 
                 id: 'productEdit',
@@ -209,14 +233,25 @@ const adminController = {
             })
             .catch(error => res.send(error));
         }
-        res.render('./products/productEdit', { 
+        let old = req.body;
+        old.id = req.params.id;
+        db.Product.findByPk(
+            req.params.id, 
+            {
+                attributes:['id'],
+                include: ['images']
+            }
+        )
+        .then(product => {
+            res.render('./products/productEdit', { 
             id: 'productEdit', 
             title: 'LUMEN - Edición de producto', 
+            product: product,
             error: errors.mapped(), 
-            old: req.body 
+            old: old 
         });
-        
-
+        })
+        .catch(error => res.send(error));
     },
 
     result: (req, res) => {
@@ -226,7 +261,12 @@ const adminController = {
     },
 
     delete: async (req, res) => {
-        await db.Product.findByPk(req.params.id,{include: ['images']})
+        await db.Product.findByPk(
+            req.params.id,
+            {
+                include: ['images']
+            }
+        )
         .then(product => {
             res.render('./products/productDelete', { 
                 id: 'productDelete', 

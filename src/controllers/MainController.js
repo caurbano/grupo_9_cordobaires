@@ -3,6 +3,7 @@ const db = require('../database/models');
 const mainController = {
     home: async (req, res) => {
         await db.Product.findAll({
+            attributes:['id', 'name', 'price', 'discount'],
             include: ['images'],
             limit: 5
         })

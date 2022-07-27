@@ -15,14 +15,14 @@
             <form action="/admin/product/create" method="post" class="form" enctype="multipart/form-data">
                 <section class="register">
                     <label class="form-title">Nombre del producto</label>
-                    <input type="text" class="validate" name="name"  pattern="{0,11}" placeholder = "Nombre del producto (escribir en MAYÚSCULA. Ej. GRECIA)">
+                    <input type="text" class="validate" name="name" placeholder = "Nombre del producto (escribir en MAYÚSCULA. Ej. GRECIA)" value="<%= locals.old && old.name ? old.name : '' %>">
                     <% if ( locals.error && error.name ){ %>
                         <p class="error"><%= error.name.msg %></p>
                     <% } %>
                 </section>
                 <section class="register">
                     <label class="form-title">Descripción del producto</label>
-                    <textarea name="description" rows="4" cols="50" placeholder = "Descripción del producto (separar cada características con un . )"></textarea>
+                    <textarea name="description" rows="4" cols="50" placeholder = "Descripción del producto (separar cada características con un . )" value="<%= locals.old && old.description ? old.description : '' %>"></textarea>
                     <% if ( locals.error && error.description ){ %>
                         <p class="error"><%= error.description.msg %></p>
                     <% } %>
@@ -34,33 +34,33 @@
                 <section class="register">
                     <label class="form-title">Categoría</label>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="techo">
+                        <input type="radio" name="category" value="techo" <%=  locals.old && old.category == 'techo' ? 'checked' : ''; %>>
                         <label>Techo</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="pared">
+                        <input type="radio" name="category" value="pared" <%=  locals.old && old.category == 'pared' ? 'checked' : ''; %>>
                         <label>Pared</label>
                     </div>
                     <div class="register-radio">
-                        <input type="radio" name="category" value="pie">
+                        <input type="radio" name="category" value="pie" <%=  locals.old && old.category == 'pie' ? 'checked' : ''; %>>
                         <label>Pie</label>
                     </div>
                 </section>
                 <section class="register">
                     <label class="form-title">Color</label>
-                    <input type="text" class="validate" name="color"  placeholder = "Color">
+                    <input type="text" class="validate" name="color"  placeholder = "Color" value="<%= locals.old && old.color ? old.color : '' %>">
                 </section>
                 <section class="register">
                     <label class="form-title">Precio</label>
-                    <input type="number" class="validate" name="price"  placeholder = "Precio">
+                    <input type="number" class="validate" name="price"  placeholder = "Precio" value="<%= locals.old && old.price ? old.price : '' %>">
                 </section>
                 <section class="register">
                     <label class="form-title">Descuento</label>
-                    <input type="number" class="validate" name="discount"  placeholder = "Descuento">
+                    <input type="number" class="validate" name="discount"  placeholder = "Descuento" value="<%= locals.old && old.discount ? old.discount : '' %>">
                 </section>
                 <section class="register">
                     <label class="form-title">Stock</label>
-                    <input type="number" class="validate" name="stock"  placeholder = "stock">
+                    <input type="number" class="validate" name="stock"  placeholder = "stock" value="<%= locals.old && old.stock ? old.stock : '' %>">
                 </section>
                 <section class="confirm">
                     <button type="reset"><p>Borrar</p></button>

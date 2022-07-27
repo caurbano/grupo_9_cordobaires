@@ -82,8 +82,8 @@ const usersController = {
             }
             //Registro la cuenta
             await db.User.create({
-                first_name: req.body.firstName,
-                last_name: req.body.lastName,
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
                 admin: 0,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
@@ -163,8 +163,6 @@ const usersController = {
     },
 
     deleteUser: (req, res) => {
-        console.log(req.session);
-        console.log(req.session.userLogged);
         res.render('./users/userDelete', { 
             id: 'userDelete', 
             title: 'LUMEN - Eliminar usuario',
