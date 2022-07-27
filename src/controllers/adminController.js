@@ -235,7 +235,6 @@ const adminController = {
         }
         let old = req.body;
         old.id = req.params.id;
-<<<<<<< HEAD
         db.Product.findByPk(
             req.params.id, 
             {
@@ -245,9 +244,6 @@ const adminController = {
         )
         .then(product => {
             res.render('./products/productEdit', { 
-=======
-        res.render('./products/productEdit', { 
->>>>>>> 275a3c7bf489d9100ff76d38c25481bdee704de0
             id: 'productEdit', 
             title: 'LUMEN - Edición de producto', 
             product: product,
