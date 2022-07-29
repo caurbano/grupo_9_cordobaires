@@ -21,9 +21,9 @@
     text-align: center;
 }
 .detail_product_name1 {
+    display: block;
     font-size: 40px;
     font-weight: bold;
-    display: block;
     margin-bottom: 20px;
 }
 .detail_product_name2 {
@@ -32,10 +32,25 @@
 }
 
 .detail_product_price {
-    margin-top: 20px;
-    margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.detail_product_disc {
+    color: darkolivegreen;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.detail_product_disc_percent {
+    color: darkgreen;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .preview p {
@@ -55,7 +70,7 @@
 
 .agregarcarrito {
     cursor: pointer;
-    padding: 3px;
+    padding: 5px 10px;
     margin: 2px;
 }
 .button_admin {

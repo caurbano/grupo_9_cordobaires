@@ -288,6 +288,7 @@
 @media (min-width: 769px) {
     .review {
         height: 290px;
+        padding: 10px 0px;
         }
         .review h1 {
         font-size: 35px;

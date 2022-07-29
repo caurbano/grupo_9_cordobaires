@@ -22,22 +22,26 @@ const storageImgUser = multer.diskStorage({
 
 const uploadImgUser = multer({ storage: storageImgUser });
 
+//Login de usuarios
 routerUsers.get('/login', guestMiddleware, usersController.login);
 routerUsers.post('/login', validatorLogin, usersController.processLogin);
 
-
+//Registro de usuarios
 routerUsers.get('/register', guestMiddleware, usersController.register);
 routerUsers.post('/register', uploadImgUser.single('img'), validatorRegister, usersController.processRegister);
 
+//Edición de usuarios (propia cuenta)
 routerUsers.get('/edit', authMiddleware, usersController.editUser);
 routerUsers.put('/edit', uploadImgUser.single('img'), validatorEditUser, usersController.updateUser);
 
+//Eliminación de cuenta (propia)
 routerUsers.get('/delete', authMiddleware, usersController.deleteUser);
 routerUsers.delete('/delete', usersController.destroyUser);
 
+//Perfil de usuario
 routerUsers.get('/profile', authMiddleware, usersController.profile);
 
-//logout
+//Logout de usuario
 routerUsers.get('/logout', authMiddleware,usersController.logout);
 
 

@@ -4,6 +4,7 @@ const db = require('../database/models');
 
 const usersController = {
 
+    //Logueo
     login: (req, res) => {
         res.render('./users/login', { id: 'login', title: 'LUMEN - Login' });
     },
@@ -49,6 +50,7 @@ const usersController = {
 
     },
 
+    //Registro
     register: (req, res) => {
         res.render('./users/register', { 
             id: 'register', 
@@ -108,6 +110,7 @@ const usersController = {
         });
     },
 
+    //Edición
     editUser: (req, res) => {
         res.render('./users/userEdit', { 
             id: 'userEdit', 
@@ -167,6 +170,7 @@ const usersController = {
         });
     },
 
+    //Eliminación
     deleteUser: (req, res) => {
         res.render('./users/userDelete', { 
             id: 'userDelete', 
@@ -192,10 +196,12 @@ const usersController = {
         
     },
 
+    //Ver perfil
     profile: async (req, res) => {
         res.render('./users/profile', { id: 'profile', title: 'LUMEN - Perfil del usuario' });
     },
     
+    //Deslogueo
     logout: (req, res) => {
         req.session.destroy();
         res.clearCookie('rememberEmail');

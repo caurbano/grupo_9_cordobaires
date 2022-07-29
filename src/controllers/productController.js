@@ -3,6 +3,7 @@ const Op = db.Sequelize.Op;
 
 module.exports = productController = {
 
+    //Detalle
     detail: async (req, res) => {
         let productDetail = await db.Product.findByPk(
             req.params.id, 
@@ -36,6 +37,7 @@ module.exports = productController = {
         .catch(error => res.send(error));
     },
 
+    //Categorías
     category: async (req, res) => {
         let category = req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1);
         db.Product.findAll({
@@ -57,6 +59,7 @@ module.exports = productController = {
         .catch(error => res.send(error));
     },
 
+    //Galería completa
     gallery: async (req, res) => {
         db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount'],
@@ -73,6 +76,7 @@ module.exports = productController = {
         .catch(error => res.send(error));
     },
 
+    //Búsqueda por NOMBRE
     search: async (req, res) => {
         db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount'],
