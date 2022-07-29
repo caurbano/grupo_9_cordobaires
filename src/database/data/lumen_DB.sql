@@ -14,6 +14,7 @@ CREATE TABLE `Users`(
     `img` VARCHAR(45) NOT NULL,
     `created_at` DATE,
     `updated_at` DATE,
+    `state` INT NOT NULL,
     PRIMARY KEY (`id`)
 );
 
@@ -38,6 +39,7 @@ CREATE TABLE `Products`(
     `created_at` DATE,
     `updated_at` DATE,
     `stock` INT NOT NULL,
+    `state` INT NOT NULL,
     PRIMARY KEY (`id`)
 );
 

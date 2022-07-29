@@ -9,7 +9,8 @@ module.exports = productController = {
             req.params.id, 
             {
                 attributes:['id', 'name', 'description', 'category', 'price', 'discount', 'stock'],
-                include: ['images']
+                include: ['images'],
+                where: {state: { [db.Sequelize.Op.eq] : 1 }}
             }
         );
 
@@ -18,6 +19,7 @@ module.exports = productController = {
             where: {
                 id: { [db.Sequelize.Op.ne] : req.params.id },
                 category: { [db.Sequelize.Op.eq] : productDetail.category },
+                state: { [db.Sequelize.Op.eq] : 1 }
             },
             include: ['images'],
             limit: 5
@@ -38,30 +40,33 @@ module.exports = productController = {
     //Categorías
     category: async (req, res) => {
         let category = req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1);
-        await db.Product.findAll({
+        db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount'],
             where: {
-                category: { [db.Sequelize.Op.eq] : category }
+                category: { [db.Sequelize.Op.eq] : category },
+                state: { [db.Sequelize.Op.eq] : 1 }
             },
             include: ['images']
         })
-        .then(function(products){
+        .then(products => {
             res.render('./products/categories', { 
                 id: 'categories', 
                 title: 'LUMEN - Categoría - ' + req.params.category, 
                 category: category, 
                 products: products
             });
-        });
+        })
+        .catch(error => res.send(error));
     },
 
     //Galería completa
     gallery: async (req, res) => {
-        await db.Product.findAll({
+        db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount'],
-            include: ['images']
+            include: ['images'],
+            where: {state: { [db.Sequelize.Op.eq] : 1 }}
         })
-        .then(function(products){
+        .then(products => {
             res.render('./products/productList', { 
                 id: 'productList', 
                 category: req.params.category, title: 'LUMEN - Galería ', 
@@ -73,10 +78,11 @@ module.exports = productController = {
 
     //Búsqueda por NOMBRE
     search: async (req, res) => {
-        await db.Product.findAll({
+        db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount'],
             where: {
-                name: {[Op.substring]: req.body.search}
+                name: {[Op.substring]: req.body.search},
+                state: { [db.Sequelize.Op.eq] : 1 }
             },
             include: ['images']
         })

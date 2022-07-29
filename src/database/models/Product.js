@@ -42,7 +42,11 @@ module.exports = (sequelize, dataTypes) => {
         stock:{
             type: dataTypes.INTEGER,
             allowNull: true
-        }
+        },
+        state:{
+            type: dataTypes.INTEGER,
+            allowNull: true
+        },
     };
     let config = {underscored: true, timestamps: false};
 

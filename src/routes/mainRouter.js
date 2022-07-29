@@ -20,5 +20,6 @@ router.use("/cart", cartRouter);
 router.use("/admin", authMiddleware, adminMiddleware, adminRouter);
 //Home
 router.get('/', mainController.home);
+router.get('/error', mainController.error404);
 
 module.exports = router;
