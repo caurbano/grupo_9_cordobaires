@@ -3,6 +3,7 @@ const path = require('path');
 
 module.exports = cartController = {
 
+    //Ver carrito
     cart: (req, res) => {
         const productsFilePath = path.join(__dirname, '../data/products.json');
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

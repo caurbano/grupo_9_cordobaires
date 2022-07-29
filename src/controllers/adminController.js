@@ -5,7 +5,7 @@ const db = require('../database/models');
 const adminController = {
 
     //USER
-
+    //Edición
     editUser: async (req, res) => {
         await db.User.findByPk(req.params.id)
         .then(user => {
@@ -68,6 +68,7 @@ const adminController = {
         
     },
 
+    //Eliminación
     deleteUser: async (req, res) => {
         await db.User.findByPk(req.params.id)
         .then(user => {
@@ -95,6 +96,7 @@ const adminController = {
         .catch(error => res.send(error));
     },
 
+    //Lista
     list: (req, res) => {
         db.User.findAll({
             attributes:['id', 'first_name', 'last_name', 'admin', 'email', 'phone', 'img'],
@@ -108,6 +110,7 @@ const adminController = {
         .catch(error => res.send(error));
     },
 
+    //Dar/Quitar perfil de ADMIN
     setAdmin: async (req, res) => {
         await db.User.findByPk(req.params.id)
         .then(user => {
@@ -128,6 +131,7 @@ const adminController = {
 
     // PRODUCT
 
+    //Creación
     create: (req, res) => {
         res.render('./products/productCreate', { 
             id: 'productCreate', 
@@ -189,6 +193,7 @@ const adminController = {
         });
     },
 
+    //Edición
     edit: async (req, res) => {
         db.Product.findByPk(req.params.id, {include: ['images']})
         .then(product => {
@@ -260,6 +265,7 @@ const adminController = {
         res.render('./products/result', { id: 'result', title: 'LUMEN - Verificación', result: result });
     },
 
+    //Eliminación
     delete: async (req, res) => {
         await db.Product.findByPk(
             req.params.id,
