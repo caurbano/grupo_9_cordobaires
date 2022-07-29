@@ -21,6 +21,14 @@
                         <p class="detail_product_price">
                             $<%= product.price %>
                         </p>
+                        <% if (product.discount > 0) { %>
+                        <p class="detail_product_disc">
+                            Aprovechá la promoción!
+                        </p>
+                        <p class="detail_product_disc_percent">
+                            <%= product.discount %>% free
+                        </p>
+                        <% } %>
                         
                         <form action="" method="POST">
 
