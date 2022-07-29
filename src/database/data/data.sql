@@ -1,19 +1,19 @@
 INSERT INTO products VALUES 
-(DEFAULT, "SILVER", "Base y brazo metálico con pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro.", "pie", "plateado", 13500, 0, NOW(), NOW(), 100),
-(DEFAULT, "GRECIA", "Tres pantallas colgantes de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro.", "techo", "blanco", 47550, 0, NOW(), NOW(), 100),
-(DEFAULT, "ECLIPSE", "Aplique para iluminación de espejo. Cable de alimentación interno. Medidas generales: Alto 55cm x 55cm.", "pared", "espejado", 24000, 0, NOW(), NOW(), 100),
-(DEFAULT, "STRIPES", "Lámpara de techo. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm.", "techo", "negro", 81000, 0, NOW(), NOW(), 100),
-(DEFAULT, "MINIMAL", "Simulación de borde de foco LED. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.", "techo", "cobre", 2700, 0, NOW(), NOW(), 100),
-(DEFAULT, "BINOMIO", "Lámpara de techo doble foco. Con base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm.", "techo", "negro", 8400, 0, NOW(), NOW(), 100),
-(DEFAULT, "ERIZO", "Lámpara simulacion de erizo marino. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm.", "techo", "negro", 10500, 0, NOW(), NOW(), 100),
-(DEFAULT, "MEMBRANA", "Pantalla de mimbre color beige. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro.", "techo", "beige", 6000, 0, NOW(), NOW(), 100),
-(DEFAULT, "GRUA", "Lámpara con varios brazos en cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro.", "techo", "cobre", 15000, 0, NOW(), NOW(), 100),
-(DEFAULT, "TRIVENTO", "Tres pantallas de alambre de bronce. Cable alimentación 2m marron. Medida pantalla: Alto 35cm x 40cm de diámetro.", "techo", "bronce", 8400, 0, NOW(), NOW(), 100),
-(DEFAULT, "VENTILUZ", "Base y brazo metálico. Cable alimentación 1m negro. Medidas generales: Alto 100cm x base 55cm de diámetro. Moderno diseño para 5 focos.", "pie", "bronce", 6600, 0, NOW(), NOW(), 100),
-(DEFAULT, "MONROE", "Base y brazo metálico. Cable alimentación 1m negro. Medidas generales: Alto 120cm x base 45cm de diámetro. Translúcida en tonalidad gris.", "pie", "dorado", 12300, 0, NOW(), NOW(), 100),
-(DEFAULT, "CILINDRO", "Aplique para iluminación de pared. Cable de alimentación interno. Medidas generales: Alto 35cm x 15cm.", "pared", "negro", 3600, 0, NOW(), NOW(), 100),
-(DEFAULT, "BARRAL", "Barral de 4 s. Cable de alimentación interno. Medidas generales: Alto 34cm x 105cm.", "pared", "negro", 11400, 0, NOW(), NOW(), 100),
-(DEFAULT, "SANTORINI", "Aplique simple. Cable de alimentación interno de vidrio. Base metálica cromada. Medidas generales: Alto 45cm x 25cm.", "pared", "blanco", 4230, 0, NOW(), NOW(), 100);
+(DEFAULT, "SILVER", "Base y brazo metálico con pantalla de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro.", "pie", "plateado", 13500, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "GRECIA", "Tres pantallas colgantes de aluminio. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm. Medida pantallas: Alto 30 cm x 40cm de diámetro.", "techo", "blanco", 47550, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "ECLIPSE", "Aplique para iluminación de espejo. Cable de alimentación interno. Medidas generales: Alto 55cm x 55cm.", "pared", "espejado", 24000, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "STRIPES", "Lámpara de techo. Cable alimentación 1,5m negro. Medidas generales: Alto 55cm x 125cm.", "techo", "negro", 81000, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "MINIMAL", "Simulación de borde de foco LED. Cable alimentación 1,5m negro. Medidas generales: Alto 22cm x 15cm.", "techo", "cobre", 2700, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "BINOMIO", "Lámpara de techo doble foco. Con base y brazo metálico. Cable alimentación 1,5m negro. Medidas generales: Alto 90cm x 35cm.", "techo", "negro", 8400, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "ERIZO", "Lámpara simulacion de erizo marino. Cable alimentación 1m negro. Medidas generales: Alto 90cm x 90cm.", "techo", "negro", 10500, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "MEMBRANA", "Pantalla de mimbre color beige. Cable alimentación 1,5m negro. Medida pantallas: Alto 40 cm x 90cm de diámetro.", "techo", "beige", 6000, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "GRUA", "Lámpara con varios brazos en cobre. Cable alimentación 1,5m negro. Medidas generales: Alto 210cm x base 55cm de diámetro. Medida pantalla: Alto 24 cm x 38cm de diámetro.", "techo", "cobre", 15000, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "TRIVENTO", "Tres pantallas de alambre de bronce. Cable alimentación 2m marron. Medida pantalla: Alto 35cm x 40cm de diámetro.", "techo", "bronce", 8400, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "VENTILUZ", "Base y brazo metálico. Cable alimentación 1m negro. Medidas generales: Alto 100cm x base 55cm de diámetro. Moderno diseño para 5 focos.", "pie", "bronce", 6600, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "MONROE", "Base y brazo metálico. Cable alimentación 1m negro. Medidas generales: Alto 120cm x base 45cm de diámetro. Translúcida en tonalidad gris.", "pie", "dorado", 12300, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "CILINDRO", "Aplique para iluminación de pared. Cable de alimentación interno. Medidas generales: Alto 35cm x 15cm.", "pared", "negro", 3600, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "BARRAL", "Barral de 4 s. Cable de alimentación interno. Medidas generales: Alto 34cm x 105cm.", "pared", "negro", 11400, 0, NOW(), NOW(), 100, 1),
+(DEFAULT, "SANTORINI", "Aplique simple. Cable de alimentación interno de vidrio. Base metálica cromada. Medidas generales: Alto 45cm x 25cm.", "pared", "blanco", 4230, 0, NOW(), NOW(), 100, 1);
 -- id / name / description / category / color / price / discount / create_at / update_at / stock
 
 INSERT INTO images VALUES 
@@ -34,7 +34,7 @@ INSERT INTO images VALUES
 (DEFAULT, "product-15-SANTORINI.jpeg", 15);
 -- id / url / product_id
 
-INSERT INTO users VALUES (DEFAULT, "Admin", "Lumen", 1, "admin@lumenshop.com", "$2a$10$W4oZflXyNKtJ9v21yGaFiul.d3rrrM6oszY0Abp13saz1SnYsRU4G", "0303456", "user-1655677988734.png" , NOW(), NOW());
-INSERT INTO users VALUES (DEFAULT, "Usuario1", "Prueba", 0, "prueba@lumenshop.com", "$2a$10$oaltQbokfqZrSRhAMiYjbOe7HbGgQ7Asz2eDJkAOLuchpuHQyMdXC", "987654321", "default.jpg" , NOW(), NOW());
-INSERT INTO users VALUES (DEFAULT, "Usuario2", "Prueba", 0, "usuario@lumenshop.com", "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq", "456789123", "default.jpg" , NOW(), NOW());
+INSERT INTO users VALUES (DEFAULT, "Admin", "Lumen", 1, "admin@lumenshop.com", "$2a$10$W4oZflXyNKtJ9v21yGaFiul.d3rrrM6oszY0Abp13saz1SnYsRU4G", "0303456", "user-1655677988734.png" , NOW(), NOW(), 1);
+INSERT INTO users VALUES (DEFAULT, "Usuario1", "Prueba", 0, "prueba@lumenshop.com", "$2a$10$oaltQbokfqZrSRhAMiYjbOe7HbGgQ7Asz2eDJkAOLuchpuHQyMdXC", "987654321", "default.jpg" , NOW(), NOW(), 1);
+INSERT INTO users VALUES (DEFAULT, "Usuario2", "Prueba", 0, "usuario@lumenshop.com", "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq", "456789123", "default.jpg" , NOW(), NOW(), 1);
 -- id / first_name / last_name / admin / email / password / phone / img / create_at / update_at

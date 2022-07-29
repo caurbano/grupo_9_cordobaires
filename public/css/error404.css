@@ -1,0 +1,11 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    height: 700px;
+    background-color:#918c8c1e;
+}

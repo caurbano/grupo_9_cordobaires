@@ -12,7 +12,10 @@ const usersController = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let user = await db.User.findOne({ 
-                where: { email: req.body.email } 
+                where: { 
+                    email: req.body.email,
+                    state: { [db.Sequelize.Op.eq] : 1 }
+                } 
             })
             .catch(error => res.send(error));
             
@@ -81,7 +84,7 @@ const usersController = {
                 }); 
             }
             //Registro la cuenta
-            await db.User.create({
+            db.User.create({
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 admin: 0,

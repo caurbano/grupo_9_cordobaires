@@ -42,7 +42,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         updated_at:{
             type: dataTypes.DATE
-        }
+        },
+        state:{
+            type: dataTypes.INTEGER,
+            allowNull: true
+        },
     };
     let config = {underscored: true, timestamps: false};
 

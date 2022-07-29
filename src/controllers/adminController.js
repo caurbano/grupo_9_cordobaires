@@ -126,6 +126,24 @@ const adminController = {
         .catch(error => res.send(error));
     },
 
+    setStateUser: async (req, res) => {
+        db.User.findByPk(req.params.id)
+        .then(user => {
+            let booleanState;
+            if(user.dataValues.state){
+                booleanState = 0;
+            }else{
+                booleanState = 1;
+            }
+            db.User.update({state : booleanState}, {where:{id:req.params.id}})
+            .then(user => {
+                res.redirect('/admin/user/list');
+            })
+            .catch(error => res.send(error));         
+        })
+        .catch(error => res.send(error));
+    },
+
     // PRODUCT
 
     create: (req, res) => {
@@ -297,7 +315,25 @@ const adminController = {
             res.redirect('/admin/product/result');
         });
         
-    }
+    },
+
+    setStateProduct: async (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then(product => {
+            let booleanState;
+            if(product.dataValues.state){
+                booleanState = 0;
+            }else{
+                booleanState = 1;
+            }
+            db.Product.update({state : booleanState}, {where:{id:req.params.id}})
+            .then(product => {
+                res.redirect('/product/list');
+            })
+            .catch(error => res.send(error));         
+        })
+        .catch(error => res.send(error));
+    },
 
 }
 

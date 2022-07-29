@@ -10,6 +10,10 @@ const mainController = {
         .then(function(products){
             res.render('home', { id: 'home', title: 'LUMEN Lights Shop', products: products });
         });
+    },
+
+    error404: async (req, res) => {
+        res.render('error404', { id: 'error404', title: 'LUMEN Lights Shop'});  
     }
 }
 
