@@ -10,10 +10,15 @@ const adminRouter = require('./adminRouter');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
+//Usuarios
 router.use("/user", userRouter);
+//Productos
 router.use("/product", productRouter);
+//Carrito de compras
 router.use("/cart", cartRouter);
+//Perfil ADMIN
 router.use("/admin", authMiddleware, adminMiddleware, adminRouter);
+//Home
 router.get('/', mainController.home);
 
 module.exports = router;
