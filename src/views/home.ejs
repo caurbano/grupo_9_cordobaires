@@ -70,7 +70,23 @@
                     <div class="see__dest">
                         <a href="/product/detail/<%= products[i].id %>">
                             <img src="/img/<%= products[i].images[0].url %>" alt="Producto destacado" class="dest">
-                            <p><%= products[i].name %><br><strong> $<%= products[i].price %></strong></p>
+                            <p class="product_name">
+                                <%= products[i].name %><br>
+                                <!-- Si el producto tiene descuento % -->
+                                <% if (products[i].discount > 0) { %>
+                                    <p class="see_price_lt">
+                                        $<%= products[i].price %>
+                                    </p>
+                                    <p class="see_price_final">
+                                        $<%= products[i].price - (products[i].discount * products[i].price / 100) %>
+                                    </p>
+                                <% } else { %>
+                                    <!-- Si no tiene descuento -->
+                                    <p class="see_price">
+                                       <strong>$<%= products[i].price %></strong>
+                                    </p>
+                                <% } %>
+                            </p>
                         </a>
                         <!-- <p class="dest-fee"><%= products[i].payments %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].price) /parseInt(products[i].payments)) %></strong></p> -->
                     </div>
