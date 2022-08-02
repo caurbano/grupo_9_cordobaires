@@ -97,8 +97,6 @@ const usersController = {
                 state: 1
             })
             .then(user => {
-                console.log('Chau');
-
                 res.redirect('/user/login');
             })
             .catch(error => res.send(error));
@@ -185,8 +183,8 @@ const usersController = {
 
     destroyUser: async (req, res) => {
         //Elimina el Usuario
-        //PD:Este codigo no sirve cuando el CARRITO este en funcionamiento
-        await db.User.destroy({
+        //Cambia el estado de la cuenta de habilitado a deshabilitado
+        db.User.update({ state: 0}, {
             where:{
                 id: req.session.userLogged.id,
             },

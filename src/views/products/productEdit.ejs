@@ -38,7 +38,7 @@
                     <section class="img">
                         <img src="\img\<%= product.images[0].url %>" width="100%" id="img">
                     </section>
-                    <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png" multiple>
+                    <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png .mp4" multiple>
                     <% if ( locals.error && error.img ){ %>
                         <p class="errorMsg"><%= error.img.msg %></p>
                     <% } %>
