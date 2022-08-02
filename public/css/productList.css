@@ -57,6 +57,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* margin-bottom: 15%; */
     padding: 6% 0%;
     width: 100%;
 }
@@ -81,6 +82,17 @@
 }
 .see__dest p {
     display: none;
+}
+.buttons{
+    display: flex;
+    margin: 2px 0px;
+    padding: 1px 2px;
+    justify-content: space-evenly;
+}
+
+.back_button{
+    cursor: pointer;
+    padding: 1px;
 }
 
 /* BREAKPOINTS */
@@ -134,7 +146,7 @@
         }
         .see__dest {
             border: solid 2px #1f1d1d;
-            height: 305px;
+            height: 308px;
             width: 20%;
             margin: 2% 1%;
         }
@@ -173,13 +185,13 @@
         
         .buttons{
             display: flex;
-            margin: 10px;
-            padding: 2px;
+            margin: 2px 0px;
+            padding: 1px 2px;
             justify-content: space-evenly;
         }
         
         .back_button{
             cursor: pointer;
-            padding: 2px;
+            padding: 1px;
         }
     }
