@@ -163,8 +163,8 @@ const adminController = {
     store: async (req, res) => {
         let errors = validationResult(req);
         //Si subio una imagen verifico el tipo de formato de la imagen
-        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
-            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$|mp4$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG, GIF o MP4.', param:'img'});
         }
         if (errors.isEmpty()) { 
             try {
@@ -231,8 +231,8 @@ const adminController = {
     update: async (req, res) => {
         let errors = validationResult(req);
         //Si subio una imagen verifico el tipo de formato de la imagen
-        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
-            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$|mp4$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG, GIF o MP4.', param:'img'});
         }
         if (errors.isEmpty()) {
             let product_old = await db.Product.findByPk(req.params.id);

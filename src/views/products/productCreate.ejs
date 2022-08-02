@@ -35,7 +35,7 @@
                 </section>
                 <section class="register">
                     <label class="form-title">Foto del producto</label>
-                    <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple id="img">
+                    <input type="file" name="img" accept=".jpg, .jpeg, .png .mp4" multiple id="img">
                     <% if ( locals.error && error.img ){ %>
                         <p class="errorMsg"><%= error.img.msg %></p>
                     <% } %>
