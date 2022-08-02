@@ -247,10 +247,9 @@ const adminController = {
                 where: {id: req.params.id}
             }).then(product => {
                 if(req.file){
-                    let updateImg = db.Image.update({
-                        url: req.file.filename
-                    },{
-                        where: {id: req.params.id}
+                    let updateImg = db.Image.create({
+                        url: req.file.filename,
+                        product_id:req.params.id
                     })
                     .then(images =>{
                         res.redirect('/product/detail/' + req.params.id);

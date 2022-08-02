@@ -97,8 +97,6 @@ const usersController = {
                 state: 1
             })
             .then(user => {
-                console.log('Chau');
-
                 res.redirect('/user/login');
             })
             .catch(error => res.send(error));
