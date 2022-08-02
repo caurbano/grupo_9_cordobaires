@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
             errors.push("La descripción del producto debe tener al menos 20 caracteres.")
         }
 
-        if(imgField.value != "" && imgField.value.search(/jpg$|jpeg$|png$/m) == -1) {
+        if(imgField.value != "" && imgField.value.search(/jpg$|jpeg$|png$|mp4$/m) == -1) {
             errors.push("Formato de imagen no válido.")
         }
 
