@@ -101,7 +101,7 @@ const adminController = {
     //Lista
     list: (req, res) => {
         db.User.findAll({
-            attributes:['id', 'first_name', 'last_name', 'admin', 'email', 'phone', 'img'],
+            attributes:['id', 'first_name', 'last_name', 'admin', 'email', 'phone', 'img', 'state'],
             where:{
                 id: { [db.Sequelize.Op.ne] : req.session.userLogged.id}
             }

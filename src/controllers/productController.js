@@ -41,7 +41,7 @@ module.exports = productController = {
     category: async (req, res) => {
         let category = req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1);
         db.Product.findAll({
-            attributes:['id', 'name', 'price', 'discount'],
+            attributes:['id', 'name', 'price', 'discount', 'state'],
             where: {
                 category: { [db.Sequelize.Op.eq] : category },
                 state: { [db.Sequelize.Op.eq] : 1 }
@@ -62,7 +62,7 @@ module.exports = productController = {
     //Galería completa
     gallery: async (req, res) => {
         db.Product.findAll({
-            attributes:['id', 'name', 'price', 'discount'],
+            attributes:['id', 'name', 'price', 'discount', 'state'],
             include: ['images'],
             where: {state: { [db.Sequelize.Op.eq] : 1 }}
         })
@@ -79,7 +79,7 @@ module.exports = productController = {
     //Búsqueda por NOMBRE
     search: async (req, res) => {
         db.Product.findAll({
-            attributes:['id', 'name', 'price', 'discount'],
+            attributes:['id', 'name', 'price', 'discount', 'state'],
             where: {
                 name: {[Op.substring]: req.body.search},
                 state: { [db.Sequelize.Op.eq] : 1 }

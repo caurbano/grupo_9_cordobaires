@@ -24,16 +24,21 @@
             </section>
         
             <section class="users_options">
-                <% if(userLogged.admin) {%>
-                    <form action="/admin/user/<%= users[i].id %>?_method=PUT" method="POST">
+                <form action="/admin/user/setstate/<%= users[i].id %>?_method=PUT" method="POST">
+                    <% if(users[i].state) {%>
+                        <button class="back_button"><p>Deshabilitar</p></button>
+                    <% } else {%>
+                        <button class="back_button"><p>Habilitar</p></button>
+                    <% } %>
+                </form>
+                <form action="/admin/user/setadmin/<%= users[i].id %>?_method=PUT" method="POST">
                     <% if(users[i].admin) {%>
                         <button class="back_button"><p>Quitar admin</p></button>
                     <% } else {%>
                         <button class="back_button"><p>Dar admin</p></button>
                     <% } %>
-                    <!-- <input type="checkbox" id="switch" /><label for="switch">Toggle</label> -->
-                    </form>
-                <% } %>
+                <!-- <input type="checkbox" id="switch" /><label for="switch">Toggle</label> -->
+                </form>
                 <a href="/admin/user/edit/<%- users[i].id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
                 <a href="/admin/user/delete/<%- users[i].id %>"><i class="fa-solid fa-trash" id="delete"></i></a>
             </section>

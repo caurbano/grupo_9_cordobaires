@@ -52,8 +52,12 @@ router.get('/product/result', adminController.result);
 
 //Lista de usuarios
 router.get('/user/list', adminController.list);
+
 //Lista de usuarios: Dar/Quitar perfil de admin
-router.put('/user/:id', adminController.setAdmin);
+router.put('/user/setadmin/:id', adminController.setAdmin);
+
+//Lista de usuarios: Habilitar/Deshabilitar perfil de admin
+router.put('/user/setstate/:id', adminController.setStateUser);
 
 //Edición de usuarios
 router.get('/user/edit/:id', adminController.editUser);
