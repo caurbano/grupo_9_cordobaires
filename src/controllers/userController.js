@@ -60,8 +60,8 @@ const usersController = {
 
     processRegister: async (req, res) => {
         let errors = validationResult(req);
-        if(!req.file){
-            errors.errors.pop();
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG o PNG.', param:'img'});
         }
         if (errors.isEmpty()) {
             //Verifico si el email que ingreso ya fue registrado
@@ -94,6 +94,7 @@ const usersController = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 phone: req.body.phone,
                 img: req.file ? req.file.filename : 'default.jpg',
+                state: 1
             })
             .then(user => {
                 console.log('Chau');
@@ -120,8 +121,12 @@ const usersController = {
 
     updateUser: async (req, res) => {
         let errors = validationResult(req);
-        //Si no cambio la imagen de prefil o la contraseña no lo tomo como error
+        //Si no cambio la contraseña no lo tomo como error
         errors.errors = errors.errors.filter(error => {return error.msg != ' '});
+        //Si subio una imagen verifico el tipo de formato de la imagen
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
+        }
         if (errors.isEmpty()) {
             
             //Pido los datos del usuario que voy a modificar

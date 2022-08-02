@@ -6,7 +6,6 @@ const validatorRegister = [
     check('email').notEmpty().withMessage('Debes completar este campo.').bail().isEmail().withMessage('Debes ingresar un email.'),
     check('phone').notEmpty().withMessage('Debes completar este campo.'),
     check('password').notEmpty().withMessage('Debes completar este campo.').bail().isLength({ min: 8 }).withMessage('La contraseña debe contener 8 caracteres como mínimo.').bail().matches(/\d/).withMessage('La contraseña debe tener un numero').bail().matches(/[A-Z]/).withMessage('La contraseña debe tener una letra mayuscula.'),
-    check('img').matches(/jpg$|jpeg$|png$|gif$/m).withMessage('Solo formatos JPG, JPEG, PNG o GIF.')
 ];
 
 module.exports = validatorRegister;

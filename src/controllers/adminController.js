@@ -20,8 +20,10 @@ const adminController = {
 
     updateUser: async (req, res) => {
         let errors = validationResult(req);
-        //Si no cambio la imagen de prefil o la contraseña no lo tomo como error
-        errors.errors = errors.errors.filter(error => {return error.msg != ' '});
+        //Si subio una imagen verifico el tipo de formato de la imagen
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
+        }
         if (errors.isEmpty()) {
             //Pido los datos del usuario que voy a modificar
             let user_old = await db.User.findByPk(req.params.id)
@@ -159,8 +161,9 @@ const adminController = {
 
     store: async (req, res) => {
         let errors = validationResult(req);
-        if(!req.file){
-            errors.errors.pop();
+        //Si subio una imagen verifico el tipo de formato de la imagen
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
         }
         if (errors.isEmpty()) { 
             try {
@@ -171,7 +174,8 @@ const adminController = {
                     color: req.body.color,
                     price: req.body.price,
                     discount: req.body.discount,
-                    stock: req.body.stock
+                    stock: req.body.stock,
+                    state: 1
                 })
                 let newImage = await db.Image.create({
                         url: req.file ? req.file.filename : 'default.jpg',
@@ -225,8 +229,9 @@ const adminController = {
 
     update: async (req, res) => {
         let errors = validationResult(req);
-        if(!req.file){
-            errors.errors.pop();
+        //Si subio una imagen verifico el tipo de formato de la imagen
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
         }
         if (errors.isEmpty()) {
             let product_old = await db.Product.findByPk(req.params.id);
