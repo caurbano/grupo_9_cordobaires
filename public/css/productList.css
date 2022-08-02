@@ -56,11 +56,9 @@
 .see {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-evenly;
     padding: 6% 0%;
     width: 100%;
-    /* box-shadow: none; */
 }
 
 .see__dest {
@@ -85,10 +83,6 @@
     display: none;
 }
 
-.dest-fee {
-    display: none;
-
-}
 /* BREAKPOINTS */
 /* TABLETS */
 @media (min-width: 481px) {
@@ -153,9 +147,29 @@
         }
         .see__dest p {
             display: block;
-            font-size: 13px;
-            margin-top: 20px;
         }
+    
+        .product_name {
+            font-size: 13px;
+            margin-top: 5%;
+        }
+    
+        .see_price_lt {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            text-decoration: line-through;
+        }
+        .see_price_final {
+            color: rgb(15, 165, 15);
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 2px 2px 3px darkolivegreen;
+        }
+        .see_price{
+            margin-top: 5%;
+        } 
         
         .buttons{
             display: flex;

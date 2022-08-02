@@ -131,6 +131,7 @@ const adminController = {
         .catch(error => res.send(error));
     },
 
+    //Cambio de estado: Habilita/Deshabilita
     setStateUser: async (req, res) => {
         db.User.findByPk(req.params.id)
         .then(user => {
@@ -328,6 +329,7 @@ const adminController = {
         
     },
 
+    //Cambio de estado: Habilita/Deshabilita
     setStateProduct: async (req, res) => {
         db.Product.findByPk(req.params.id)
         .then(product => {

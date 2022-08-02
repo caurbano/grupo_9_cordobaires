@@ -1,6 +1,7 @@
 const db = require('../database/models');
 
 const mainController = {
+    //Home
     home: async (req, res) => {
         await db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount'],
@@ -12,6 +13,7 @@ const mainController = {
         });
     },
 
+    //Vista de error
     error404: async (req, res) => {
         res.render('error404', { id: 'error404', title: 'LUMEN Lights Shop'});  
     }
