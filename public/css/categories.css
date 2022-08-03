@@ -56,11 +56,9 @@
 .see {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-evenly;
     padding: 6% 0%;
     width: 100%;
-    /* box-shadow: none; */
 }
 
 .see__dest {
@@ -68,7 +66,7 @@
     border: solid 1px #1f1d1d;
     height: 100px;
     width: 32%;
-    margin: 3% 3%;
+    margin: 8% 3%;
 }
 .dest {
     border-bottom: solid 1px #1f1d1d;
@@ -85,9 +83,17 @@
     display: none;
 }
 
-.dest-fee {
-    display: none;
+.buttons{
+    display: flex;
+    margin: 2px 0px;
+    padding: 1px 2px;
+    justify-content: space-evenly;
+}
 
+.back_button{
+    cursor: pointer;
+    padding: 1px;
+    margin: 0px 2px;
 }
 
 /* BREAKPOINTS */
@@ -188,5 +194,6 @@
         .back_button{
             cursor: pointer;
             padding: 1px;
+            margin: 0px;
         }
     }
