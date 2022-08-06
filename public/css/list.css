@@ -35,7 +35,7 @@
 .users_data {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
 }
 
 .users_data h4 {
@@ -53,7 +53,11 @@
     display: flex;
     justify-content: center;
     font-size: 13px;
-    width: 15%;
+    width: 25%;
+}
+
+.back_button{
+    margin-left: 10px;
 }
 
 #edit {
@@ -90,6 +94,9 @@
     .users_options {
         font-size: 16px;
     }
+    /* .back_button{
+        width: 80px;
+    } */
     #edit {
         margin: 0px 5px;
     }
@@ -108,7 +115,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 15px;
-        width: 85%;
+        width: 90%;
     }
     .users_img {
         width: 150px;
@@ -130,6 +137,11 @@
     .users_options {
         font-size: 20px;
     }
+
+    .back_button{
+        width: 100px;
+    }
+
     #edit {
         cursor: pointer;
         margin: 0px 6px;

@@ -28,7 +28,7 @@
     margin: 20px;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .msg{
@@ -48,7 +48,7 @@
         padding-top: 225px;
     }
     .title{
-        font-size: 22px;
+        font-size: 35px;
     }
     .msg{
         font-size: 15px;
@@ -65,7 +65,8 @@
         padding-top: 230px;
     }
     .title{
-        font-size: 25px;
+        font-size: 50px;
+        margin-top: 50px;
     }
     .msg{
         font-size: 17px;

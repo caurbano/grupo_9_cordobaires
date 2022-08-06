@@ -61,15 +61,19 @@
                             <% } %>
                         </section>
                         <section class="confirm">
-                            <button type="button">
+                            <button type="button" class="confirm_cancel">
                                 <a href="/admin/user/list"><p class="button_text">Cancelar</p></a>
                             </button>
-                            <button type="submit">
+                            <button type="submit" class="confirm_confirm">
                                 <p class="button_text">Confirmar</p>
                             </button>
+                            <button type="submit" class="deleteButton">
+                            <a href="/admin/user/delete/<%= user.id %>">
+                                <p>Eliminar usuario</p></a>
+                            </button>
                         </section>
+
                     </form>
-                <a href="/admin/user/delete/<%= user.id %>"><button type="submit" class="deleteButton"><p>Eliminar usuario</p></button></a>
                 </section>
             </main>
 

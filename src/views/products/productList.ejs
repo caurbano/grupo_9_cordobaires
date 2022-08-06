@@ -40,13 +40,15 @@
                                     </p>
                                 <% } %>
                             </p>
+                        </a>
 
-                        <% if(locals.userLogged && userLogged.admin) {%>
-                            <div class="buttons">
-                            <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button">Editar</button></a>
-                            <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button">Eliminar</button></a>
-                            </div>
-                        <% } %>
+                            <% if(locals.userLogged && userLogged.admin) {%>
+                                <div class="buttons">
+                                <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button">Editar</button></a>
+                                <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button">Eliminar</button></a>
+                                </div>
+                            <% } %>
+                        </a>
                     </div>
                 <% } %>
             </article>            

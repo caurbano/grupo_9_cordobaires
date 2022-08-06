@@ -101,7 +101,7 @@ const adminController = {
     //Lista
     list: (req, res) => {
         db.User.findAll({
-            attributes:['id', 'first_name', 'last_name', 'admin', 'email', 'phone', 'img'],
+            attributes:['id', 'first_name', 'last_name', 'admin', 'email', 'phone', 'img', 'state'],
             where:{
                 id: { [db.Sequelize.Op.ne] : req.session.userLogged.id}
             }
@@ -163,8 +163,8 @@ const adminController = {
     store: async (req, res) => {
         let errors = validationResult(req);
         //Si subio una imagen verifico el tipo de formato de la imagen
-        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
-            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$|mp4$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG, GIF o MP4.', param:'img'});
         }
         if (errors.isEmpty()) { 
             try {
@@ -231,8 +231,8 @@ const adminController = {
     update: async (req, res) => {
         let errors = validationResult(req);
         //Si subio una imagen verifico el tipo de formato de la imagen
-        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$/m) == -1){
-            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG o GIF.', param:'img'});
+        if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$|mp4$/m) == -1){
+            errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG, GIF o MP4.', param:'img'});
         }
         if (errors.isEmpty()) {
             let product_old = await db.Product.findByPk(req.params.id);
@@ -247,10 +247,9 @@ const adminController = {
                 where: {id: req.params.id}
             }).then(product => {
                 if(req.file){
-                    let updateImg = db.Image.update({
-                        url: req.file.filename
-                    },{
-                        where: {id: req.params.id}
+                    let updateImg = db.Image.create({
+                        url: req.file.filename,
+                        product_id:req.params.id
                     })
                     .then(images =>{
                         res.redirect('/product/detail/' + req.params.id);
