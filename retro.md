@@ -10,19 +10,19 @@ En este punto, llegamos a conclusiones tanto grupales, como individuales… Algu
 Aun así, hay cosas que queremos mejorar, no sólo la comunicación, si no también aspectos como la prolijidad en la ejecución (el código, lo visual), tener más atención a ciertos detalles que suman su aporte al resultado final. Por último, optimizar los tiempos o bien, proponer otras instancias apartes para cuando algún integrante se encuentre con algún conflicto que le impida avanzar con su tarea y así poder asistir a quien lo necesite en algo puntual.  
 
 Según la dinámica mencionada, resaltamos aquello que debemos:  
-#### Comenzar a hacer  
+### Comenzar a hacer  
 Manejar mejor los tiempos personales para combinarlos con los del grupo.
 
-#### Hacer más  
+### Hacer más  
 Mayor colaboración entre los integrantes.
 
-#### Continuar haciendo  
+### Continuar haciendo  
 Complementarnos como equipo en lo que cada uno sabe, conoce, tiene preferencia, le resulta más comprensible (algún contenido en particular), etc.
 
-#### Hacer menos  
+### Hacer menos  
 En algunos momentos y casos puntuales, depender de la ayuda externa y en vez de eso, intentar más “con el código”.
 
-#### Dejar de hacer  
+### Dejar de hacer  
 Llegar con el tiempo límite de la entrega, por no prever con anticipación el tiempo que puede llevarle a cada uno, comprender los contenidos y llevarlos a la práctica, en algunos casos.
   
 
