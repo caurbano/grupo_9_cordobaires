@@ -110,3 +110,23 @@ Proponer menor cantidad de mejoras quizás, en relación al tiempo del que dispo
   
 ### Dejar de hacer  
 En este momento y por ahora, no encontramos algo que debamos “dejar de hacer”.  
+  
+   
+## Retrospectiva luego del SPRINT 7  
+### Dinámica “Estrella de mar”  
+Según esta dinámica, resaltamos aquello que tenemos que:  
+
+### Comenzar a hacer  
+  
+  
+### Hacer más  
+
+    
+### Continuar haciendo  
+
+  
+### Hacer menos  
+    
+  
+### Dejar de hacer  
+ 

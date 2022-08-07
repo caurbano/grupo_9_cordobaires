@@ -104,3 +104,11 @@ Tareas realizadas:
   
    
 Nuestra impresión respecto a esta ceremonia, es que se trata de un momento necesario para el trabajo grupal. Lo llevamos a cabo y según lo conversado en cada instancia, redistribuimos a veces algunas tareas o bien, las finalizamos en equipo. Nos sirve para estar pendientes del ciclo de cada integrante, al asumir alguna tarea.  
+  
+### SPRINT 8  
+1° weekly  
+Tareas realizadas:  
+ 
+  
+  
+2° weekly  
