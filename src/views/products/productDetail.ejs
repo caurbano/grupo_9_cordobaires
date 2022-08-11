@@ -12,7 +12,7 @@
                     </p>
                     <!-- <p>Lámpara de <%= product.category %></p> -->
                     <article class="preview__img">
-                        <img src="\img\<%= product.images[0].url %>" alt="Luces" class="preview__img__img">
+                        <img src="\img\<%= product.images[0].url %>" alt="Producto" class="preview__img__img">
                     </article>
                     <div class="preview__txt">
                         <p class="detail_product_name2">
@@ -38,6 +38,7 @@
                                 $<%= product.price %>
                             </p>
                         <% } %>
+                        <p class="stock">Stock disponible: <%= product.stock %></p>
                         
                         <form action="" method="POST">
 
