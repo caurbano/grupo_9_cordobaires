@@ -71,6 +71,11 @@
                     <div class="see__dest">
                         <a href="/product/detail/<%= products[i].id %>">
                             <img src="/img/<%= products[i].images[0].url %>" alt="Producto destacado" class="dest">
+
+                            <!-- <% if (products[i].images[1]) { %> 
+                                <img src="/img/<%= products[i].images[1].url %>" alt="Producto destacado" class="dest_b">
+                            <% } %>  -->
+
                             <p class="product_name">
                                 <%= products[i].name %><br>
                                 <!-- Si el producto tiene descuento % -->
@@ -95,6 +100,8 @@
             </article>            
         </section>
     </main>
+
+    <script src="/js/home.js"></script>
 
     <!-- FOOTER -->
     <%- include('./partials/footer') %>

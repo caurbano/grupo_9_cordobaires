@@ -437,6 +437,17 @@
             font-size: 13px;
             margin-top: 5%;
         }
+        
+        /* .dest_b {
+            border-bottom: solid 1px #1f1d1d;
+            height: 88px;
+            width: 100%;
+            margin-bottom: 2px;
+            display: none;
+        }
+        .show {
+            display: block;
+        } */
     
         /* Productos destacados */
         .see_price_lt {

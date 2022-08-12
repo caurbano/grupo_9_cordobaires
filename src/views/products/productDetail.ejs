@@ -11,8 +11,41 @@
                         <%= product.name %>
                     </p>
                     <!-- <p>Lámpara de <%= product.category %></p> -->
+                                     
                     <article class="preview__img">
-                        <img src="\img\<%= product.images[0].url %>" alt="Producto" class="preview__img__img">
+                        <div class="carousel">
+                            <div class="item_carousel" id="itemCarousel1">
+                                <div class="carousel_img" id="img1">
+                                    <img src="\img\<%= product.images[0].url %>" alt="Producto" class="preview__img__img">
+                                </div>
+                                <div class="carousel_arrows">
+                                    <a href="#itemCarousel2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </a>
+                                    <a href="#itemCarousel2">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="item_carousel" id="itemCarousel2">
+                                <div class="carousel_img" id="img2">
+                                    <img src="\img\<%= product.images[1].url %>" alt="Producto" class="preview__img__img">
+                                </div>
+                                <div class="carousel_arrows">
+                                    <a href="#itemCarousel1">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </a>
+                                    <a href="#itemCarousel1">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <a href="#itemCarousel1"><p>°</p></a>
+                            <a href="#itemCarousel2">°</a>
+                        </div>
                     </article>
                     <div class="preview__txt">
                         <p class="detail_product_name2">
@@ -42,7 +75,7 @@
                         
                         <form action="" method="POST">
 
-                            <button class="agregarcarrito">Agregar al carrito</button>
+                            <a href="#"><button class="agregarcarrito">Agregar al carrito</button></a>
                             <% if(locals.userLogged && userLogged.admin) {%>
                                 <a href="/admin/product/edit/<%- product.id %>"><button type="button" class="button_admin">Editar</button></a>
                                 <a href="/admin/product/delete/<%- product.id %>"><button type="button" class="button_admin">Eliminar</button></a>
@@ -60,7 +93,7 @@
                     </p>
                 </section>
                     <section class="products">
-                        <h2>Productos relacionados</h2>
+                        <span><h2>Productos relacionados</h2></span>
                         <article class="see">
                             <% for( let i=0; i < products.length; i++ ) { %>
                                 <article class="see__dest">
