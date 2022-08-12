@@ -47,6 +47,9 @@ router.delete('/product/delete/:id', adminController.destroy);
 //Mensaje de respuesta - resultado
 router.get('/product/result', adminController.result);
 
+//Lista de productos: Habilitar/Deshabilitar perfil de admin
+router.put('/product/setstate/:id', adminController.setStateProduct);
+
 
 //USER
 
