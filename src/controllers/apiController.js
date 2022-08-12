@@ -16,7 +16,7 @@ const apiController = {
                         id: user.id,
                         name: user.first_name + ' ' + user.last_name,
                         email: user.email,
-                        detail: 'api/users/'+ user.id,
+                        detail: '/api/users/'+ user.id,
                     }
                 }),
                 status: 200
@@ -32,7 +32,7 @@ const apiController = {
             const user = await db.User.findByPk(
                 req.params.id,
                 {
-                    attributes:['id', 'first_name', 'last_name', 'email', 'phone', 'img', 'state']
+                    attributes:['id', 'first_name', 'last_name', 'email', 'phone', 'img', 'created_at', 'state']
                 }
             );
             return res.status(200).json(user);
@@ -54,14 +54,7 @@ const apiController = {
                 attributes:['id', 'name', 'description', 'category'],
                 include: ['images']
             });
-            
-            // const categoryList = await db.Product.findAll({
-            //     attributes:['id', 'name', 'description', 'category'],
-            //     include: ['images']
-            // })
-            // let categoryList = productsList.filter((value, index, self) => {
-            //     return self.indexOf(value) === index
-            // });
+
             let data = {
                 count : productsList.length,
                 countByCategory: categoryList,
@@ -71,7 +64,7 @@ const apiController = {
                         name: product.name,
                         description: product.description,
                         img: product.images[0],
-                        detail: 'api/products/'+ product.id,
+                        detail: '/api/products/'+ product.id,
                     }
                 }),
                 status: 200

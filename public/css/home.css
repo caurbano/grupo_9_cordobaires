@@ -440,6 +440,7 @@
     
         /* Productos destacados */
         .see_price_lt {
+            color: #665e5e;
             font-size: 14px;
             font-weight: bold;
             margin-bottom: 5px;

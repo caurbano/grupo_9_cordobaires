@@ -3,35 +3,54 @@
     <%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header') %>
-    <main id="maindetodo">
-        <div class="main">
-        <div id="tituloDelCarrito">
+    <main class="main">
+        <div id="cart_title">
             <h3>Carrito</h3>
         </div>
             <% for( let i=0; i < 3; i++ ) { %>
-                <div class = "productosDelCarrito">
-                <article class="producto">
-                    <img src="/img/<%= product[i].img %>" alt="">
+                <div class = "cart_products">
+                <article class="product">
+                    <img src="/img/<%= product[i].img %>" alt="Imagen de producto">
                 </article>
-                <article class="nombreDelProducto">
+                <article class="product_name">
                     <p><%= product[i].name %></p>
                 </article>
-                <article class="Precio">
+                <article class="price">
                     <p>$<%= product[i].price %></p>      
                 </article>
+
+                <!-- Si el producto tiene descuento % -->
+                <!-- <% if (product[i].discount > 0) { %>
+                    <p class="detail_product_price_lt">
+                        $<%= product[i].price %>
+                    </p>
+                    <p class="detail_product_price_final">
+                        $<%= product[i].price - (product[i].discount * product[i].price / 100) %>
+                    </p>
+
+                <p class="detail_product_disc_percent">
+                    <%= product[i].discount %>% free
+                </p>
+                <% } else { %> -->
+                    <!-- Si no tiene descuento -->
+                    <!-- <p class="detail_product_price">
+                        $<%= product[i].price %>
+                    </p>
+                <% } %>
+                 -->
                 <article class="add_delete">
-                    <button class="menos">
+                    <button class="decr">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
                           </svg>
                     </button>
                     <p class="cero">1</p>     
-                    <button class="mas">
+                    <button class="incr">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                           </svg>
                     </button>
-                    <button class="botonDeEliminar">
+                    <button class="delete">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                           </svg>
@@ -40,16 +59,14 @@
         </div>
                 <% } %>
             
-        <div id = "total">
-            <article class="totales">
-                <p class= "totalDelCarrito precioTotal">Total: $<%= parseInt(product[0].price) + parseInt(product[1].price) + parseInt(product[2].price) %></p>
+            <article class="total">
+                <p>Total: $<%= parseInt(product[0].price) + parseInt(product[1].price) + parseInt(product[2].price) %></p>
             </article>
-        </div>
-        <div id="boton_comprar">
-            <button class="botonDeComprar">
+
+        <div id="final_buy">
+            <button class="finish_buy">
                 Continuar compra
             </button>
-        </div>
         </div>
     </main>
     <%- include('../partials/footer') %>
