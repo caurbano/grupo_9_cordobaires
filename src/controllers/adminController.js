@@ -168,6 +168,14 @@ const adminController = {
         if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$|mp4$/m) == -1){
             errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG, GIF o MP4.', param:'img'});
         }
+        //Verifico si el nombre del producto que ingreso ya fue registrado
+        let user = await db.User.findOne({ 
+            where: { email: req.body.name } 
+        })
+        .catch(error => res.send(error));
+        if(user){
+            errors.errors.push({msg: 'Este nombre ya está registrado.', param:'name'})
+        }
         if (errors.isEmpty()) { 
             try {
                 let newProduct = await db.Product.create({
@@ -190,25 +198,6 @@ const adminController = {
             } catch (error) {
                 console.log(error);
             }
-
-            // .then(product => {
-            //     db.Image.create({
-            //         url: req.file ? req.file.filename : 'default.jpg',
-            //         product_id: product.id
-            //     }).then(image => {
-            //         res.redirect('/product/detail/' + image.product_id);
-            //     })
-            //     .catch(error => res.send(error));
-            // })
-            // .catch(error => res.send(error));
-            // let newImage = await db.Image.create({
-            //     url: req.file ? req.file.filename : 'default.jpg',
-            //     product_id: newProduct.dataValues.id
-            // })
-            // .catch(error => res.send(error));
-            // Promise.all([newProduct, newImage]).then(function([product, img]){
-            //     res.redirect('/product/detail/' + product.dataValues.id);
-            // });
         }
         res.render('./products/productCreate', { 
             id: 'productCreate', 
@@ -232,9 +221,17 @@ const adminController = {
 
     update: async (req, res) => {
         let errors = validationResult(req);
-        //Si subio una imagen verifico el tipo de formato de la imagen
+        //Si subio una imagen verifico el formato de la imagen
         if(req.file && req.file.filename.search(/jpg$|jpeg$|png$|gif$|mp4$/m) == -1){
             errors.errors.push({msg: 'Solo formatos JPG, JPEG, PNG, GIF o MP4.', param:'img'});
+        }
+        //Verifico si el nombre del producto que ingreso ya fue registrado
+        let user = await db.User.findOne({ 
+            where: { email: req.body.name } 
+        })
+        .catch(error => res.send(error));
+        if(user){
+            errors.errors.push({msg: 'Este nombre ya está registrado.', param:'name'})
         }
         if (errors.isEmpty()) {
             let product_old = await db.Product.findByPk(req.params.id);
@@ -308,25 +305,29 @@ const adminController = {
     },
 
     destroy: async (req, res) => {
+        try{
+            let destroyImg = await db.Image.destroy({
+                where:{
+                    id: req.params.id,
+                },
+                force: true
+            })
+
+            let destroyProduct = await db.Product.destroy({
+                where:{
+                    id: req.params.id,
+                },
+                force: true
+            })
+
+            Promise.all([destroyProduct, destroyImg])
+            .then(function([product, img]){
+                req.session.check = true;
+                res.redirect('/admin/product/result');
+            });
+        }
+        catch(errors){ res.send(errors) }
         
-        let destroyImg = await db.Image.destroy({
-            where:{
-                id: req.params.id,
-            },
-            force: true
-        }).catch(error => res.send(error));
-
-        let destroyProduct = await db.Product.destroy({
-            where:{
-                id: req.params.id,
-            },
-            force: true
-        }).catch(error => res.send(error));
-
-        Promise.all([destroyProduct, destroyImg]).then(function([product, img]){
-            req.session.check = true;
-            res.redirect('/admin/product/result');
-        });
         
     },
 

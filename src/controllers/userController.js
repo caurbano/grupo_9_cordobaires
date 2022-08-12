@@ -16,7 +16,7 @@ const usersController = {
                 where: { 
                     email: req.body.email,
                     state: { [db.Sequelize.Op.eq] : 1 }
-                } 
+                }
             })
             .catch(error => res.send(error));
             
@@ -28,6 +28,7 @@ const usersController = {
                 delete userLogin.password;
                 delete userLogin.created_at;
                 delete userLogin.updated_at;
+                delete userLogin.state;
                 req.session.userLogged = userLogin;
                 if (req.body.remember != undefined) {
                     res.cookie('rememberEmail', userLogin.email, { maxAge: 1000 * 60 * 1 });
