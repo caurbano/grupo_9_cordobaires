@@ -32,6 +32,23 @@ INSERT INTO images VALUES
 (DEFAULT, "product-13-CILINDRO.jpeg", 13),
 (DEFAULT, "product-14-BARRAL.jpeg", 14),
 (DEFAULT, "product-15-SANTORINI.jpeg", 15);
+
+-- Permitió ingresarlos de a uno:
+(DEFAULT, "product-1660352611644.jpeg", 1);
+(DEFAULT, "product-1660352661197.jpeg", 2);
+(DEFAULT, "product-1660352685478.jpeg", 3);
+(DEFAULT, "product-1660352964324.jpeg", 4);
+(DEFAULT, "product-1660352979537.jpeg", 5);
+(DEFAULT, "product-1660353020592.jpeg", 6);
+(DEFAULT, "product-1660354232217.jpeg", 7);
+(DEFAULT, "product-1660353909653.jpeg", 8);
+(DEFAULT, "product-1660354307959.jpeg", 9);
+(DEFAULT, "product-1660354886928.jpeg", 10);
+(DEFAULT, "product-1660354909549.jpeg", 11);
+(DEFAULT, "product-1660355186841.jpeg", 12);
+(DEFAULT, "product-1660355352002.jpeg", 13);
+(DEFAULT, "product-1660355719788.jpeg", 14);
+(DEFAULT, "product-1660355891797.jpeg", 15);
 -- id / url / product_id
 
 INSERT INTO users VALUES (DEFAULT, "Admin", "Lumen", 1, "admin@lumenshop.com", "$2a$10$W4oZflXyNKtJ9v21yGaFiul.d3rrrM6oszY0Abp13saz1SnYsRU4G", "0303456", "user-1655677988734.png" , NOW(), NOW(), 1);

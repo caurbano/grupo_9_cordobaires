@@ -11,36 +11,39 @@
         <% for( let i = 0; i < users.length; i++ ) { %>
         <article class="users_list">
             <section class="users_img">
-                <!-- Ver si dejar esta section o dejar solo la img -->
                 <img src="/img/users/<%= users[i].img %>" alt="Imagen de usuario">
             </section>
             
             <section class="users_data">
                  <h4>
-                    <%= users[i].firstName %> <%= users[i].lastName %> (id:<%= users[i].id %>)
+                    <%= users[i].first_name %> <%= users[i].last_name %> (id:<%= users[i].id %>)
                  </h4>
                  <p>Email: <%= users[i].email %></p>
                  <p>Teléfono: <%= users[i].phone %></p>
             </section>
         
             <section class="users_options">
-                <form action="/admin/user/setstate/<%= users[i].id %>?_method=PUT" method="POST">
-                    <% if(users[i].state) {%>
-                        <button class="back_button"><p>Deshabilitar</p></button>
-                    <% } else {%>
-                        <button class="back_button"><p>Habilitar</p></button>
-                    <% } %>
-                </form>
-                <form action="/admin/user/setadmin/<%= users[i].id %>?_method=PUT" method="POST">
-                    <% if(users[i].admin) {%>
-                        <button class="back_button"><p>Quitar admin</p></button>
-                    <% } else {%>
-                        <button class="back_button"><p>Dar admin</p></button>
-                    <% } %>
-                <!-- <input type="checkbox" id="switch" /><label for="switch">Toggle</label> -->
-                </form>
-                <a href="/admin/user/edit/<%- users[i].id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
-                <a href="/admin/user/delete/<%- users[i].id %>"><i class="fa-solid fa-trash" id="delete"></i></a>
+                
+                <div class="opt1">
+                    <a href="/admin/user/edit/<%- users[i].id %>"><i class="fa-solid fa-pen-to-square" id="edit"></i></a>
+                    <a href="/admin/user/delete/<%- users[i].id %>"><i class="fa-solid fa-trash" id="delete"></i></a>
+                </div>
+                <div class="opt2">
+                    <form action="/admin/user/setstate/<%= users[i].id %>?_method=PUT" method="POST">
+                        <% if(users[i].state) {%>
+                            <button class="back_button"><p>Deshabilitar</p></button>
+                        <% } else {%>
+                            <button class="back_button"><p>Habilitar</p></button>
+                        <% } %>
+                    </form>
+                    <form action="/admin/user/setadmin/<%= users[i].id %>?_method=PUT" method="POST">
+                        <% if(users[i].admin) {%>
+                            <button class="back_button"><p>Quitar admin</p></button>
+                        <% } else {%>
+                            <button class="back_button"><p>Dar admin</p></button>
+                        <% } %>
+                    </form>
+                </div>
             </section>
         </article>
         <% } %>
