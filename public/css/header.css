@@ -78,7 +78,6 @@
     text-decoration: none;
 }
 
-/* Esta sección está pensada para que funcione con click (JS) */
 .input_search {
     border: solid 1px #666666;
     height: 20px;
@@ -99,10 +98,7 @@
     position: fixed;
 }
 
-/* #search:hover .search_form {
-    display: block;
-} */
-/* Hasta acá */
+
 .bar__logo {
     margin-left: auto;
     margin-right: auto;
@@ -157,8 +153,8 @@
     }
     .menu-dd a {
         border: solid 1px white;
-        font-size: 15px;
-        padding: 20px 10px;
+        font-size: 18px;
+        padding: 25px 20px;
     }
     #menu,
     #search,
@@ -214,7 +210,7 @@
     .menu-dd a {
         border: solid 1px white;
         font-size: 20px;
-        padding: 30px 18px;
+        padding: 32px 15px;
     }
     #menu,
     #search,
