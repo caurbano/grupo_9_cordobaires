@@ -1,8 +1,15 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom'
+// import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+// import useCustomFetch from '../hooks/useCustomFetch';
 
 const Products = () => {
-    // useState({data:null})
+
+    // const [productsList, setProductsList] = useState();
+    // const { data, hasError } = useCustomFetch(`http://localhost:3030/api/products`);
+    // useEffect(() => {
+    //     setProductsList(data);
+    // }, [])
+
     return(
         <div className="products">
             <h2>PRODUCTOS</h2>
