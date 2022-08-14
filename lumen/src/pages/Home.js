@@ -1,18 +1,26 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import LineChart from "../components/LineChart";
 const Home = () => {
     return(
         <div className="home">
             <Container className="content">
-                {/* <Row> */}
-                    <article>
-                        <h2>Bienvenido, Admin!</h2>
-                        <p>Revisa la última información</p>
-                    </article>
-                {/* </Row> */}
-                    
-
+                <article>
+                    <h2>Bienvenido, Admin!</h2>
+                    <p>Revisa la última información</p>
+                </article>
             </Container>
+            <Container className="body">
+                <article>
+                    <p>Gráfico de ventas en la última semana o mes</p>
+                    <p>Ingresos mensuales - Año 2022</p>
+                </article>
+            </Container>
+            <Container>
+                <LineChart />
+            </Container>
+
+
             {/* <Container>
                 <Row>
                     <Col xs="4" className="bg-primary">columna 1</Col>

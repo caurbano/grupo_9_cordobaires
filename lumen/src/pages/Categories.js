@@ -1,6 +1,20 @@
 import { NavLink } from 'react-router-dom'
+// import { Pie } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2';
 
 const Categories = () => {
+    const data = {
+        labels: ['Techo', 'Pared', 'Pie'],
+        datasets:[{
+            data: [8, 4, 3],
+            backgroundColor: ['blue', 'yellow', 'green']
+        }]
+    };
+
+    const options = {
+        responsive: true
+    }
+
     return(
         <div className="categories">
             <h2>CATEGORÍAS</h2>
@@ -37,6 +51,10 @@ const Categories = () => {
                     <NavLink to={'/http:localhost:3030/product/gallery'} className='adm-link'>Lista</NavLink>
                 </article>
             </section>
+            {/* <section className="graphics">
+                <Doughnut data={data} options={options} />
+            </section> */}
+
         </div>
     )
 }

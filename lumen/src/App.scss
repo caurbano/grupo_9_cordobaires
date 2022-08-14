@@ -75,6 +75,21 @@
   }
 }
 
+.barChart {
+  border: 1px solid lightgray;
+  height: 320px;
+  width: 550px;
+  margin: 20px 25px;
+  padding: 10px;
+ 
+  .barTitle {
+    color: brown;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+}
+
+
 .home {
   .content {
     background-color: rgba(128, 128, 128, 0.075);
