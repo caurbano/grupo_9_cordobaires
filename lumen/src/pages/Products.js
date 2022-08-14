@@ -1,8 +1,12 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import useCustomFetch from '../hooks/useCustomFetch';
 
 const Products = () => {
-    // useState({data:null})
+
+    const listProducts = useCustomFetch(`http://localhost:3030/api/products`);
+
+    console.log(listProducts);
+
     return(
         <div className="products">
             <h2>PRODUCTOS</h2>
