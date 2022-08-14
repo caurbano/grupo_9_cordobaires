@@ -5,17 +5,18 @@ const useCustomFetch = (url) => {
     const [state, setState] = useState({data: null, hasError: null});
 
     useEffect(() => {
-        fetch(url, {
-            headers: {
+        fetch(url,{
+            headers:{
                 'Access-Control-Allow-Origin':'*'
             },
-            mode: 'cors'
+            mode:'cors'
         })
         .then(res => res.json())
         .then(data => { setState({
                 data,
                 hasError: null
-            }) 
+            });
+            console.log(data);
         })
         .catch(error => {
             setState({
@@ -23,7 +24,7 @@ const useCustomFetch = (url) => {
                 hasError: error
             })
         })
-    }, [url]);
+    }, []);
 
   return { data : state.data, hasError : state.hasError }
 }

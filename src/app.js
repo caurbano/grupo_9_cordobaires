@@ -4,8 +4,11 @@ const app = express();
 const mainRouter = require('./routes/mainRouter');
 const methodOverride =  require('method-override');
 const session = require('express-session');
-const cookieParser = require('cookie-parser')
-const userLoggedMiddlewares = require('./middlewares/userLoggedMiddlewares')
+const cookieParser = require('cookie-parser');
+const userLoggedMiddlewares = require('./middlewares/userLoggedMiddlewares');
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(methodOverride('_method'));
 
