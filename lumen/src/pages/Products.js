@@ -14,7 +14,7 @@ const Products = () => {
         <div className="products">
             <h2>PRODUCTOS</h2>
 
-            <section className="sale-panels">
+            <section className="products-panels">
                 <article className="p-panels">
                     <h3>Total de productos</h3>
                     <p className="info">Cantidad total:</p>
@@ -22,15 +22,17 @@ const Products = () => {
                 </article>
 
                 <article className="p-panels">
-                    <h3>Último creado</h3>
-                    <p className="info">Producto X</p>
-                    <p className="number">10/08/2022</p>  
-                </article>
-
-                <article className="p-panels">
                     <h3>Listado</h3> 
                     <p className="info">Ir al listado completo:</p>
                     <NavLink to={'/http:localhost:3030/product/gallery'} className='adm-link'>Lista</NavLink>
+                </article>
+            </section>
+            <section className="products-info">
+                <article className="p-info">
+                        <h3>Último producto creado</h3>
+                        <h4>AURORA</h4>
+                        <p className="number">10/08/2022</p>
+                        <img src='lastProduct.jpg' alt='Último producto'/>  
                 </article>
             </section>
         </div>

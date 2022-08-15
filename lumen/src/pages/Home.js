@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import LineChart from "../components/LineChart";
 const Home = () => {
     return(
@@ -10,24 +10,23 @@ const Home = () => {
                     <p>Revisa la última información</p>
                 </article>
             </Container>
+
             <Container className="body">
                 <article>
-                    <p>Gráfico de ventas en la última semana o mes</p>
-                    <p>Ingresos mensuales - Año 2022</p>
+                    <h3>Ingresos mensuales - Año 2022</h3>
+                    <p>Expresado en $AR (Ej.: 40 = $40.000)</p>
                 </article>
             </Container>
+
             <Container>
                 <LineChart />
             </Container>
 
-
-            {/* <Container>
-                <Row>
-                    <Col xs="4" className="bg-primary">columna 1</Col>
-                    <Col xs="4" className="bg-warning">columna 2</Col>
-                    <Col xs="4" className="bg-danger">columna 2</Col>
-                </Row>
-            </Container> */}
+            <Container className="report">
+                <article>
+                    <button>Descargar reporte</button>
+                </article>
+            </Container>
         </div>
     )
 }

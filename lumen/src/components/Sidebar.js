@@ -4,7 +4,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className='logo'>
-                <img src='LUMEN.png' alt='logo'/>
+                <img src='LUMEN-logo.png' alt='logo'/>
             </div>
             <ul>
                 <li>

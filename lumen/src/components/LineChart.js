@@ -23,9 +23,9 @@ ChartJS.register(
   Filler
 );
 // ingresos mensuales x vtas x 1 año 2022
-// const scores = [25.000, 48.900, 60.300, 55.000, 70.500, 100.900, 190.000];
-const scores = [1, 5, 2, 6, 7, 8, 4]
-const scores2 = [1, 3, 2, 2, 4, 4, 8];
+const scores = [28.000, 48.900, 45.300, 55.000, 80.500, 120.900, 130.500];
+const scores2 = [15.000, 35.900, 18.300, 18.000, 17.500, 15.900, 46.900];
+
 const labels = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
 const options = {
@@ -48,29 +48,29 @@ const options = {
     return {
       datasets: [
         {
-          label: "Mis datos",
-          data: scores,
+            label: "Ingresos",
+            tension: 0.3,
+            data: scores,
+            borderColor: "green",
+            backgroundColor: "rgba(0, 255, 0, 0.3)",
+            pointRadius: 6,
+          },
+        {
+          label: "Egresos",
+          data: scores2,
           tension: 0.3,
           borderColor: "rgb(75, 192, 192)",
           pointRadius: 6,
           pointBackgroundColor: "rgb(75, 192, 192)",
           backgroundColor: "rgba(75, 192, 192, 0.3)",
-        },
-        {
-          label: "Mis datos (2)",
-          tension: 0.3,
-          data: scores2,
-          borderColor: "green",
-          backgroundColor: "rgba(0, 255, 0, 0.3)",
-          pointRadius: 6,
-        },
+        }
       ],
       labels,
     };
   }, []);
 
   return (
-    <div className="barChart">
+    <div className="lineChart">
     <Line data={data} options={options} />
     </div>);
 }
