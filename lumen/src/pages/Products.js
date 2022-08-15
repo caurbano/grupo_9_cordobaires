@@ -1,29 +1,42 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-// import useCustomFetch from '../hooks/useCustomFetch';
+//import useCustomFetch from '../hooks/useCustomFetch';
 
 const Products = () => {
 
-    // const [productsList, setProductsList] = useState();
-    // const { data, hasError } = useCustomFetch(`http://localhost:3030/api/products`);
-    // useEffect(() => {
-    //     setProductsList(data);
-    // }, [])
+    const [productList, setProductList] = useState();
+
+    //setProductList(useCustomFetch(`http://localhost:3030/api/products`));
+    
+    useEffect(() => {
+
+        fetch(`http://localhost:3030/api/products`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setProductList(data);
+        })
+        .catch(error => {
+        })
+
+    }, []);
+
 
     return(
-        <div className="products">
+        productList?
+        (<div className="products">
             <h2>PRODUCTOS</h2>
 
             <section className="sale-panels">
                 <article className="p-panels">
                     <h3>Total de productos</h3>
                     <p className="info">Cantidad total:</p>
-                    <p className="number">16</p> 
+                    <p className="number">{ productList.count }</p> 
                 </article>
 
                 <article className="p-panels">
                     <h3>Último creado</h3>
-                    <p className="info">Producto X</p>
+                    <p className="info">{ productList.propducts[productList.count-1] }</p>
                     <p className="number">10/08/2022</p>  
                 </article>
 
@@ -33,7 +46,8 @@ const Products = () => {
                     <NavLink to={'/http:localhost:3030/product/gallery'} className='adm-link'>Lista</NavLink>
                 </article>
             </section>
-        </div>
+        </div>) : 
+        (<div className="products">Loading ...</div>)
     )
 }
 
