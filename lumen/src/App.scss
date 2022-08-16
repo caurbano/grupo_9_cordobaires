@@ -145,7 +145,7 @@
       font-size: 17px;
       margin-left: 250px;
       margin-top: 15px;
-      padding: 7px 10px;
+      padding: 7px 14px;
       transition: ease 0.3;
     }
     button:hover {
@@ -439,3 +439,9 @@
     }
   }
 }
+
+/* BREAKPOINTS */
+/* TABLET */
+@media (min-width: 481px) {}
+/* DESKTOP */
+@media (min-width: 769px) {}

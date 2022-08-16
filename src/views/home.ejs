@@ -11,7 +11,7 @@
             <img src="/img/img2.jpeg" alt="Imágen bienvenida" class="home__img__img">
             <!-- <img src="/img/chand.jpg" alt="Imágen bienvenida" class="home__img__img"> -->
         </section>
-        <section class="review">
+        <section class="review" id="us">
             <article class="review__txt">
                 <h1>LUMEN Lights Shop</h1>
                 <p>
@@ -70,11 +70,11 @@
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">
                         <a href="/product/detail/<%= products[i].id %>">
-                            <img src="/img/<%= products[i].images[0].url %>" alt="Producto destacado" class="dest">
-
-                            <!-- <% if (products[i].images[1]) { %> 
-                                <img src="/img/<%= products[i].images[1].url %>" alt="Producto destacado" class="dest_b">
-                            <% } %>  -->
+                            <article class="img">
+                                <img src="/img/<%= products[i].images[0].url %>" alt="Producto destacado" class="dest">
+                                <!-- <img src="/img/<%= products[i].images[1].url %>" alt="Producto destacado" class="dest_b none"> -->
+                            </article>
+                            
 
                             <p class="product_name">
                                 <%= products[i].name %><br>
@@ -94,7 +94,6 @@
                                 <% } %>
                             </p>
                         </a>
-                        <!-- <p class="dest-fee"><%= products[i].payments %> cuotas sin interés de <strong>$<%= parseInt(parseInt(products[i].price) /parseInt(products[i].payments)) %></strong></p> -->
                     </div>
                 <% } %>
             </article>            

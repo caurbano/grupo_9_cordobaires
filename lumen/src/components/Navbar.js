@@ -19,7 +19,7 @@ function NavbarNav (args) {
   return (
     <div>
       <Navbar {...args}>
-        <NavbarBrand href="/">Sesión iniciada (desp dirá algo más)</NavbarBrand>
+        <NavbarBrand href="/">Sesión iniciada</NavbarBrand>
         <NavbarToggler onClick={toggle} className="toggler"/>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>

@@ -23,8 +23,8 @@ ChartJS.register(
   Filler
 );
 // ingresos mensuales x vtas x 1 año 2022
-const scores = [28.000, 48.900, 45.300, 55.000, 80.500, 120.900, 130.500];
-const scores2 = [15.000, 35.900, 18.300, 18.000, 17.500, 15.900, 46.900];
+const ing = [28.000, 48.900, 45.300, 55.000, 80.500, 120.900, 130.500, 125.500];
+const out = [15.000, 35.900, 18.300, 18.000, 17.500, 15.900, 46.900, 56.900];
 
 const labels = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
@@ -50,18 +50,17 @@ const options = {
         {
             label: "Ingresos",
             tension: 0.3,
-            data: scores,
+            data: ing,
             borderColor: "green",
             backgroundColor: "rgba(0, 255, 0, 0.3)",
-            pointRadius: 6,
+            pointRadius: 5,
           },
         {
           label: "Egresos",
-          data: scores2,
+          data: out,
           tension: 0.3,
           borderColor: "rgb(75, 192, 192)",
-          pointRadius: 6,
-          pointBackgroundColor: "rgb(75, 192, 192)",
+          pointRadius: 5,
           backgroundColor: "rgba(75, 192, 192, 0.3)",
         }
       ],
