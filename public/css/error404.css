@@ -37,6 +37,12 @@
     font-size: 13px;
 }
 
+.msg > a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 /* BREAKPOINTS */
 /* TABLET */
 @media (min-width: 481px) {
@@ -52,6 +58,9 @@
     }
     .msg{
         font-size: 15px;
+    }
+    .msg > a{
+        font-size: 20px;
     }
 }
 

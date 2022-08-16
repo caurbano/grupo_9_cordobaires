@@ -1,5 +1,6 @@
 
 import { NavLink } from 'react-router-dom'
+import BarChart from '../components/BarChart';
 
 const Statistics = () => {
     return(
@@ -10,12 +11,6 @@ const Statistics = () => {
                     <h3>Total vendidos</h3>
                     <p className="info">Cantidad total:</p>
                     <p className="number">X</p> 
-                </article>
-
-                <article className="s-panels">
-                    <h3>Últimos 5 vendidos</h3>
-                    <p className="info">Producto X</p>
-                    <p className="number">10/08/2022</p>  
                 </article>
 
                 <article className="s-panels">
@@ -31,8 +26,13 @@ const Statistics = () => {
                             <NavLink to={'/'} className='adm-link'>Eliminación</NavLink>
                         </li>
                     </ul>
-                    
                 </article>
+            </section>
+            <section>
+                <article className="s-body">
+                    <BarChart />
+                </article>
+
             </section>
         </div>
     )

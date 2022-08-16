@@ -49,7 +49,12 @@ const apiController = {
                 ],
                 group: 'category',
             });
-
+            let objCategory = {}
+            categoryList.forEach(element => {
+                console.log(element.dataValues);
+                objCategory[element.category] = element.dataValues.cant;
+            });
+            
             const productsList = await db.Product.findAll({
                 attributes:['id', 'name', 'description', 'category'],
                 include: ['images']
@@ -57,13 +62,13 @@ const apiController = {
 
             let data = {
                 count : productsList.length,
-                countByCategory: categoryList,
+                countByCategory: objCategory,
                 products : productsList.map(product => { 
                     return { 
                         id: product.id,
                         name: product.name,
                         description: product.description,
-                        img: product.images[0],
+                        img: product.images[0].url,
                         detail: '/api/products/'+ product.id,
                     }
                 }),

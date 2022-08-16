@@ -75,6 +75,37 @@
   }
 }
 
+.lineChart {
+  border: 1px solid lightgray;
+  height: 320px;
+  width: 550px;
+  margin: 20px 25px;
+  padding: 10px;
+ 
+  // .barTitle {
+  //   color: brown;
+  //   font-size: 20px;
+  //   margin-left: 20px;
+  // }
+}
+
+.barChart {
+  border: 1px solid lightgray;
+  height: 320px;
+  width: 550px;
+  margin: 20px 25px;
+  padding: 10px;
+ 
+  .barTitle {
+    color: rgb(45, 5, 156);
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+
 .home {
   .content {
     background-color: rgba(128, 128, 128, 0.075);
@@ -85,13 +116,40 @@
     // overflow-y: auto;
     margin-top: 0px;
     h2 {
-      color: rgb(8, 5, 14);
+      color: rgb(10, 1, 37);
       font-size: 40px;
       font-weight: bold;
     }
     p {
       color: gray;
       font-size: 18px;
+    }
+  }
+  .body {
+    h3 {
+    color: rgb(45, 5, 156);
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 25px;
+    }
+    p {
+      font-size: 18px;
+      margin-left: 25px;
+    }
+  }
+  .report {
+    button {
+      background-color: rgb(23, 3, 83);
+      border-radius: 10px;
+      color:white;
+      font-size: 17px;
+      margin-left: 250px;
+      margin-top: 15px;
+      padding: 7px 10px;
+      transition: ease 0.3;
+    }
+    button:hover {
+      background-color: rgba(23, 3, 83, 0.842);
     }
   }
 }
@@ -104,7 +162,7 @@
       font-weight: bold;
       margin: 20px;
   }
-  .sale-panels {
+  .products-panels {
     display: flex;
     justify-content: space-around;
     .p-panels {
@@ -129,19 +187,41 @@
 
       }
       .number {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 34px;
         font-weight: bold;
         margin-top: 5px;
         text-align: center;
       }
       .adm-link {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 25px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
       }
+    }
+  }
+  .products-info {
+    border: 1px solid lightgray;
+    margin: 30px 50px;
+    padding: 20px;
+    width: 400px;
+    h3 {
+    color: rgb(45, 5, 156);
+    font-size: 22px;
+    font-weight: bold;
+    // margin: 15px 25px;
+    }
+    h4 {
+    color: rgb(25, 24, 24);
+    font-size: 22px;
+    font-weight: bold;
+    }
+    img {
+      height: 150px;
+      width: 185px;
+      margin-left: 85px;
     }
   }
 }
@@ -153,7 +233,7 @@
       font-weight: bold;
       margin: 20px;
   }
-  .user-panels {
+  .users-panels {
     display: flex;
     justify-content: space-around;
     .u-panels {
@@ -177,19 +257,41 @@
 
       }
       .number {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 34px;
         font-weight: bold;
         margin-top: 5px;
         text-align: center;
       }
       .adm-link {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 25px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
       }
+    }
+  }
+  .users-info {
+    border: 1px solid lightgray;
+    margin: 30px 50px;
+    padding: 20px;
+    width: 400px;
+    h3 {
+    color: rgb(45, 5, 156);
+    font-size: 22px;
+    font-weight: bold;
+    // margin: 15px 25px;
+    }
+    h4 {
+    color: rgb(25, 24, 24);
+    font-size: 22px;
+    font-weight: bold;
+    }
+    img {
+      height: 150px;
+      width: 150px;
+      margin-left: 95px;
     }
   }
 }
@@ -232,26 +334,53 @@
       }
       .cant {
         font-size: 15px;
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-weight: bold;
         margin-top: 1px;
         padding-left: 2px;
       }
       .adm-link {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 25px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
       }
       .number {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 34px;
         font-weight: bold;
         margin-top: 5px;
         text-align: center;
       }
     }
+  }
+  .cat-info {
+    border: 1px solid lightgray;
+    margin: 30px 50px;
+    padding: 20px;
+    width: 400px;
+    h3 {
+    color: rgb(45, 5, 156);
+    font-size: 22px;
+    font-weight: bold;
+    // margin: 15px 25px;
+    }
+    button {
+      background-color: rgb(23, 3, 83);
+      border-radius: 10px;
+      color:white;
+      font-size: 17px;
+      margin-left: 80px;
+      margin-top: 15px;
+      padding: 7px 20px;
+      width: 200px;
+      transition: ease 0.3;
+    }
+    button:hover {
+      background-color: rgba(23, 3, 83, 0.842);
+    }
+  
   }
 }
 
@@ -285,7 +414,7 @@
         margin-top: 5px;
       }
       .number {
-        color: limegreen;
+        color: rgb(73, 61, 177);
         font-size: 34px;
         font-weight: bold;
         margin-top: 5px;
@@ -300,7 +429,7 @@
         list-style: none;
         margin-top: 5px;
         .adm-link {
-          color: limegreen;
+          color: rgb(73, 61, 177);
           font-size: 20px;
           font-weight: bold;
           text-decoration: none;

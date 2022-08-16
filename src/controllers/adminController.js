@@ -305,28 +305,35 @@ const adminController = {
     },
 
     destroy: async (req, res) => {
-        try{
-            let destroyImg = await db.Image.destroy({
+        
+            db.Image.destroy({
                 where:{
-                    id: req.params.id,
+                    product_id: req.params.id,
                 },
                 force: true
             })
-
-            let destroyProduct = await db.Product.destroy({
-                where:{
-                    id: req.params.id,
-                },
-                force: true
-            })
-
-            Promise.all([destroyProduct, destroyImg])
-            .then(function([product, img]){
-                req.session.check = true;
-                res.redirect('/admin/product/result');
-            });
-        }
-        catch(errors){ res.send(errors) }
+            .then(img => {
+                console.log('img: ',img);
+                db.Product.destroy({
+                    where:{
+                        id: req.params.id,
+                    },
+                    force: true
+                })
+                .then( product => {
+                    req.session.check = true;
+                    res.redirect('/admin/product/result');
+                })
+                .catch(errors =>{ 
+                    console.log(errors);
+                    res.redirect('/error');
+                })
+            }) 
+       
+        .catch(errors => { 
+            console.log(errors);
+            res.redirect('/error');
+        })
         
         
     },

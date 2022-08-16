@@ -6,15 +6,12 @@
 }
 
 /* general*/
-/* .main{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-} */
+.main{
+    margin-top: 90px;
+}
 #cart_title{
     text-shadow: 1px 1px white, -2px -1px #E79F00;
     margin-bottom: 30px;
-    margin-top: 30px;
     margin-left: 10%;
     font-size:20px;
 }
@@ -22,11 +19,12 @@
     background-color:white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     /* margin: 0.5% auto; */
 }
 
 .cart_products p {
-    font-size: 14px;
+    font-weight: bold;
 }
 .product{
     width: 20%;
@@ -38,20 +36,23 @@
 .product img{
     width: 100%;
 }
-.product_name{
-    font-size: 14px;
-    width: 20%;
-    text-align: center;
-    display: flex;
-    align-items: center;
+.detail_product_price_lt {
+    color: #665e5e;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: line-through;
 }
-.price{
-    width: 20%;
-    /* margin: 2%; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.detail_product_price_final {
+    color: rgb(15, 165, 15);
+    font-size: 15px;
+    font-weight: bold;
 }
+.detail_product_price {
+    font-size: 13px;
+    font-weight: bold;
+}
+
 .add_delete{
     width: 30%;
     display: flex;
@@ -116,8 +117,21 @@
     @media (min-width: 481px) {
         #cart_title{
             margin-top: 120px;
-           
-    }
+            font-size: 30px;
+        }
+        .detail_product_price_lt {
+            font-size: 15px;
+
+        }
+        .detail_product_price_final {
+            font-size: 17px;
+            text-shadow: 2px 2px 3px darkolivegreen;
+
+
+        }
+        .detail_product_price {
+            font-size: 15px;;
+        }
 }
 
 /*Desktop*/
@@ -127,7 +141,6 @@
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 100px;
         width: 80%;
         background-color: white;
     }
@@ -148,16 +161,6 @@
 
     .cart_products img {
         box-shadow: 3px 3px 6px #666666;
-
-    }
-    .product_name {
-        display: flex;
-        align-items: center;
-
-    }
-    .product_name p{
-        display:flex;
-        padding: 1%;
 
     }
     
@@ -185,13 +188,7 @@
         margin-right: 1px;
         font-size: 20px;
     }
-    .price{
-        width: 10%;
-    }
-    .price p{
-        display: flex;
-        justify-content: center;
-    }
+
     .addProduct{
         width: 20%;
         display: flex;
@@ -229,6 +226,8 @@
         width: 200px;
         font-size: 16px;
         font-weight: bold;
+        transition: all 0.3s ease;
+
     }
     .finish_buy:hover {
         color: white;
