@@ -164,6 +164,7 @@
     
         .product_name {
             font-size: 13px;
+            font-weight: bold;
             margin-top: 5%;
         }
     
@@ -196,5 +197,18 @@
             cursor: pointer;
             padding: 1px;
             margin: 0px;
+        }
+    }
+
+    @media (min-width: 1140px) {
+        .see__dest {
+            border: solid 2px #1f1d1d;
+            height: 308px;
+            width: 17.9%;
+            margin: 2% 1%;
+        }
+        .dest {
+            height: 190px;
+            width: 100%;
         }
     }

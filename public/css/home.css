@@ -159,7 +159,6 @@
 }
 
 /* Productos destacados */
-/* La idea es que posteriormente esta parte sea un carrousel */
 .see {
     background-color: #918c8c1e;
     height: 120px;
@@ -196,6 +195,7 @@
     height: 88px;
     width: 100%;
     margin-bottom: 2px;
+    z-index: 0;
 }
 .see__dest a {
     color: black;
@@ -343,10 +343,12 @@
         .none {
             display: none;
         }
-        .shop__top:hover h3 {
-            color: #E79F00;
+        .shop__top:hover h3,
+        .shop__wall:hover h3,
+        .shop__floor:hover h3 {
+            color: #e79e00;
             cursor: pointer;
-            font-size: 30px;
+            font-size: 28px;
             z-index: 1;
         }
         .wall-floor {
@@ -364,12 +366,7 @@
             opacity: 0.8;
             box-shadow: 3px 3px 6px #666666;
         }
-        .shop__wall:hover h3 {
-            color: #E79F00;
-            cursor: pointer;
-            font-size: 30px;
-            z-index: 1;
-        }
+        
         .shop__floor {
             height: 280px;
         }
@@ -385,11 +382,8 @@
             opacity: 0.8;
             box-shadow: 3px 3px 6px #666666;
         }
-        .shop__floor:hover h3 {
-            color: #E79F00;
-            cursor: pointer;
-            font-size: 30px;
-            z-index: 1;
+        .img {
+            display: flex;
         }
         
         .info {
@@ -436,19 +430,24 @@
 
         .product_name {
             font-size: 13px;
+            font-weight: bold;
             margin-top: 5%;
         }
-        
-        /* .dest_b {
+        .img {
+            display: flex;
+        }
+        .dest_b {
             border-bottom: solid 1px #1f1d1d;
-            height: 88px;
+            height: 190px;
             width: 100%;
             margin-bottom: 2px;
-            display: none;
+            object-fit: fill;
+            /* /* z-index: 0; */
         }
-        .show {
-            display: block;
-        } */
+        .none {
+            display: none;
+
+        }
     
         /* Productos destacados */
         .see_price_lt {
