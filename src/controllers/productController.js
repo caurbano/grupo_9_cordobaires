@@ -88,10 +88,11 @@ module.exports = productController = {
         })
         .then(products => {
             res.render('./products/categories', { 
-                id: 'productList', 
+                id: 'categories', 
                 category: req.body.search,
-                title: 'LUMEN - Galería ', 
-                products: products 
+                title: 'LUMEN - Búsqueda ', 
+                products: products,
+                search: 1
             });
         })
         .catch(error => res.send(error));

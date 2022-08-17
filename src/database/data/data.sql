@@ -101,6 +101,6 @@ INSERT INTO users VALUES
 (DEFAULT, "Usuario1", "Prueba", 0, "prueba@lumenshop.com", "$2a$10$oaltQbokfqZrSRhAMiYjbOe7HbGgQ7Asz2eDJkAOLuchpuHQyMdXC", "987654321", "default.jpg" , NOW(), NOW(), 1),
 (DEFAULT, "Usuario2", "Prueba", 0, "usuario2@lumenshop.com", "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq", "456789123", "default.jpg" , NOW(), NOW(), 1),
 (DEFAULT, "Usuario3", "Prueba", 0, "usuario3@lumenshop.com", "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq", "456789123", "default.jpg" , NOW(), NOW(), 1),
-(DEFAULT, "Usuario4", "Prueba", 0, "usuario4@lumenshop.com", "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq", "456789123", "default.jpg" , NOW(), NOW(), 1),
+(DEFAULT, "Usuario4", "Prueba", 0, "usuario4@lumenshop.com", "$2a$10$Lqr/Wgo7c6.i1o7rgOtW5Oqsu9ONXUBoyQ2pmBtap7scmaX2.jgkq", "456789123", "default.jpg" , NOW(), NOW(), 1);
 
 -- id / first_name / last_name / admin / email / password / phone / img / create_at / update_at

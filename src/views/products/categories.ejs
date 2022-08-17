@@ -8,11 +8,21 @@
     <%- include('../partials/header') %>
     <section class="categories">
         <section class="category">
+            <% if(locals.search) { %>
+            <p><a href="/">INICIO</a></p>
+            <% } else { %>
             <p><a href="/">INICIO</a> > <%= category %> </p>
+            <% } %>
         </section>
 
         <section class="products">
+            <% if(locals.search) { %>
+            <h2>Resultados de su búsqueda</h2>
+            <p class="rel">Productos relacionados con: <b> <%= category.toLowerCase() %> </b></p>
+            <% } else { %>
             <h2>Lámparas de <%= category.toLowerCase() %></h2>
+            <% } %>
+
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">
@@ -35,6 +45,7 @@
                                        <strong>$<%= products[i].price %></strong>
                                     </p>
                                 <% } %>
+                                
                             </p>
                         </a>
 

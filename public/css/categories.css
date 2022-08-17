@@ -12,7 +12,7 @@
 .category {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 90px;
 }
 
 .category p {
@@ -28,6 +28,7 @@
 /* Productos */
 .products {
     width: 100%;
+    margin-top: -5px;
 }
 .products h2 {
     font-size: 20px;
@@ -37,6 +38,9 @@
     margin-bottom: 3px;
     padding-top: 15px;
     text-shadow: 1px 1px white, -2px -1px #E79F00;
+}
+.rel {
+    padding: 40px 0px 0px 40px;
 }
 .admin_options {
     background-color: #e79e003b;
@@ -58,7 +62,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 6% 0%;
+    padding: 20x 0px;
     width: 100%;
 }
 
@@ -133,6 +137,9 @@
             top: 45px;
             left: 40px;
             width: 50%;
+        }
+        .rel {
+            padding: 60px 0px 10px 40px;
         }
         .admin_options {
             margin-left: 40px;

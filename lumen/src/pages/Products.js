@@ -36,7 +36,7 @@ const Products = () => {
                 <article className="p-panels">
                     <h3>Listado</h3> 
                     <p className="info">Ir al listado completo:</p>
-                    <NavLink to={'/http:localhost:3030/product/gallery'} className='adm-link'>Lista</NavLink>
+                    <NavLink to={'/productlist'} className='adm-link'>Lista</NavLink>
                 </article>
             </section>
 
