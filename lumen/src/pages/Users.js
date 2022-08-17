@@ -44,8 +44,7 @@ const Users = () => {
                 <article className="p-info">
                         <h3>Último usuario creado</h3>
                         <h4>{ usersList.users[usersList.count - 1].name }</h4>
-                        <p className="number">15/08/2022</p>
-                        <img src='user.jpg' alt='Último producto'/>  
+                        <img src={ 'img/users/' + usersList.users[usersList.count - 1].img } alt='Último producto'/>  
                 </article>
             </section>
             }
