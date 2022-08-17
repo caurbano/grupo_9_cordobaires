@@ -45,7 +45,19 @@ const Products = () => {
                 <article className="p-info">
                         <h3>Último producto creado</h3>
                         <h4>{ productsList.products[productsList.count - 1].name }</h4>
-                        <img src={'img/products/'+ productsList.products[productsList.count - 1].img}  alt='Último producto'/>  
+                        <img src={'img/products/'+ productsList.products[productsList.count - 1].img}  alt='Último producto'/>
+                        <button>Ver detalle</button>  
+                </article>
+                
+                <article className="p-info">
+                        <h4>{ productsList.products[productsList.count - 1].name }</h4>
+                        <p> ID: { productsList.products[productsList.count - 1].id }</p>
+                        <p> Lámpara de { productsList.products[productsList.count - 1].category }</p>
+                        <p> { productsList.products[productsList.count - 1].description }</p>
+                        {/* VER INFO DISPONIBLE */}
+                        <p> ${ productsList.products[productsList.count - 1].price }</p>
+                        <p> Stock disponible: { productsList.products[productsList.count - 1].stock }</p>
+                        <p> Color: { productsList.products[productsList.count - 1].color }</p>
                 </article>
             </section>
             }
