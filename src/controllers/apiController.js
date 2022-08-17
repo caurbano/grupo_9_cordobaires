@@ -51,7 +51,6 @@ const apiController = {
             });
             let objCategory = {}
             categoryList.forEach(element => {
-                console.log(element.dataValues);
                 objCategory[element.category] = element.dataValues.cant;
             });
             

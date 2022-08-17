@@ -45,8 +45,7 @@ const Products = () => {
                 <article className="p-info">
                         <h3>Último producto creado</h3>
                         <h4>{ productsList.products[productsList.count - 1].name }</h4>
-                        <p className="number">10/08/2022</p>
-                        <img src='lastProduct.jpg' alt='Último producto'/>  
+                        <img src={'img/products/'+ productsList.products[productsList.count - 1].img}  alt='Último producto'/>  
                 </article>
             </section>
             }
