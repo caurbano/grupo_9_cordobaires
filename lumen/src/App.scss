@@ -248,6 +248,25 @@
   }
 }
 
+.p-list {
+  h2 {
+    color: rgb(8, 5, 14);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  ol {
+    list-style: decimal-leading-zero;
+  }
+}
+
+.p-items {
+  li {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+}
+
 .users {
   h2 {
       color: rgb(8, 5, 14);
@@ -335,6 +354,9 @@
     }
     button:hover {
       background-color: rgba(23, 3, 83, 0.842);
+    }
+    p {
+      line-height: 22px;
     }
   }
 }

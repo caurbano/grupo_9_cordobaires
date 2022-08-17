@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import Product from '../components/Product';
+import User from '../components/User';
 
-const ProductList = () => {
+// ARMAR LISTADO DE USUARIOS
+const UserList = () => {
     const [productsList, setProductsList] = useState({});
     
     useEffect(() => {
@@ -18,13 +19,13 @@ const ProductList = () => {
     }, []);
     return(
         <div className='p-list'>
-            <h2>Lista de productos</h2>
+            <h2>Lista de usuarios</h2>
             <ol>
                 { productsList && productsList.products && productsList.products.map(element => 
-                <Product url = { 'http://localhost:3030' + element.detail } />)}
+                <User url = { 'http://localhost:3030' + element.detail } />)}
             </ol>
         </div>
     )
 }
 
-export default ProductList;
+export default UserList;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-
-const Product = ({url}) => {
+// ARMAR USUARIO
+const User = ({url}) => {
     const [product, setProduct] = useState({});
     
     useEffect(() => {
@@ -26,4 +26,4 @@ const Product = ({url}) => {
     )
 }
 
-export default Product;
+export default User;

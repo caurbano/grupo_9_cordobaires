@@ -7,6 +7,7 @@ import Users from './pages/Users';
 import Categories from './pages/Categories';
 import Statistics from './pages/Statistics';
 import ProductList from './pages/ProductList';
+import UserList from './pages/UserList';
 import './App.scss';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/categories' exact={true} element={<Categories/>}/>
           <Route path='/statistics' exact={true} element={<Statistics/>}/>
           <Route path='/productlist' exact={true} element={<ProductList/>}/>
+          <Route path='/userlist' exact={true} element={<UserList/>}/>
         </Routes>
       </div>
       </div>
