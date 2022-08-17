@@ -210,7 +210,7 @@
     border: 1px solid lightgray;
     margin: 30px 50px;
     padding: 20px;
-    width: 380px;
+    width: 360px;
     }
     h3 {
     color: rgb(45, 5, 156);
@@ -295,21 +295,28 @@
     }
   }
   .users-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .u-info {
     border: 1px solid lightgray;
     margin: 30px 50px;
     padding: 20px;
-    width: 380px;
+    width: 360px;
+
+    }
     h3 {
-    color: rgb(45, 5, 156);
-    font-size: 22px;
-    font-weight: bold;
-    // margin: 15px 25px;
-    }
-    h4 {
-    color: rgb(25, 24, 24);
-    font-size: 20px;
-    font-weight: bold;
-    }
+      color: rgb(45, 5, 156);
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      }
+      h4 {
+      color: rgb(25, 24, 24);
+      font-size: 20px;
+      font-weight: bold;
+      }
     img {
       height: 150px;
       width: 150px;

@@ -41,11 +41,18 @@ const Users = () => {
 
             {usersList && usersList.users &&
             <section className="users-info">
-                <article className="p-info">
+                <article className="u-info">
                         <h3>Último usuario creado</h3>
                         <h4>{ usersList.users[usersList.count - 1].name }</h4>
                         <img src={ 'img/users/' + usersList.users[usersList.count - 1].img } alt='Último usuario'/>
                         <button>Ver detalle</button> 
+                </article>
+
+                <article className="u-info">
+                        <h4>{ usersList.users[usersList.count - 1].name }</h4>
+                        <p>{ usersList.users[usersList.count - 1].email }</p>
+                        {/* VER INFO DISPONIBLE */}
+                        <p>{ usersList.users[usersList.count - 1].phone }</p>
                 </article>
             </section>
             }
