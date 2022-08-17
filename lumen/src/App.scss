@@ -203,6 +203,8 @@
   }
   .products-info {
     display: flex;
+    justify-content: center;
+    align-items: center;
     
     .p-info {
     border: 1px solid lightgray;
@@ -214,7 +216,7 @@
     color: rgb(45, 5, 156);
     font-size: 22px;
     font-weight: bold;
-    // margin: 15px 25px;
+    margin-bottom: 15px;
     }
     h4 {
     color: rgb(25, 24, 24);
@@ -222,9 +224,9 @@
     font-weight: bold;
     }
     img {
-      height: 140px;
+      height: 150px;
       width: 170px;
-      margin-left: 85px;
+      margin: 20px 0px 12px 85px;
     }
     button {
       background-color: rgb(23, 3, 83);
@@ -239,6 +241,9 @@
     }
     button:hover {
       background-color: rgba(23, 3, 83, 0.842);
+    }
+    p {
+      line-height: 22px;
     }
   }
 }
@@ -308,7 +313,7 @@
     img {
       height: 150px;
       width: 150px;
-      margin-left: 95px;
+      margin: 20px 0px 12px 95px;;
     }
     button {
       background-color: rgb(23, 3, 83);
