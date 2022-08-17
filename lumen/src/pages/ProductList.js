@@ -8,10 +8,9 @@ const ProductList = () => {
         
         fetch(`http://localhost:3030/api/products`)
         .then(res => res.json())
-        .then(data => {
-            console.log(data);
+        .then(data => 
             setProductsList(data)
-        })
+        )
         .catch(error => 
             console.log(error)
         )
@@ -20,10 +19,10 @@ const ProductList = () => {
     return(
         <div>
             <h2>Lista de productos</h2>
-            {/* {productsList.products[0].name} */}
-            { productsList.products.map((element) => 
-                (<Product url = { 'http://localhost:3030' + element.detail } />)
-            ) }
+            <ul>
+                { productsList && productsList.products && productsList.products.map(element => 
+                <Product url = { 'http://localhost:3030' + element.detail } />)}
+            </ul>
         </div>
     )
 }

@@ -4,7 +4,6 @@ const Product = ({url}) => {
     const [product, setProduct] = useState({});
     
     useEffect(() => {
-        
         fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -17,11 +16,11 @@ const Product = ({url}) => {
             
     }, [url]);
     return(
-        <div>
+        <li key= {product.id}>
             <h2>{ product.name }</h2>
             {/* <p>{ product. }</p>
             <p>{ product. }</p> */}
-        </div>
+        </li>
     )
 }
 
