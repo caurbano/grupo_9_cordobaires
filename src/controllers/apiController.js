@@ -103,7 +103,35 @@ const apiController = {
             return res.status(200).json(data);
         }
         catch(error){ res.send(error) }
-    }
+    },
+
+    // productsPage: async (req, res) => {
+    //     try {
+            
+    //         const productsList = await db.Product.findAll({
+    //             offset: (5 * (req.query.num - 1)), 
+    //             limit: 5,
+    //             attributes:['id', 'name', 'description', 'category'],
+    //             include: ['images']
+    //         });
+
+    //         let data = {
+    //             count : productsList.length,
+    //             products : productsList.map(product => { 
+    //                 return { 
+    //                     id: product.id,
+    //                     name: product.name,
+    //                     description: product.description,
+    //                     img: product.images[0].url,
+    //                     detail: '/api/products/'+ product.id,
+    //                 }
+    //             }),
+    //             status: 200
+    //         };
+    //         return res.status(200).json(data);
+    //     }
+    //     catch(error){ res.send(error) }
+    // }
 
 }
 

@@ -10,7 +10,8 @@ const Products = () => {
         fetch(`http://localhost:3030/api/products`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            localStorage.setItem('countProducts',data.count )
+            //console.log(data);
             setProductsList(data)
         })
         .catch(error => 
@@ -36,7 +37,7 @@ const Products = () => {
                 <article className="p-panels">
                     <h3>Listado</h3> 
                     <p className="info">Ir al listado completo:</p>
-                    <NavLink to={'/productlist'} className='adm-link'>Lista</NavLink>
+                    <NavLink to={`/productlist`} className='adm-link' >Lista</NavLink>
                 </article>
             </section>
 
