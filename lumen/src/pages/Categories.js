@@ -28,32 +28,28 @@ const Categories = () => {
 
                 <article className="c-panels">
                     <h3>Productos por categoría</h3>
-                    <p className="info">Cantidad por cada una:</p>
+                    <p className="info">Cantidad:</p>
                     <div className='flex-div'>
                         <h4>Techo:</h4>
-                        <p className="cant">X productos</p>
+                        <p className="cant">X</p>
                     </div>
 
                     <div className='flex-div'>
                     <h4>Pared:</h4>
-                    <p className="cant">X productos</p>
+                    <p className="cant">X</p>
                     </div>
 
                     <div className='flex-div'>
                     <h4>Pie:</h4>
-                    <p className="cant">X productos</p>
+                    <p className="cant">X</p>
                     </div>
                 </article>
             </section>
-            {/* <section className="graphics">
-                <Doughnut data={data} options={options} />
-            </section> */}
 
             <section className="cat-info">
                 <article>
                     <h3>Listado de productos</h3> 
                     <p className="info">Ver por categoría:</p>
-                    {/* <NavLink to={'/http:localhost:3030/product/gallery'} className='adm-link'>Lista</NavLink> */}
                     <div className="buttons">
                         <button>Lámparas de techo</button>
                         <button>Lámparas de pared</button>

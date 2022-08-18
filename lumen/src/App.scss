@@ -24,39 +24,36 @@
   padding: 1rem 2rem;
   width: 100%;
   .toggler.navbar-toggler {
-    margin-left: 92%;
-    margin-top: -35px;
-    padding: 5px 8px;
+    margin-left: 70%;
+    margin-top: -43px;
+    padding: 4px 6px;
   }
   .dropdown-toggle.nav-link {
-    margin-left: 92%;
+    margin-left: 70%;
+    margin-top: -10px;
+    font-size: 13px;
+
   }
   .dropdown-menu.dropdown-menu-end.show {
-    margin-left: 83%;
-    margin-top: 1px;
-    width: 190px;
-    // .dropdown.show.nav-item {
-    // margin-left: 910px;
-    // }
+    margin-left: 60%;
+    margin-top: -8px;
+    width: 50px;
+    font-size: 12px; 
   }
 }
-
-// .navbar-toggler-icon {
-//   font-size: large;
-// }
 
 .sidebar {
   background-color: rgb(25, 24, 24);
   border-right: 1px solid black;
-  // height: 100%;
-  width: 30%;
+  // height: 120vh;
+  width: 25%;
   .logo {
     background-color: rgb(25, 24, 24);
     display: flex;
     padding: 15px 0px;
   }
   img {
-    width: 80px;
+    width: 72px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -82,36 +79,28 @@
 
 .lineChart {
   border: 1px solid lightgray;
-  height: 320px;
-  width: 550px;
-  margin: 20px 25px;
-  padding: 10px;
- 
-  // .barTitle {
-  //   color: brown;
-  //   font-size: 20px;
-  //   margin-left: 20px;
-  // }
+  width: 245px;
+  margin: 20px 0px;
 }
 
 .barChart {
   border: 1px solid lightgray;
-  height: 320px;
-  width: 550px;
-  margin: 20px 25px;
-  padding: 10px;
+  width: 255px;
+  margin: 20px 2px;
+  padding: 3px;
  
   .barTitle {
     color: rgb(45, 5, 156);
-    font-size: 22px;
+    font-size: 15px;
     font-weight: bold;
-    margin-left: 25px;
+    margin-left: 22px;
     margin-bottom: 10px;
   }
 }
 
 
 .home {
+  height: 100vh;
   .content {
     background-color: rgba(128, 128, 128, 0.075);
     border-bottom: 1px solid rgba(128, 128, 128, 0.658);
@@ -122,39 +111,37 @@
     margin-top: 0px;
     h2 {
       color: rgb(10, 1, 37);
-      font-size: 40px;
+      font-size: 22px;
       font-weight: bold;
     }
     p {
       color: gray;
-      font-size: 18px;
+      font-size: 15px;
     }
   }
   .body {
     h3 {
     color: rgb(45, 5, 156);
-    font-size: 22px;
+    font-size: 15px;
     font-weight: bold;
-    margin: 15px 25px;
+    margin: 15px 2px;
     }
     p {
-      font-size: 18px;
-      margin-left: 25px;
+      font-size: 13px;
+      margin-left: 1px;
     }
   }
+
   .report {
     button {
       background-color: rgb(23, 3, 83);
       border-radius: 10px;
       color:white;
-      font-size: 17px;
-      margin-left: 250px;
-      margin-top: 15px;
-      padding: 7px 14px;
-      transition: ease 0.3;
-    }
-    button:hover {
-      background-color: rgba(23, 3, 83, 0.842);
+      font-size: 13px;
+      margin-left: 50px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      padding: 3px 12px;
     }
   }
 }
@@ -163,43 +150,39 @@
 .products {
   h2 {
       color: rgb(8, 5, 14);
-      font-size: 40px;
+      font-size: 22px;
       font-weight: bold;
       margin: 20px;
   }
   .products-panels {
     display: flex;
     justify-content: space-around;
+    width: 255px;
     .p-panels {
       border: 1px solid gray;
       border-radius: 5px;
-      box-shadow: 4px 4px 4px gray;
       display: flex;
       flex-direction: column;
       margin: 5px 0px;
-      padding: 12px;
-      height: 180px;
-      width: 270px;
+      padding: 5px;
+      height: 140px;
+      width: 105px;
       h3 {
         color: gray;
-        font-size: 22px;
-        margin-top: 5px;
+        font-size: 15px;
       }
       .info {
-        font-size: 18px;
-        margin-top: 5px;
-
+        font-size: 14px;
       }
       .number {
         color: rgb(73, 61, 177);
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold;
-        margin-top: 5px;
         text-align: center;
       }
       .adm-link {
         color: rgb(73, 61, 177);
-        font-size: 25px;
+        font-size: 18px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -208,47 +191,42 @@
   }
   .products-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     
     .p-info {
     border: 1px solid lightgray;
-    margin: 30px 50px;
+    margin: 20px 8px;
     padding: 20px;
-    width: 360px;
+    width: 240px;
     }
     h3 {
     color: rgb(45, 5, 156);
-    font-size: 22px;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 15px;
     }
     h4 {
     color: rgb(25, 24, 24);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     }
     img {
-      height: 150px;
-      width: 170px;
-      margin: 20px 0px 12px 85px;
+      height: 90px;
+      width: 100px;
+      margin: 15px 0px 5px 50px;
     }
     button {
       background-color: rgb(23, 3, 83);
       border-radius: 10px;
       color:white;
       display: flex;
-      font-size: 14px;
-      margin-left: 125px;
-      margin-top: 12px;
-      padding: 5px 14px;
-      transition: ease 0.3;
-    }
-    button:hover {
-      background-color: rgba(23, 3, 83, 0.842);
+      font-size: 13px;
+      margin-left: 55px;
+      margin-top: 10px;
+      padding: 2px 12px;
     }
     p {
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -256,7 +234,7 @@
 .p-list {
   h2 {
     color: rgb(8, 5, 14);
-    font-size: 40px;
+    font-size: 22px;
     font-weight: bold;
     margin: 20px;
   }
@@ -267,51 +245,49 @@
 
 .p-items {
   li {
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 20px;
   }
 }
 
 .users {
+  height: 100vh;
+
   h2 {
       color: rgb(8, 5, 14);
-      font-size: 40px;
+      font-size: 22px;
       font-weight: bold;
       margin: 20px;
   }
   .users-panels {
     display: flex;
     justify-content: space-around;
+    width: 255px;
     .u-panels {
       border: 1px solid gray;
       border-radius: 5px;
-      box-shadow: 4px 4px 4px gray;
       display: flex;
       flex-direction: column;
       margin: 5px 0px;
-      padding: 12px;
-      height: 180px;
-      width: 270px;
+      padding: 5px;
+      height: 140px;
+      width: 105px;
       h3 {
         color: gray;
-        font-size: 22px;
-        margin-top: 5px;
+        font-size: 15px;
       }
       .info {
-        font-size: 18px;
-        margin-top: 5px;
-
+        font-size: 14px;
       }
       .number {
         color: rgb(73, 61, 177);
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold;
-        margin-top: 5px;
         text-align: center;
       }
       .adm-link {
         color: rgb(73, 61, 177);
-        font-size: 25px;
+        font-size: 18px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -320,45 +296,39 @@
   }
   .users-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
     .u-info {
-    border: 1px solid lightgray;
-    margin: 30px 50px;
-    padding: 20px;
-    width: 360px;
-
+      border: 1px solid lightgray;
+      margin: 20px 8px;
+      padding: 20px;
+      width: 240px;
     }
     h3 {
       color: rgb(45, 5, 156);
-      font-size: 22px;
+      font-size: 15px;
       font-weight: bold;
-      margin-bottom: 15px;
       }
       h4 {
-      color: rgb(25, 24, 24);
-      font-size: 20px;
-      font-weight: bold;
+        color: rgb(25, 24, 24);
+        font-size: 16px;
+        font-weight: bold;
       }
     img {
-      height: 150px;
-      width: 150px;
-      margin: 20px 0px 12px 95px;;
+      height: 100px;
+      width: 100px;
+      margin: 15px 0px 5px 45px;
+
     }
     button {
       background-color: rgb(23, 3, 83);
       border-radius: 10px;
       color:white;
       display: flex;
-      font-size: 14px;
-      margin-left: 125px;
-      margin-top: 12px;
-      padding: 5px 14px;
-      transition: ease 0.3;
-    }
-    button:hover {
-      background-color: rgba(23, 3, 83, 0.842);
+      font-size: 13px;
+      margin-left: 50px;
+      margin-top: 10px;
+      padding: 2px 12px;
     }
     p {
       line-height: 22px;
@@ -367,127 +337,113 @@
 }
 
 .categories {
+  height: 100vh;
+
   h2 {
       color: rgb(8, 5, 14);
-      font-size: 40px;
+      font-size: 22px;
       font-weight: bold;
       margin: 20px;
   }
   .cat-panels {
     display: flex;
     justify-content: space-around;
+    width: 255px;
     .c-panels {
       border: 1px solid gray;
       border-radius: 5px;
-      box-shadow: 4px 4px 4px gray;
       display: flex;
       flex-direction: column;
       margin: 5px 0px;
-      padding: 12px;
-      height: 180px;
-      width: 270px;
+      padding: 5px;
+      height: 140px;
+      width: 105px;
       h3 {
         color: gray;
-        font-size: 22px;
-        margin-top: 5px;
+        font-size: 15px;
       }
       .info {
-        font-size: 18px;
-        // margin-top: 5px;
+        font-size: 14px;
       }
       .flex-div {
         display: flex;
       }
       h4 {
-        font-size: 16px;
-        margin-top: -6px;
+        font-size: 14px;
+        margin-top: -14px;
+        line-height: 5px;
       }
       .cant {
-        font-size: 15px;
+        font-size: 12px;
         color: rgb(73, 61, 177);
         font-weight: bold;
-        margin-top: -7px;
+        margin-top: -18px;
         padding-left: 2px;
-      }
-      .adm-link {
-        color: rgb(73, 61, 177);
-        font-size: 25px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
       }
       .number {
         color: rgb(73, 61, 177);
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold;
-        margin-top: 5px;
         text-align: center;
       }
     }
   }
   .cat-info {
     border: 1px solid lightgray;
-    margin: 30px 50px;
-    padding: 20px;
-    width: 400px;
+      margin: 20px 8px;
+      padding: 20px;
+      width: 240px;
     h3 {
-    color: rgb(45, 5, 156);
-    font-size: 22px;
-    font-weight: bold;
+      color: rgb(45, 5, 156);
+      font-size: 15px;
+      font-weight: bold;
     // margin: 15px 25px;
     }
     button {
       background-color: rgb(23, 3, 83);
       border-radius: 10px;
       color:white;
-      font-size: 17px;
-      margin-left: 80px;
-      margin-top: 15px;
-      padding: 7px 20px;
-      width: 200px;
-      transition: ease 0.3;
+      font-size: 13px;
+      margin-left: 22px;
+      margin-top: 8px;
+      padding: 3px;
+      width: 150px;
     }
-    button:hover {
-      background-color: rgba(23, 3, 83, 0.842);
-    }
-  
   }
 }
 
 .statistics {
+  height: 100vh;
   h2 {
       color: rgb(8, 5, 14);
-      font-size: 40px;
+      font-size: 22px;
       font-weight: bold;
       margin: 20px;
   }
   .statis-panels {
     display: flex;
     justify-content: space-around;
+    width: 255px;
     .s-panels {
       border: 1px solid gray;
       border-radius: 5px;
-      box-shadow: 4px 4px 4px gray;
       display: flex;
       flex-direction: column;
       margin: 5px 0px;
-      padding: 12px;
-      height: 180px;
-      width: 270px;
+      padding: 5px;
+      height: 140px;
+      width: 105px;
       h3 {
         color: gray;
-        font-size: 22px;
-        margin-top: 5px;
+        font-size: 15px;
       }
       .info {
-        font-size: 18px;
-        margin-top: 5px;
+        font-size: 14px;
       }
       .number {
         color: rgb(73, 61, 177);
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold;
-        margin-top: 5px;
         text-align: center;
       }
       .link {
@@ -495,17 +451,20 @@
         margin-top: 5px;
         text-align: center;
       }
-      li {
-        list-style: none;
-        margin-top: 5px;
-        .adm-link {
-          color: rgb(73, 61, 177);
-          font-size: 20px;
-          font-weight: bold;
-          text-decoration: none;
+      ul {
+        margin-left: -32px;
+        li {
+          list-style: none;
+          margin-top: 1px;
+          .adm-link {
+            color: rgb(73, 61, 177);
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+          }
         }
       }
-      
     }
   }
 }
@@ -515,15 +474,269 @@
 
 /* TABLET */
 @media (min-width: 481px) {
+  .navbar {
+    .toggler.navbar-toggler {
+      margin-left: 80%;
+    }
+    .dropdown-toggle.nav-link {
+      margin-left: 80%;  
+    }
+    .dropdown-menu.dropdown-menu-end.show {
+      margin-left: 70%;
+    }
+  }
   
+  .lineChart {
+    width: 345px;
+  }
+  
+  .barChart {
+    width: 355px;
+   
+    .barTitle {
+      font-size: 16px;
+      margin-left: 30px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  .home {
+    height: 100vh;
+    .content {
+      height: 125px;
+      margin-top: 0px;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .body {
+      h3 {
+      color: rgb(45, 5, 156);
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 2px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  
+    .report {
+      button {
+        font-size: 14px;
+        margin-left: 100px;
+      }
+    }
+  }
+  
+  
+  .products {
+    h2 {
+        font-size: 26px;
+    }
+    .products-panels {
+      width: 355px;
+      .p-panels {
+        padding: 8px;
+        height: 160px;
+        width: 135px;
+        h3 {
+          font-size: 16px;
+        }
+        .info {
+          font-size: 14px;
+        }
+        .number {
+          font-size: 22px;
+        }
+        .adm-link {
+          font-size: 20px;
+        }
+      }
+    }
+    .products-info {
+      .p-info {
+      margin: 20px 22px;
+      width: 310px;
+      }
+      h3 {
+      font-size: 16px;
+      }
+      h4 {
+      font-size: 18px;
+      }
+      img {
+        height: 120px;
+        width: 130px;
+        margin: 15px 0px 5px 70px;
+      }
+      button {
+        font-size: 14px;
+        margin-left: 90px;
+      }
+    }
+  }
+  
+  .p-list {
+    h2 {
+      color: rgb(8, 5, 14);
+      font-size: 22px;
+      font-weight: bold;
+      margin: 20px;
+    }
+    ol {
+      list-style: decimal-leading-zero;
+    }
+  }
+  
+  .p-items {
+    li {
+      font-size: 13px;
+      margin-left: 20px;
+    }
+  }
+  
+  .users {
+    height: 100vh;
+  
+    h2 {
+      font-size: 26px;
+    }
+    .users-panels {
+      width: 355px;
+      .u-panels {
+        padding: 8px;
+        height: 160px;
+        width: 135px;
+        h3 {
+          font-size: 16px;
+        }
+        .info {
+          font-size: 14px;
+        }
+        .number {
+          font-size: 22px;
+        }
+        .adm-link {
+          font-size: 20px;
+        }
+      }
+    }
+    .users-info {
+      display: flex;
+      flex-direction: column;
+  
+      .u-info {
+        margin: 20px 22px;
+        width: 310px;
+      }
+      h3 {
+        font-size: 16px;
+        }
+        h4 {
+        font-size: 18px;
+        }
+      img {
+        height: 100px;
+        width: 100px;
+        margin: 15px 0px 5px 45px
+      }
+      button {
+        font-size: 14px;
+        margin-left: 80px;
+      }
+    }
+  }
+  
+  .categories {
+    height: 100vh;
+  
+    h2 {
+      font-size: 26px;
+    }
+    .cat-panels {
+      width: 355px;
+      .c-panels {
+        padding: 8px;
+        height: 160px;
+        width: 135px;
+        h3 {
+          font-size: 16px;
+        }
+
+        .flex-div {
+          display: flex;
+        }
+        h4 {
+          font-size: 15px;
+          margin-top: -10px;
+          line-height: 8px;
+        }
+        .cant {
+          font-size: 14px;
+          margin-top: -16px;
+          padding-left: 4px;
+        }
+        .number {
+          font-size: 22px;
+        }
+      }
+    }
+    .cat-info {
+      margin: 20px 22px;
+      width: 310px;
+      h3 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 14px;
+        margin-left: 60px;
+        margin-top: 12px;
+        padding: 4px;
+        width: 155px;
+      }
+    }
+  }
+  
+  .statistics {
+    height: 100vh;
+    h2 {
+      font-size: 26px;
+
+    }
+    .statis-panels {
+      width: 355px;
+      .s-panels {
+        padding: 8px;
+        height: 160px;
+        width: 135px;
+        h3 {
+          font-size: 16px;
+        }
+        .info {
+          font-size: 14px;
+        }
+        .number {
+          font-size: 22px;
+        }
+        .link {
+          font-size: 15px;
+          margin-top: 5px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
+
 /* DESKTOP */
 @media (min-width: 769px) {
 
 .navbar {
-  background-color: rgba(128, 128, 128, 0.185);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.658);
-  // display: flex;
   height: 95px;
   padding: 1rem 2rem;
   width: 100%;
@@ -539,33 +752,12 @@
     margin-left: 83%;
     margin-top: 1px;
     width: 190px;
-    // .dropdown.show.nav-item {
-    // margin-left: 910px;
-    // }
   }
 }
 
-
-
-// .navbar-toggler-icon {
-//   font-size: large;
-// }
-
 .sidebar {
-  background-color: rgb(25, 24, 24);
-
-  border-right: 1px solid black;
-  // height: 100%;
-  width: 25%;
-  .logo {
-    background-color: rgb(25, 24, 24);
-    display: flex;
-    padding: 15px 0px;
-  }
   img {
     width: 125px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .mobile {
     display: none;
@@ -576,30 +768,19 @@
 }
 
 .lineChart {
-  border: 1px solid lightgray;
   height: 320px;
   width: 550px;
   margin: 20px 25px;
   padding: 10px;
- 
-  // .barTitle {
-  //   color: brown;
-  //   font-size: 20px;
-  //   margin-left: 20px;
-  // }
 }
 
 .barChart {
-  border: 1px solid lightgray;
-  height: 320px;
   width: 550px;
-  margin: 20px 25px;
+  margin: 50px 25px;
   padding: 10px;
  
   .barTitle {
-    color: rgb(45, 5, 156);
     font-size: 22px;
-    font-weight: bold;
     margin-left: 25px;
     margin-bottom: 10px;
   }
@@ -608,28 +789,17 @@
 
 .home {
   .content {
-    background-color: rgba(128, 128, 128, 0.075);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.658);
-    display: flex;
-    align-items: center;
     height: 130px;
-    // overflow-y: auto;
-    margin-top: 0px;
     h2 {
-      color: rgb(10, 1, 37);
       font-size: 40px;
-      font-weight: bold;
     }
     p {
-      color: gray;
       font-size: 18px;
     }
   }
   .body {
     h3 {
-    color: rgb(45, 5, 156);
     font-size: 22px;
-    font-weight: bold;
     margin: 15px 25px;
     }
     p {
@@ -639,9 +809,6 @@
   }
   .report {
     button {
-      background-color: rgb(23, 3, 83);
-      border-radius: 10px;
-      color:white;
       font-size: 17px;
       margin-left: 250px;
       margin-top: 15px;
@@ -663,78 +830,53 @@
       margin: 20px;
   }
   .products-panels {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
     .p-panels {
-      border: 1px solid gray;
-      border-radius: 5px;
       box-shadow: 4px 4px 4px gray;
-      display: flex;
-      flex-direction: column;
       margin: 5px 0px;
       padding: 12px;
       height: 180px;
-      width: 270px;
+      width: 265px;
       h3 {
-        color: gray;
         font-size: 22px;
         margin-top: 5px;
       }
       .info {
         font-size: 18px;
         margin-top: 5px;
-
       }
       .number {
-        color: rgb(73, 61, 177);
         font-size: 30px;
-        font-weight: bold;
         margin-top: 5px;
-        text-align: center;
       }
       .adm-link {
-        color: rgb(73, 61, 177);
         font-size: 25px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
       }
     }
   }
   .products-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     
     .p-info {
-    border: 1px solid lightgray;
     margin: 30px 50px;
     padding: 20px;
     width: 360px;
     }
     h3 {
-    color: rgb(45, 5, 156);
     font-size: 22px;
-    font-weight: bold;
     margin-bottom: 15px;
     }
     h4 {
-    color: rgb(25, 24, 24);
     font-size: 20px;
-    font-weight: bold;
     }
     img {
       height: 150px;
       width: 170px;
-      margin: 20px 0px 12px 85px;
+      margin: 20px 0px 12px 75px;
     }
     button {
-      background-color: rgb(23, 3, 83);
-      border-radius: 10px;
-      color:white;
-      display: flex;
       font-size: 14px;
-      margin-left: 125px;
+      margin-left: 115px;
       margin-top: 12px;
       padding: 5px 14px;
       transition: ease 0.3;
@@ -750,16 +892,10 @@
 
 .p-list {
   h2 {
-    color: rgb(8, 5, 14);
     font-size: 40px;
-    font-weight: bold;
     margin: 20px;
   }
-  ol {
-    list-style: decimal-leading-zero;
-  }
 }
-
 .p-items {
   li {
     font-size: 15px;
@@ -769,72 +905,48 @@
 
 .users {
   h2 {
-      color: rgb(8, 5, 14);
       font-size: 40px;
-      font-weight: bold;
       margin: 20px;
   }
   .users-panels {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
     .u-panels {
-      border: 1px solid gray;
-      border-radius: 5px;
       box-shadow: 4px 4px 4px gray;
-      display: flex;
-      flex-direction: column;
       margin: 5px 0px;
       padding: 12px;
       height: 180px;
-      width: 270px;
+      width: 265px;
       h3 {
-        color: gray;
         font-size: 22px;
         margin-top: 5px;
       }
       .info {
         font-size: 18px;
         margin-top: 5px;
-
       }
       .number {
-        color: rgb(73, 61, 177);
         font-size: 30px;
-        font-weight: bold;
         margin-top: 5px;
-        text-align: center;
       }
       .adm-link {
-        color: rgb(73, 61, 177);
         font-size: 25px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
       }
     }
   }
   .users-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
 
     .u-info {
-    border: 1px solid lightgray;
     margin: 30px 50px;
     padding: 20px;
     width: 360px;
-
     }
     h3 {
-      color: rgb(45, 5, 156);
       font-size: 22px;
-      font-weight: bold;
       margin-bottom: 15px;
       }
       h4 {
-      color: rgb(25, 24, 24);
       font-size: 20px;
-      font-weight: bold;
       }
     img {
       height: 150px;
@@ -842,12 +954,8 @@
       margin: 20px 0px 12px 95px;;
     }
     button {
-      background-color: rgb(23, 3, 83);
-      border-radius: 10px;
-      color:white;
-      display: flex;
       font-size: 14px;
-      margin-left: 125px;
+      margin-left: 115px;
       margin-top: 12px;
       padding: 5px 14px;
       transition: ease 0.3;
@@ -863,78 +971,47 @@
 
 .categories {
   h2 {
-      color: rgb(8, 5, 14);
       font-size: 40px;
-      font-weight: bold;
       margin: 20px;
   }
   .cat-panels {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
     .c-panels {
-      border: 1px solid gray;
-      border-radius: 5px;
       box-shadow: 4px 4px 4px gray;
-      display: flex;
-      flex-direction: column;
       margin: 5px 0px;
       padding: 12px;
       height: 180px;
-      width: 270px;
+      width: 265px;
       h3 {
-        color: gray;
         font-size: 22px;
         margin-top: 5px;
       }
       .info {
         font-size: 18px;
-        // margin-top: 5px;
-      }
-      .flex-div {
-        display: flex;
       }
       h4 {
         font-size: 16px;
-        margin-top: -6px;
+        margin-top: -10px;
       }
       .cant {
         font-size: 15px;
-        color: rgb(73, 61, 177);
-        font-weight: bold;
-        margin-top: -7px;
-        padding-left: 2px;
-      }
-      .adm-link {
-        color: rgb(73, 61, 177);
-        font-size: 25px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
+        margin-top: -17px;
       }
       .number {
-        color: rgb(73, 61, 177);
         font-size: 30px;
-        font-weight: bold;
         margin-top: 5px;
-        text-align: center;
       }
     }
   }
   .cat-info {
-    border: 1px solid lightgray;
     margin: 30px 50px;
     padding: 20px;
     width: 400px;
     h3 {
-    color: rgb(45, 5, 156);
     font-size: 22px;
     font-weight: bold;
-    // margin: 15px 25px;
     }
     button {
-      background-color: rgb(23, 3, 83);
-      border-radius: 10px;
-      color:white;
       font-size: 17px;
       margin-left: 80px;
       margin-top: 15px;
@@ -945,32 +1022,25 @@
     button:hover {
       background-color: rgba(23, 3, 83, 0.842);
     }
-  
   }
 }
 
 .statistics {
   h2 {
-      color: rgb(8, 5, 14);
       font-size: 40px;
       font-weight: bold;
       margin: 20px;
   }
   .statis-panels {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+
     .s-panels {
-      border: 1px solid gray;
-      border-radius: 5px;
       box-shadow: 4px 4px 4px gray;
-      display: flex;
-      flex-direction: column;
       margin: 5px 0px;
       padding: 12px;
       height: 180px;
-      width: 270px;
+      width: 265px;
       h3 {
-        color: gray;
         font-size: 22px;
         margin-top: 5px;
       }
@@ -979,28 +1049,13 @@
         margin-top: 5px;
       }
       .number {
-        color: rgb(73, 61, 177);
         font-size: 30px;
-        font-weight: bold;
         margin-top: 5px;
-        text-align: center;
-      }
-      .link {
-        font-size: 15px;
-        margin-top: 5px;
-        text-align: center;
-      }
-      li {
-        list-style: none;
-        margin-top: 5px;
-        .adm-link {
-          color: rgb(73, 61, 177);
-          font-size: 20px;
-          font-weight: bold;
-          text-decoration: none;
-        }
       }
       
+      li {
+        font-size: 22px;
+      }
     }
   }
 }
