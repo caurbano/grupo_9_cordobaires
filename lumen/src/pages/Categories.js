@@ -1,19 +1,5 @@
-import { NavLink } from 'react-router-dom'
-// import { Pie } from 'react-chartjs-2'
-// import { Doughnut } from 'react-chartjs-2';
 
 const Categories = () => {
-    // const data = {
-    //     labels: ['Techo', 'Pared', 'Pie'],
-    //     datasets:[{
-    //         data: [8, 4, 3],
-    //         backgroundColor: ['blue', 'yellow', 'green']
-    //     }]
-    // };
-
-    // const options = {
-    //     responsive: true
-    // }
 
     return(
         <div className="categories">
