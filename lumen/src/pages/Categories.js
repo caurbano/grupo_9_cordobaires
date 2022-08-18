@@ -1,20 +1,6 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom'
-// import { Pie } from 'react-chartjs-2'
-// import { Doughnut } from 'react-chartjs-2';
 
 const Categories = () => {
-    // const data = {
-    //     labels: ['Techo', 'Pared', 'Pie'],
-    //     datasets:[{
-    //         data: [8, 4, 3],
-    //         backgroundColor: ['blue', 'yellow', 'green']
-    //     }]
-    // };
-
-    // const options = {
-    //     responsive: true
-    // }
 
     const [data, setData] = useState({});
     const [cant, setCant] = useState(0);
@@ -62,15 +48,11 @@ const Categories = () => {
                     )}
                 </article>
             </section>
-            {/* <section className="graphics">
-                <Doughnut data={data} options={options} />
-            </section> */}
 
             <section className="cat-info">
                 <article>
                     <h3>Listado de productos</h3> 
                     <p className="info">Ver por categoría:</p>
-                    {/* <NavLink to={'/http:localhost:3030/product/gallery'} className='adm-link'>Lista</NavLink> */}
                     <div className="buttons">
                         <button>Lámparas de techo</button>
                         <button>Lámparas de pared</button>
