@@ -148,6 +148,7 @@
 
 
 .products {
+  height: 100vh;
   h2 {
       color: rgb(8, 5, 14);
       font-size: 22px;
@@ -232,6 +233,8 @@
 }
 
 .p-list {
+  height: 100vh;
+
   h2 {
     color: rgb(8, 5, 14);
     font-size: 22px;
@@ -588,12 +591,13 @@
       font-weight: bold;
       margin: 20px;
     }
-    ol {
+    ul {
       list-style: decimal-leading-zero;
     }
   }
   
   .p-items {
+    border: solid 1px gray;
     li {
       font-size: 13px;
       margin-left: 20px;

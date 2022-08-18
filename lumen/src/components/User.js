@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 // ARMAR USUARIO
 const User = ({url}) => {
-    const [product, setProduct] = useState({});
+    const [user, setUser] = useState({});
     
     useEffect(() => {
         fetch(url)
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            setProduct(data)
+            setUser(data)
         })
         .catch(error => 
             console.log(error)
@@ -17,10 +17,8 @@ const User = ({url}) => {
     }, [url]);
     return(
         <div className='p-items'>
-        <li key= {product.id}>
-            <p>{ product.name }</p>
-            {/* <p>{ product. }</p>
-            <p>{ product. }</p> */}
+        <li key= {user.id}>
+            <p>{ user.first_name }</p>
         </li>
         </div>
     )

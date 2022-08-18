@@ -17,11 +17,11 @@ const Product = ({url}) => {
     }, [url]);
     return(
         <div className='p-items'>
-        <li key= {product.id}>
-            <p>{ product.name }</p>
-            {/* <p>{ product. }</p>
-            <p>{ product. }</p> */}
-        </li>
+            <li key= {product.id}>
+                <p>{ product.name }</p>
+                <p>{ product.description }</p>
+                <img src=  { 'img/products/' + product.images.url[0] } />
+            </li>
         </div>
     )
 }
