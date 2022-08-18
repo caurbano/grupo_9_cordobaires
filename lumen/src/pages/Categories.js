@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom'
 // import { Pie } from 'react-chartjs-2'
 // import { Doughnut } from 'react-chartjs-2';
@@ -15,6 +16,30 @@ const Categories = () => {
     //     responsive: true
     // }
 
+    const [data, setData] = useState({});
+    const [cant, setCant] = useState(0);
+    
+    useEffect(() => {
+        
+        fetch(`http://localhost:3030/api/products`)
+        .then(res => res.json())
+        .then(dataApi => {
+            //console.log(dataApi);
+            const { countByCategory } = dataApi;
+            setData(countByCategory);
+
+            let aux = 0;
+            for (const key in countByCategory) {
+                aux++;
+            }
+            setCant(aux);
+        })
+        .catch(error => 
+            console.log(error)
+        )
+            
+    }, []);
+
     return(
         <div className="categories">
             <h2>CATEGORÍAS</h2>
@@ -23,26 +48,18 @@ const Categories = () => {
                 <article className="c-panels">
                     <h3>Total de categorías</h3>
                     <p className="info">Cantidad total:</p>
-                    <p className="number">3</p> 
+                    <p className="number">{cant}</p> 
                 </article>
 
                 <article className="c-panels">
                     <h3>Productos por categoría</h3>
                     <p className="info">Cantidad por cada una:</p>
-                    <div className='flex-div'>
-                        <h4>Techo:</h4>
-                        <p className="cant">X productos</p>
-                    </div>
-
-                    <div className='flex-div'>
-                    <h4>Pared:</h4>
-                    <p className="cant">X productos</p>
-                    </div>
-
-                    <div className='flex-div'>
-                    <h4>Pie:</h4>
-                    <p className="cant">X productos</p>
-                    </div>
+                    {Object.keys(data).map((element) => 
+                        <div className='flex-div'>
+                            <h4>{element.toLocaleUpperCase()}:</h4>
+                            <p className="cant"> {data[element]} productos</p>
+                        </div>
+                    )}
                 </article>
             </section>
             {/* <section className="graphics">

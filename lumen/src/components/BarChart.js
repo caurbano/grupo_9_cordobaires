@@ -24,9 +24,9 @@ ChartJS.register(
 );
 
   // eje y
-  const scores = [10, 20, 30, 40, 50];
+  const sales = [39, 49, 63, 69, 79];
   // eje x
-  const labels = ['prod1', 'prod2', 'prod3', 'prod4', 'prod5'];
+  const labels = ['Monroe', 'Minimal', 'Cristal', 'Aurora', 'Oross'];
   const options = {
       fill: true,
       animations: false,
@@ -50,7 +50,7 @@ const BarChart = () => {
         {
           label: "Ventas",
           tension: 0.3,
-          data: scores,
+          data: sales,
           borderColor: "rgb(75, 192, 192)",
           backgroundColor: "rgba(75, 192, 192, 0.3)",
         },

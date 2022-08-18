@@ -60,7 +60,7 @@
     align-items: center;
 }
 
-.incr{
+/* .incr{
     margin:1%;
     display: flex;
     justify-content: center;
@@ -77,6 +77,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+#cant {
+    width: 28px;
+    margin-right: 3px;
 }
 
 .delete{
@@ -126,13 +131,16 @@
         .detail_product_price_final {
             font-size: 17px;
             text-shadow: 2px 2px 3px darkolivegreen;
-
-
         }
         .detail_product_price {
             font-size: 15px;;
         }
-}
+        #cant {
+            margin-right: 5px;
+            padding: 2px;
+            width: 32px;
+        }
+    }
 
 /*Desktop*/
 @media (min-width: 791px){
@@ -196,7 +204,7 @@
         justify-content: center;
         align-items: center;
     }
-    .incr {
+    /* .incr {
         cursor: pointer;
         font-weight: bold;    
         background-color: white;
@@ -215,6 +223,12 @@
     }
     .cero{
         font-size: 25px;
+    } */
+    #cant {
+        font-size: 18px;
+        height: 28px;
+        padding: 4px;
+        width: 32px;
     }
     #final_buy{
         height: 55px;

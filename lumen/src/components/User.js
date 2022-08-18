@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-
-const Product = ({url}) => {
-    const [product, setProduct] = useState({});
+// ARMAR USUARIO
+const User = ({url}) => {
+    const [user, setUser] = useState({});
     
     useEffect(() => {
         fetch(url)
         .then(res => res.json())
         .then(data => {
-            // console.log(data);
-            setProduct(data)
+            console.log(data);
+            setUser(data)
         })
         .catch(error => 
             console.log(error)
@@ -17,11 +17,11 @@ const Product = ({url}) => {
     }, [url]);
     return(
         <div className='p-items'>
-            <li key= {product.id}>
-                <p>{ product.name }</p>
-            </li>
+        <li key= {user.id}>
+            <p>{ user.first_name }</p>
+        </li>
         </div>
     )
 }
 
-export default Product;
+export default User;

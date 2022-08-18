@@ -1,22 +1,24 @@
 import { useEffect, useState } from 'react';
-import Product from '../components/Product';
+import User from '../components/User';
 
-const ProductList = () => {
+// ARMAR LISTADO DE USUARIOS
+const UserList = () => {
     const [data, setData] = useState([]);
-    const [productsList, setProductsList] = useState([]);
+    const [usersList, setUsersList] = useState([]);
     const [page, setPage] = useState(0);
     const [cantButton, setCantButton] = useState([]);
-    const cantProductsForPage = 10;
+    const cantUsersForPage = 10;
     
     useEffect(() => {
-        fetch(`http://localhost:3030/api/products`)
+        fetch(`http://localhost:3030/api/users`)
         .then(res => res.json())
         .then(dataApi => {
             const { count }  = dataApi;
-            const { products } = dataApi;
-            setData(products);
+            const { users } = dataApi;
+            setData(users);
 
-            const max = ((count / cantProductsForPage) >> 0) + (count % cantProductsForPage ? 1 : 0);
+            const max = ((count / cantUsersForPage) >> 0) + (count % cantUsersForPage ? 1 : 0);
+            console.log('max: ',max);
             let arrayaux = [];
             for (let i = 0; i < max; i++) {
                 arrayaux.push(i+1);
@@ -33,33 +35,32 @@ const ProductList = () => {
         
         
     useEffect(() => {
-            const array =data.slice((cantProductsForPage*(page -1)), (cantProductsForPage* page));
-            setProductsList(array);
+            const array =data.slice((cantUsersForPage*(page -1)), (cantUsersForPage* page));
+            setUsersList(array);
     }, [page]);
         
     const onButton = (event) => {
         event.preventDefault();
         setPage(event.target.value);
     }
-        
-    return(
-        <div>
 
-            <h2>Lista de productos</h2>
+    return(
+        <div className='p-list'>
+            <h2>Lista de usuarios</h2>
             <ul>
-                { productsList && productsList.map(element => 
-                    <Product url = { 'http://localhost:3030' + element.detail } key= {element.id}/>
-                )}
+                { usersList && usersList.map(element => 
+                <User url = { 'http://localhost:3030' + element.detail } key= {element.id}/>)}
             </ul>
+        
 
             <section>
-                { cantButton.length>1 && cantButton.map(element => 
+                { cantButton.length > 1 && cantButton.map(element => 
                     <button value={element} onClick={onButton}>{element}</button>
                 )}
             </section>
- 
+
         </div>
     )
 }
 
-export default ProductList;
+export default UserList;

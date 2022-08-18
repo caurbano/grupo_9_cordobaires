@@ -10,7 +10,6 @@ const Users = () => {
         fetch(`http://localhost:3030/api/users`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             setUsersList(data)
         })
         .catch(error => 
@@ -18,6 +17,13 @@ const Users = () => {
         )
             
     }, []);
+
+    const [detail, setDeltail] = useState(false);
+
+    const viewDetail = (event) => {
+        event.preventDefault();
+        setDeltail(!detail);
+    }
 
     return(
         <div className="users">
@@ -35,17 +41,27 @@ const Users = () => {
                 <article className="u-panels">
                     <h3>Listado</h3> 
                     <p className="info">Ir al listado completo:</p>
-                    <NavLink to={'/http:localhost:3030/admin/user/list'} className='adm-link'>Lista</NavLink>
+                    <NavLink to={'/userlist'} className='adm-link'>Lista</NavLink>
                 </article>
             </section>
 
             {usersList && usersList.users &&
             <section className="users-info">
-                <article className="p-info">
+                <article className="u-info">
                         <h3>Último usuario creado</h3>
                         <h4>{ usersList.users[usersList.count - 1].name }</h4>
-                        <img src={ 'img/users/' + usersList.users[usersList.count - 1].img } alt='Último producto'/>  
+                        <img src={ 'img/users/' + usersList.users[usersList.count - 1].img } alt='Último usuario'/>
+                        <button onClick={viewDetail}>Ver detalle</button> 
                 </article>
+
+                { detail?
+                <article className="u-info">
+                        <h4>{ usersList.users[usersList.count - 1].name }</h4>
+                        <p>{ usersList.users[usersList.count - 1].email }</p>
+                        {/* VER INFO DISPONIBLE */}
+                        <p>{ usersList.users[usersList.count - 1].phone }</p>
+                </article> : <></>
+                }
             </section>
             }
         </div>
