@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Products = () => {
 
     const [productsList, setProductsList] = useState({});
+    const [lastProduct, setLastProduct] = useState({})
     
     useEffect(() => {
         
@@ -11,11 +12,20 @@ const Products = () => {
         .then(res => res.json())
         .then(data => {
             //console.log(data);
-            setProductsList(data)
+            setProductsList(data);
+            fetch(`http://localhost:3030/api/products/${data.count}`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setLastProduct(data);
+            })
+            .catch(error => 
+                console.log(error)
+            );
         })
         .catch(error => 
             console.log(error)
-        )
+        );
             
     }, []);
 
@@ -57,14 +67,14 @@ const Products = () => {
                 </article>
                 { detail?
                 <article className="p-info">
-                        <h4>{ productsList.products[productsList.count - 1].name }</h4>
-                        <p> ID: { productsList.products[productsList.count - 1].id }</p>
-                        <p> Lámpara de { productsList.products[productsList.count - 1].category }</p>
-                        <p> { productsList.products[productsList.count - 1].description }</p>
+                        <h4>{ lastProduct.name }</h4>
+                        <p> ID: { lastProduct.id }</p>
+                        <p> Lámpara de { lastProduct.category }</p>
+                        <p> { lastProduct.description }</p>
                         {/* VER INFO DISPONIBLE */}
-                        <p> ${ productsList.products[productsList.count - 1].price }</p>
-                        <p> Stock disponible: { productsList.products[productsList.count - 1].stock }</p>
-                        <p> Color: { productsList.products[productsList.count - 1].color }</p>
+                        <p> ${ lastProduct.price }</p>
+                        <p> Stock disponible: { lastProduct.stock }</p>
+                        <p> Color: { lastProduct.color }</p>
                 </article> : <></>
                 }
             </section>

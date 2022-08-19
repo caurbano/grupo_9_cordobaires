@@ -19,6 +19,7 @@
 
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if( products[i].state || (locals.userLogged && userLogged.admin)) { %>
                     <div class="see__dest">
                         <a href="/product/detail/<%= products[i].id %>">
                             <img src="/img/<%= products[i].images[0].url %>" alt="Producto destacado" class="dest">
@@ -43,6 +44,13 @@
                         </a>
 
                             <% if(locals.userLogged && userLogged.admin) {%>
+                                <form action="/admin/product/setstate/<%= products[i].id %>?_method=PUT" method="POST">
+                                    <% if(products[i].state) {%>
+                                        <button class="back_button"><p>Deshabilitar</p></button>
+                                    <% } else {%>
+                                        <button class="back_button"><p>Habilitar</p></button>
+                                    <% } %>
+                                </form>
                                 <div class="buttons">
                                 <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button">Editar</button></a>
                                 <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button">Eliminar</button></a>
@@ -50,6 +58,7 @@
                             <% } %>
                         </a>
                     </div>
+                    <% } %>
                 <% } %>
             </article>            
         </section>
