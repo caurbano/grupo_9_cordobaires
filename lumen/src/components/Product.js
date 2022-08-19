@@ -18,9 +18,12 @@ const Product = ({url}) => {
     return(
         <div className='p-items'>
             <li key= {product.id}>
-                <p>{ product.name }</p>
-                <p>{ product.description }</p>
-                <img src=  { 'img/products/' + product.images.url[0] } />
+                <h4>{ product.name }</h4>
+                <p>Lámpara de { product.category }</p>
+                <img src= { 'img/products/' + product.images.url[0] } />
+                <p>${ product.price }</p>
+                <p>stock: { product.stock } un.</p>
+                <p>color: { product.color } </p>
             </li>
         </div>
     )

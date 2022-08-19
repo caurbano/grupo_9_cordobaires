@@ -10,6 +10,7 @@ const Users = () => {
         fetch(`http://localhost:3030/api/users`)
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             setUsersList(data)
         })
         .catch(error => 

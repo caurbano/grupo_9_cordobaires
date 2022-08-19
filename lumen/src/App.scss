@@ -45,7 +45,7 @@
 .sidebar {
   background-color: rgb(25, 24, 24);
   border-right: 1px solid black;
-  // height: 120vh;
+  // height: 100vh;
   width: 25%;
   .logo {
     background-color: rgb(25, 24, 24);
@@ -233,24 +233,41 @@
 }
 
 .p-list {
-  height: 100vh;
-
   h2 {
     color: rgb(8, 5, 14);
     font-size: 22px;
     font-weight: bold;
     margin: 20px;
   }
-  ol {
-    list-style: decimal-leading-zero;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
   }
 }
 
 .p-items {
-  li {
-    font-size: 13px;
-    margin-left: 20px;
-  }
+   border: solid 1px gray;
+   width: 125px;
+   margin: 2px 1px;
+   li {
+     font-size: 13px;
+     padding: 4px 8px;
+     list-style: none;
+   }
+   h4 {
+     font-size: 18px;
+     font-weight: bold;
+   }
+   img {
+     height: 90px;
+     width: 100px;
+     margin-bottom: 8px;
+   }
+   p {
+     font-size: 13px;
+     line-height: 12px;
+   }
 }
 
 .users {
@@ -583,27 +600,30 @@
       }
     }
   }
-  
+
   .p-list {
     h2 {
-      color: rgb(8, 5, 14);
-      font-size: 22px;
-      font-weight: bold;
-      margin: 20px;
-    }
-    ul {
-      list-style: decimal-leading-zero;
+      font-size: 26px;
     }
   }
   
   .p-items {
-    border: solid 1px gray;
-    li {
-      font-size: 13px;
-      margin-left: 20px;
-    }
+     width: 175px;
+     margin: 2px 2px;
+     li {
+       font-size: 13px;
+       padding: 4px 20px;
+     }
+     img {
+       height: 100px;
+       width: 115px;
+       margin-bottom: 10px;
+     }
+     p {
+       font-size: 14px;
+     }
   }
-  
+
   .users {
     height: 100vh;
   
@@ -894,17 +914,30 @@
   }
 }
 
+
 .p-list {
+  height: 100vh;
   h2 {
     font-size: 40px;
-    margin: 20px;
   }
 }
+
 .p-items {
-  li {
-    font-size: 15px;
-    margin-left: 20px;
-  }
+   box-shadow: 4px 4px 4px gray;
+   width: 220px;
+   margin: 2px 5px;
+   li {
+     font-size: 13px;
+     padding: 4px 50px;
+   }
+   img {
+     height: 100px;
+     width: 115px;
+     margin-bottom: 10px;
+   }
+   p {
+     font-size: 14px;
+   }
 }
 
 .users {

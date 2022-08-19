@@ -6,7 +6,7 @@ const ProductList = () => {
     const [productsList, setProductsList] = useState([]);
     const [page, setPage] = useState(0);
     const [cantButton, setCantButton] = useState([]);
-    const cantProductsForPage = 10;
+    const cantProductsForPage = 6;
     
     useEffect(() => {
         fetch(`http://localhost:3030/api/products`)
@@ -43,10 +43,10 @@ const ProductList = () => {
     }
         
     return(
-        <div>
+        <div className='p-list'>
 
             <h2>Lista de productos</h2>
-            <ul>
+            <ul >
                 { productsList && productsList.map(element => 
                     <Product url = { 'http://localhost:3030' + element.detail } key= {element.id}/>
                 )}
