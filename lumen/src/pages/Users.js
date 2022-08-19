@@ -4,13 +4,23 @@ import { NavLink } from 'react-router-dom'
 const Users = () => {
 
     const [usersList, setUsersList] = useState({});
+    const [lastUser, setLastUser] = useState({});
     
     useEffect(() => {
         
         fetch(`http://localhost:3030/api/users`)
         .then(res => res.json())
         .then(data => {
-            setUsersList(data)
+            setUsersList(data);
+            fetch(`http://localhost:3030/api/users/${data.count}`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setLastUser(data);
+            })
+            .catch(error => 
+                console.log(error)
+            );
         })
         .catch(error => 
             console.log(error)
@@ -50,16 +60,18 @@ const Users = () => {
                 <article className="u-info">
                         <h3>Último usuario creado</h3>
                         <h4>{ usersList.users[usersList.count - 1].name }</h4>
-                        <img src={ 'img/users/' + usersList.users[usersList.count - 1].img } alt='Último usuario'/>
+                        <img src={ 'img/users/' + lastUser.img } alt='Último usuario'/>
                         <button onClick={viewDetail}>Ver detalle</button> 
                 </article>
 
                 { detail?
                 <article className="u-info">
-                        <h4>{ usersList.users[usersList.count - 1].name }</h4>
-                        <p>{ usersList.users[usersList.count - 1].email }</p>
+                        <h4>{ lastUser.first_name + ' ' + lastUser.last_name }</h4>
+                        <p>Email: { lastUser.email }</p>
                         {/* VER INFO DISPONIBLE */}
-                        <p>{ usersList.users[usersList.count - 1].phone }</p>
+                        <p>Telefono: { lastUser.phone }</p>
+                        <p>Fecha de creación: { lastUser.created_at }</p>
+                        <p>Estado de cuenta: { lastUser.state? 'Habilitado':'Deshabilitado' }</p>
                 </article> : <></>
                 }
             </section>

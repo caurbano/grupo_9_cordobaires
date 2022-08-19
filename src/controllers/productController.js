@@ -63,8 +63,7 @@ module.exports = productController = {
     gallery: async (req, res) => {
         db.Product.findAll({
             attributes:['id', 'name', 'price', 'discount', 'state'],
-            include: ['images'],
-            where: {state: { [db.Sequelize.Op.eq] : 1 }}
+            include: ['images']
         })
         .then(products => {
             res.render('./products/productList', { 

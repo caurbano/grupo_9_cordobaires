@@ -350,7 +350,7 @@ const adminController = {
             }
             db.Product.update({state : booleanState}, {where:{id:req.params.id}})
             .then(product => {
-                res.redirect('/product/list');
+                res.redirect('/product/gallery');
             })
             .catch(error => res.send(error));         
         })
