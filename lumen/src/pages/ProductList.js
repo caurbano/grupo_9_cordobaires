@@ -52,7 +52,7 @@ const ProductList = () => {
                 )}
             </ul>
 
-            <section>
+            <section className='buttons'>
                 { cantButton.length>1 && cantButton.map(element => 
                     <button value={element} onClick={onButton}>{element}</button>
                 )}

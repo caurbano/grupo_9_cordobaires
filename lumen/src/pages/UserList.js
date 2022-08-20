@@ -45,7 +45,7 @@ const UserList = () => {
     }
 
     return(
-        <div className='p-list'>
+        <div className='u-list'>
             <h2>Lista de usuarios</h2>
             <ul>
                 { usersList && usersList.map(element => 
@@ -53,7 +53,7 @@ const UserList = () => {
             </ul>
         
 
-            <section>
+            <section className='buttons'>
                 { cantButton.length > 1 && cantButton.map(element => 
                     <button value={element} onClick={onButton}>{element}</button>
                 )}

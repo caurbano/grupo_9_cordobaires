@@ -8,9 +8,6 @@
   margin: 0;
   padding: 0;
 }
-// body {
-//   overflow: hidden;
-// }
 .flex {
   display: flex;
 }
@@ -41,6 +38,7 @@
     font-size: 12px; 
   }
 }
+
 
 .sidebar {
   background-color: rgb(25, 24, 24);
@@ -77,11 +75,13 @@
   }
 }
 
+
 .lineChart {
   border: 1px solid lightgray;
   width: 245px;
   margin: 20px 0px;
 }
+
 
 .barChart {
   border: 1px solid lightgray;
@@ -244,6 +244,18 @@
     flex-wrap: wrap;
     padding: 1px;
   }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    button {
+      border: 1px solid gray;
+      font-size: 14px;
+      height: 25px;
+      width: 25px;
+      margin: 0px 5px 8px 3px;
+    }
+  }
+  
 }
 
 .p-items {
@@ -251,7 +263,7 @@
    width: 125px;
    margin: 2px 1px;
    li {
-     font-size: 13px;
+    //  font-size: 13px;
      padding: 4px 8px;
      list-style: none;
    }
@@ -269,6 +281,7 @@
      line-height: 12px;
    }
 }
+
 
 .users {
   height: 100vh;
@@ -356,6 +369,44 @@
   }
 }
 
+.u-list {
+  h2 {
+    color: rgb(8, 5, 14);
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+  }
+}
+
+.u-items {
+   border: solid 1px gray;
+   width: 125px;
+   margin: 2px 1px;
+   li {
+     padding: 4px 6px;
+     list-style: none;
+   }
+   h4 {
+     font-size: 18px;
+     font-weight: bold;
+   }
+   img {
+     height: 80px;
+     width: 80px;
+     margin-bottom: 8px;
+   }
+   p {
+     font-size: 9px;
+     line-height: 12px;
+   }
+}
+
+
 .categories {
   height: 100vh;
 
@@ -432,6 +483,7 @@
   }
 }
 
+
 .statistics {
   height: 100vh;
   h2 {
@@ -490,8 +542,6 @@
 }
 
 
-
-
 /* TABLET */
 @media (min-width: 481px) {
   .navbar {
@@ -506,10 +556,12 @@
     }
   }
   
+
   .lineChart {
     width: 345px;
   }
   
+
   .barChart {
     width: 355px;
    
@@ -605,13 +657,17 @@
     h2 {
       font-size: 26px;
     }
+    ul {
+    display: flex;
+    justify-content: center;
+    }
   }
   
   .p-items {
      width: 175px;
      margin: 2px 2px;
      li {
-       font-size: 13px;
+      //  font-size: 13px;
        padding: 4px 20px;
      }
      img {
@@ -623,6 +679,7 @@
        font-size: 14px;
      }
   }
+
 
   .users {
     height: 100vh;
@@ -676,6 +733,39 @@
     }
   }
   
+  .u-list {
+  height: 100vh;
+
+    h2 {
+      font-size: 26px;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      }
+  }
+  
+  .u-items {
+    width: 160px;
+    margin: 2px 2px;
+      li {
+      padding: 4px 8px;
+     }
+     h4 {
+       font-size: 18px;
+       font-weight: bold;
+     }
+     img {
+       height: 90px;
+       width: 90px;
+       margin-bottom: 10px;
+     }
+     p {
+       font-size: 11px;
+     }
+  }
+
+
   .categories {
     height: 100vh;
   
@@ -779,6 +869,7 @@
   }
 }
 
+
 .sidebar {
   img {
     width: 125px;
@@ -791,12 +882,14 @@
   }
 }
 
+
 .lineChart {
   height: 320px;
   width: 550px;
   margin: 20px 25px;
   padding: 10px;
 }
+
 
 .barChart {
   width: 550px;
@@ -914,31 +1007,43 @@
   }
 }
 
-
 .p-list {
-  height: 100vh;
   h2 {
     font-size: 40px;
+  }
+  .buttons {
+    button {
+      font-size: 14px;
+      height: 26px;
+      width: 26px;
+      margin: 12px 6px;
+      padding: 2px;
+    }
   }
 }
 
 .p-items {
    box-shadow: 4px 4px 4px gray;
-   width: 220px;
-   margin: 2px 5px;
+   width: 260px;
+   margin: 4px 8px;
+      
    li {
-     font-size: 13px;
-     padding: 4px 50px;
+    //  font-size: 14px;
+     padding: 6px 65px;
+   }
+   h4 {
+    font-size: 20px;
    }
    img {
-     height: 100px;
-     width: 115px;
-     margin-bottom: 10px;
+     height: 110px;
+     width: 125px;
+     margin-bottom: 12px;
    }
    p {
-     font-size: 14px;
+     font-size: 15px;
    }
 }
+
 
 .users {
   h2 {
@@ -1005,6 +1110,34 @@
     }
   }
 }
+
+.u-list {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.u-items {
+  box-shadow: 4px 4px 4px gray;
+  width: 250px;
+  margin: 6px 15px;
+    li {
+    padding: 4px 40px;
+   }
+   h4 {
+     font-size: 20px;
+   }
+   img {
+     height: 105px;
+     width: 105px;
+     margin-bottom: 12px;
+     margin-left: 25px;
+   }
+   p {
+     font-size: 13px;
+   }
+}
+
 
 .categories {
   h2 {
