@@ -71,7 +71,6 @@ const Products = () => {
                         <p> ID: { lastProduct.id }</p>
                         <p> Lámpara de { lastProduct.category }</p>
                         <p> { lastProduct.description }</p>
-                        {/* VER INFO DISPONIBLE */}
                         <p> ${ lastProduct.price }</p>
                         <p> Stock disponible: { lastProduct.stock }</p>
                         <p> Color: { lastProduct.color }</p>

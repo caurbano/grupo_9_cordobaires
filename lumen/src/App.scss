@@ -193,6 +193,7 @@
   .products-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     
     .p-info {
     border: 1px solid lightgray;
@@ -330,6 +331,7 @@
   .users-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .u-info {
       border: 1px solid lightgray;
@@ -975,9 +977,9 @@
     flex-direction: row;
     
     .p-info {
-    margin: 30px 50px;
-    padding: 20px;
-    width: 360px;
+    margin: 30px 80px;
+    padding: 30px;
+    width: 380px;
     }
     h3 {
     font-size: 22px;
@@ -1079,9 +1081,9 @@
     flex-direction: row;
 
     .u-info {
-    margin: 30px 50px;
-    padding: 20px;
-    width: 360px;
+    margin: 30px 80px;
+    padding: 30px;
+    width: 380px;
     }
     h3 {
       font-size: 22px;

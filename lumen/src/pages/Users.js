@@ -70,7 +70,6 @@ const Users = () => {
                 <article className="u-info">
                         <h4>{ lastUser.first_name + ' ' + lastUser.last_name }</h4>
                         <p>Email: { lastUser.email }</p>
-                        {/* VER INFO DISPONIBLE */}
                         <p>Telefono: { lastUser.phone }</p>
                         <p>Fecha de creación: { lastUser.created_at }</p>
                         <p>Estado de cuenta: { lastUser.state? 'Habilitado':'Deshabilitado' }</p>
