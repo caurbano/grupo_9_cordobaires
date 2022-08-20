@@ -10,7 +10,7 @@ const Statistics = () => {
                 <article className="s-panels">
                     <h3>Total vendidos</h3>
                     <p className="info">Cantidad total:</p>
-                    <p className="number">X</p> 
+                    <p className="number">536</p> 
                 </article>
 
                 <article className="s-panels">
