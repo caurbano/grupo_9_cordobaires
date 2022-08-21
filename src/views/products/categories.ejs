@@ -21,7 +21,7 @@
                 <% if(products.length > 0) { %>
                     <p class="rel">Productos relacionados con: <b> <%= category.toLowerCase() %> </b></p>
                 <% } else { %>
-                    <p class="rel">No hay productos relacionados con: <b> <%= category.toLowerCase() %> </b></p>
+                    <p class="rel">No se encontraron coincidencias con: <b> <%= category.toLowerCase() %> </b></p>
                 <% } %>  
             <% } else { %>
                 <h2>Lámparas de <%= category.toLowerCase() %></h2>
@@ -64,8 +64,9 @@
                 <% } %>
             </article>
             <% } else { %>
-            <article>
-                <p> NO hay productos relacionados.</p>
+            <article class="no-results">
+                <img src="/img/noresults.jpg" alt="Sin resultados">
+                <p> Intente nuevamente con otra búsqueda...</p>
             </article>
             <% } %>           
         </section>
