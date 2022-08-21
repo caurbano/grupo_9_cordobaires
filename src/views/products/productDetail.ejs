@@ -13,6 +13,7 @@
                     <!-- <p>Lámpara de <%= product.category %></p> -->
                                      
                     <article class="preview__img">
+                        <% if(product.images.length > 1) { %>
                         <div class="carousel">
                             <div class="item_carousel" id="itemCarousel1">
                                 <div class="carousel_img" id="img1">
@@ -46,6 +47,15 @@
                             <a href="#itemCarousel1"><p>°</p></a>
                             <a href="#itemCarousel2">°</a>
                         </div>
+                        <% } else { %>
+                            <div class="item_carousel" id="itemCarousel1">
+                                <div class="carousel_img" id="img1">
+                                    <img src="\img\<%= product.images[0].url %>" alt="Producto" class="preview__img__img">
+                                </div>
+                            </div>
+                        <% } %>
+
+
                     </article>
                     <div class="preview__txt">
                         <p class="detail_product_name2">

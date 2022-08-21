@@ -39,11 +39,11 @@ const Categories = () => {
 
                 <article className="c-panels">
                     <h3>Productos por categoría</h3>
-                    <p className="info">Cantidad por cada una:</p>
+                    <p className="info">Cantidad:</p>
                     {Object.keys(data).map((element) => 
                         <div className='flex-div'>
                             <h4>{element.toLocaleUpperCase()}:</h4>
-                            <p className="cant"> {data[element]} productos</p>
+                            <p className="cant"> {data[element]} </p>
                         </div>
                     )}
                 </article>

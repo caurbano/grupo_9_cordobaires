@@ -15,18 +15,18 @@ function App() {
     <Router>
       <div className='flex'>
       <Sidebar />
-      <div className='content w-100'>
-      <NavbarNav />
-        <Routes>
-          <Route path='/' exact={true} element={<Home/>}/>
-          <Route path='/products' exact={true} element={<Products/>}/>
-          <Route path='/users' exact={true} element={<Users/>}/>
-          <Route path='/categories' exact={true} element={<Categories/>}/>
-          <Route path='/statistics' exact={true} element={<Statistics/>}/>
-          <Route path='/productlist' exact={true} element={<ProductList/>}/>
-          <Route path='/userlist' exact={true} element={<UserList/>}/>
-        </Routes>
-      </div>
+        <div className='content w-100'>
+        <NavbarNav />
+          <Routes>
+            <Route path='/' exact={true} element={<Home/>}/>
+            <Route path='/products' exact={true} element={<Products/>}/>
+            <Route path='/users' exact={true} element={<Users/>}/>
+            <Route path='/categories' exact={true} element={<Categories/>}/>
+            <Route path='/statistics' exact={true} element={<Statistics/>}/>
+            <Route path='/productlist' exact={true} element={<ProductList/>}/>
+            <Route path='/userlist' exact={true} element={<UserList/>}/>
+          </Routes>
+        </div>
       </div>
      
     </Router>

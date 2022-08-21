@@ -11,6 +11,8 @@ const Users = () => {
         fetch(`http://localhost:3030/api/users`)
         .then(res => res.json())
         .then(data => {
+            // console.log(data)
+            // setUsersList(data)
             setUsersList(data);
             fetch(`http://localhost:3030/api/users/${data.count}`)
             .then(res => res.json())
@@ -28,11 +30,11 @@ const Users = () => {
             
     }, []);
 
-    const [detail, setDeltail] = useState(false);
+    const [detail, setDetail] = useState(false);
 
     const viewDetail = (event) => {
         event.preventDefault();
-        setDeltail(!detail);
+        setDetail(!detail);
     }
 
     return(
@@ -68,7 +70,6 @@ const Users = () => {
                 <article className="u-info">
                         <h4>{ lastUser.first_name + ' ' + lastUser.last_name }</h4>
                         <p>Email: { lastUser.email }</p>
-                        {/* VER INFO DISPONIBLE */}
                         <p>Telefono: { lastUser.phone }</p>
                         <p>Fecha de creación: { lastUser.created_at }</p>
                         <p>Estado de cuenta: { lastUser.state? 'Habilitado':'Deshabilitado' }</p>

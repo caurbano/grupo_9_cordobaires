@@ -85,7 +85,7 @@
 }
 
 .back_button{
-    width: 200px;
+    width: 150px;
     background-color: #918c8c;
     cursor: pointer;
     padding: 14px 18px;
@@ -112,7 +112,7 @@
 
 .delete_button {
     margin-top: 5%;
-    width: 200px;
+    width: 150px;
     cursor: pointer;
     background-color: #ff0000;
     cursor: pointer;
@@ -155,10 +155,16 @@
     }
     .confirm{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .delete_button {
         margin-top: 0;
+    }
+    .back_button{
+        width: 130px;
+    }
+    .delete_button {
+        width: 130px;
     }
     
 }
@@ -218,4 +224,10 @@
         font-size: 15px;
     }
 
+    .back_button{
+        width: 150px;
+    }
+    .delete_button {
+        width: 150px;
+    }
 }

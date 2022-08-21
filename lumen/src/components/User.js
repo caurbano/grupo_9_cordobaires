@@ -16,10 +16,13 @@ const User = ({url}) => {
             
     }, [url]);
     return(
-        <div className='p-items'>
-        <li key= {user.id}>
-            <p>{ user.first_name }</p>
-        </li>
+        <div className='u-items'>
+            <li key= {user.id}>
+                <h4>{ user.first_name + ' ' + user.last_name }</h4>
+                <img src= { 'img/users/' + user.img } />
+                <p>{ user.email }</p>
+                <p>Tel. contacto: { user.phone }</p>
+            </li>
         </div>
     )
 }

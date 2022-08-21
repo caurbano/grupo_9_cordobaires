@@ -62,8 +62,8 @@ const BarChart = () => {
   return (
     <div className="barChart">
       <h3 className="barTitle">Los 5 productos más vendidos</h3>
+      <p>Año 2021/2022</p>
       <Bar data={data} options={options} role="img" />
-      {/* className="w-100 p-3 h-100 d-inline-block" height="50" width="100" */}
     </div>
   );
 }

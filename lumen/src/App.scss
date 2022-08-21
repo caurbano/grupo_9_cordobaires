@@ -8,9 +8,6 @@
   margin: 0;
   padding: 0;
 }
-// body {
-//   overflow: hidden;
-// }
 .flex {
   display: flex;
 }
@@ -19,10 +16,12 @@
 .navbar {
   background-color: rgba(128, 128, 128, 0.185);
   border-bottom: 1px solid rgba(128, 128, 128, 0.658);
-  // display: flex;
   height: 65px;
   padding: 1rem 2rem;
   width: 100%;
+  .navbar-brand {
+    font-size: 18px;
+  }
   .toggler.navbar-toggler {
     margin-left: 70%;
     margin-top: -43px;
@@ -32,7 +31,6 @@
     margin-left: 70%;
     margin-top: -10px;
     font-size: 13px;
-
   }
   .dropdown-menu.dropdown-menu-end.show {
     margin-left: 60%;
@@ -42,10 +40,10 @@
   }
 }
 
+
 .sidebar {
   background-color: rgb(25, 24, 24);
   border-right: 1px solid black;
-  // height: 120vh;
   width: 25%;
   .logo {
     background-color: rgb(25, 24, 24);
@@ -77,11 +75,13 @@
   }
 }
 
+
 .lineChart {
   border: 1px solid lightgray;
   width: 245px;
   margin: 20px 0px;
 }
+
 
 .barChart {
   border: 1px solid lightgray;
@@ -95,6 +95,10 @@
     font-weight: bold;
     margin-left: 22px;
     margin-bottom: 10px;
+  }
+  p {
+    font-size: 12px;
+    padding: 0px 20px;
   }
 }
 
@@ -132,13 +136,18 @@
     }
   }
 
+  .line {
+    display: flex;
+    justify-content: center;
+  }
   .report {
+    display: flex;
+    justify-content: center;
     button {
       background-color: rgb(23, 3, 83);
       border-radius: 10px;
       color:white;
       font-size: 13px;
-      margin-left: 50px;
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 3px 12px;
@@ -148,6 +157,7 @@
 
 
 .products {
+  height: 100vh;
   h2 {
       color: rgb(8, 5, 14);
       font-size: 22px;
@@ -192,8 +202,12 @@
   .products-info {
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+  
     .p-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid lightgray;
     margin: 20px 8px;
     padding: 20px;
@@ -212,7 +226,7 @@
     img {
       height: 90px;
       width: 100px;
-      margin: 15px 0px 5px 50px;
+      margin: 15px 0px 5px 0px;
     }
     button {
       background-color: rgb(23, 3, 83);
@@ -220,11 +234,11 @@
       color:white;
       display: flex;
       font-size: 13px;
-      margin-left: 55px;
       margin-top: 10px;
       padding: 2px 12px;
     }
     p {
+      align-self: flex-start;
       font-size: 14px;
       line-height: 20px;
     }
@@ -238,17 +252,49 @@
     font-weight: bold;
     margin: 20px;
   }
-  ol {
-    list-style: decimal-leading-zero;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
   }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    button {
+      border: 1px solid gray;
+      font-size: 14px;
+      height: 25px;
+      width: 25px;
+      margin: 0px 5px 8px 3px;
+    }
+  }
+  
 }
 
 .p-items {
-  li {
-    font-size: 13px;
-    margin-left: 20px;
-  }
+   border: solid 1px gray;
+   width: 125px;
+   margin: 2px 1px;
+   li {
+    //  font-size: 13px;
+     padding: 4px 8px;
+     list-style: none;
+   }
+   h4 {
+     font-size: 18px;
+     font-weight: bold;
+   }
+   img {
+     height: 90px;
+     width: 100px;
+     margin-bottom: 8px;
+   }
+   p {
+     font-size: 13px;
+     line-height: 12px;
+   }
 }
+
 
 .users {
   height: 100vh;
@@ -297,8 +343,13 @@
   .users-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .u-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       border: 1px solid lightgray;
       margin: 20px 8px;
       padding: 20px;
@@ -317,7 +368,7 @@
     img {
       height: 100px;
       width: 100px;
-      margin: 15px 0px 5px 45px;
+      margin: 15px 0px 5px 0px;
 
     }
     button {
@@ -326,15 +377,53 @@
       color:white;
       display: flex;
       font-size: 13px;
-      margin-left: 50px;
       margin-top: 10px;
       padding: 2px 12px;
     }
     p {
+      align-self: flex-start;
       line-height: 22px;
     }
   }
 }
+
+.u-list {
+  h2 {
+    color: rgb(8, 5, 14);
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+  }
+}
+
+.u-items {
+   border: solid 1px gray;
+   width: 125px;
+   margin: 2px 1px;
+   li {
+     padding: 4px 6px;
+     list-style: none;
+   }
+   h4 {
+     font-size: 18px;
+     font-weight: bold;
+   }
+   img {
+     height: 80px;
+     width: 80px;
+     margin-bottom: 8px;
+   }
+   p {
+     font-size: 9px;
+     line-height: 12px;
+   }
+}
+
 
 .categories {
   height: 100vh;
@@ -389,7 +478,7 @@
     }
   }
   .cat-info {
-    border: 1px solid lightgray;
+      border: 1px solid lightgray;
       margin: 20px 8px;
       padding: 20px;
       width: 240px;
@@ -397,7 +486,6 @@
       color: rgb(45, 5, 156);
       font-size: 15px;
       font-weight: bold;
-    // margin: 15px 25px;
     }
     button {
       background-color: rgb(23, 3, 83);
@@ -411,6 +499,7 @@
     }
   }
 }
+
 
 .statistics {
   height: 100vh;
@@ -470,8 +559,6 @@
 }
 
 
-
-
 /* TABLET */
 @media (min-width: 481px) {
   .navbar {
@@ -486,10 +573,12 @@
     }
   }
   
+
   .lineChart {
     width: 345px;
   }
   
+
   .barChart {
     width: 355px;
    
@@ -497,6 +586,10 @@
       font-size: 16px;
       margin-left: 30px;
       margin-bottom: 10px;
+    }
+    p {
+      font-size: 13px;
+      padding: 0px 25px;
     }
   }
   
@@ -528,7 +621,6 @@
     .report {
       button {
         font-size: 14px;
-        margin-left: 100px;
       }
     }
   }
@@ -539,7 +631,7 @@
         font-size: 26px;
     }
     .products-panels {
-      width: 355px;
+      width: 360px;
       .p-panels {
         padding: 8px;
         height: 160px;
@@ -572,34 +664,42 @@
       img {
         height: 120px;
         width: 130px;
-        margin: 15px 0px 5px 70px;
+        margin: 15px 0px 5px 0px;
       }
       button {
         font-size: 14px;
-        margin-left: 90px;
       }
     }
   }
-  
+
   .p-list {
     h2 {
-      color: rgb(8, 5, 14);
-      font-size: 22px;
-      font-weight: bold;
-      margin: 20px;
+      font-size: 26px;
     }
-    ol {
-      list-style: decimal-leading-zero;
+    ul {
+    display: flex;
+    justify-content: center;
     }
   }
   
   .p-items {
-    li {
-      font-size: 13px;
-      margin-left: 20px;
-    }
+     width: 175px;
+     margin: 2px 2px;
+     li {
+      //  font-size: 13px;
+       padding: 4px 20px;
+     }
+     img {
+       height: 100px;
+       width: 115px;
+       margin-bottom: 10px;
+     }
+     p {
+       font-size: 14px;
+     }
   }
-  
+
+
   .users {
     height: 100vh;
   
@@ -607,7 +707,7 @@
       font-size: 26px;
     }
     .users-panels {
-      width: 355px;
+      width: 360px;
       .u-panels {
         padding: 8px;
         height: 160px;
@@ -643,15 +743,47 @@
       img {
         height: 100px;
         width: 100px;
-        margin: 15px 0px 5px 45px
+        margin: 15px 0px 5px 0px
       }
       button {
         font-size: 14px;
-        margin-left: 80px;
       }
     }
   }
   
+  .u-list {
+  height: 100vh;
+
+    h2 {
+      font-size: 26px;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      }
+  }
+  
+  .u-items {
+    width: 160px;
+    margin: 2px 2px;
+      li {
+      padding: 4px 8px;
+     }
+     h4 {
+       font-size: 18px;
+       font-weight: bold;
+     }
+     img {
+       height: 90px;
+       width: 90px;
+       margin-bottom: 10px;
+     }
+     p {
+       font-size: 11px;
+     }
+  }
+
+
   .categories {
     height: 100vh;
   
@@ -755,6 +887,7 @@
   }
 }
 
+
 .sidebar {
   img {
     width: 125px;
@@ -767,12 +900,14 @@
   }
 }
 
+
 .lineChart {
   height: 320px;
   width: 550px;
   margin: 20px 25px;
   padding: 10px;
 }
+
 
 .barChart {
   width: 550px;
@@ -783,6 +918,10 @@
     font-size: 22px;
     margin-left: 25px;
     margin-bottom: 10px;
+  }
+  p {
+    font-size: 15px;
+    padding: 0px 25px;
   }
 }
 
@@ -810,7 +949,6 @@
   .report {
     button {
       font-size: 17px;
-      margin-left: 250px;
       margin-top: 15px;
       padding: 7px 14px;
       transition: ease 0.3;
@@ -858,9 +996,9 @@
     flex-direction: row;
     
     .p-info {
-    margin: 30px 50px;
-    padding: 20px;
-    width: 360px;
+    margin: 30px 80px;
+    padding: 30px;
+    width: 380px;
     }
     h3 {
     font-size: 22px;
@@ -872,11 +1010,10 @@
     img {
       height: 150px;
       width: 170px;
-      margin: 20px 0px 12px 75px;
+      margin: 20px 0px 12px 0px;
     }
     button {
       font-size: 14px;
-      margin-left: 115px;
       margin-top: 12px;
       padding: 5px 14px;
       transition: ease 0.3;
@@ -893,15 +1030,40 @@
 .p-list {
   h2 {
     font-size: 40px;
-    margin: 20px;
+  }
+  .buttons {
+    button {
+      font-size: 14px;
+      height: 26px;
+      width: 26px;
+      margin: 12px 6px;
+      padding: 2px;
+    }
   }
 }
+
 .p-items {
-  li {
-    font-size: 15px;
-    margin-left: 20px;
-  }
+   box-shadow: 4px 4px 4px gray;
+   width: 260px;
+   margin: 4px 8px;
+      
+   li {
+    //  font-size: 14px;
+     padding: 6px 65px;
+   }
+   h4 {
+    font-size: 20px;
+   }
+   img {
+     height: 110px;
+     width: 125px;
+     margin-bottom: 12px;
+   }
+   p {
+     font-size: 15px;
+   }
 }
+
 
 .users {
   h2 {
@@ -937,9 +1099,9 @@
     flex-direction: row;
 
     .u-info {
-    margin: 30px 50px;
-    padding: 20px;
-    width: 360px;
+    margin: 30px 80px;
+    padding: 30px;
+    width: 380px;
     }
     h3 {
       font-size: 22px;
@@ -947,15 +1109,15 @@
       }
       h4 {
       font-size: 20px;
+      margin-bottom: 15px;
       }
     img {
       height: 150px;
       width: 150px;
-      margin: 20px 0px 12px 95px;;
+      margin: 20px 0px 12px 0px;;
     }
     button {
       font-size: 14px;
-      margin-left: 115px;
       margin-top: 12px;
       padding: 5px 14px;
       transition: ease 0.3;
@@ -968,6 +1130,34 @@
     }
   }
 }
+
+.u-list {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.u-items {
+  box-shadow: 4px 4px 4px gray;
+  width: 250px;
+  margin: 6px 15px;
+    li {
+    padding: 4px 40px;
+   }
+   h4 {
+     font-size: 20px;
+   }
+   img {
+     height: 105px;
+     width: 105px;
+     margin-bottom: 12px;
+     margin-left: 25px;
+   }
+   p {
+     font-size: 13px;
+   }
+}
+
 
 .categories {
   h2 {
@@ -1005,7 +1195,7 @@
   }
   .cat-info {
     margin: 30px 50px;
-    padding: 20px;
+    padding: 25px;
     width: 400px;
     h3 {
     font-size: 22px;
