@@ -30,11 +30,11 @@ const Users = () => {
             
     }, []);
 
-    const [detail, setDeltail] = useState(false);
+    const [detail, setDetail] = useState(false);
 
     const viewDetail = (event) => {
         event.preventDefault();
-        setDeltail(!detail);
+        setDetail(!detail);
     }
 
     return(

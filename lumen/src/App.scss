@@ -16,10 +16,12 @@
 .navbar {
   background-color: rgba(128, 128, 128, 0.185);
   border-bottom: 1px solid rgba(128, 128, 128, 0.658);
-  // display: flex;
   height: 65px;
   padding: 1rem 2rem;
   width: 100%;
+  .navbar-brand {
+    font-size: 18px;
+  }
   .toggler.navbar-toggler {
     margin-left: 70%;
     margin-top: -43px;
@@ -29,7 +31,6 @@
     margin-left: 70%;
     margin-top: -10px;
     font-size: 13px;
-
   }
   .dropdown-menu.dropdown-menu-end.show {
     margin-left: 60%;
@@ -43,7 +44,6 @@
 .sidebar {
   background-color: rgb(25, 24, 24);
   border-right: 1px solid black;
-  // height: 100vh;
   width: 25%;
   .logo {
     background-color: rgb(25, 24, 24);
@@ -136,13 +136,18 @@
     }
   }
 
+  .line {
+    display: flex;
+    justify-content: center;
+  }
   .report {
+    display: flex;
+    justify-content: center;
     button {
       background-color: rgb(23, 3, 83);
       border-radius: 10px;
       color:white;
       font-size: 13px;
-      margin-left: 50px;
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 3px 12px;
@@ -200,6 +205,9 @@
     justify-content: center;
   
     .p-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid lightgray;
     margin: 20px 8px;
     padding: 20px;
@@ -218,7 +226,7 @@
     img {
       height: 90px;
       width: 100px;
-      margin: 15px 0px 5px 50px;
+      margin: 15px 0px 5px 0px;
     }
     button {
       background-color: rgb(23, 3, 83);
@@ -226,11 +234,11 @@
       color:white;
       display: flex;
       font-size: 13px;
-      margin-left: 55px;
       margin-top: 10px;
       padding: 2px 12px;
     }
     p {
+      align-self: flex-start;
       font-size: 14px;
       line-height: 20px;
     }
@@ -338,6 +346,10 @@
     justify-content: center;
 
     .u-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       border: 1px solid lightgray;
       margin: 20px 8px;
       padding: 20px;
@@ -356,7 +368,7 @@
     img {
       height: 100px;
       width: 100px;
-      margin: 15px 0px 5px 45px;
+      margin: 15px 0px 5px 0px;
 
     }
     button {
@@ -365,11 +377,11 @@
       color:white;
       display: flex;
       font-size: 13px;
-      margin-left: 50px;
       margin-top: 10px;
       padding: 2px 12px;
     }
     p {
+      align-self: flex-start;
       line-height: 22px;
     }
   }
@@ -466,7 +478,7 @@
     }
   }
   .cat-info {
-    border: 1px solid lightgray;
+      border: 1px solid lightgray;
       margin: 20px 8px;
       padding: 20px;
       width: 240px;
@@ -474,7 +486,6 @@
       color: rgb(45, 5, 156);
       font-size: 15px;
       font-weight: bold;
-    // margin: 15px 25px;
     }
     button {
       background-color: rgb(23, 3, 83);
@@ -610,7 +621,6 @@
     .report {
       button {
         font-size: 14px;
-        margin-left: 100px;
       }
     }
   }
@@ -621,7 +631,7 @@
         font-size: 26px;
     }
     .products-panels {
-      width: 355px;
+      width: 360px;
       .p-panels {
         padding: 8px;
         height: 160px;
@@ -654,11 +664,10 @@
       img {
         height: 120px;
         width: 130px;
-        margin: 15px 0px 5px 70px;
+        margin: 15px 0px 5px 0px;
       }
       button {
         font-size: 14px;
-        margin-left: 90px;
       }
     }
   }
@@ -698,7 +707,7 @@
       font-size: 26px;
     }
     .users-panels {
-      width: 355px;
+      width: 360px;
       .u-panels {
         padding: 8px;
         height: 160px;
@@ -734,11 +743,10 @@
       img {
         height: 100px;
         width: 100px;
-        margin: 15px 0px 5px 45px
+        margin: 15px 0px 5px 0px
       }
       button {
         font-size: 14px;
-        margin-left: 80px;
       }
     }
   }
@@ -941,7 +949,6 @@
   .report {
     button {
       font-size: 17px;
-      margin-left: 250px;
       margin-top: 15px;
       padding: 7px 14px;
       transition: ease 0.3;
@@ -1003,11 +1010,10 @@
     img {
       height: 150px;
       width: 170px;
-      margin: 20px 0px 12px 75px;
+      margin: 20px 0px 12px 0px;
     }
     button {
       font-size: 14px;
-      margin-left: 115px;
       margin-top: 12px;
       padding: 5px 14px;
       transition: ease 0.3;
@@ -1108,11 +1114,10 @@
     img {
       height: 150px;
       width: 150px;
-      margin: 20px 0px 12px 95px;;
+      margin: 20px 0px 12px 0px;;
     }
     button {
       font-size: 14px;
-      margin-left: 115px;
       margin-top: 12px;
       padding: 5px 14px;
       transition: ease 0.3;
@@ -1190,7 +1195,7 @@
   }
   .cat-info {
     margin: 30px 50px;
-    padding: 20px;
+    padding: 25px;
     width: 400px;
     h3 {
     font-size: 22px;

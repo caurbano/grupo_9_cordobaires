@@ -18,7 +18,7 @@ const Home = () => {
                 </article>
             </Container>
 
-            <Container>
+            <Container className="line">
                 <LineChart />
             </Container>
 
