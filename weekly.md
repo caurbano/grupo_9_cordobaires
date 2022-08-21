@@ -108,7 +108,17 @@ Nuestra impresión respecto a esta ceremonia, es que se trata de un momento nece
 ### SPRINT 8  
 1° weekly  
 Tareas realizadas:  
- 
+-	Tablero de Trello armado  
+-	Retrospectiva completa  
+-	Organización de las tareas  
+-	APIs (comienzo)  
+-	Dashboard (maquetación)  
   
   
 2° weekly  
+Tareas realizadas:  
+-	APIs  
+-	Dashboard conexión con las APIs  
+-	Mejoras del código general  
+-	Heroku: proyecto  
+-	Netlify: dashboard  

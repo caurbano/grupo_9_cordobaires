@@ -117,16 +117,17 @@ En este momento y por ahora, no encontramos algo que debamos “dejar de hacer�
 Según esta dinámica, resaltamos aquello que tenemos que:  
 
 ### Comenzar a hacer  
-  
+Darle mayor relevancia a la herramienta Trello, interiorizarnos respecto a un uso más profesional del mismo…  
   
 ### Hacer más  
-
+Hacer rendir más el tiempo, distribuirlo mejor con respecto a las actividades planteadas.  
     
 ### Continuar haciendo  
-
+Refactorizar el código de algunas partes del proyecto (mejoras).  
+Investigar más aún respecto a contenidos puntuales y reforzar conceptos ya vistos.  
   
 ### Hacer menos  
-    
+Quizás dejar un poco de lado el “perfeccionismo” en algunas cosas y avanzar en otras de mayor prioridad…  
   
 ### Dejar de hacer  
- 
+En este momento y por ahora, no encontramos algo que debamos “dejar de hacer” en su totalidad.  
