@@ -37,17 +37,6 @@
                         <% } %>
                     </article>
                     <article class="add_delete">
-                        <!-- <button class="decr">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
-                            </svg>
-                        </button>
-                        <p class="cero">1</p>     
-                        <button class="incr">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                            </svg>
-                        </button> -->
                         <input type="number" name="cant" class="cant" id="cant<%= product[i].id %>" value="1">
                         <button class="delete" type="button" id="delete<%= product[i].id %>">
                             <svg width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -72,8 +61,9 @@
         </section>
         <% } else { %>
             <section class="void">
-                <p class="title">Está Vacio</p>
-                <p class="msg">Tenemos productos que te pueden interesar.</p>
+                <img src="/img/empty.jpg" alt="carrito vacío">
+                <p class="title">Tu carrito está vacío</p>
+                <p class="msg">Tenemos productos que te pueden interesar...</p>
                 <p class="msg"><a href="/product/gallery">VER PRODUCTOS</a></p>
             </section>
         <% } %>
