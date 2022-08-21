@@ -20,7 +20,9 @@ const Product = ({url}) => {
             <li key= {product.id}>
                 <h4>{ product.name }</h4>
                 <p>Lámpara de { product.category }</p>
-                <img src= { 'img/products/' + product.images.url[0] } />
+                {product.images && product.images.url[0] && 
+                    <img src= { 'img/products/' + product.images.url[0] } />
+                }
                 <p>${ product.price }</p>
                 <p>stock: { product.stock } un.</p>
                 <p>color: { product.color } </p>
