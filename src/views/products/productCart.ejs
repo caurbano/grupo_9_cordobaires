@@ -7,8 +7,10 @@
         <div id="cart_title">
             <h3>Carrito</h3>
         </div>
-            <% for( let i=0; i < 3; i++ ) { %>
-                <div class = "cart_products">
+        <% if(product.length){ %>
+        <section class="products">
+            <% for( let i=0; i < product.length; i++ ) { %>
+                <div class = "cart_products" id="product<%= product[i].id %>">
                     <!-- cuatro articles -->
                     <article class="product">
                         <img src="/img/<%= product[i].images[0].url %>" alt="Imagen de producto">
@@ -24,14 +26,13 @@
                             <p class="detail_product_price_lt">
                                 $<%= product[i].price %>
                             </p>
-                            <p class="detail_product_price_final">
-                                $<%= product[i].price - (product[i].discount * product[i].price / 100) %>
-                            </p>
+                            <!-- <p class="detail_product_price_final">$</p> -->
+                            <p id="discount<%= product[i].id %>" class="detail_product_price_final"><%= product[i].price - (product[i].discount * product[i].price / 100) %></p>
 
                         <% } else { %>
                             <!-- Si no tiene descuento -->
                             <p class="detail_product_price">
-                                $<%= product[i].price %>
+                                $<div id="price<%= product[i].id %>" class="detail_product_price"><%= product[i].price %></div>
                             </p>
                         <% } %>
                     </article>
@@ -47,25 +48,35 @@
                                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                             </svg>
                         </button> -->
-                        <input type="number" name="cant" id="cant" value="1">
-                        <button class="delete">
+                        <input type="number" name="cant" class="cant" id="cant<%= product[i].id %>" value="1">
+                        <button class="delete" type="button" id="delete<%= product[i].id %>">
                             <svg width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                                 <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                             </svg>
                         </button>
                     </article>   
                 </div>
-                <% } %>
+            <% } %>
             
             <article class="total">
-                <p>Total: $<%= parseInt(product[0].price - (product[0].discount * product[0].price / 100)) + parseInt(product[1].price - (product[1].discount * product[1].price / 100)) + parseInt(product[2].price - (product[2].discount * product[2].price / 100)) %></p>
+                <p>Total: $</p><p id="total" class="total"><%= total %></p>
             </article>
 
-        <div id="final_buy">
-            <button class="finish_buy">
-                Continuar compra
-            </button>
-        </div>
+            <div id="final_buy">
+                <form action="/user/buy" method="post">
+                    <button class="finish_buy" type="submit">
+                        Continuar compra
+                    </button>
+                </form>
+            </div>
+        </section>
+        <% } else { %>
+            <section class="void">
+                <p class="title">Está Vacio</p>
+                <p class="msg">Tenemos productos que te pueden interesar.</p>
+                <p class="msg"><a href="/product/gallery">VER PRODUCTOS</a></p>
+            </section>
+        <% } %>
     </main>
     <script src="/js/productCart.js"></script>
 

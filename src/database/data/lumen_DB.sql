@@ -18,16 +18,6 @@ CREATE TABLE `Users`(
     PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `Carts`(
-	`id` INT NOT NULL AUTO_INCREMENT,
-    `total` INT NOT NULL,
-    `cant_items` INT NOT NULL,
-    `user_id` INT NOT NULL,
-    PRIMARY KEY (`id`),
-    FOREIGN KEY(`user_id`) REFERENCES `Users`(`id`)
-);
-
-
 CREATE TABLE `Products`(
 	`id` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(45) NOT NULL UNIQUE,
@@ -43,19 +33,21 @@ CREATE TABLE `Products`(
     PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `Carts`(
+	`id` INT NOT NULL AUTO_INCREMENT,
+    `total` INT NOT NULL,
+    `cant_product` INT NOT NULL,
+    `product_id` INT NOT NULL,
+    `user_id` INT NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`product_id`) REFERENCES `Products`(`id`),
+    FOREIGN KEY(`user_id`) REFERENCES `Users`(`id`)
+);
+
 CREATE TABLE `Images`(
 	`id` INT NOT NULL AUTO_INCREMENT,
     `url` VARCHAR(45) NOT NULL,
     `product_id` INT NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`product_id`) REFERENCES `Products`(`id`)
-);
-
-CREATE TABLE `Products_Carts`(
-	`id` INT NOT NULL AUTO_INCREMENT,
-    `product_id` INT NOT NULL,
-    `cart_id` INT NOT NULL,
-    PRIMARY KEY (`id`),
-    FOREIGN KEY (`product_id`) REFERENCES `Products`(`id`),
-    FOREIGN KEY (`cart_id`) REFERENCES `Carts`(`id`)
 );

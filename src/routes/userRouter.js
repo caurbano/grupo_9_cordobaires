@@ -42,11 +42,11 @@ routerUsers.delete('/delete', usersController.destroyUser);
 routerUsers.get('/profile', authMiddleware, usersController.profile);
 
 //Logout de usuario
-routerUsers.get('/logout', authMiddleware,usersController.logout);
+routerUsers.get('/logout', authMiddleware, usersController.logout);
 
+//Agregar Producto al carrito del usuario
+routerUsers.post('/addproduct/:id', authMiddleware, usersController.addProduct);
 
-
-
-
+routerUsers.post('/buy', authMiddleware, usersController.buy);
 
 module.exports = routerUsers;

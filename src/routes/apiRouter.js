@@ -6,6 +6,7 @@ router.get('/users', apiController.usersList);
 router.get('/users/:id', apiController.user);
 router.get('/products', apiController.productsList);
 router.get('/products/:id', apiController.product);
+router.post('/createcart', apiController.product);
 
 
 module.exports = router;

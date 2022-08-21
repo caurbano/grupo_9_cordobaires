@@ -71,16 +71,19 @@
                                 $<%= product.price %>
                             </p>
                         <% } %>
-                        <p class="stock">Stock disponible: <%= product.stock %></p>
-                        
-                        <form action="" method="POST">
-
-                            <a href="#"><button class="agregarcarrito">Agregar al carrito</button></a>
+                        <p class="stock">Cantidad: <input type="number" class="cant" name="cant" value="1"></p>
+                        <section class="stock_max">
+                            <p class="stock">Stock disponible: </p>
+                            <p class="stock max"> <%= product.stock %></p>
+                        </section>
+                        <form action="/user/addproduct/<%= product.id %>" method="post" class="form">
+                            <button type="submit" class="agregarcarrito" value=<%= product.id %>>Agregar al carrito</button>
+                        </form>
+                            <p class="stock error"></p>
                             <% if(locals.userLogged && userLogged.admin) {%>
                                 <a href="/admin/product/edit/<%- product.id %>"><button type="button" class="button_admin">Editar</button></a>
                                 <a href="/admin/product/delete/<%- product.id %>"><button type="button" class="button_admin">Eliminar</button></a>
                             <% } %>
-                        </form>
                        
                     </div>
                    
@@ -122,6 +125,8 @@
                         </article>
                     </section>
             </main>
+
+            <script src="/js/productDetail.js"></script>
             
             <%- include('../partials/footer') %>
     </body>

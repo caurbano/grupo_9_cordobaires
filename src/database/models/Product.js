@@ -57,11 +57,10 @@ module.exports = (sequelize, dataTypes) => {
             as:'images',
             foreignKey:'product_id'
         });
-        Product.belongsToMany(models.Cart, {
-            as:'carts',
-            through:'product_carts',
+        Product.belongsToMany(models.User, {
+            through:'carts',
             foreignKey:'product_id',
-            otherKey:'cart_id',
+            otherKey:'user_id',
             timestamps:false
         });
     }

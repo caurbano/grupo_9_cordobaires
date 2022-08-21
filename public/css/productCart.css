@@ -8,6 +8,7 @@
 /* general*/
 .main{
     margin-top: 90px;
+    margin-bottom: 5%;
 }
 #cart_title{
     text-shadow: 1px 1px white, -2px -1px #E79F00;
@@ -79,7 +80,7 @@
     align-items: center;
 } */
 
-#cant {
+.cant {
     width: 28px;
     margin-right: 3px;
 }
@@ -110,14 +111,39 @@
         display: flex;
         justify-content: right;
         margin: 20px;
-    }
-    .finish_buy{
-        font-weight: bold;
-        height: 30px;
-        border: solid #1f1d1d 1px;
-        border-radius: 8px;
-        width: 150px;
-    }
+}
+
+.finish_buy{
+    font-weight: bold;
+    height: 30px;
+    border: solid #1f1d1d 1px;
+    border-radius: 8px;
+    width: 150px;
+}
+
+.void{
+    height: 40vh;
+}
+
+.title{
+    margin: 20px;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.msg{
+    margin: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.msg > a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
 
     @media (min-width: 481px) {
         #cart_title{
@@ -135,10 +161,22 @@
         .detail_product_price {
             font-size: 15px;;
         }
-        #cant {
+        .cant {
             margin-right: 5px;
             padding: 2px;
             width: 32px;
+        }
+        .void{
+            height: 45vh;
+        }
+        .title{
+            font-size: 35px;
+        }
+        .msg{
+            font-size: 15px;
+        }
+        .msg > a{
+            font-size: 20px;
         }
     }
 
@@ -224,7 +262,7 @@
     .cero{
         font-size: 25px;
     } */
-    #cant {
+    .cant {
         font-size: 18px;
         height: 28px;
         padding: 4px;
@@ -247,6 +285,15 @@
         color: white;
         cursor: pointer;
         background: #2f9b05;
+    }
+    .void{
+        height: 60vh;
+    }
+    .title{
+        font-size: 50px;
+    }
+    .msg{
+        font-size: 17px;
     }
 
 }

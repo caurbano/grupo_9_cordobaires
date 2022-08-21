@@ -44,13 +44,6 @@
                         </a>
 
                             <% if(locals.userLogged && userLogged.admin) {%>
-                                <form action="/admin/product/setstate/<%= products[i].id %>?_method=PUT" method="POST">
-                                    <% if(products[i].state) {%>
-                                        <button class="back_button"><p>Deshabilitar</p></button>
-                                    <% } else {%>
-                                        <button class="back_button"><p>Habilitar</p></button>
-                                    <% } %>
-                                </form>
                                 <div class="buttons">
                                 <a href="/admin/product/edit/<%- products[i].id %>"><button class="back_button">Editar</button></a>
                                 <a href="/admin/product/delete/<%- products[i].id %>"><button class="back_button">Eliminar</button></a>

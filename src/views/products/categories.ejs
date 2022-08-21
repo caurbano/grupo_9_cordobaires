@@ -17,12 +17,17 @@
 
         <section class="products">
             <% if(locals.search) { %>
-            <h2>Resultados de su búsqueda</h2>
-            <p class="rel">Productos relacionados con: <b> <%= category.toLowerCase() %> </b></p>
+                <h2>Resultados de su búsqueda</h2>
+                <% if(products.length > 0) { %>
+                    <p class="rel">Productos relacionados con: <b> <%= category.toLowerCase() %> </b></p>
+                <% } else { %>
+                    <p class="rel">No hay productos relacionados con: <b> <%= category.toLowerCase() %> </b></p>
+                <% } %>  
             <% } else { %>
-            <h2>Lámparas de <%= category.toLowerCase() %></h2>
+                <h2>Lámparas de <%= category.toLowerCase() %></h2>
             <% } %>
 
+            <% if(products.length > 0){ %>
             <article class="see">
                 <% for( let i = 0; i < products.length; i++ ) { %>
                     <div class="see__dest">
@@ -57,7 +62,12 @@
                         <% } %>
                     </div>
                 <% } %>
-            </article>            
+            </article>
+            <% } else { %>
+            <article>
+                <p> NO hay productos relacionados.</p>
+            </article>
+            <% } %>           
         </section>
 
     </section>

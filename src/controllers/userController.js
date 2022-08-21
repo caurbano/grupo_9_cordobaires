@@ -30,6 +30,7 @@ const usersController = {
                 delete userLogin.updated_at;
                 delete userLogin.state;
                 req.session.userLogged = userLogin;
+                req.session.cart = [];
                 if (req.body.remember != undefined) {
                     res.cookie('rememberEmail', userLogin.email, { maxAge: 1000 * 60 * 1 });
                 }
@@ -210,6 +211,16 @@ const usersController = {
         req.session.destroy();
         res.clearCookie('rememberEmail');
         return res.redirect('/');
+    },
+
+    addProduct: (req, res) => {
+        req.session.cart.push(req.params.id);
+        res.redirect('/product/gallery');
+    },
+
+    buy:(req, res) => {
+        req.session.destroy(cart);
+        res.redirect('/');
     }
     
 }

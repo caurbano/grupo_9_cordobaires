@@ -12,9 +12,13 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: true,
         },
-        cant_items:{
+        cant_product:{
             type: dataTypes.INTEGER,
             allowNull: true,
+        },
+        product_id:{
+            type: dataTypes.INTEGER,
+            allowNull: true
         },
         user_id:{
             type: dataTypes.INTEGER,
@@ -24,20 +28,6 @@ module.exports = (sequelize, dataTypes) => {
     let config = {underscored: true, timestamps:false};
 
     const Cart = sequelize.define(alias, cols, config);
-
-    Cart.associate = function (models){
-        Cart.belongsTo(models.User, {
-            as:'user',
-            foreignKey:'id'
-        });
-        Cart.belongsToMany(models.Product, {
-            as:'product',
-            through:'products_carts',
-            foreignKey:'cart_id',
-            otherKey:'product_id',
-            timestamps:false
-        });
-    }
 
     return Cart;
 }
