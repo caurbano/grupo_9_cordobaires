@@ -24,9 +24,7 @@ const Home = () => {
 
             <Container className="report">
                 <article>
-                    <a href="reporte.jpg" download={'reporteanual.jpg'}><button>Descargar reporte</button></a>
-                    {/* Crear PDF con info */}
-                    {/* <a href="reporte.pdf" download={'reporteanual.pdf'}><button>Descargar reporte</button></a> */}
+                    <a href="reporte.pdf" download={'reporteanual.pdf'}><button>Descargar reporte</button></a>
                 </article>
             </Container>
         </div>
