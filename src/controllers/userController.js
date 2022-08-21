@@ -213,6 +213,7 @@ const usersController = {
         return res.redirect('/');
     },
 
+    //Carrito de compras
     addProduct: (req, res) => {
         req.session.cart.push(req.params.id);
         res.redirect('/product/gallery');

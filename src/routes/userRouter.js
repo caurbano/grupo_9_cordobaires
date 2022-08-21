@@ -44,7 +44,7 @@ routerUsers.get('/profile', authMiddleware, usersController.profile);
 //Logout de usuario
 routerUsers.get('/logout', authMiddleware, usersController.logout);
 
-//Agregar Producto al carrito del usuario
+//Agregar producto al carrito del usuario
 routerUsers.post('/addproduct/:id', authMiddleware, usersController.addProduct);
 
 routerUsers.post('/buy', authMiddleware, usersController.buy);
