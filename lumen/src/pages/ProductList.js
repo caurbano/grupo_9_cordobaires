@@ -9,7 +9,7 @@ const ProductList = () => {
     const cantProductsForPage = 6;
     
     useEffect(() => {
-        fetch(`http://localhost:3030/api/products`)
+        fetch(`https://lumen-shop.herokuapp.com/api/products`)
         .then(res => res.json())
         .then(dataApi => {
             const { count }  = dataApi;
@@ -48,7 +48,7 @@ const ProductList = () => {
             <h2>Lista de productos</h2>
             <ul >
                 { productsList && productsList.map(element => 
-                    <Product url = { 'http://localhost:3030' + element.detail } key= {element.id}/>
+                    <Product url = { 'https://lumen-shop.herokuapp.com' + element.detail } key= {element.id}/>
                 )}
             </ul>
 

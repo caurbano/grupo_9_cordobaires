@@ -10,7 +10,7 @@ const UserList = () => {
     const cantUsersForPage = 10;
     
     useEffect(() => {
-        fetch(`http://localhost:3030/api/users`)
+        fetch(`https://lumen-shop.herokuapp.com/api/users`)
         .then(res => res.json())
         .then(dataApi => {
             const { count }  = dataApi;
@@ -49,7 +49,7 @@ const UserList = () => {
             <h2>Lista de usuarios</h2>
             <ul>
                 { usersList && usersList.map(element => 
-                <User url = { 'http://localhost:3030' + element.detail } key= {element.id}/>)}
+                <User url = { 'https://lumen-shop.herokuapp.com' + element.detail } key= {element.id}/>)}
             </ul>
         
 

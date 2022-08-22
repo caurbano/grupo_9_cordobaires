@@ -8,13 +8,13 @@ const Users = () => {
     
     useEffect(() => {
         
-        fetch(`http://localhost:3030/api/users`)
+        fetch(`https://lumen-shop.herokuapp.com/api/users`)
         .then(res => res.json())
         .then(data => {
             // console.log(data)
             // setUsersList(data)
             setUsersList(data);
-            fetch(`http://localhost:3030/api/users/${data.count}`)
+            fetch(`https://lumen-shop.herokuapp.com/api/users/${data.count}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -62,7 +62,8 @@ const Users = () => {
                 <article className="u-info">
                         <h3>Último usuario creado</h3>
                         <h4>{ usersList.users[usersList.count - 1].name }</h4>
-                        <img src={ 'img/users/' + lastUser.img } alt='Último usuario'/>
+                        {lastUser && lastUser.img && 
+                        <img src={ 'img/users/' + lastUser.img } alt='Último usuario'/>}
                         <button onClick={viewDetail}>Ver detalle</button> 
                 </article>
 

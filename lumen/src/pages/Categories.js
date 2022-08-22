@@ -7,7 +7,7 @@ const Categories = () => {
     
     useEffect(() => {
         
-        fetch(`http://localhost:3030/api/products`)
+        fetch(`https://lumen-shop.herokuapp.com/api/products`)
         .then(res => res.json())
         .then(dataApi => {
             //console.log(dataApi);

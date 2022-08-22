@@ -44,5 +44,5 @@
   "devDependencies": {
     "sass": "^1.54.4"
   },
-  "proxy": "http://localhost:3030"
+  "proxy": "https://lumen-shop.herokuapp.com/"
 }

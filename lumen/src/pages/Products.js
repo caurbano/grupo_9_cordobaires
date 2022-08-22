@@ -8,12 +8,12 @@ const Products = () => {
     
     useEffect(() => {
         
-        fetch(`http://localhost:3030/api/products`)
+        fetch(`https://lumen-shop.herokuapp.com/api/products`)
         .then(res => res.json())
         .then(data => {
             //console.log(data);
             setProductsList(data);
-            fetch(`http://localhost:3030/api/products/${data.count}`)
+            fetch(`https://lumen-shop.herokuapp.com/api/products/${data.count}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
