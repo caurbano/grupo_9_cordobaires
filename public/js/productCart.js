@@ -13,9 +13,6 @@ window.addEventListener('load', function () {
             }
         }
         document.querySelector(`#total`).innerHTML = total;
-        // for (let index = 0; index < array.length; index++) {
-        //     document.querySelector(`#${array[index].id}`).value = array[index].cant;
-        // }
 
         for (let index = 0; index < products.length; index++) {
             document.querySelector(`#cant${products[index].id}`).addEventListener('change', event => {
@@ -34,33 +31,20 @@ window.addEventListener('load', function () {
         }
         
         for (let index = 0; index < products.length; index++) {
-            document.querySelector(`#delete${products[index].id}`).addEventListener('click', event => {
-                document.querySelector(`#product${products[index].id}`).style.display = 'none';
+            document.querySelector(`#delete${products[index].id}`).addEventListener('submit', event => {
                 products = products.filter(element => element.id != products[index].id);
                 sessionStorage.setItem("cart", JSON.stringify(products));
-                if(products.length){
-                    total = 0;
-                    for (let index = 0; index < products.length; index++) {
-                        if(document.querySelector(`#discount${products[index].id}`)){
-                            total += parseFloat(document.querySelector(`#discount${products[index].id}`).innerHTML) * parseInt(document.querySelector(`#cant${products[index].id}`).value);
-                        }else{
-                            total += parseInt(document.querySelector(`#price${products[index].id}`).innerHTML) * parseInt(document.querySelector(`#cant${products[index].id}`).value);
-                        }
-                    }
-                    document.querySelector(`#total`).innerHTML = total? total : 0;
-                } else {
-                    //Agregar un fech para eliminar el session.cart
-                    document.querySelector(`.products`).innerHTML = `<section class='void'>
-                        <p class='title'>Está Vacio</p>
-                        <p class='msg'>Tenemos productos que te pueden interesar.</p>
-                        <p class='msg'><a href='/product/gallery'>VER PRODUCTOS</a></p>
-                    </section>`;
-                }
             });
         }
 
         document.querySelector(`.form`).addEventListener('submit', event => {
-            if(parseFloat(document.querySelector(`#total`).innerHTML) <= 0){
+            let boolean = true;
+            products.forEach(element => {
+                if(parseInt(document.querySelector(`#cant${element.id}`).value) > 0){
+                    boolean = false;
+                }
+            })
+            if(boolean){
                 event.preventDefault();
                 alert('No hay productos en el carrito.');
             }else{

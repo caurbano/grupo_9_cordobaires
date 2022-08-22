@@ -226,6 +226,11 @@ const usersController = {
         req.session.cart= [];
         console.log(req.session);
         res.redirect('/');
+    },
+
+    deleteCart:(req, res) => {
+        req.session.cart = req.session.cart.filter(element => element != req.params.id);
+        res.redirect('/cart');
     }
     
 }

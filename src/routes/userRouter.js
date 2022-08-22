@@ -49,4 +49,6 @@ routerUsers.post('/addproduct/:id', authMiddleware, usersController.addProduct);
 
 routerUsers.post('/buy', authMiddleware, usersController.buy);
 
+routerUsers.post('/deleteCart/:id', authMiddleware, usersController.deleteCart);
+
 module.exports = routerUsers;
