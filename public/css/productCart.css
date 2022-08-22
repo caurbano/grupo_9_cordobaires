@@ -61,25 +61,6 @@
     align-items: center;
 }
 
-/* .incr{
-    margin:1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.decr{
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cero{
-    margin: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .cant {
     width: 28px;
     margin-right: 3px;
@@ -118,31 +99,40 @@
     height: 30px;
     border: solid #1f1d1d 1px;
     border-radius: 8px;
+    margin-top: 10px;
     width: 150px;
 }
 
 .void{
-    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.title{
-    margin: 20px;
-    margin-top: 100px;
-    text-align: center;
+.void img {
+    height: 150px;
+    width: 150px;
+    margin: 10px 0px;
+    opacity: 0.9;
+}
+
+.void .title{
+    margin-top: 20px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .msg{
-    margin: 20px;
-    text-align: center;
+    margin: 8px 0px;
     font-size: 13px;
 }
 
 .msg > a{
-    text-decoration: none;
+    color: #E79F00;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
+    text-decoration: none;
 }
 
     @media (min-width: 481px) {
@@ -159,24 +149,32 @@
             text-shadow: 2px 2px 3px darkolivegreen;
         }
         .detail_product_price {
-            font-size: 15px;;
+            font-size: 20px;
         }
         .cant {
             margin-right: 5px;
             padding: 2px;
             width: 32px;
+        }   
+        .void img {
+            height: 210px;
+            width: 210px;
+            margin: 20px 0px;
         }
-        .void{
-            height: 45vh;
+        
+        .void .title{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 25px;
         }
-        .title{
-            font-size: 35px;
-        }
+        
         .msg{
+            margin: 12px 0px;
             font-size: 15px;
         }
+        
         .msg > a{
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -225,7 +223,6 @@
         display: flex;
         flex-direction: row;
         justify-content: right;
-        margin: 3%;
         color: black
     }
     .total p{
@@ -242,26 +239,7 @@
         justify-content: center;
         align-items: center;
     }
-    /* .incr {
-        cursor: pointer;
-        font-weight: bold;    
-        background-color: white;
-        margin-left: 1px;
-        opacity: 0.5;
-        padding: 5px;
-    }
-    .decr{
-        cursor: pointer;
-        background-color: white;
-        font-weight: bold;
-        margin-right: 5px;
-        opacity: 0.5;
-        padding: 5px;
-
-    }
-    .cero{
-        font-size: 25px;
-    } */
+    
     .cant {
         font-size: 18px;
         height: 28px;
@@ -278,6 +256,7 @@
         width: 200px;
         font-size: 16px;
         font-weight: bold;
+        margin-top: 20px;
         transition: all 0.3s ease;
 
     }
@@ -286,14 +265,13 @@
         cursor: pointer;
         background: #2f9b05;
     }
-    .void{
-        height: 60vh;
+    .void img {
+        height: 300px;
+        width: 290px;
+        margin: 20px 0px;
     }
-    .title{
-        font-size: 50px;
-    }
-    .msg{
-        font-size: 17px;
+    .void .title{
+        font-size: 28px;
     }
 
 }
