@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
         
         error.innerHTML = "";
         //verifico si hay Stock
-        if( cant.value <= parseInt(max.innerHTML) ){
+        if( cant.value <= parseInt(max.innerHTML) && cant.value > 0 ){
             //Solo usuarios logeados
             if(user){
                 //Verifico si es el primer producto del carrito 
@@ -37,7 +37,11 @@ window.addEventListener('load', function () {
             }
         }else{
             event.preventDefault();
-            error.innerHTML = "No hay suficiente Stock";
+            if(cant.value <= 0){
+                error.innerHTML = "La cantidad tiene que ser mayor a 0";
+            } else {
+                error.innerHTML = "No hay suficiente Stock";
+            }
         }
     })
 

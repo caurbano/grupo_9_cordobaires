@@ -38,7 +38,7 @@
                     </article>
                     <article class="add_delete">
                         <input type="number" name="cant" class="cant" id="cant<%= product[i].id %>" value="1">
-                        <form action="/user/deleteCart/<%= product[i].id %>" method="post" id="delete<%= product[i].id %>">
+                        <form action="/user/deleteCart/<%= product[i].id %>" method="post" id="delete<%= product[i].id %>" class="formdelete">
                             <button class="delete" type="submit" >
                         </form>
                             <svg width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
