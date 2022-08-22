@@ -214,12 +214,16 @@ const usersController = {
     },
 
     addProduct: (req, res) => {
-        req.session.cart.push(req.params.id);
+        if(!req.session.cart.includes(req.params.id)){
+            req.session.cart.push(req.params.id);
+        }
         res.redirect('/product/gallery');
     },
 
     buy:(req, res) => {
-        req.session.destroy(cart);
+        console.log(req.session);
+        req.session.cart= [];
+        console.log(req.session);
         res.redirect('/');
     }
     

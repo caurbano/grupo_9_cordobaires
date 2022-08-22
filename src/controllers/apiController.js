@@ -105,32 +105,32 @@ const apiController = {
         catch(error){ res.send(error) }
     },
 
-    createCart:  async (req, res) => {
-        try {
-            req.body.products.forEach(async (product) => {
-                let data = await db.Product.findByPk(
-                    product.id, 
-                    {
-                        attributes:['price', 'discount', 'stock']
-                    }
-                );
-                console.log('data: ',data);
-                await db.Product.update( {stock: data.stock-product.cant}, {
-                    where: {id: product.id}
-                })
+    // createCart:  async (req, res) => {
+    //     try {
+    //         req.body.products.forEach(async (product) => {
+    //             let data = await db.Product.findByPk(
+    //                 product.id, 
+    //                 {
+    //                     attributes:['price', 'discount', 'stock']
+    //                 }
+    //             );
+    //             console.log('data: ',data);
+    //             await db.Product.update( {stock: data.stock-product.cant}, {
+    //                 where: {id: product.id}
+    //             })
                 
-                let result = await db.Cart.create({
-                    total:(data.price - (data.price * data.discount / 100) * product.cant),
-                    cant_product: product.cant,
-                    product_id: product.id,
-                    user_id: req.session.userLogged.id
-                })
-                console.log('result: ',result);
-            });
-            res.status(200);
-        }
-        catch(error){ res.send(error) }
-    }
+    //             let result = await db.Cart.create({
+    //                 total:(data.price - (data.price * data.discount / 100) * product.cant),
+    //                 cant_product: product.cant,
+    //                 product_id: product.id,
+    //                 user_id: req.session.userLogged.id
+    //             })
+    //             console.log('result: ',result);
+    //         });
+    //         res.status(200);
+    //     }
+    //     catch(error){ res.send(error) }
+    // }
 
 }
 

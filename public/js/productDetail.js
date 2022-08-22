@@ -7,7 +7,6 @@ window.addEventListener('load', function () {
     let error = document.querySelector(".error");
 
     //Capturo el evento
-    console.log(form);
     form.addEventListener('submit', function(event){
         
         error.innerHTML = "";

@@ -59,25 +59,23 @@ window.addEventListener('load', function () {
             });
         }
 
-        document.querySelector(`.finish_buy`).addEventListener('click', event => {
-            console.log(parseFloat(document.querySelector(`#total`).innerHTML));
+        document.querySelector(`.form`).addEventListener('submit', event => {
             if(parseFloat(document.querySelector(`#total`).innerHTML) <= 0){
+                event.preventDefault();
                 alert('No hay productos en el carrito.');
             }else{
-                let myHeaders = new Headers();
-                    myHeaders.append("Content-Type", "application/json");
-                let requestOptions = {
-                    method: 'POST',
-                    headers: myHeaders,
-                    body: products,
-                    redirect: 'follow'
-                  };
+                // let requestOptions = {
+                //     method: "POST",
+                //     body: JSON.stringify(products),
+                //     headers: {"Content-type": "application/json; charset=UTF-8"}
+                // };
                   
-                  fetch("http://localhost:3030/api/createcart", requestOptions)
-                    .then(response => response.text())
-                    .then(result => console.log(result))
-                    .catch(error => console.log('error', error));
-                    sessionStorage.setItem("cart", JSON.stringify([]));
+                // fetch(window.origin+"/api/createcart", requestOptions)
+                // .then(response => response.text())
+                // .then(result => console.log(result))
+                // .catch(error => console.log('error', error));
+                sessionStorage.removeItem("cart");
+                // window.location.href = window.origin;
             }
         })
 
